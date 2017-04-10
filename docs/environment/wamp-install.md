@@ -1,11 +1,5 @@
----
-layout: post
 title: 独立安装wamp环境
-tags: wamp
-categories: 环境
----
-* TOC
-{:toc}
+======================
 
 ## 概述
 WAMP的从广义上来讲是Windows + Apache + MySql + PHP，是一个用来搭建动态网站的开发环境。  
@@ -47,7 +41,7 @@ WAMP的从广义上来讲是Windows + Apache + MySql + PHP，是一个用来搭�
 
 * 下载页面：[http://www.apachehaus.com/cgi-bin/download.plx](http://www.apachehaus.com/cgi-bin/download.plx)  
 * 下载地址1：[http://www.apachehaus.com/downloads/httpd-2.4.23-x64-vc14.zip](http://www.apachehaus.com/downloads/httpd-2.4.23-x64-vc14.zip)  
-* 下载地址2：[http://101.44.1.12/files/31590000058B42CD/www.apachehaus.com/downloads/  httpd-2.4.23-x64-vc14.zip](http://101.44.1.12/files/31590000058B42CD/www.apachehaus.com/downloads/  httpd-2.4.23-x64-vc14.zip)  
+* 下载地址2：[http://101.44.1.12/files/31590000058B42CD/www.apachehaus.com/downloads/httpd-2.4.23-x64-vc14.zip](http://101.44.1.12/files/31590000058B42CD/www.apachehaus.com/downloads/httpd-2.4.23-x64-vc14.zip)  
 * 下载地址3：[http://pan.baidu.com/s/1i43rbbJ](http://pan.baidu.com/s/1i43rbbJ)  
 
 > MySql  
@@ -85,13 +79,13 @@ WAMP的从广义上来讲是Windows + Apache + MySql + PHP，是一个用来搭�
 2. 点击I accept the license terms （同意协议）,点击next。  
 3. 选择Custom （自定义），点击next。  
 4. 展开MySql Servers -> MySql Server -> MySql Server 5.7,选择MySql Server 5.7.14 -   X64或者X86,点击中间的向右的箭头。  
-![mysql-install-1][mysql-install-1]
+![mysql-install-1](../../images/mysql-install-1.png)
 5. 选中右边的MySql Server 5.6.14 - X64，点击Advanced   Options，分别设置MySql的安装目录和MySql数据的目录，点击OK，点击next。  
-![mysql-install-2][mysql-install-2]
+![mysql-install-2](../../images/mysql-install-2.png)
 6. 一路next或者execute，其中有一个设置密码的地方，如图所示  
-![mysql-install-3][mysql-install-3]
+![mysql-install-3](../../images/mysql-install-3.png)
 7. 最后出现这样的界面即安装完成  
-![mysql-install-4][mysql-install-4]
+![mysql-install-4](../../images/mysql-install-4.png)
   
 ## 配置  
 
@@ -179,9 +173,3 @@ extension=php_pdo_mysql.dll
 ```
 
 > 如果需要配置多个虚拟域名，请重复第1步和第3步。  
-
-
-[mysql-install-1]: {{"/mysql-install-1.png" | prepend: site.imgrepo}}
-[mysql-install-2]: {{"/mysql-install-2.png" | prepend: site.imgrepo}}
-[mysql-install-3]: {{"/mysql-install-3.png" | prepend: site.imgrepo}}
-[mysql-install-4]: {{"/mysql-install-4.png" | prepend: site.imgrepo}}

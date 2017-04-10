@@ -1,12 +1,5 @@
----
-layout: post
 title: PHP编码规范(PSR)
-tags: PHP
-categories: PHP
----
-
-* TOC
-{:toc}
+======================
 
 ## 官方
 

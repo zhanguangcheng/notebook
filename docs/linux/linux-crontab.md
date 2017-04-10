@@ -1,11 +1,5 @@
----
-layout: post
 title: Linux命令之crontab
-tags: Linux 计划任务
-categories: linux
----
-* TOC
-{:toc}
+========================
 
 # 概述
 > crontab是Unix和Linux系统下的管理计划任务的一个命令。

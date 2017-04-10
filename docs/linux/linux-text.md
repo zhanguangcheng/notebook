@@ -1,12 +1,5 @@
----
-layout: post
 title: Linux命令之文本处理
-tags: Linux 文本处理
-categories: linux
----
-* TOC
-{:toc}
-
+=========================
 
 # 文本处理相关命令
 

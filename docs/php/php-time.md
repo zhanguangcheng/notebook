@@ -1,11 +1,5 @@
----
-layout: post
 title: PHP中的时间处理方法&技巧
-tags: PHP
-categories: PHP
----
-* TOC
-{:toc}
+=============================
 
 * 获取一个秒级别的时间戳
 ```php

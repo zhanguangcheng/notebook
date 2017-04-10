@@ -1,13 +1,5 @@
----
-layout: post
 title: Composer快速入门
-tags: Composer PHP
-categories: PHP
----
-
-* TOC
-{:toc}
-
+======================
 
 ## Composer简介
 

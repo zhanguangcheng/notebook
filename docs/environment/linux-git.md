@@ -1,12 +1,5 @@
----
-layout: post
 title: Linux服务器之搭建git服务
-tags: linux git
-categories: linux
-published: false
----
-* TOC
-{:toc}
+==============================
 
 # 环境&软件  
 

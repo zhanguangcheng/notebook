@@ -1,11 +1,5 @@
----
-layout: post
 title: Git命令列表
-tags: Git 版本控制
-categories: 版本控制
----
-* TOC
-{:toc}
+=================
 
 ## 概述
 > Git是一款免费、开源的分布式版本控制系统, 作者:Linux之父Torvalds 

@@ -1,11 +1,5 @@
----
-layout: post
 title: Linux命令之logrotate
-tags: Linux logrotate
-categories: linux
----
-* TOC
-{:toc}
+===========================
 
 # 概述  
 

@@ -1,11 +1,5 @@
----
-layout: post
 title: Memcache的安装和使用
-tags: cache memcache
-categories: server
----
-* TOC
-{:toc}
+==========================
 
 ##  Memcache简介:
 >高性能的分布式的内存对象缓存系统
@@ -125,24 +119,24 @@ categories: server
 
 > 单一memcache服务器:
 
-~~~php
+```php
 <?php
 $memcache = new Memcache();
 $memcache->connect('192.168.25.115',11211);
 $memcache->set('xiaocao','hello,world',0,3600);
 echo $memcache->get('xiaocao');
 $memcache->close();
-~~~
+```
 
 > 集群memcache服务器:
 
-~~~php
+```php
 <?php
 $memcache = new Memcache();
 $memcache->addServer('192.168.25.115',11211);
 $memcache->addServer('127.0.0.1',11211);
 .......
-~~~
+```
 
 ## 注意事项:
 1. 键最大长度为255字节,值的最大值为1MB
@@ -153,6 +147,4 @@ $memcache->addServer('127.0.0.1',11211);
 
 
 分布式集群架构图:
-![memcache][memcache]
-
-[memcache]: {{"/memcache.png" | prepend: site.imgrepo }}
+![分布式集群架构图](../../memcache.png)

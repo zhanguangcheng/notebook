@@ -1,12 +1,5 @@
----
-layout: post
-title: LNMP编译安装过程
-tags: Linux PHP MySQL Nginx
-categories: 环境
----
-
-* TOC
-{:toc}
+title: CentOS之LNMP编译安装
+======================
 
 ## 环境
 

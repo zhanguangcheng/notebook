@@ -1,12 +1,5 @@
----
-layout: post
 title: Git服务器搭建
-tags: Git Linux
-categories: 版本控制
----
-
-* TOC
-{:toc}
+===================
 
 ## 环境
 

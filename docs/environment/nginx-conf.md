@@ -1,12 +1,5 @@
----
-layout: post
 title: nginx.conf中文说明
-tags: nginx
-categories: linux
----
-* TOC
-{:toc}
-
+========================
 
 ```conf
 #定义Nginx运行的用户和用户组
