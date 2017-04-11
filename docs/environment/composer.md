@@ -18,7 +18,7 @@ https://getcomposer.org/download/ (Manual Download下面)
 
 ### Linux: 
 
-```shell
+```bash
 wget https://getcomposer.org/download/1.2.2/composer.phar
 mv composer.phar /usr/local/bin/composer
 chmod +x /usr/local/bin/composer
@@ -30,7 +30,7 @@ chmod +x /usr/local/bin/composer
 * 复制 composer.phar 到php.exe同级目录  
 * 新建一个composer.bat, 将下面代码保存到该文件中  
 
-```shell
+```bash
 @php "%~dp0composer.phar" %*
 ```
 
@@ -52,20 +52,20 @@ composer config -g repo.packagist
 
 全局(全部项目生效)
 
-```
+```bash
 composer config -g repo.packagist composer https://packagist.phpcomposer.com
 ```
 
 局部(当前项目生效)
 
-```
+```bash
 composer config repo.packagist composer https://packagist.phpcomposer.com
 ```
 
 ## Composer使用
 
 
-```
+```bash
 #生成composer.json 根据提示操作
 composer init
 

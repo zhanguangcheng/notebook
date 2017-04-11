@@ -97,7 +97,7 @@ WAMP的从广义上来讲是Windows + Apache + MySql + PHP，是一个用来搭�
 * 修改第280行`DirectoryIndex index.html`加入`index.php`
 * 在文件末尾加入以下代码(将PHP作为Apahce的模块运行，添加识别php类型，设置php配置文件路径  
 
-```conf
+```apache
 LoadModule php5_module "D:\amp\php\php5apache2_4.dll"
 AddType application/x-httpd-php .php
 PHPIniDir "D:\amp\php"
@@ -144,7 +144,7 @@ extension=php_pdo_mysql.dll
 2. 将Apache配置文件`D:\amp\apache\conf\httpd.conf`的499行`# Include conf/extra/httpd-vhosts.conf`前面的`#`去掉  
 3. 编辑文件httpd-vhosts.conf，加入如下代码  
 
-```conf
+```apache
 #网站名称
 <VirtualHost *:80>
     #网站的路径

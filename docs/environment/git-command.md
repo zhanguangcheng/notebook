@@ -11,7 +11,7 @@ Git命令列表
 
 ## git配置 
 
-```shell
+```bash
 # 配置用户名
 git config --global user.name <你的名字>
 
