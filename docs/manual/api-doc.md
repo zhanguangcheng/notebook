@@ -1,5 +1,5 @@
-title: 各种Api文档 & 手册
-========================
+各种Api文档 & 手册
+=================
 
 * [OverApi](http://www.xcx1.com/www/api-php.html)
 * [PHP.ini](/www/php-ini.html)

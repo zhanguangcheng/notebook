@@ -1,5 +1,5 @@
-title: Git命令列表
-=================
+Git命令列表
+==========
 
 ## 概述
 > Git是一款免费、开源的分布式版本控制系统, 作者:Linux之父Torvalds 
@@ -212,4 +212,4 @@ git push origin master
 ```
 
 ## 图解git工作流程
-![](/assets/img/git/git.jpg)
+![](../../images/git/git.jpg)

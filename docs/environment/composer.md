@@ -1,4 +1,4 @@
-title: Composer快速入门
+Composer快速入门
 ======================
 
 ## Composer简介

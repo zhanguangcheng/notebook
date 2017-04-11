@@ -1,5 +1,5 @@
-title: Linux命令之logrotate
-===========================
+Linux命令之logrotate
+====================
 
 # 概述  
 
