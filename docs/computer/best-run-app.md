@@ -32,6 +32,6 @@
 * calc 计算器
 * msconfig 系统配置
 * mspaint 画图
-* service.msc 服务管理
+* services.msc 服务管理
 * regedit 注册表管理
 * mstsc 远程桌面连接

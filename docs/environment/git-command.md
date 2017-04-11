@@ -128,10 +128,10 @@ git add <文件1> <文件2>
 git add .
 
 #提交暂存区的文件到本地版本库
-git commit -m '提交信息'
+git commit -m "提交信息"
 
 #提交并跟踪暂存区的文件到本地版本库
-git commit -ad '提交信息'
+git commit -ad "提交信息"
 
 #用暂存区的文件覆盖当前工作区的文件(丢弃工作区的文件)
 git checkout -- <文件>
@@ -142,70 +142,87 @@ git reset --herd
 ```
 
 ## 远端
-    git fetch originname <branchName> #拉去远端上指定分支
-    git merge originname/<branchName> #合并远端上指定分支
-    git push originname <branchName> #推送到远端上指定分支
-    git push originname localbranch:serverbranch #推送到远端上指定分支
-    git checkout -b test origin/dev #基于远端dev新建test分支
-    git push origin :branchName #删除远端分支, 原理是提交空的分支
+```shell
+git fetch originname <branchName> #拉去远端上指定分支
+git merge originname/<branchName> #合并远端上指定分支
+git push originname <branchName> #推送到远端上指定分支
+git push originname localbranch:serverbranch #推送到远端上指定分支
+git checkout -b test origin/dev #基于远端dev新建test分支
+git push origin :branchName #删除远端分支, 原理是提交空的分支
+```
 
 ## 源
-    git remote add origin1 git@github.com:yanhaijing/data.js.git
-    git remote #显示全部源
-    git remote -v #显示全部源+详细信息
-    git remote rename origin1 origin2 #重命名
-    git remote rm origin1 #删除
-    git remote show origin1 #查看指定源的全部信息
+```shell
+git remote add origin1 git@github.com:yanhaijing/data.js.git
+git remote #显示全部源
+git remote -v #显示全部源+详细信息
+git remote rename origin1 origin2 #重命名
+git remote rm origin1 #删除
+git remote show origin1 #查看指定源的全部信息
+```
 
 ## 其他
-    git help <command> #查看帮助的命令
+```shell
+git help <command> #查看帮助的命令
+```
 
 
 ## 实例
 配置git  
 
-    git config --global user.name "<用户名>"
-    git config --global user.email "<邮箱>"
+```shell
+git config --global user.name "<用户名>"
+git config --global user.email "<邮箱>"
+```
 
 克隆代码  
 
-    git clone <git仓库地址>
+```shell
+git clone <git仓库地址>
+```
 提交代码
 
-    git add <文件名>
-    git commit -m "<提交说明>"
-    git push <源名称> <本地分支>:<远程分支>
+```shell
+git add <文件名>
+git commit -m "<提交说明>"
+git push <源名称> <本地分支>:<远程分支>
+```
 
 拉取最新代码
 
-    git fetch <源名称> <远程分支>
-    git merge <源名称> <分支名称> #合并到当前分支
+```shell
+git fetch <源名称> <远程分支>
+git merge <源名称> <分支名称> #合并到当前分支
+```
 
 从远程拉取分支到本地创建
 
-    git checkout -b <分支名称> <源名称>/<远程分支名称>
+```shell
+git checkout -b <分支名称> <源名称>/<远程分支名称>
+```
 切换分支
     
-    git checkout <分支名称>
+```shell
+git checkout <分支名称>
+```
     
 
 ## 良好的git协作方式
 远程分支:
-> master    
+> master
 
 本地分支
->master
-    a
+> a
 
 ```shell
 git checkout a
-coding...
+#coding...
 git add .
-git commit -m 'message'
+git commit -m "message"
 git checkout master
 git pull
 git checkout a
-git rebase master 如果有冲突在此时解决
+git rebase master #如果有冲突在此时解决
 git checkout master
 git merge a
 git push origin master
