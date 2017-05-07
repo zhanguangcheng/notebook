@@ -17,6 +17,7 @@ Windows 绿色版软件开发环境
 * [Redis 3.2.100](http://ofyijnqas.bkt.clouddn.com/redis3.2.100.7z)
 * [Ruby 2.3.3 + Sass 3.4.23](http://ofyijnqas.bkt.clouddn.com/ruby2.3.3.7z)
 * [Python 3.6.1](http://ofyijnqas.bkt.clouddn.com/python3.6.1.7z)
+* [Ctags 5.8](http://ofyijnqas.bkt.clouddn.com/ctags5.8.7z)
 
 ### 注意事项
 
@@ -47,6 +48,7 @@ C:\greenEnvironment\java\1.8.0\bin;
 C:\greenEnvironment\redis\3.2.100;
 C:\greenEnvironment\ruby\2.3.3\bin;
 C:\greenEnvironment\python\3.6.1;
+C:\greenEnvironment\ctags\5.8;
 ```
 
 ### 服务创建
@@ -72,19 +74,22 @@ sc delete 服务名称
 
 ## 测试安装状态
 
-* httpd -v
-* mysql --version
-* php -v
-* composer --version
-* node -v
-* npm -v
-* curl -v
-* java -version
-* redis-server -v
-* ruby -v
-* gem -v
-* python -V
-* memcached -h
+```bash
+httpd -v
+mysql --version
+php -v
+composer --version
+node -v
+npm -v
+curl -v
+java -version
+redis-server -v
+ruby -v
+gem -v
+python -V
+memcached -h
+ctags --version
+```
 
 ## 官网原始下载地址
 
@@ -123,6 +128,9 @@ ruby:
 
 python:
     https://www.python.org/downloads/windows/
+
+ctags:
+    http://ctags.sourceforge.net/
 
 VC库:
     VC9-x86:https://www.microsoft.com/zh-CN/download/details.aspx?id=5582
