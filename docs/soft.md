@@ -8,7 +8,7 @@ Windows常用软件
 * [FSCapture](http://www.fscapture.com/)
 * [notepad2](http://notepad2.com/)
 * [EditPlus](https://www.editplus.com/) $
-* [Sublimt Text](http://www.sublimetext.com/)
+* [Sublime Text](http://www.sublimetext.com/)
 * [Vim](http://www.vim.org/)
 * [PHPStorm](https://www.jetbrains.com/phpstorm/) $
 * [licecap](http://www.cockos.com/licecap/)
