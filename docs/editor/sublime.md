@@ -39,22 +39,24 @@ import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.
 ## 常用快捷键
 
 * `Ctrl+P` 文件跳转
-* `Ctrl+Shift+P` 命令面板
-* `Ctrl+Shift+N` 新建窗口
 * `Ctrl+W` 关闭当前tab
 * `Ctrl+R` 函数列表
 * `Ctrl+G` 行跳转
-* `Ctrl+Z` 撤销
-* `Ctrl+Y` 恢复撤销(或者Ctrl+Shift+Z)
+* `Ctrl+Z` 撤销i
+* `Ctrl+Shift+Z` 恢复撤销
 * `Ctrl+L` 选择整行（按住-继续选择下行）
 * `Ctrl+Shift+D` 复制光标所在整行，插入在该行之后
+* `Ctrl+Shift+P` 命令面板
+* `Ctrl+Shift+N` 新建窗口
+* `Ctrl+Shift+M` 选择括号内的内容（{[()]}按住-继续选择父括号）
+* `Ctrl+Shift+Backspace` 从光标处删除至行首(`Ctrl+K Backspace`)
 * `Ctrl+J` 合并行（已选择需要合并的多行时）
 * `Ctrl+KK` 从光标处删除至行尾
-* `Ctrl+K Backspace` 从光标处删除至行首
 * `Ctrl+D` 选词 （按住-继续选择下个相同的字符串）
 * `Alt+F3` 选词(全部)
+* `Alt+-` 上一个修改的位置
+* `Alt+Shift+-` 下一个修改的位置
 * `Ctrl+M` 光标移动至括号内开始或结束的位置
-* `Ctrl+Shift+M` 选择括号内的内容（{[()]}按住-继续选择父括号）
 * `Ctrl+'` 选中引号中的内容
 * `Ctrl+F2` 设置/取消书签
 * `F2` 下一个书签
@@ -65,7 +67,7 @@ import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.
 * `Ctrl+Shift+↓` 与下行互换
 * `Ctrl+KU` 改为大写
 * `Ctrl+KL` 改为小写
-* `Shift+鼠标右键拖动` 列编辑(或者按住鼠标中间拖动)
+* `Shift+鼠标右键拖动` 列编辑(或者按住鼠标中键拖动)
 * `Ctrl+Shift+[` 折叠代码
 * `Ctrl+Shift+]` 展开代码
 * `Ctrl+KJ` 展开全部代码
@@ -87,7 +89,7 @@ import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.
     "bold_folder_labels": true,
     "color_scheme": "Packages/User/SublimeLinter/Monokai (SL).tmTheme",
     "default_encoding": "UTF-8",
-    "default_line_ending": "system",
+    "default_line_ending": "unix",
     "draw_minimap_border": true,
     "draw_white_space": "all",
     "trim_automatic_white_space": false,
