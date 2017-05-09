@@ -58,6 +58,10 @@
 
 * [markdown简明语法](http://ibruce.info/2013/11/26/markdown/)
 
+## 版本管理
+
+* [git merge和rebase的区别](http://www.cnblogs.com/xueweihan/p/5743327.html)
+
 ## RegExp
 
 * [20个正则表达式](http://www.jianshu.com/p/e7bb97218946)

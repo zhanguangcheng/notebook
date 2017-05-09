@@ -4,6 +4,9 @@ Windows常用软件
 * [Chrome](http://www.chrome.com/)
 * [Firefox](http://www.firefox.com.cn/)
 * [cmder](http://cmder.net/)
+
+> 中文乱码问题解决:settings->environment->`set LANG=zh_CN.UTF8`
+
 * [Everything](http://www.voidtools.com/)
 * [FSCapture](http://www.fscapture.com/)
 * [notepad2](http://notepad2.com/)
@@ -32,3 +35,4 @@ Windows常用软件
 * [VirtualBox](https://www.virtualbox.org/)
 * [Adobe Reader](https://acrobat.adobe.com/us/en/acrobat/pdf-reader.html)
 * [KeePass](http://keepass.info/)
+* [SourceTree](https://www.sourcetreeapp.com/)

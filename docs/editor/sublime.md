@@ -9,8 +9,8 @@ Sublime Text 3
 import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())
 ```
 
-* `Emmet`  前端神器(`Tab`)
-* `Alignment`  等号对齐(`Ctrl+Alt+A`)
+* `Emmet`  前端神器(<kbd>Tab</kbd>)
+* `Alignment`  等号对齐(<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>A</kbd>`)
 * `Docblockr`  生成注释格式(`/**`)
 * `ConvertToUTF8`  更多编码支持
 * `IMESupport`  修复输入法不跟踪问题
@@ -20,15 +20,16 @@ import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.
 * `BracketHighlighter`    括号高亮
 * `All Completion` 全能代码提示
 * `modific`    更好的显示git&svn差异
-* `themr`   多种主题切换(`Ctrl+F5`)
+* `themr`   多种主题切换(<kbd>Ctrl</kbd>+<kbd>F5</kbd>)
 * `colorsublime`   多种配色切换(`colorsublime`)
 * `jquery`   jquery方法提示
-* `AdvancedNewFile`   高级新建文件(`Ctrl+Alt+N`)
+* `AdvancedNewFile`   高级新建文件(<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>N</kbd>)
 * `sublimeLinter`    语法检测基础包
 * `sublimeLinter-php`    php语法检测
-* `Markdown Preview`  Markdown预览
 * `ini` ini文件语法高亮
 * `CFG Configuration Syntax Highlighting` 配置文件语法高亮
+* `Omni​Markup​Previewer`  Markdown预览 (报错解决:fix2 <http://blog.csdn.net/zhangyunfei_happy/article/details/54573435>)
+* `MarkdownHighlighting`  Markdown高亮
 * `BufferScroll`  保存折叠状态
 * `ftpsync` FTP同步
 * `HTML5` HTML5标签拓展
@@ -38,42 +39,42 @@ import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.
 
 ## 常用快捷键
 
-* `Ctrl+P` 文件跳转
-* `Ctrl+W` 关闭当前tab
-* `Ctrl+R` 函数列表
-* `Ctrl+G` 行跳转
-* `Ctrl+Z` 撤销i
-* `Ctrl+Shift+Z` 恢复撤销
-* `Ctrl+L` 选择整行（按住-继续选择下行）
-* `Ctrl+Shift+D` 复制光标所在整行，插入在该行之后
-* `Ctrl+Shift+P` 命令面板
-* `Ctrl+Shift+N` 新建窗口
-* `Ctrl+Shift+M` 选择括号内的内容（{[()]}按住-继续选择父括号）
-* `Ctrl+Shift+Backspace` 从光标处删除至行首(`Ctrl+K Backspace`)
-* `Ctrl+J` 合并行（已选择需要合并的多行时）
-* `Ctrl+KK` 从光标处删除至行尾
-* `Ctrl+D` 选词 （按住-继续选择下个相同的字符串）
-* `Alt+F3` 选词(全部)
-* `Alt+-` 上一个修改的位置
-* `Alt+Shift+-` 下一个修改的位置
-* `Ctrl+M` 光标移动至括号内开始或结束的位置
-* `Ctrl+'` 选中引号中的内容
-* `Ctrl+F2` 设置/取消书签
-* `F2` 下一个书签
-* `Shift+F2` 上一个书签
-* `Ctrl+Enter` 光标后插入行
-* `Ctrl+Shift+Enter` 光标前插入行
-* `Ctrl+Shift+↑` 与上行互换
-* `Ctrl+Shift+↓` 与下行互换
-* `Ctrl+KU` 改为大写
-* `Ctrl+KL` 改为小写
-* `Shift+鼠标右键拖动` 列编辑(或者按住鼠标中键拖动)
-* `Ctrl+Shift+[` 折叠代码
-* `Ctrl+Shift+]` 展开代码
-* `Ctrl+KJ` 展开全部代码
-* `Ctrl+K1` 折叠1级代码, 1是可变的
-* `Ctrl+Shift+V` 原格式粘贴
-* `Ctrl+KV` 从记录中粘贴
+* <kbd>Ctrl</kbd>+<kbd>P</kbd> 文件跳转
+* <kbd>Ctrl</kbd>+<kbd>W</kbd> 关闭当前tab
+* <kbd>Ctrl</kbd>+<kbd>R</kbd> 函数列表
+* <kbd>Ctrl</kbd>+<kbd>G</kbd> 行跳转
+* <kbd>Ctrl</kbd>+<kbd>Z</kbd> 撤销
+* <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Z</kbd> 恢复撤销
+* <kbd>Ctrl</kbd>+<kbd>L</kbd> 选择整行（按住-继续选择下行）
+* <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd> 复制光标所在整行，插入在该行之后
+* <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> 命令面板
+* <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>N</kbd> 新建窗口
+* <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>M</kbd> 选择括号内的内容（{[()]}按住-继续选择父括号）
+* <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Backspace</kbd> 从光标处删除至行首(<kbd>Ctrl</kbd>+<kbd>K</kbd><kbd>Backspace</kbd>)
+* <kbd>Ctrl</kbd>+<kbd>J</kbd> 合并行（已选择需要合并的多行时）
+* <kbd>Ctrl</kbd>+<kbd>KK</kbd> 从光标处删除至行尾
+* <kbd>Ctrl</kbd>+<kbd>D</kbd> 选词 （按住-继续选择下个相同的字符串）
+* <kbd>Alt</kbd>+<kbd>F3</kbd> 选词(全部)
+* <kbd>Alt</kbd>+<kbd>-</kbd> 上一个修改的位置
+* <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>-</kbd> 下一个修改的位置
+* <kbd>Ctrl</kbd>+<kbd>M</kbd> 光标移动至括号内开始或结束的位置
+* <kbd>Ctrl</kbd>+<kbd>'</kbd></kbd> 选中引号中的内容
+* <kbd>Ctrl</kbd>+<kbd>F2</kbd> 设置/取消书签
+* <kbd>F2</kbd> 下一个书签
+* <kbd>Shift</kbd>+<kbd>F2</kbd> 上一个书签
+* <kbd>Ctrl</kbd>+<kbd>Enter</kbd> 光标后插入行
+* <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Enter</kbd> 光标前插入行
+* <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>↑</kbd> 与上行互换
+* <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>↓</kbd> 与下行互换
+* <kbd>Ctrl</kbd>+<kbd>KU</kbd> 改为大写
+* <kbd>Ctrl</kbd>+<kbd>KL</kbd> 改为小写
+* <kbd>Shift</kbd>+<kbd>鼠标右键拖动</kbd> 列编辑(或者按住鼠标中键拖动)
+* <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>[</kbd> 折叠代码
+* <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>]</kbd> 展开代码
+* <kbd>Ctrl</kbd>+<kbd>KJ</kbd> 展开全部代码
+* <kbd>Ctrl</kbd>+<kbd>K1</kbd> 折叠1级代码, 1是可变的
+* <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>V</kbd> 原格式粘贴
+* <kbd>Ctrl</kbd>+<kbd>KV</kbd> 从记录中粘贴
 
 ## 惯例配置
 
@@ -109,8 +110,8 @@ import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.
     [
         120
     ],
-    "line_padding_bottom": 3,
-    "line_padding_top": 3,
+    "line_padding_bottom": 4,
+    "line_padding_top": 4,
     "margin": 0,
     "save_on_focus_lost": true,
     "show_encoding": true,
@@ -209,8 +210,9 @@ import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.
 
 ### 开启操作log
 
-`sublime.log_commands(True)`
-
+```python
+sublime.log_commands(True)
+```
 
 ### 注册码
 
