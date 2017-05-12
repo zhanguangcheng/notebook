@@ -30,6 +30,7 @@ import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.
 * `CFG Configuration Syntax Highlighting` 配置文件语法高亮
 * `Omni​Markup​Previewer`  Markdown预览 (报错解决:fix2 <http://blog.csdn.net/zhangyunfei_happy/article/details/54573435>)
 * `MarkdownHighlighting`  Markdown高亮
+* `ExtendedTabSwitcher`  快速切换tab(<kbd>Alt</kbd>+<kbd>N</kbd>)
 * `BufferScroll`  保存折叠状态
 * `ftpsync` FTP同步
 * `HTML5` HTML5标签拓展
@@ -114,6 +115,7 @@ import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.
     "line_padding_top": 4,
     "margin": 0,
     "save_on_focus_lost": true,
+    "scroll_past_end": false,
     "show_encoding": true,
     "show_line_endings": true,
     "tab_size": 4,
@@ -152,7 +154,8 @@ import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.
      { "keys": ["ctrl+q"], "command": "toggle_comment", "args": { "block": false } },
 
      { "keys": ["f1"], "command": "show_php_document" },
-     { "keys": ["shift+f1"], "command": "goto_documentation" }
+     { "keys": ["shift+f1"], "command": "goto_documentation" },
+     { "keys": ["alt+n"], "command": "extended_switcher", "args": {"list_mode": "window"} }
 ]
 ```
 
