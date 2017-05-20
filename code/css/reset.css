@@ -1,0 +1,308 @@
+/*--------------------------*\
+    * Global reset
+    * Date: 2015-04-02
+    * author: dbj
+    * © 2015 www.trjcn.com
+\*--------------------------*/
+
+/* 防止用户自定义背景颜色对网页的影响，添加让用户可以自定义字体 */
+html { color: #333; background-color: #fff; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+/* 内外边距通常让各个浏览器样式的表现位置不同 */
+body, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { margin: 0; padding: 0; }
+
+/* 重设 HTML5 标签, IE 需要在 js 中 createElement(TAG) */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+
+/* HTML5 媒体文件跟 img 保持一致 */
+audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+
+/* 要注意表单元素并不继承父级 font 的问题 */
+body, button, input, select, textarea { font: 12px/1.5 tahoma, arial, "Microsoft Yahei", "Hiragino Sans GB", \5b8b\4f53; }
+input, select, textarea { font-size: 100%; }
+textarea { resize: none; }
+
+/* 去掉各Table  cell 的边距并让其边重合 */
+table { border-collapse: collapse; border-spacing: 0; }
+
+/* IE bug fixed: th 不继承 text-align*/
+th { text-align: inherit; }
+
+/* 去除默认边框 */
+fieldset, img { border: 0; }
+
+/* ie6 7 8(q) bug 显示为行内表现 */
+iframe { display: block; }
+
+/* 去掉 firefox 下此元素的边框 */
+abbr, acronym { border: 0; font-variant: normal; }
+
+/* 一致的 del 样式 */
+del { text-decoration: line-through; }
+address, caption, cite, code, dfn, em, i, th, var { font-style: normal; font-weight: 500; }
+
+/* 去掉列表前的标识, li 会继承 */
+ol, ul { list-style: none; }
+
+/* 对齐是排版最重要的因素, 别让什么都居中 */
+caption, th { text-align: left; }
+
+/* 来自yahoo, 让标题都自定义, 适应多个系统应用 */
+h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: 500; }
+q:before, q:after { content: ''; }
+
+/* 统一上标和下标 */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+/* 正常链接 未访问 */
+a { color: #3b4a82; cursor: pointer; }
+
+/* 鼠标悬停 */
+a:hover { color: #e93100; text-decoration: underline; }
+
+/* 默认不显示下划线，保持页面简洁 */
+ins, a { text-decoration: none; }
+
+/* 代码字体 */
+code, kbd, pre, samp { font-family: monospace, serif; font-size: 1em; }
+.font-simsun { font-family: SimSun; }
+
+/* 清理浮动 */
+.clearfix{*zoom:1;}
+.clearfix:before,.clearfix:after{display:table;content:"";line-height:0;}
+.clearfix:after{clear:both;}
+
+.fn-clear:after{visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;}
+.fn-clear { *zoom: 1; /* for IE6 IE7 */ }
+.fn-ow-clear{ overflow:hidden; zoom:1;}
+/* 全局容器居中 1000px */
+.container:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+.container { *zoom: 1; width: 1000px; min-width: 1000px; margin-left: auto; margin-right: auto; }
+
+/* 隐藏, 通常用来与 JS 配合 */
+body .fn-hide { display: none;}
+
+/* 设置内联, 减少浮动带来的bug */
+.fn-left, .fn-right { _display: inline; /* for IE6 */ }
+.fn-left { float: left; }
+.fn-right { float: right; }
+
+/* 单行文字溢出时出现省略号，需设定宽度 */
+.fn-text-overflow { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* 简单的渐变 */
+.fn-linear { background: -webkit-gradient(linear, left top, left bottom, from(#fcfcfc), to(#f1f1f1)); background: -moz-linear-gradient(top, #fcfcfc, #f1f1f1); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#f1f1f1'); background: -o-linear-gradient(top, #fcfcfc, #f1f1f1); background: -ms-linear-gradient(top, #fcfcfc, #f1f1f1); background: linear-gradient(to bottom, #fcfcfc, #f1f1f1); }
+
+/* 浅色的渐变 */
+.fn-linear-light { background: -webkit-gradient(linear, left top, left bottom, from(#fcfcfc), to(#f9f9f9)); background: -moz-linear-gradient(top, #fcfcfc, #f9f9f9); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#f9f9f9'); background: -o-linear-gradient(top, #fcfcfc, #f9f9f9); background: -ms-linear-gradient(top, #fcfcfc, #f9f9f9); background: linear-gradient(to bottom, #fcfcfc, #f9f9f9); }
+
+/* 人民币符号 */
+.fn-rmb { font-family: arial; font-style: normal; padding-right: 4px; }
+
+/* chrome 下字体过小的问题 */
+.fn-webkit-adjust { -webkit-text-size-adjust: none; }
+
+/* 文字设置 */
+.fn-text-indent { text-indent: 2em; }
+.fn-font-14b { font-size: 14px; font-weight: bold; vertical-align: middle; }
+.fn-font-b { font-weight: bold; }
+.fn-font-n { font-weight: normal; }
+.fn-font-i { font-style: italic; }
+.fn-font-12 { font-size: 12px; }
+.fn-font-14 { font-size: 14px; }
+.fn-font-16 { font-size: 16px; }
+.fn-font-18 { font-size: 18px; }
+.fn-font-20 { font-size: 20px; }
+.fn-font-22 { font-size: 22px; }
+.fn-font-24 { font-size: 24px; }
+.fn-font-26 { font-size: 26px; }
+.fn-font-28 { font-size: 28px; }
+
+
+/* 对齐方式 */
+.fn-tal { text-align: left !important; }
+.fn-tac { text-align: center !important; }
+.fn-tar { text-align: right !important; }
+.fn-vat { vertical-align: top; }
+.fn-vam { vertical-align: middle; }
+.fn-vab { vertical-align: bottom; }
+.fn-vaba { vertical-align: baseline; }
+.fn-v-hide { visibility: hidden; }
+
+/* 定位 */
+.fn-pr { position: relative; }
+.fn-pa { position: absolute; }
+
+/* 内填充 */
+.fn-pt-5 { padding-top: 5px !important; }
+.fn-pr-5 { padding-right: 5px !important; }
+.fn-pb-5 { padding-bottom: 5px !important; }
+.fn-pl-5 { padding-left: 5px !important; }
+.fn-p-5 { padding: 5px !important; }
+.fn-pt-10 { padding-top: 10px !important; }
+.fn-pr-10 { padding-right: 10px !important; }
+.fn-pb-10 { padding-bottom: 10px !important; }
+.fn-pl-10 { padding-left: 10px !important; }
+.fn-p-10 { padding: 10px !important; }
+.fn-pt-15 { padding-top: 15px !important; }
+.fn-pr-15 { padding-right: 15px !important; }
+.fn-pb-15 { padding-bottom: 15px !important; }
+.fn-pl-15 { padding-left: 15px !important; }
+.fn-p-15 { padding: 15px !important; }
+.fn-pt-20 { padding-top: 20px !important; }
+.fn-pr-20 { padding-right: 20px !important; }
+.fn-pb-20 { padding-bottom: 20px !important; }
+.fn-pl-20 { padding-left: 20px !important; }
+.fn-p-20 { padding: 20px !important; }
+.fn-pt-25 { padding-top: 25px !important; }
+.fn-pr-25 { padding-right: 25px !important; }
+.fn-pb-25 { padding-bottom: 25px !important; }
+.fn-pl-25 { padding-left: 25px !important; }
+.fn-p-25 { padding: 25px !important; }
+.fn-pt-30 { padding-top: 30px !important; }
+.fn-pr-30 { padding-right: 30px !important; }
+.fn-pb-30 { padding-bottom: 30px !important; }
+.fn-pl-30 { padding-left: 30px !important; }
+.fn-p-30 { padding: 30px !important; }
+.fn-pb-50 { padding-bottom: 50px !important; }
+/* 外边距 */
+.fn-mt-5 { margin-top: 5px !important; }
+.fn-mr-5 { margin-right: 5px !important; }
+.fn-mb-5 { margin-bottom: 5px !important; }
+.fn-ml-5 { margin-left: 5px !important; }
+.fn-m-5 { margin: 5px !important; }
+.fn-mt-10 { margin-top: 10px !important; }
+.fn-mr-10 { margin-right: 10px !important; }
+.fn-mb-10 { margin-bottom: 10px !important; }
+.fn-ml-10 { margin-left: 10px !important; }
+.fn-m-10 { margin: 10px !important; }
+.fn-mt-15 { margin-top: 15px !important; }
+.fn-mr-15 { margin-right: 15px !important; }
+.fn-mb-15 { margin-bottom: 15px !important; }
+.fn-ml-15 { margin-left: 15px !important; }
+.fn-m-15 { margin: 15px !important; }
+.fn-mt-20 { margin-top: 20px !important; }
+.fn-mr-20 { margin-right: 20px !important; }
+.fn-mb-20 { margin-bottom: 20px !important; }
+.fn-ml-20 { margin-left: 20px !important; }
+.fn-m-20 { margin: 20px !important; }
+.fn-mt-25 { margin-top: 25px !important; }
+.fn-mr-25 { margin-right: 25px !important; }
+.fn-mb-25 { margin-bottom: 25px !important; }
+.fn-ml-25 { margin-left: 25px !important; }
+.fn-m-25 { margin: 25px !important; }
+.fn-mt-30 { margin-top: 30px !important; }
+.fn-mr-30 { margin-right: 30px !important; }
+.fn-mb-30 { margin-bottom: 30px !important; }
+.fn-ml-30 { margin-left: 30px !important; }
+.fn-m-30 { margin: 30px !important; }
+.fn-ml-35 { margin-left: 35px !important; }
+.fn-ml-50 { margin-left: 50px !important; }
+.fn-mr-150 { margin-right: 150px !important; }
+.fn-mr-160 { margin-right: 160px !important; }
+
+/* 文字颜色 */
+.ui-text-white { color: #fff; }
+.ui-text-gray { color: #999; }
+.ui-text-gray-2 { color: #666; }
+.ui-text-red { color: #e93100; }
+.ui-text-blue { color: #2d395f; }
+.ui-text-blue-2 { color: #3b4a82; }
+a.ui-text-blue-2:hover { color: #e93100; }
+.ui-text-orange { color: #f06612; }
+.ui-text-gray-3 { color: #333; }
+.ui-text-black { color: #000; }
+.c808080{color:#808080}
+/* 背景颜色 */
+.ui-bg-white { background-color: #fff; }
+
+/* 广告 box */
+.gg img { display: block; overflow: hidden; }
+
+/* 字的行高 */
+.ui-le-ht20 { line-height: 20px; }
+.ui-le-ht22 { line-height: 22px; }
+.ui-le-ht24 { line-height: 24px; }
+.ui-le-ht26 { line-height: 26px; }
+
+/* 组件 全局宽度 */
+.w20 { width: 20px !important; }
+.w30 { width: 30px !important; }
+.w35 { width: 35px !important; }
+.w40 { width: 40px !important; }
+.w50 { width: 50px !important; }
+.w60 { width: 60px !important; }
+.w70 { width: 70px !important; }
+.w80 { width: 80px !important; }
+.w90 { width: 90px !important; }
+.w100 { width: 100px !important; }
+.w102 { width: 102px !important; }
+.w110 { width: 110px !important; }
+.w120 { width: 120px !important; }
+.w125 { width: 125px !important; }
+.w130 { width: 130px !important; }
+.w140 { width: 140px !important; }
+.w150 { width: 150px !important; }
+.w155 { width: 155px !important; }
+.w160 { width: 160px !important; }
+.w166 { width: 166px !important; }
+.w170 { width: 170px !important; }
+.w180 { width: 180px !important; }
+.w190 { width: 190px !important; }
+.w200 { width: 200px !important; }
+.w220 { width: 220px !important; }
+.w260 { width: 260px !important; }
+.w270 { width: 270px !important; }
+.w280 { width: 280px !important; }
+.w290 { width: 290px !important; }
+.w300 { width: 300px !important; }
+.w330 { width: 330px !important; }
+.w304 { width: 304px !important; }
+.w350 { width: 350px !important; }
+.w370 { width: 370px !important; }
+.wb10 { width: 10%; }
+.wb20 { width: 20%; }
+.wb30 { width: 30%; }
+.wb40 { width: 40%; }
+.wb50 { width: 50%; }
+.wb60 { width: 60%; }
+.wb70 { width: 70%; }
+.wb80 { width: 80%; }
+.wb90 { width: 90%; }
+.wb98 { width: 98%; }
+.wb100 { width: 100%; }
+
+/* 手型*/
+.label-pointer, .label-pointer input { cursor: pointer; }
+.label-pointer input { vertical-align: middle; margin-right: 3px; }
+
+/* top边框*/
+.fn-border-t-gary { border-top: 1px solid #ddd; }
+.fn-border-gary { border: 1px solid #ddd; }
+.fn-br-l0 { border-left: 0 !important; }
+.fn-br-r0 { border-right: 0 !important; }
+.fn-br-t0 { border-top: 0 !important; }
+.fn-br-b0 { border-bottom: 0 !important; }
+.fn-bb-ece{ border-bottom:1px solid #ececec !important; }
+
+/* 公用分页 */
+.table-page-part { margin: 15px 0 15px 10px; overflow: hidden; zoom: 1; }
+.table-page-part .paging { text-align: right; }
+.paging { height: 26px; overflow: hidden; text-align: center; font: 12px arial; color: #666; }
+.paging a, .paging span { line-height: 24px; overflow: hidden; vertical-align: top; display: inline-block; }
+.paging a { height: 24px; border: 1px solid #e8e8e8; background: #ffffff; color: #999; padding: 0 10px; line-height: 24px; margin: 0 2px; text-decoration: none; }
+.paging a:hover { text-decoration: none; border: 1px solid #c1c1c1; background: #e9e9e9; color: #666; }
+.paging .select, .paging .selected { border: 1px solid #8892b5; background: #8892b5; margin: 0 2px; color: #fff; height: 24px; line-height: 24px; padding: 0 10px; }
+.paging .no { padding: 0 10px; height: 24px; margin: 0 2px; line-height: 24px; border: 1px solid #e8e8e8; background: #fff; cursor: no-drop; color: #ccc; }
+
+/*公共画出三角*/
+.part-icon-arrow-a, .part-icon-arrow-b { position: absolute; width: 0; height: 0; overflow: hidden; border: 8px dashed transparent; display: block; }
+
+/*验证 开始*/
+.prompt_pass{ position:absolute; left:5px; top:5px; color:#999; display:none}
+/*验证 结束*/
+
+/*内链颜色*/
+.nl-color{color:#3b4a82;}

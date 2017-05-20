@@ -28,7 +28,7 @@ import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.
 * `sublimeLinter-php`    php语法检测
 * `ini` ini文件语法高亮
 * `CFG Configuration Syntax Highlighting` 配置文件语法高亮
-* `Omni​Markup​Previewer`  Markdown预览 (报错解决:fix2 <http://blog.csdn.net/zhangyunfei_happy/article/details/54573435>)
+* `OmniMarkupPreviewer`  Markdown预览 (报错解决:fix2 <http://blog.csdn.net/zhangyunfei_happy/article/details/54573435>)
 * `MarkdownHighlighting`  Markdown高亮
 * `ExtendedTabSwitcher`  快速切换tab(<kbd>Alt</kbd>+<kbd>N</kbd>)
 * `BufferScroll`  保存折叠状态
