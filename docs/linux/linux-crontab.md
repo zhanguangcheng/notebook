@@ -66,4 +66,4 @@ crontab [选项]
 
 * 计划任务配置文件保存的位置： /var/spool/cron/<你的用户名>
 * 计划任务执行记录：/var/log/cron
-* 校验计划任务配置文件：[http://tool.lu/crontab/](http://tool.lu/crontab/)
+* 校验计划任务配置文件：<http://tool.lu/crontab/>

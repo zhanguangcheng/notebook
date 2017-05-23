@@ -53,6 +53,7 @@
 * [PhpExcel中文帮助手册1](http://www.cnblogs.com/freespider/p/3284828.html)
 * [PhpExcel中文帮助手册2](http://blog.csdn.net/yangyuteng/article/details/8463891)
 * [Yii2 干货集](https://github.com/forecho/awesome-yii2)
+* [Composer进阶使用 —— 常用命令和版本约束](https://segmentfault.com/a/1190000005898222)
 
 ## Markdown
 
