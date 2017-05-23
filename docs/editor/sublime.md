@@ -82,6 +82,7 @@ import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.
 ```json
 {
     "always_show_minimap_viewport": true,
+    "animation_enabled": false,
     "auto_complete": true,
     "auto_complete_commit_on_tab": true,
     "auto_complete_delay": 100,
@@ -98,6 +99,7 @@ import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.
     "ensure_newline_at_eof_on_save": true,
     "font_size": 12,
     "highlight_line": true,
+    "highlight_modified_tabs": true,
     "hot_exit": true,
     "ignored_packages":
     [

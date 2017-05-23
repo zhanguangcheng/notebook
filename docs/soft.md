@@ -18,6 +18,7 @@ Windows常用软件
 * [HeidiSQL](https://www.heidisql.com/)
 * [KeePass](http://keepass.info/)
 * [licecap](http://www.cockos.com/licecap/)
+* [listary](http://www.listary.com/)
 * [native for mysql](https://www.navicat.com/) $
 * [notepad2](http://notepad2.com/)
 * [PHPStorm](https://www.jetbrains.com/phpstorm/) $
