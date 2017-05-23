@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery chosen</title>
+    <link href="http://cdn.bootcss.com/chosen/1.7.0/chosen.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 
+    概述:
+        增强select下拉框插件, 可搜索
+    官网: 
+        https://harvesthq.github.io/chosen/ 
+    -->
+
+    <select class="chosen-1" data-placeholder="请选择城市">
+        <option value=""></option>
+        <option value="United States">United States</option>
+        <option disabled value="United Kingdom">United Kingdom</option>
+        <option value="Afghanistan">Afghanistan</option>
+        <option value="Aland Islands">Aland Islands</option>
+        <option value="Albania">Albania</option>
+        <option value="Algeria">Algeria</option>
+        <option value="American Samoa">American Samoa</option>
+        <option value="Andorra">Andorra</option>
+        <option value="Austria">Austria</option>
+        <option value="Austria2">Austria2</option>
+    </select>
+
+    <select class="chosen-2" data-placeholder="请选择城市" multiple>
+        <option value=""></option>
+        <option value="United States">United States</option>
+        <option disabled value="United Kingdom">United Kingdom</option>
+        <option selected value="Afghanistan">Afghanistan</option>
+        <option value="Aland Islands">Aland Islands</option>
+        <option selected value="Albania">Albania</option>
+        <option value="Algeria">Algeria</option>
+        <option value="American Samoa">American Samoa</option>
+        <option value="Andorra">Andorra</option>
+        <option value="Austria">Austria</option>
+        <option value="Austria2">Austria2</option>
+    </select>
+
+    <script src="http://cdn.bootcss.com/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/chosen/1.7.0/chosen.jquery.min.js"></script>
+    <script>
+    $(".chosen-1").chosen({
+        disable_search_threshold: 10,
+        no_results_text: "没有找到",
+        width: "300px",
+        placeholder_text_single:'请选择',
+    });
+
+    $(".chosen-2").chosen({
+        disable_search_threshold: 10,
+        no_results_text: "没有找到",
+        width: "300px",
+        placeholder_text_single:'请选择',
+    });
+    </script>
+</body>
+</html>
