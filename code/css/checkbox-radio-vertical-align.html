@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>复选框和文字垂直居中</title>
+    <style type="text/css">
+    body{font:12px SimSun;}
+    p{margin:30px 10px;}
+    .wrapper{margin:50px auto;width:500px;}
+
+    .input1{vertical-align:text-bottom; margin-bottom:-1px; *margin-bottom:-4px;}
+    .input2{height:13px; vertical-align:text-top; margin-top:0;}
+    .input3{height:15px; vertical-align:bottom; margin-bottom:-1px; margin-bottom:-2px\9; *margin-bottom:0px;}
+    .input4{height:14px; vertical-align:top; margin-top:1px; margin-top:0\9;}
+    .input5{vertical-align:middle; margin-top:-2px;}
+    .input6{vertical-align:-2px;}
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <form action="#" method="post">
+            <h2>单选框</h2>
+            <p><input type="radio" name="radio" id="radio1" class="input1"/><label for="radio1">解决方法一</label></p>
+            <p><input type="radio" name="radio" id="radio2" class="input2"/><label for="radio2">解决方法二</label></p>
+            <p><input type="radio" name="radio" id="radio3" class="input3"/><label for="radio3">解决方法三</label></p>
+            <p><input type="radio" name="radio" id="radio4" class="input4"/><label for="radio4">解决方法四</label></p>
+            <p><input type="radio" name="radio" id="radio5" class="input5"/><label for="radio5">解决方法五</label></p>
+            <p><input type="radio" name="radio" id="radio6" class="input6"/><label for="radio6">解决方法六</label></p>
+            <h2>复选框</h2>
+            <p><input type="checkbox" name="checkbox" id="checkbox1" class="input1"/><label for="checkbox1">解决方法一</label></p>
+            <p><input type="checkbox" name="checkbox" id="checkbox2" class="input2"/><label for="checkbox2">解决方法二</label></p>
+            <p><input type="checkbox" name="checkbox" id="checkbox3" class="input3"/><label for="checkbox3">解决方法三</label></p>
+            <p><input type="checkbox" name="checkbox" id="checkbox4" class="input4"/><label for="checkbox4">解决方法四</label></p>
+            <p><input type="checkbox" name="checkbox" id="checkbox5" class="input5"/><label for="checkbox5">解决方法五</label></p>
+            <p><input type="checkbox" name="checkbox" id="checkbox6" class="input6"/><label for="checkbox6">解决方法六</label></p>
+        </form>
+    </div>
+</body>
+</html>
+<!-- http://www.cnblogs.com/yjzhu/archive/2012/12/07/2807737.html -->

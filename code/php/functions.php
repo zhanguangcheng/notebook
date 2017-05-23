@@ -41,6 +41,17 @@ if (!function_exists('array_column')) {
 }
 
 /**
+ * 美化的var_dump()
+ * > 更多丰富打印: https://github.com/zhanguangcheng/php-output
+ */
+function vd()
+{
+    ob_start();
+    call_user_func_array('var_dump', func_get_args());
+    echo preg_replace('/=>\n\s+/', '=> ', ob_get_clean());
+}
+
+/**
  * 格式化字节(略快)
  * @param  integer $size      字节
  * @param  string $delimiter 分隔符

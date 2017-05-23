@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义滚动条</title>
+    <style>
+    /*
+    自定义滚动条, 仅兼容webkit内核浏览器, 不兼容IE、Edge、FireFox、Opera Mini
+     */
+    .box {
+        width: 300px;height:200px;border:1px solid #ABABAB;overflow-y: auto;
+    }
+
+    .box::-webkit-scrollbar {
+        -webkit-appearance: none;
+    }
+
+    .box::-webkit-scrollbar:horizontal {
+        height: 11px
+    }
+
+    .box::-webkit-scrollbar:vertical {
+        width: 11px
+    }
+
+    .box::-webkit-scrollbar-thumb {
+        background-color:rgba(0,0,0,.33); 
+        border: 2px solid #fff;
+        border-radius: 8px;
+    }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat soluta at debitis magni maxime possimus sequi, quasi nisi labore accusantium neque eum culpa minus, natus totam deserunt iusto, veritatis asperiores! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, dolore rem aut architecto harum quos amet quas sequi laborum corporis ducimus distinctio doloremque nisi veritatis, quam deleniti et, eos saepe.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat soluta at debitis magni maxime possimus sequi, quasi nisi labore accusantium neque eum culpa minus, natus totam deserunt iusto, veritatis asperiores! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, dolore rem aut architecto harum quos amet quas sequi laborum corporis ducimus distinctio doloremque nisi veritatis, quam deleniti et, eos saepe.</p>
+    </div>
+</body>
+</html>
