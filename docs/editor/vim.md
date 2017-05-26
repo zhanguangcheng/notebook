@@ -41,6 +41,7 @@ gf 打开光标处的文件
 :#,#s/old/new/g替换 #代表行号
 :%s/old/new/gc替换,全局替换,并询问用户是否替换
 :!<命令> 执行外部命令
+:nohl 搜索之后取消高亮
 :set paste 粘贴模式
 ```
 
@@ -55,9 +56,6 @@ syntax on
 
 "显示行号
 set number
-
-"设置背景为亮色
-set background=light
 
 "高亮当前行
 set cursorline

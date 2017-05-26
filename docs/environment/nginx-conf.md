@@ -90,7 +90,7 @@ http{
     gzip_vary on;
 
     #ie6禁用gzip压缩，否则会出现bug
-    gzip_disable "MSIE [1-6]\.(?!.*SV1)";
+    gzip_disable "msie6";
 
 
     open_file_cache max=1000 inactive=20s;
@@ -123,8 +123,8 @@ http{
         #隐藏nginx的版本号 默认为on
         server_tokens off;
 
-	#自定义错误页面
-	error_page 404 /404.html;
+        #自定义错误页面
+        error_page 404 /404.html;
 
         #隐藏index.php的通常做法（请求一个不存在的资源时，）
         location / {
@@ -132,7 +132,7 @@ http{
             #    rewrite ^/(.*)$ /index.php/$1 last;
             #}
 
-	    #下行与上三行同样功能
+            #下行与上三行同样功能
             try_files $uri /index.php$uri?$query_string;
         }
 

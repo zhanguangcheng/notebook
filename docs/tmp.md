@@ -44,4 +44,46 @@ systemctl enable php-fpm
 systemctl restart iptables
 
 setenforce 0
+
+cat snippets/fastcgi-php.conf
+# the file from Ubuntu_16 nginx 1.10.3
+# regex to split $uri to $fastcgi_script_name and $fastcgi_path
+fastcgi_split_path_info ^(.+\.php)(/.+)$;
+
+# Check that the PHP script exists before passing it
+try_files $fastcgi_script_name =404;
+
+# Bypass the fact that try_files resets $fastcgi_path_info
+# see: http://trac.nginx.org/nginx/ticket/321
+set $path_info $fastcgi_path_info;
+fastcgi_param PATH_INFO $path_info;
+
+fastcgi_index index.php;
+include fastcgi.conf;
+
+cat sites/pathinfo.conf
+server {
+    root /var/www/php;
+    server_name php.xc;
+    location ~ \.php$ {
+        fastcgi_pass 127.0.0.1:9000;
+        include snippets/fastcgi-php.conf;
+    }
+}
+
+server {
+    root /var/www/php;
+    server_name php.xc;
+
+    # hidden index.php:domain.com/a/b
+    location / {
+        try_files $uri /index.php$uri?$query_string;
+    }
+
+    # support PATH_INFO:domain.com/index.php/a/b or domain.com/other.php/a/b
+    location ~ \.php(\/|$) {
+        fastcgi_pass 127.0.0.1:9000;
+        include snippets/fastcgi-php.conf;
+    }
+}
 ```
