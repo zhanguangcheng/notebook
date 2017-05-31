@@ -67,6 +67,7 @@
 
 * [20个正则表达式](http://www.jianshu.com/p/e7bb97218946)
 * [JavaScript常用正则表达式](https://github.com/xiayulei/notebook/issues/24)
+* [脚本之家-常用正则表达式](http://www.jb51.net/tools/regex.htm)
 
 ## 编辑器
 
