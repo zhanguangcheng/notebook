@@ -33,6 +33,8 @@ Windows常用软件
 * [TeamViewer](https://www.teamviewer.com/)
 * [Vim](http://www.vim.org/)
 * [VirtualBox](https://www.virtualbox.org/)
+* [VMware](https://download3.vmware.com/software/wkst/file/VMware-workstation-full-12.5.6-5528349.exe) $
+> 5A02H-AU243-TZJ49-GTC7K-3C61N
 * [WinSCP](https://winscp.net)
 * [Xshell](http://www.netsarang.com/xshell.html)
 * [Zeal](https://zealdocs.org/)
