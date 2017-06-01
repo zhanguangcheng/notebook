@@ -10,7 +10,7 @@ import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.
 ```
 
 * `Emmet`  前端神器(<kbd>Tab</kbd>)
-* `Alignment`  等号对齐(<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>A</kbd>`)
+* `Alignment`  等号对齐(<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>A</kbd>)
 * `Docblockr`  生成注释格式(`/**`)
 * `ConvertToUTF8`  更多编码支持
 * `IMESupport`  修复输入法不跟踪问题
