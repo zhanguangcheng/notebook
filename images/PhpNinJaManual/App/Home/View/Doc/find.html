@@ -1,0 +1,34 @@
+<style>
+a{
+    color: #62D9EF;
+}
+label {
+    color: #66D9EF;
+    font-weight: bold;
+}
+.args {
+    color: #BE84FF;
+}
+</style>
+<p>{$fun.desc}({$fun.ver})</p>
+<span class="keyword">{$fun.params.0.ret_type}</span>
+<a class="entity name function" href="{$url}" title="title">{$fun.params.0.name}</a>
+(<span class="comment line">
+<volist name="fun.params.0.list" id="i">
+{$i['beh']=='optional'?' [':''}<neq name="key" value="0">,</neq> <span class="keyword">{$i.type}</span>
+<span class="string quoted">{$i.var}</span><?php echo isset($i['default']) ? ' = '.$i['default'] : '' ?>
+{$i['beh']=='optional'?']':''}</volist>
+</span>)
+<p>
+    <label>说明: </label>
+    {$fun.long_desc}
+</p>
+<p>
+    <label>参数: </label><br>
+    <volist name="fun.params.0.list" id="i">
+        　<span class="entity name function">{$i.var}</span>
+        <br>
+        　　{$i['desc']? $i['desc']: '暂无说明'}<br>
+    </volist>
+</p>
+<p><label>返回值: </label>{$fun.ret_desc}</p>
