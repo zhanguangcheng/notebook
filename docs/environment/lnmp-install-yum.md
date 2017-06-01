@@ -27,20 +27,6 @@ yum -y install nginx
 yum -y install php70w-fpm php70w-cli php70w-gd php70w-pdo php70w-mysql php70w-xml php70w-mbstring php70w-opcac he php70w-pgsql php70w-intl php70w-mcrypt php70w-soap
 ```
 
-*[nginx配置](https://github.com/zhanguangcheng/notebook/tree/master/code/nginx/etc/nginx)*
-
-*查看mysql默认设置的密码:*
-
-```bash
-grep 'temporary password' /var/log/mysqld.log
-```
-
-*测试环境可以设置:*
-
-```bash
-[mysqld]
-validate_password = off
-```
 
 ## 启动
 
@@ -63,9 +49,23 @@ systemctl enable mysqld php-fpm nginx
 
 ## 注意事项
 
-* 防火墙 firewalld
-* selinux
+* 防火墙 firewalld `systemctl stop firewalld`
+* selinux `setenforce 0`
 
+*[nginx配置](https://github.com/zhanguangcheng/notebook/tree/master/code/nginx/etc/nginx)*
+
+*查看mysql默认设置的密码:*
+
+```bash
+grep 'password' /var/log/mysqld.log
+```
+
+*测试环境可以设置:*
+
+```bash
+[mysqld]
+validate_password = off
+```
 
 ## Reference
 
