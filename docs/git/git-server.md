@@ -5,13 +5,10 @@ Git服务器搭建
 
 > CentOS6.6 64位 Basic Server
 
-## 下载
-
-[http://pan.baidu.com/s/1b2SQ0u](http://pan.baidu.com/s/1b2SQ0u)
-
-## 安装git
+## 安装git-编译安装
 
 ```shell
+# 下载链接 <https://www.kernel.org/pub/software/scm/git/>
 #将git-1.7.9.1.tar.gz上传到 ~/tar/ 目录下
 
 #解压git包
@@ -36,6 +33,13 @@ source /etc/profile
 
 #运行 如下命令 显示"git version 1.7.9.1"即安装成功
 git --version
+```
+
+## 安装git-yum安装
+
+```bash
+yum -y install git
+su -c 'adduser git'
 ```
 
 ## 配置rsa秘钥环境
@@ -78,7 +82,7 @@ ssh-keygen -t rsa
 
 > 第一次会提示你秘钥保存位置, 直接回车使用默认位置  
 > 第二次和第三次提示你输入该秘钥的密码, 根据情况自己设置, 直接回车密码为空.  
-> 使用git bash操作, 不是cmd啊  
+> 使用[git bash](https://git-scm.com/downloads)操作, 不是cmd啊  
 
 2. 将客户端生成的公钥里面的内容粘贴到服务器上`/home/git/.ssh/authorized_keys`文件中, 一行一个. 
 
