@@ -38,3 +38,11 @@ Windows常用软件
 * [WinSCP](https://winscp.net)
 * [Xshell](http://www.netsarang.com/xshell.html)
 * [Zeal](https://zealdocs.org/)
+
+
+常用网站工具
+===============
+
+* [Staticfile CDN](http://www.staticfile.org/)
+* [BootCDN](http://www.bootcdn.cn/)
+* [RawGit](http://rawgit.com/)

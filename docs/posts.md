@@ -40,6 +40,7 @@
 * [scrollTop,offsetTop,scrollLeft,offsetLeft](http://i.jakeyu.top/2016/09/04/scrollTop-offsetTop-scrollLeft-offsetLeft/)
 * [充分理解这几张图，你就是js小牛了](http://www.qdfuns.com/notes/16115/2949efbf88d86f01fe4fadab65c47dd6.html)
 * [YOU MIGHT NOT NEED JQUERY](http://youmightnotneedjquery.com/)
+* [只有20行Javascript代码！手把手教你写一个页面模板引擎](http://blog.jobbole.com/56689/)
 
 ## PHP
 
