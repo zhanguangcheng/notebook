@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>常用加密库md5, sha1, base64</title>
+</head>
+<body>
+    <!--
+    更多加密算法: https://github.com/emn178/online-tools 
+    -->
+    <script src="https://rawgit.com/emn178/js-md5/master/build/md5.min.js"></script>
+    <script src="https://rawgit.com/emn178/js-sha1/master/build/sha1.min.js"></script>
+    <script src="https://rawgit.com/emn178/hi-base64/master/build/base64.min.js"></script>
+    <script src="https://rawgit.com/emn178/hi-base64/master/build/base64.min.js"></script>
+    <script>
+        document.write("md5('admin') => ", md5('admin'), '<hr>');
+        document.write("sha1('admin') => ", sha1('admin'), '<hr>');
+        document.write("base64.encode('admin') => ", base64.encode('admin'), '<hr>');
+        document.write("base64.decode('YWRtaW4=') => ", base64.decode('YWRtaW4='), '<hr>');
+    </script>
+</body>
+</html>

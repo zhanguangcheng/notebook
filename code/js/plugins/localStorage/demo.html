@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <!--[if ie]>
+    <script src="./localStorage.js"></script>
+    <![endif]-->
+
+    <script>
+        if (window.localStorage) {
+            console.log('支持');
+        } else {
+            console.log('不支持');
+        }
+        localStorage.setItem('key', 'value');
+        console.log(localStorage.getItem('key'));
+    </script>
+</body>
+</html>

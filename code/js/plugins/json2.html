@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>让不支持JSON对象的浏览器兼容(ie7以下就不支持)</title>
+</head>
+<body>
+    <!--
+    https://github.com/douglascrockford/JSON-js
+    -->
+    <script>
+        if (typeof JSON !== "object") {
+            var o = document.createElement('script');
+            o.src = 'http://cdn.bootcss.com/json2/20160511/json2.min.js';
+            o.defer = false;
+            document.getElementsByTagName('head')[0].appendChild(o);
+        }
+    </script>
+</body>
+</html>

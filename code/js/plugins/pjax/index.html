@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pjax Demo</title>
+</head>
+<body>
+
+    <div style="width:195px;position:fixed;top:0;bottom:0;left:0;border:1px solid red">
+        <p>menu</p>
+        <ul>
+            <li><a href="index.html">index.html</a></li>
+            <li><a href="page1.html">page1.html</a></li>
+            <li><a href="page2.html">page2.html</a></li>
+        </ul>
+    </div>
+
+    <div id="box" style="height:100%;position:absolute;left:200px;top:0;bottom:0;right:0;border:2px solid blue;">
+        index
+    </div>
+
+    <script src="//cdn.bootcss.com/jquery/1.10.0/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/jquery.pjax/1.9.6/jquery.pjax.min.js"></script>
+    <script>
+        $(document).pjax('a[target!=_blank]', '#box', {
+            timeout: 2000, // 超时, 跳转
+            scrollTo: false,// 保持滚动条
+            fragment: '#box'// 指定取的片段(css选择器)
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cookie</title>
+</head>
+<body>
+    <!--
+    https://github.com/js-cookie/js-cookie
+    必须在http环境中才可用
+    -->
+    <script src="http://cdn.bootcss.com/js-cookie/2.1.4/js.cookie.min.js"></script>
+    <script>
+        Cookies.set('name', 'value');
+        console.log(Cookies.get('name'));
+
+        Cookies.set('json', {"name": "grass", "age": 18}, {
+            expires: 7
+        });
+        console.log(Cookies.getJSON('json'));
+
+        Cookies.remove('name');
+    </script>
+</body>
+</html>
