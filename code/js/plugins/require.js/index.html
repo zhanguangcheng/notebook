@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AMD规范模块化 Require.js Demo</title>
+    <script defer async="true" src="//cdn.bootcss.com/require.js/2.3.3/require.min.js" data-main="lib/app"></script>
+</head>
+<body>
+    <!--
+    http://requirejs.org/
+    http://www.ruanyifeng.com/blog/2012/11/require_js.html
+
+    执行结果:
+    20:04:04.074 (index):22 document ready
+    20:04:04.287 test.js:2 run other/test.js
+    20:04:04.346 module1.js:2 run module1.js
+    20:04:04.347 app.js:16 jquery: function (e,t){return new v.fn.init(e,t,n)}
+    20:04:04.348 app.js:17 module1: Object {data: Object, func1: function}
+    20:04:04.354 module1.js:4 module1.func1() function (e,t){return new v.fn.init(e,t,n)}
+    -->
+    <div id="box">box</div>
+    <script>
+        console.log('document ready');
+    </script>
+</body>
+</html>
