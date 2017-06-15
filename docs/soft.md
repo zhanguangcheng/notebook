@@ -49,3 +49,4 @@ Windows常用软件
 * [BootCDN](http://www.bootcdn.cn/ "CDN")
 * [RawGit](http://rawgit.com/ "转换github文件的header，让其可以解析（不能用于生产环境）")
 * [hyperpolyglot](http://hyperpolyglot.org/ "各种语言，工具的对比")
+* [MSDN, 我告诉你](http://www.itellyou.cn/ "各种原版Windows系统, 软件")
