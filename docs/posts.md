@@ -41,6 +41,7 @@
 * [充分理解这几张图，你就是js小牛了](http://www.qdfuns.com/notes/16115/2949efbf88d86f01fe4fadab65c47dd6.html)
 * [YOU MIGHT NOT NEED JQUERY](http://youmightnotneedjquery.com/)
 * [只有20行Javascript代码！手把手教你写一个页面模板引擎](http://blog.jobbole.com/56689/)
+* [Javascript模块化编程（三）：require.js的用法](http://www.ruanyifeng.com/blog/2012/11/require_js.html)
 
 ## PHP
 
