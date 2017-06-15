@@ -3,7 +3,6 @@
  * 常用函数集合
  */
 
-
 if (!function_exists('array_column')) {
     /**
      * Returns an array of values representing a single column from the input
@@ -154,6 +153,33 @@ function decrypt($data, $key)
         }
     }
     return $str;
+}
+
+/**
+ * 对称编码
+ * 不是用于安全传输, 而是用于验证数据的合法来源
+ * @param  mixed $data
+ * @param  string $key
+ * @return string
+ */
+function symmetry_encode($data, $key = 'XqNI@8sCmZ[=u@CJc#]L')
+{
+    $data = base64_encode(serialize($data));
+    return md5($data . $key) . $data;
+}
+
+/**
+ * 对称解码
+ * @param  mixed $data
+ * @param  string $key
+ * @return string
+ */
+function symmetry_decode($data, $key = 'XqNI@8sCmZ[=u@CJc#]L')
+{
+    if (md5(substr($data, 32) . $key) === substr($data, 0, 32)) {
+        return unserialize(base64_decode(substr($data, 32)));
+    }
+    return null;
 }
 
 /**
