@@ -6,7 +6,7 @@ app.js是入口文件, 在引入require.js时 data-main定义的
 require.config({
     baseUrl: './lib',
     paths: {
-        "jquery": "http://cdn.bootcss.com/jquery/1.8.3/jquery.min",
+        "jquery": "//cdn.bootcss.com/jquery/1.8.3/jquery.min",
         "module1": "module1"
     }
 });
