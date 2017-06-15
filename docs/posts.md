@@ -56,6 +56,12 @@
 * [Yii2 干货集](https://github.com/forecho/awesome-yii2)
 * [Composer进阶使用 —— 常用命令和版本约束](https://segmentfault.com/a/1190000005898222)
 
+## 小程序
+
+* [小程序blog](https://my.oschina.net/huangxiujie/blog)
+* [小程序服务端集成微信支付](https://my.oschina.net/huangxiujie/blog/817654)
+* [微信小程序实现微信登录](https://my.oschina.net/huangxiujie/blog/903277)
+
 ## Markdown
 
 * [markdown简明语法](http://ibruce.info/2013/11/26/markdown/)

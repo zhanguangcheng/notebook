@@ -25,6 +25,7 @@ Windows常用软件
 * [Postman](https://www.getpostman.com/)
 * [PuTTY](http://www.putty.org/)
 * [RegexTester](http://www.regextester.com/)
+* [Rufus](http://rufus.akeo.ie/ "支持各种系统的U盘制作工具")
 * [seer](http://www.1218.io/)
 * [SourceTree](https://www.sourcetreeapp.com/)
 * [SQLiteStudio](https://sqlitestudio.pl)
@@ -43,6 +44,7 @@ Windows常用软件
 常用网站工具
 ===============
 
-* [Staticfile CDN](http://www.staticfile.org/)
-* [BootCDN](http://www.bootcdn.cn/)
-* [RawGit](http://rawgit.com/)
+* [Staticfile CDN](http://www.staticfile.org/ "CDN")
+* [BootCDN](http://www.bootcdn.cn/ "CDN")
+* [RawGit](http://rawgit.com/ "转换github文件的header，让其可以解析（不能用于生产环境）")
+* [hyperpolyglot](http://hyperpolyglot.org/ "各种语言，工具的对比")
