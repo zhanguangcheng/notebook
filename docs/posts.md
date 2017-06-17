@@ -42,6 +42,8 @@
 * [YOU MIGHT NOT NEED JQUERY](http://youmightnotneedjquery.com/)
 * [只有20行Javascript代码！手把手教你写一个页面模板引擎](http://blog.jobbole.com/56689/)
 * [Javascript模块化编程（三）：require.js的用法](http://www.ruanyifeng.com/blog/2012/11/require_js.html)
+* [requireJS 从概念到实战](http://www.cnblogs.com/HCJJ/p/6611669.html)
+* [RequireJS进阶:配置文件的学习](https://segmentfault.com/a/1190000002401665)
 
 ## PHP
 
