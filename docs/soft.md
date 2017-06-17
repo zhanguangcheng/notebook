@@ -45,8 +45,9 @@ Windows常用软件
 常用网站工具
 ===============
 
-* [Staticfile CDN](http://www.staticfile.org/ "CDN")
 * [BootCDN](http://www.bootcdn.cn/ "CDN")
-* [RawGit](http://rawgit.com/ "转换github文件的header，让其可以解析（不能用于生产环境）")
 * [hyperpolyglot](http://hyperpolyglot.org/ "各种语言，工具的对比")
 * [MSDN, 我告诉你](http://www.itellyou.cn/ "各种原版Windows系统, 软件")
+* [RawGit](http://rawgit.com/ "转换github文件的header，让其可以解析（不能用于生产环境）")
+* [Staticfile CDN](http://www.staticfile.org/ "CDN")
+* [TinyPNG](https://tinypng.com/ "png,jpg图片压缩")
