@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>iCheck 单选框复选框美化</title>
+</head>
+<body>
+    <!-- 
+    github: 
+        https://github.com/fronteed/icheck
+    website:
+        http://icheck.fronteed.com/
+     -->
+    <script src="//cdn.bootcss.com/jquery/1.8.3/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/iCheck/1.0.2/icheck.min.js"></script>
+
+    <!-- 操作演示 -->
+    <div>
+        <button data-name="radio" data-action="check">radio check</button>
+        <button data-name="radio" data-action="uncheck">radio uncheck</button>
+        <button data-name="radio" data-action="getcheck">radio get check</button>
+        <button data-name="radio" data-action="enable">radio enable</button>
+        <button data-name="radio" data-action="disable">radio disable</button>
+        <br>
+    </div>
+    <script>
+        $('button').on('click', function() {
+            $radio = $('.radio');
+            $checkbox = $('.checkbox');
+            if ($(this).data('name') == 'radio') {
+                switch ($(this).data('action')) {
+                    case 'check':
+                        $radio.iCheck('check');
+                        break;
+                    case 'uncheck':
+                        $radio.iCheck('uncheck');
+                        break;
+                    case 'getcheck':
+                        console.log($radio.attr('checked'));
+                        break;
+                    case 'enable':
+                        $radio.iCheck('enable');
+                        break;
+                    case 'disable':
+                        $radio.iCheck('disable');
+                        break;
+                }
+            }
+        });
+    </script>
+    <!-- ./操作演示 -->
+
+    <!-- minimal-blue 效果展示 -->
+    <link href="//cdn.bootcss.com/iCheck/1.0.2/skins/minimal/blue.css" rel="stylesheet">
+    <div class="box1">
+        <label><input class="radio" type="radio" name="radio">radio</label>
+        <label><input type="radio" name="radio">radio</label>
+        <label><input type="radio" checked name="radio">radio</label>
+        <label><input type="radio" readonly name="radio">radio</label>
+        <label><input type="radio" disabled name="radio">disabled</label>
+        <br>
+        <label><input class="checkbox" type="checkbox">checkbox</label>
+        <label><input type="checkbox">checkbox</label>
+        <label><input type="checkbox" checked>checkbox</label>
+        <label><input type="checkbox" readonly>checkbox</label>
+        <label><input type="checkbox" disabled>disabled</label>
+    </div>
+    <script>
+        $('.box1 input').iCheck({
+           checkboxClass: 'icheckbox_minimal-blue',
+           radioClass: 'iradio_minimal-blue',
+           increaseArea: '20%'
+        });
+    </script>
+    <!-- ./minimal-blue 效果展示 -->
+
+    <!-- square-green 效果展示 -->
+    <hr>
+    <link href="//cdn.bootcss.com/iCheck/1.0.2/skins/square/green.css" rel="stylesheet">
+    <div class="box2">
+        <label><input type="radio" name="radio">radio</label>
+        <label><input type="radio" name="radio">radio</label>
+        <label><input type="radio" checked name="radio">radio</label>
+        <label><input type="radio" readonly name="radio">radio</label>
+        <label><input type="radio" disabled name="radio">disabled</label>
+        <br>
+        <label><input type="checkbox">checkbox</label>
+        <label><input type="checkbox">checkbox</label>
+        <label><input type="checkbox" checked>checkbox</label>
+        <label><input type="checkbox" readonly>checkbox</label>
+        <label><input type="checkbox" disabled>disabled</label>
+    </div>
+    <script>
+        $('.box2 input').iCheck({
+           checkboxClass: 'icheckbox_square-green',
+           radioClass: 'iradio_square-green',
+           increaseArea: '20%'
+        });
+    </script>
+    <!-- ./square-green 效果展示 -->
+
+    <!-- flat-red 效果展示 -->
+    <hr>
+    <link href="//cdn.bootcss.com/iCheck/1.0.2/skins/flat/red.css" rel="stylesheet">
+    <div class="box3">
+        <label><input type="radio" name="radio">radio</label>
+        <label><input type="radio" name="radio">radio</label>
+        <label><input type="radio" checked name="radio">radio</label>
+        <label><input type="radio" readonly name="radio">radio</label>
+        <label><input type="radio" disabled name="radio">disabled</label>
+        <hr>
+        <label><input type="checkbox">checkbox</label>
+        <label><input type="checkbox">checkbox</label>
+        <label><input type="checkbox" checked>checkbox</label>
+        <label><input type="checkbox" readonly>checkbox</label>
+        <label><input type="checkbox" disabled>disabled</label>
+    </div>
+    <script>
+        $('.box2 input').iCheck({
+           checkboxClass: 'icheckbox_flat-red',
+           radioClass: 'iradio_flat-red',
+           increaseArea: '20%'
+        });
+    </script>
+    <!-- /flat-red 效果展示 -->
+
+</body>
+</html>

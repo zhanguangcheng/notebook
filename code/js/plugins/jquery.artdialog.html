@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>artDialog</title>
+</head>
+<body>
+    <!-- 
+    github:
+        https://github.com/aui/artDialog/
+    website:
+        http://aui.github.io/artDialog/
+    docs&demo:
+        http://aui.github.io/artDialog/doc/index.html
+     -->
+     <div>
+         <button data-action="tips">tips</button>
+         <button data-action="loding">loding</button>
+         <button data-action="alert">alert</button>
+         <button data-action="confirm">confirm</button>
+         <button data-action="prompt">prompt</button>
+         <p>
+             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur minus quos accusamus, molestiae hic, accusantium sit distinctio ut libero nulla. Cumque ipsa nobis ut accusantium earum, magni, ex quam recusandae!
+         </p>
+         <p>
+             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur minus quos accusamus, molestiae hic, accusantium sit distinctio ut libero nulla. Cumque ipsa nobis ut accusantium earum, magni, ex quam recusandae!
+         </p>
+         <p>
+             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur minus quos accusamus, molestiae hic, accusantium sit distinctio ut libero nulla. Cumque ipsa nobis ut accusantium earum, magni, ex quam recusandae!
+         </p>
+         <p>
+             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur minus quos accusamus, molestiae hic, accusantium sit distinctio ut libero nulla. Cumque ipsa nobis ut accusantium earum, magni, ex quam recusandae!
+         </p>
+         <p>
+             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur minus quos accusamus, molestiae hic, accusantium sit distinctio ut libero nulla. Cumque ipsa nobis ut accusantium earum, magni, ex quam recusandae!
+         </p>
+         <p>
+             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur minus quos accusamus, molestiae hic, accusantium sit distinctio ut libero nulla. Cumque ipsa nobis ut accusantium earum, magni, ex quam recusandae!
+         </p>
+         <p>
+             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur minus quos accusamus, molestiae hic, accusantium sit distinctio ut libero nulla. Cumque ipsa nobis ut accusantium earum, magni, ex quam recusandae!
+         </p>
+         <p>
+             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur minus quos accusamus, molestiae hic, accusantium sit distinctio ut libero nulla. Cumque ipsa nobis ut accusantium earum, magni, ex quam recusandae!
+         </p>
+         <p>
+             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur minus quos accusamus, molestiae hic, accusantium sit distinctio ut libero nulla. Cumque ipsa nobis ut accusantium earum, magni, ex quam recusandae!
+         </p>
+         <p>
+             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur minus quos accusamus, molestiae hic, accusantium sit distinctio ut libero nulla. Cumque ipsa nobis ut accusantium earum, magni, ex quam recusandae!
+         </p>
+         <p>
+             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur minus quos accusamus, molestiae hic, accusantium sit distinctio ut libero nulla. Cumque ipsa nobis ut accusantium earum, magni, ex quam recusandae!
+         </p>
+         <p>
+             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur minus quos accusamus, molestiae hic, accusantium sit distinctio ut libero nulla. Cumque ipsa nobis ut accusantium earum, magni, ex quam recusandae!
+         </p>
+         <p>
+             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur minus quos accusamus, molestiae hic, accusantium sit distinctio ut libero nulla. Cumque ipsa nobis ut accusantium earum, magni, ex quam recusandae!
+         </p>
+         <p>
+             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur minus quos accusamus, molestiae hic, accusantium sit distinctio ut libero nulla. Cumque ipsa nobis ut accusantium earum, magni, ex quam recusandae!
+         </p>
+     </div>
+     <div class="box" style="display:none">
+         <form class="form">
+             <h2>register</h2>
+             <p>username: <input type="text"></p>
+             <p>password: <input type="password"></p>
+        </form>
+     </div>
+     <script src="//cdn.bootcss.com/jquery/1.8.3/jquery.min.js"></script>
+     <script src="//cdn.bootcss.com/artDialog/7.0.0/dialog.js"></script>
+     <script src="//cdn.bootcss.com/artDialog/7.0.0/dialog-plus.js"></script>
+     <script>
+        var art = {
+            dialog: dialog,
+            instance: null,
+            backdropOpacity: 0.5,
+            
+            /* 简单提示, 自动关闭 */
+            tips: function(msg) {
+                var d = this.instance = this.dialog({
+                    content: msg,
+                    fixed: true,
+                    quickClose: true,
+                    backdropOpacity: this.backdropOpacity
+                }).show();
+                setTimeout(function () {
+                    d.close().remove();
+                }, 2000);
+            },
+
+            /* 加载层 */
+            loding: function(msg, timeout) {
+                var d = this.instance = this.dialog({
+                    title: msg || "加载中……　　　",
+                    cancel: false,
+                    cancelDisplay: false,
+                    fixed: true,
+                    backdropOpacity: 0
+                }).showModal();
+                setTimeout(function() {
+                    d.close().remove();
+                }, timeout || 2000);
+            },
+
+            /* 关闭加载层 */
+            closeLoding: function() {
+                this.instance.close().remove();
+            },
+
+            /* 提示框 */
+            alert: function(msg) {
+                this.instance = this.dialog({
+                    title: "温馨提示",
+                    content: msg,
+                    fixed: true,
+                    quickClose: true,
+                    backdropOpacity: this.backdropOpacity
+                }).show();
+            },
+
+            /* 确认框 */
+            confirm: function(msg, okCall, cancelCall) {
+                this.instance = this.dialog({
+                    title: "温馨提示",
+                    content: msg,
+                    fixed: true,
+                    okValue: "确定",
+                    cancelValue: "取消",
+                    backdropOpacity: this.backdropOpacity,
+                    ok: okCall || function(){},
+                    cancel: cancelCall || function(){}
+                }).showModal();
+            },
+
+            /* 输入框 */
+            prompt: function(msg, defaultValue, okCall) {
+                var defaultValue = defaultValue || '';
+                this.instance = this.dialog({
+                    title: msg,
+                    content: '<input id="artdialog-prompt-input" value="' + defaultValue + '">',
+                    fixed: true,
+                    okValue: "确定",
+                    cancelValue: "取消",
+                    backdropOpacity: this.backdropOpacity,
+                    ok: function() {
+                        okCall && okCall($('#artdialog-prompt-input').val());
+                    },
+                    cancel: function() {
+                        okCall && okCall($('#artdialog-prompt-input').val());
+                    }
+                }).showModal();
+            }
+        };
+
+        $(document).on('click', 'button', function() {
+            var action = $(this).data('action');
+            switch (action) {
+                case 'tips':
+                    art.tips('对话框将在两秒内关闭');
+                    break;
+                case 'loding':
+                    art.loding();
+                    setTimeout(function() {
+                        art.closeLoding();
+                    }, 1000);
+                    break;
+                case 'alert':
+                    art.alert('alert提示框');
+                    break;
+                case 'confirm':
+                    art.confirm('你真的确认要执行该操作吗?', function(){
+                        alert('ok');
+                    }, function(){
+                        alert('cancel');
+                    });
+                    break;
+                case 'prompt':
+                    art.prompt('请输入内容', '默认值', function(content) {
+                        alert(content);
+                    });
+                    break;
+            }
+        });
+     </script>
+</body>
+</html>
