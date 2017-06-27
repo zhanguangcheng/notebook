@@ -19,7 +19,7 @@ JSON.parse('JSON字符串');
 JSON.stringify('JSON对象');
 ```
 
-## ie6 不支持console兼容方法(防止报错, 终止程序)
+## 不支持console兼容方法(防止报错, 终止程序), 兼容性: ie6,7不支持, ie8,9需要打开控制台才支持
 ```js
 var console = console || {log: function () {}};
 ```
