@@ -65,6 +65,14 @@ $('#goods-list').delegate('.delete', 'click', function(event) {
 });
 ```
 
+## jQuery事件推荐方式
+```js
+// 使用事件冒泡机制绑定到#range, .fn-delete为过滤器
+$('#range').on('click', '.fn-delete', function(event) {
+    // do some thing
+});
+```
+
 ## a链接javascript:fun1(this);这里的this代表window, 不是元素本身
 ```html
 <a href="javascript:fun1(this);">link</a>

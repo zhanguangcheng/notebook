@@ -17,6 +17,8 @@ import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.
 * `GotoDocumentation`   快速定位帮助文档
 * `PhpNinJaManual` PHP函数提示
 * `AutoFileName`   自动提示本地文件名
+* `phpfmt`   格式化PHP代码为PSR-2规范(需要PHP7环境)
+* `PHPCompanion`   PHP导入命名空间
 * `BracketHighlighter`    括号高亮
 * `All Completion` 全能代码提示
 * `modific`    更好的显示git&svn差异
