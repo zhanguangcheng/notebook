@@ -17,6 +17,7 @@ import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.
 * `GotoDocumentation`   快速定位帮助文档
 * `PhpNinJaManual` PHP函数提示
 * `AutoFileName`   自动提示本地文件名
+* `HTML-CSS-JS Prettify` 前端代码格式化(需要nodejs环境)
 * `phpfmt`   格式化PHP代码为PSR-2规范(需要PHP7环境)
 * `PHPCompanion`   PHP导入命名空间
 * `BracketHighlighter`    括号高亮
@@ -94,7 +95,6 @@ import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.
     "auto_indent": true,
     "auto_match_enabled": true,
     "bold_folder_labels": true,
-    "color_scheme": "Packages/User/SublimeLinter/Monokai (SL).tmTheme",
     "default_encoding": "UTF-8",
     "default_line_ending": "unix",
     "draw_minimap_border": true,
@@ -161,6 +161,9 @@ import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.
 
      { "keys": ["f1"], "command": "show_php_document" },
      { "keys": ["shift+f1"], "command": "goto_documentation" },
+     { "keys": ["alt+f"], "command": "fmt_now" },
+     { "keys": ["alt+u"], "command": "find_use" },
+     { "keys": ["ctrl+alt+f"], "command": "htmlprettify" },
      { "keys": ["alt+n"], "command": "extended_switcher", "args": {"list_mode": "window"} }
 ]
 ```
