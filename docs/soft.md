@@ -60,3 +60,4 @@ Windows常用软件
 * [Staticfile CDN](http://www.staticfile.org/ "CDN")
 * [Tick list](https://www.dida365.com "滴答清单")
 * [TinyPNG](https://tinypng.com/ "png,jpg图片压缩")
+* [微软常用运行库合集](https://www.baidu.com/baidu?wd=微软常用运行库合集" 微软常用运行库合集")

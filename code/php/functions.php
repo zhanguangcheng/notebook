@@ -228,7 +228,7 @@ function auto_version($file)
     } else {
         $ver = 1;
     }
-    return $file . '?v=' . $ver;
+    return $file . '?v=' . $ver;               
 }
 
 /**
@@ -247,7 +247,7 @@ function array_order_by(array &$arr, $order = null)
     usort($arr, function($a, $b) use($orders) {
         $result = array();
         foreach ($orders as &$value) {
-            list($field, $sort) = array_map('trim', explode(' ', trim($value)));
+            list($field,$sort) = array_map('trim', explode(' ', trim($value)));
             if (!(isset($a[$field]) && isset($b[$field]))) {
                 continue;
             }
