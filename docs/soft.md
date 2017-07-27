@@ -48,6 +48,7 @@ Windows常用软件
 * [BootCDN](http://www.bootcdn.cn/ "CDN")
 * [Can I use](http://caniuse.com "前端兼容性查看")
 * [Color Hunt](http://www.colorhunt.co/ "网站配色")
+* [Chrome扩展程序下载](http://crx.2333.me/ "Chrome 扩展程序 下载")
 * [Debuggex](https://www.debuggex.com/ "正则测试+图形显示")
 * [devdocs](http://devdocs.io/ "各种在线文档")
 * [ExplainShell](http://www.explainshell.com/ "图形显示Linux命令")
