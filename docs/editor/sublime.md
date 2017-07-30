@@ -210,6 +210,28 @@ import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.
 }
 ```
 
+### 执行C程序
+
+```json
+{
+    "working_dir": "$file_path",
+    "shell_cmd": "gcc -Wall \"$file\" -o \"$file_base_name\" && \"${file_path}/${file_base_name}\"",
+    "file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
+    "selector": "source.c",
+    "variants": 
+    [
+        {
+        "name": "Build",
+            "shell_cmd": "gcc -Wall \"$file\" -o \"$file_base_name\""
+        },
+        {
+        "name": "Build & Run",
+            "shell_cmd": "gcc -Wall \"$file\" -o \"$file_base_name\" && start cmd /c \"\"${file_path}/${file_base_name}\" & pause\""
+        },
+    ]
+}
+```
+
 ### Snippet
 
 * http://www.jianshu.com/p/356bd7b2ea8e
