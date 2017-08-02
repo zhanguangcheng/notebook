@@ -266,3 +266,16 @@ function array_order_by(array &$arr, $order = null)
     });
     return $arr;
 }
+
+/**
+ * 数字转字母
+ * @param  int $index 数字: 0开始
+ * @return string A B C ... AA AB ...
+ */
+function number_to_letter($index) {
+    $str = '';
+    if (floor($index / 26) > 0) {
+        $str .= number_to_letter(floor($index / 26) - 1);
+    }
+    return $str . chr($index % 26 + 65);
+}
