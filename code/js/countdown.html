@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>倒计时Demo</title>
+</head>
+<body>
+    <button onclick="send()" id="btn">发送验证码</button>
+<script>
+    var btn = document.getElementById('btn');
+
+    var second = 10;
+    function send() {
+        btn.disabled = true;
+        (function waiting() {
+            if (second > 0) {
+                btn.innerHTML = '发送验证码(' + second + ')';
+                setTimeout(waiting, 1000);
+            } else {
+                second = 10;
+                btn.innerHTML = '发送验证码';
+                btn.disabled = false;
+            }
+            second--;
+        })();
+    }
+</script>
+</body>
+</html>
