@@ -12,9 +12,16 @@ CentOS之LNMP yum安装
 ## 增加软件源
 
 ```bash
+# CentOs 6.x
+rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
+rpm -Uvh http://mirror.webtatic.com/yum/el6/latest.rpm
+rpm -Uvh https://dev.mysql.com/get/mysql57-community-release-el6-11.noarch.rpm
+
+# CentOs 7.x
 rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
 rpm -Uvh http://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm
+
 yum -y update
 ```
 
