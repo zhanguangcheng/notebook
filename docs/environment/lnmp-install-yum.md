@@ -78,3 +78,5 @@ validate_password = off
 
 * <http://www.centoscn.com/mysql/2016/0626/7537.html>
 * <http://www.cnblogs.com/grimm/p/5300819.html>
+* <https://webtatic.com/projects/yum-repository/>
+* <https://dev.mysql.com/downloads/repo/yum/>
