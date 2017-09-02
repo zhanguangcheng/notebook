@@ -178,6 +178,25 @@ int sum(int x, int y)
 ```
 
 
+## 字符串
+
+```c
+// 初始化字符数组时会把静态存储区的字符串拷贝到数组中
+// 下面两行代码等价，字符串于字符数组的区别: 字符数组最后为\0
+char str1[] = {'a', 'b', 'c', 'd', '\0'};
+char str2[] = "abcd";
+
+// 初始化指针时, 只把字符串的地址拷贝给指针
+char * str3 = "abcd";
+```
+
+* C语言中用字符数组或者字符指针来表示字符串；  
+* 字符数组中最后一个元素是'\0'的数组就是字符串；  
+* 用双引号也可以表示字符串，其实际也会转换成最后一个元素为'\0'的字符数组；  
+* 用字符指针申明字符串时，其指针可以操作，字符数组申明则不能；
+
+
+
 ## 关键字
 
 |关键字    |描述|
@@ -214,8 +233,8 @@ int sum(int x, int y)
 |unsigned ||
 |void     ||
 |volatile ||
-|while    ||
-
+|while    |
+|
 
 
 ## 数据类型
@@ -244,21 +263,40 @@ int sum(int x, int y)
 ### stdio.h
 
 ```c
-int printf(const char *format, ...)
-int sprintf(char *buffer, const char *format, ...)
-int scanf(const char *format, ...)
+int printf(const char *format, ...);
+int sprintf(char *buffer, const char *format, ...);
+int scanf(const char *format, ...);
+
+// 获取字符串, 长度无限制
+char *gets(char *str );
+
+// 获取字符串, 可以限制长度, 缺点: 会多加一个\n字符
+char *fgets(char *str, int count, FILE *stream);
 ```
 
 ### stdlib.h
 
 ```c
-void srand(unsigned seed)
-int rand()
-void exit(int exit_code)
-int system(const char *command)
-void* malloc(size_t size) // 动态分配内存空间, 返回数组指针
-void* calloc(size_t num, size_t size) // 动态分配内存空间, 会自动初始化
-void* free(void* ptr) // 释放动态分配的内存空间
+// 以seed播种, 向rand()生成随机种子。
+void srand(unsigned seed);
+
+// 生成 0 ~ RAND_MAX(32767) 之间的随机数
+int rand();
+
+// 终止程序并返回exit_code
+void exit(int exit_code);
+
+// 执行命令command
+int system(const char *command);
+
+// 分配size字节的未初始化内存。返回最低位（首位）字节的指针
+void* malloc(size_t size);
+
+// 为num个对象size字节分配内存，并初始化所有分配存储中的字节为零。
+void* calloc(size_t num, size_t size);
+
+// 释放动态分配的内存空间
+void* free(void* ptr);
 ```
 
 ### time.h
@@ -276,22 +314,38 @@ Sleep()
 ### ctype.h
 
 ```c
-int isupper(int ch)
-int islower(int ch)
-int isalpha(int ch)
-int isdigit(int ch)
-int toupper(int ch)
-int tolower(int ch)
+int isupper(int ch);
+int islower(int ch);
+int isalpha(int ch);
+int isdigit(int ch);
+int toupper(int ch);
+int tolower(int ch);
 ```
 
 ### math.h
 
 ```c
-double ceil(double arg)
-double floor(double arg)
-double sqrt(double arg)
-double pow(double base, double exponent)
-int abs(int)
+double ceil(double arg);
+double floor(double arg);
+double sqrt(double arg);
+double pow(double base, double exponent);
+int abs(int);
+```
+
+## string.h
+
+```c
+// 计算字符串的长度
+size_t strlen( const char *str );
+
+// 字符串赋值, dest的内存空间不能小于src, 不然会溢出, 影响其他内存空间
+char *strcpy( char *dest, const char *src );
+
+// 字符串比较, 相同返回0
+int strcmp( const char *lhs, const char *rhs );
+
+// 字符串连接, 注意dest的内存空间
+char *strcat( char *dest, const char *src );
 ```
 
 ## 进制转换
@@ -356,3 +410,11 @@ options
 
 * -o <file\> 指定输出文件名
 * -E 代表预编译
+
+
+## 其他
+
+```c
+// void*表示返回任意类型的指针
+void* malloc( size_t size );
+```
