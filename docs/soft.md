@@ -52,6 +52,7 @@ Windows常用软件
 * [Debuggex](https://www.debuggex.com/ "正则测试+图形显示")
 * [devdocs](http://devdocs.io/ "各种在线文档")
 * [ExplainShell](http://www.explainshell.com/ "图形显示Linux命令")
+* [gogs](https://gogs.io/ "开源的轻量级代码托管平台")
 * [hyperpolyglot](http://hyperpolyglot.org/ "各种语言，工具的对比")
 * [Linux命令帮助](https://jaywcjlove.github.io/linux-command/ "Linux命令帮助")
 * [MSDN, 我告诉你](http://www.itellyou.cn/ "各种原版Windows系统, 软件")
@@ -62,3 +63,4 @@ Windows常用软件
 * [Tick list](https://www.dida365.com "滴答清单")
 * [TinyPNG](https://tinypng.com/ "png,jpg图片压缩")
 * [微软常用运行库合集](https://www.baidu.com/baidu?wd=微软常用运行库合集" 微软常用运行库合集")
+* [开源软件镜像站](https://www.baidu.com/baidu?wd=开源软件镜像站" 开源软件镜像站")
