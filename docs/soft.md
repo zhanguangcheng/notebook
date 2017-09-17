@@ -46,6 +46,7 @@ Windows常用软件
 ===============
 
 * [BootCDN](http://www.bootcdn.cn/ "CDN")
+* [Browsersync](https://browsersync.io/ "前端实时可视化插件")
 * [Can I use](http://caniuse.com "前端兼容性查看")
 * [Color Hunt](http://www.colorhunt.co/ "网站配色")
 * [Chrome扩展程序下载](http://crx.2333.me/ "Chrome 扩展程序 下载")
