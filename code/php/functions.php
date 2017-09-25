@@ -88,7 +88,7 @@ function bytes_format($size, $delimiter = '')
 function addslashes_array($arr)
 {
     if (is_array($arr)) {
-       $data = array();
+        $data = array();
         foreach ($arr as $key => $value) {
             $data[addslashes($key)] = addslashes_array($value);
         }
@@ -112,13 +112,13 @@ function encrypt($data, $key)
     $l = strlen($key);
     $char = $str = '';
     for ($i = 0; $i < $len; $i++) {
-        if ($x == $l){
+        if ($x == $l) {
             $x = 0;
         }
         $char .= $key{$x};
         $x++;
     }
-    for ($i = 0; $i < $len; $i++){
+    for ($i = 0; $i < $len; $i++) {
         $str .= chr(ord($data{$i}) + (ord($char{$i})) % 256);
     }
     return base64_encode($str);
@@ -138,17 +138,17 @@ function decrypt($data, $key)
     $len = strlen($data);
     $l = strlen($key);
     $char = $str = '';
-    for ($i = 0; $i < $len; $i++){
-        if ($x == $l){
+    for ($i = 0; $i < $len; $i++) {
+        if ($x == $l) {
             $x = 0;
         }
         $char .= substr($key, $x, 1);
         $x++;
     }
     for ($i = 0; $i < $len; $i++) {
-        if (ord(substr($data, $i, 1)) < ord(substr($char, $i, 1))){
+        if (ord(substr($data, $i, 1)) < ord(substr($char, $i, 1))) {
             $str .= chr((ord(substr($data, $i, 1)) + 256) - ord(substr($char, $i, 1)));
-        }else {
+        } else {
             $str .= chr(ord(substr($data, $i, 1)) - ord(substr($char, $i, 1)));
         }
     }
@@ -212,7 +212,6 @@ function download($file, $filename = null)
     header("Content-Disposition:filename=$filename");
     header('Content-Transfer-Encoding: binary');
     header('Content-Length: ' . filesize($file));
-    ob_get_level() && ob_clean();
     readfile($file);
 }
 
@@ -228,7 +227,7 @@ function auto_version($file)
     } else {
         $ver = 1;
     }
-    return $file . '?v=' . $ver;               
+    return $file . '?v=' . $ver;
 }
 
 /**
@@ -244,10 +243,10 @@ function array_order_by(array &$arr, $order = null)
         return $arr;
     }
     $orders = explode(',', $order);
-    usort($arr, function($a, $b) use($orders) {
+    usort($arr, function ($a, $b) use ($orders) {
         $result = array();
         foreach ($orders as &$value) {
-            list($field,$sort) = array_map('trim', explode(' ', trim($value)));
+            list($field, $sort) = array_map('trim', explode(' ', trim($value)));
             if (!(isset($a[$field]) && isset($b[$field]))) {
                 continue;
             }
@@ -256,7 +255,7 @@ function array_order_by(array &$arr, $order = null)
                 $a = $b;
                 $b = $tmp;
             }
-            if (is_numeric($a[$field]) && is_numeric($b[$field]) ) {
+            if (is_numeric($a[$field]) && is_numeric($b[$field])) {
                 $result[] = $a[$field] - $b[$field];
             } else {
                 $result[] = strcmp($a[$field], $b[$field]);
@@ -272,10 +271,29 @@ function array_order_by(array &$arr, $order = null)
  * @param  int $index 数字: 0开始
  * @return string A B C ... AA AB ...
  */
-function number_to_letter($index) {
+function number_to_letter($index)
+{
     $str = '';
     if (floor($index / 26) > 0) {
         $str .= number_to_letter(floor($index / 26) - 1);
     }
     return $str . chr($index % 26 + 65);
+}
+
+/**
+ * 兼容参数:JSON_UNESCAPED_UNICODE 的json编码函数
+ * @param  mixed $data
+ * @return string
+ */
+function json_encode_unicode($data)
+{
+    if (defined('JSON_UNESCAPED_UNICODE')) {
+        return json_encode($data, JSON_UNESCAPED_UNICODE);
+    }
+    array_walk_recursive($data, function (&$item) {
+        if (is_string($item)) {
+            $item = mb_encode_numericentity($item, array(0x80, 0xffff, 0, 0xffff), 'UTF-8');
+        }
+    });
+    return mb_decode_numericentity(json_encode($data), array(0x80, 0xffff, 0, 0xffff), 'UTF-8');
 }
