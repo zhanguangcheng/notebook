@@ -1,6 +1,7 @@
 CSS笔记
 ==================
 
+
 ## 概述
 
 
@@ -45,18 +46,20 @@ body {} 标签选择器
 .container {} 类选择器
 
 /* 属性选择器 ie7+ */ 
-[attribute] 用于选取带有指定属性的元素
-[attribute=value]   用于选取带有指定属性和值的元素 [attribute~=value]  用于选取属性值中包含指定词汇的元素
-[attribute|=value]  用于选取带有以指定值开头的属性值的元素，该值必须是整个单词
-[attribute^=value]  匹配属性值以指定值开头的每个元素
-[attribute$=value]  匹配属性值以指定值结尾的每个元素
-[attribute*=value]  匹配属性值中包含指定值的每个元素
+[attribute] 用于选取带有指定属性的元素 
+[attribute=value]   用于选取带有指定属性和值的元素 
+[attribute^=value]  匹配属性值以指定值开头的每个元素 
+[attribute$=value]  匹配属性值以指定值结尾的每个元素 
+[attribute*=value]  匹配属性值中包含指定值的每个元素 
+[attribute~=value]  用于选取属性值中包含指定单词的元素 
+[attribute|=value]  用于选取带有以指定值开头的属性值的元素，该值必须是整个单词 
 
-/* 关系选择器 ie7+ */
+/* 关系选择器 */
 parent child {} 包含
+/* ie7+ */
 parent > child {} 子元素
-E1 + E2 {} 相邻
-E1 ~ E2 {} 兄弟
+E1 + E2 {} 相邻(紧跟后边的指定的元素)
+E1 ~ E2 {} 兄弟(紧跟后边的指定的所有元素)
 
 /* 伪类选择器 */
 a:link {}
@@ -65,20 +68,36 @@ a:hover {}
 a:active {}
 E:first-child {}
 E:last-child {} ie9+
-E:nth-child(n) {} ie9+
+E:nth-child(n) {} ie9+ (odd even奇偶数)
 
 /* 伪元素/对象选择器 ::为css3写法 */
 E:before/E::before {} ie8+
 E:after/E::after {} ie8+
 E::selection {} ie9+ 设置对象被选择时的样式。支持background-color，color
+
 CSS3将伪对象选择符前面的单个冒号(:)修改为双冒号(::)用以区别伪类选择符，但以前的写法仍然有效。 即E:after可转化为E::after
 本质上并不支持伪元素的双冒号(::)写法，而是忽略掉了其中的一个冒号，仍以单冒号来解析，所以等同变相支持了E::after。
 
-/* 分组选择器 */
-html, body {}
+/* 组合选择器 */
+html,body {}
+p.red {}
+input[type=text] {}
 ```
 
 ### 选择器优先级(权重)
+
+important > 内联 > ID > 类 | 属性 > 标签 | 伪元素 > 继承 > 通配符
+
+* 一条样式规则的整体权重值包含四个独立的部分：[A, B, C, D];
+
+    - A表示内联样式，只有1或者0两个值；
+    - B表示规则中ID的数量；
+    - C表示规则中类、属性的数量；
+    - D表示规则中标签和伪元素的数量；
+
+* 比较时从高位到低位（从A到D）分别比较，高位相同才需要比较低位；
+* 有 !important 标记的属性无视权重值，多次指定 !important 时，相互抵销。
+
 
 ## 常用属性
 
@@ -88,8 +107,7 @@ html, body {}
 div {
     width: 100px;
     height: 100px;
-    min-width: 100px;
-    max-height: 100px;
+    min/max-width/height: 100px;/*ie7+*/
     line-height: 20px;
     opacity: 0.5; filter:alpha(opacity=50);
     text-align: left | center | right | justify/*需要在单词之间添加空白*/;
@@ -163,6 +181,65 @@ div {
     margin-top | right | bottom | left: 20px;
 }
 ```
+
+
+## 语法与规则
+
+**!important**
+
+提升指定样式规则的应用优先权。
+
+```css
+Selector { sRule!important; }
+```
+
+**@import**
+
+导入外部样式表
+
+```css
+@import <url> <media_query_list>
+
+@import url("global.css");
+@import url(global.css);
+@import "global.css";
+
+/* ie9+ */
+@import url(example.css) screen and (min-width:800px);
+```
+
+**@charset**
+
+用于外部样式表，指定该样式表使用的字符编码。
+
+```css
+@charset "utf-8";
+```
+
+**@media**
+
+指定样式表规则用于指定的媒体类型和查询条件。
+
+```css
+/* ie9+ */
+@media <media_query, media_query...>
+media_query: [only | not] 媒体类型 [and (媒体功能:值)] ...
+
+@media (min-width:500px) {}
+@media screen and (min-width:500px) {}
+@media only screen and (min-width:500px) {}
+@media only screen and (min-width:500px) and (max-width:600px) {}
+```
+
+**@font-face**
+
+设置嵌入HTML文档的字体。
+
+
+**@keyframes**
+
+指定动画名称和动画效果。
+
 
 ## 常见布局
 
@@ -256,6 +333,9 @@ div {
 #### 九宫格布局
 #### 媒体查询
 
+```css
+@media [设备类型] 
+```
 
 ## 技巧和经验
 
@@ -316,3 +396,9 @@ input{vertical-align:middle;}
 html,body {height: 100%;margin:0}
 .box {height: 100%}
 ```
+
+
+## Reference
+
+* <http://www.css88.com/book/css/>
+* <http://m.mamicode.com/info-detail-1248108.html>
