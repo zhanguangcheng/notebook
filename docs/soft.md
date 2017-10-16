@@ -37,7 +37,8 @@ Windows常用软件
 * [VirtualBox](https://www.virtualbox.org/)
 * [VMware](https://download3.vmware.com/software/wkst/file/VMware-workstation-full-12.5.6-5528349.exe) $
 > 5A02H-AU243-TZJ49-GTC7K-3C61N
-* [WinCacheGrind](https://github.com/ceefour/wincachegrind)
+* [WinCacheGrind](https://github.com/ceefour/wincachegrind "XDebug profile分析")
+* [Wireshark](https://www.wireshark.org/ "抓包工具")
 * [WinSCP](https://winscp.net)
 * [Xshell](http://www.netsarang.com/xshell.html)
 * [Zeal](https://zealdocs.org/)
