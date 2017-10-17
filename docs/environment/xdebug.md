@@ -1,4 +1,4 @@
-XDebug的基本使用
+Xdebug的基本使用
 ===============
 
 > 其中用到的PHP路径请替换成您自己的对应的PHP路径。
@@ -36,7 +36,7 @@ C:\greenEnvironment\php\5.6.30\php.exe -m | findstr xdebug
 
 ## 性能分析
 
-1.安装Chrome辅助插件[xdebug helper](https://chrome.google.com/webstore/detail/http-status/cknfnacbckhfpjahnmkblajcpledpfnp)
+1.安装Chrome辅助插件[xdebug helper](https://chrome.google.com/webstore/detail/eadndfjplgieldjbigjakmdgkmoaaaoc)
 
 2.修改php.ini配置文件，加入如下代码，记得重启Apache或者nginx
 
