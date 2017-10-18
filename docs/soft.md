@@ -33,6 +33,7 @@ Windows常用软件
 * [Sublime Text](http://www.sublimetext.com/)
 * [SuperRecovery](http://www.cjhf.net/) $
 * [TeamViewer](https://www.teamviewer.com/)
+* [Typora](https://typora.io/ "免费跨平台Markdown编辑器 a minimal markdown editor, markdown reader.")
 * [Vim](http://www.vim.org/)
 * [VirtualBox](https://www.virtualbox.org/)
 * [VMware](https://download3.vmware.com/software/wkst/file/VMware-workstation-full-12.5.6-5528349.exe) $
@@ -51,6 +52,7 @@ Windows常用软件
 * [Browsersync](https://browsersync.io/ "前端实时可视化插件")
 * [Can I use](http://caniuse.com "前端兼容性查看")
 * [Color Hunt](http://www.colorhunt.co/ "网站配色")
+* [Convertio](https://convertio.co "文件转换器")
 * [Chrome扩展程序下载](http://crx.2333.me/ "Chrome 扩展程序 下载")
 * [Debuggex](https://www.debuggex.com/ "正则测试+图形显示")
 * [devdocs](http://devdocs.io/ "各种在线文档")
@@ -59,6 +61,7 @@ Windows常用软件
 * [hyperpolyglot](http://hyperpolyglot.org/ "各种语言，工具的对比")
 * [Linux命令帮助](https://jaywcjlove.github.io/linux-command/ "Linux命令帮助")
 * [MSDN, 我告诉你](http://www.itellyou.cn/ "各种原版Windows系统, 软件")
+* [OfficePLUS](http://office.mmais.com.cn "微软Office官方在线模板网站")
 * [RawGit](http://rawgit.com/ "转换github文件的header，让其可以解析（不能用于生产环境）")
 * [RegExp](https://regex101.com/ "正则测试")
 * [RegExpFigure](https://regexper.com/ "正则图形显示")
