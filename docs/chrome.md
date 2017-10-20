@@ -9,6 +9,8 @@ Chrome 相关
 * [JSON-handle](http://jsonhandle.sinaapp.com/ "JSON格式化显示的一个插件") (iahnhfdhidomcpggpaimmmahffihkfnj)
 * [JSONView](https://github.com/gildas-lormeau/JSONView-for-Chrome "JSON格式化显示的一个插件") (chklaanhfefbnpoihckbnefhakgolnmc)
 * [Nimbus Screenshot](https://nimbus.everhelper.me "截图插件") (bpconcjcammlapcogcnnelfmaeghhagj)
+* [GitHub Markdown Menu](https://github.com/willklein/github-markdown-menu "Adds a navigation menu to any readme or Markdown file in GitHub.") (jekgocfoijmbgcjejohdgmojaejofdpo)
+* [GitHub Plus](https://chrome.google.com/webstore/detail/anlikcnbgdeidpacdbdljnabclhahhmd "Display repo size, size of each file, download link and option to copy file contents") (anlikcnbgdeidpacdbdljnabclhahhmd)
 * [Octotree](https://github.com/buunguyen/octotree "Code tree for GitHub") (bkhaagjahfmjljalopjnoealnfndnagc)
 * [Postman](https://www.getpostman.com/ "这是一个脚本管理工具, 可以将自定义脚本嵌入运行在其他网站上") (fhbjgbiflinjbdggehcddcbncdddomop) [Postman for Windows](https://dl.pstmn.io/download/latest/win64)
 * [Restlet Client](https://restlet.com/modules/client/ "直观地创建和运行单独的HTTP请求以及复杂的场景。自动化与CI / CD插件API测试。不依赖第三方网站") (aejoelaoggembcahagimdiliamlcdmfm)
