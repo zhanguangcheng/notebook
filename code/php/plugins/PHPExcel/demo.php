@@ -13,7 +13,7 @@ $exportData = array(
     array('id' => 1, 'name' => "grass"), 
     array('id' => 2, 'name' => "Rainie"),
 );
-exportExcel('ok.xlsx', $exportData);
+Excel::export('ok.xlsx', $exportData);
 
 /**
  * 简单的导入导出示例
@@ -64,7 +64,7 @@ class Excel
             $num = $key + 1;
             $i = 0;
             foreach ($row as $key2 => $value2) {
-                $objPHPExcel->setActiveSheetIndex(0)->setCellValue(PHPExcel_Cell::stringFromColumnIndex($i). ($num), $value2);
+                $objPHPExcel->setActiveSheetIndex(0)->setCellValueExplicit(PHPExcel_Cell::stringFromColumnIndex($i). ($num), $value2, PHPExcel_Cell_DataType::TYPE_STRING);
                 $i++;
             }
         }
