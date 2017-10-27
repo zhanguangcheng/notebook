@@ -78,13 +78,20 @@ header("refresh:3;url=$url");
 
 // 3秒跳转(html): 
 echo "<meta http-equiv='refresh' content='{$time};url={$url}' />"
- ```
+```
 
 
 ## 当在第二页搜索的时候, 结果不足2页就会显示空
 
-解决:判断点击了搜索按钮就把页码置为1, 判断是否是点击了搜索按钮: isset($_GET['submit'])
+解决:判断点击了搜索按钮就把页码置为1, 判断是否是点击了搜索按钮: isset($\_GET['submit'])
 
+
+## IE文件下载时中文名称乱码
+
+```php
+$filename = rawurlencode('中文.zip');
+header("Content-Disposition: attachment; filename=$filename"); 
+```
 
 ## 批量编辑多条数据时的 数据分类技巧 (数字为id)
 
