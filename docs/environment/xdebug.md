@@ -36,7 +36,7 @@ C:\greenEnvironment\php\5.6.30\php.exe -m | findstr xdebug
 
 ## 性能分析
 
-1.安装Chrome辅助插件[xdebug helper](https://chrome.google.com/webstore/detail/eadndfjplgieldjbigjakmdgkmoaaaoc)
+1.安装Chrome辅助插件[xdebug helper](https://chrome.google.com/webstore/detail/eadndfjplgieldjbigjakmdgkmoaaaoc) ([打不开？查看不翻墙安装Chrome方法](../chrome.md))
 
 2.修改php.ini配置文件，加入如下代码，记得重启Apache或者nginx
 
@@ -57,6 +57,72 @@ xdebug.profiler_output_dir="C:\greenEnvironment\php\5.6.30\xdebug"
 4.[下载profile分析软件](https://sourceforge.net/projects/wincachegrind/)，并打开生成好的profile文件，此时就能看见函数调用、执行时间等信息。
 
 
-## 程序调试
+## 程序调试(Sublime Text 3)
 
-未完待续...
+1. 修改php.ini配置，重启Apache或者nginx
+
+```ini
+[Xdebug]
+xdebug.remote_enable = on
+xdebug.remote_handler = dbgp
+xdebug.remote_host = 127.0.0.1
+xdebug.remote_port = 9000
+```
+
+2. 安装Sublime插件[Xdebug Client](https://packagecontrol.io/packages/Xdebug%20Client)
+
+3. 简单使用
+
+    - 新建一个PHP文件，写一些测试代码，移动到需要下断点的地方按下<kbd>ctrl+f8</kbd>添加一个断点。
+    - 按下<kbd>ctrl+shift+f9</kbd>开启调试模式，此时会从底部弹出一个调试窗口。
+    - 用浏览器访问该PHP程序，将 Chrome辅助插件[xdebug helper](https://chrome.google.com/webstore/detail/eadndfjplgieldjbigjakmdgkmoaaaoc) (需要科学上网) 切换至`Debug`模式，刷新浏览器，正确的情况下此时编辑器会出现调试信息，如图所示
+    - 按<kbd>ctrl+shift+f6</kbd>执行下一行代码。
+    - 按<kbd>ctrl+shift+f10</kbd>关闭调试。
+
+    - ![](../../images/xdebug-3.png)
+
+`Xdebug Client`配置
+
+```js
+{
+    // 配置打印信息的显示
+    "max_children": 32,
+    "max_data": 1024,
+    "max_depth": 3,
+    
+    // 遇到哪些报错时断点
+    "break_on_exception": [
+        // E_ERROR, E_CORE_ERROR, E_COMPILE_ERROR, E_USER_ERROR
+        "Fatal error",
+        // E_RECOVERABLE_ERROR (since PHP 5.2.0)
+        "Catchable fatal error",
+        // E_WARNING, E_CORE_WARNING, E_COMPILE_WARNING, E_USER_WARNING
+        "Warning",
+        // E_PARSE
+        "Parse error",
+        // E_NOTICE, E_USER_NOTICE
+        "Notice",
+        // E_STRICT
+        "Strict standards",
+        // E_DEPRECATED, E_USER_DEPRECATED (since PHP 5.3.0)
+        "Deprecated",
+        // 0
+        "Xdebug",
+        // default
+        "Unknown error"
+    ],
+    
+    // 关闭调试同时关闭调试窗口
+    "close_on_stop": true,
+}
+```
+
+`Xdebug Client`相关的快捷键
+
+* <kbd>ctrl+f8</kbd>:添加/删除断点
+* <kbd>ctrl+shift+f5</kbd>:运行到下一个断点Run
+* <kbd>ctrl+shift+f6</kbd>:单步Step Over
+* <kbd>ctrl+shift+f7</kbd>:进入Step Into
+* <kbd>ctrl+shift+f8</kbd>:进出Step Out
+* <kbd>ctrl+shift+f9</kbd>:开启调试
+* <kbd>ctrl+shift+f10</kbd>:关闭调试
