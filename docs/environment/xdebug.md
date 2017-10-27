@@ -7,7 +7,6 @@ Xdebug的基本使用
 ## 安装
 
 1. 打开cmd执行命令
-
 ```bash
 # 修改成为你自己的php路径
 C:\greenEnvironment\php\5.6.30\php.exe -i > info.txt
@@ -36,7 +35,7 @@ C:\greenEnvironment\php\5.6.30\php.exe -m | findstr xdebug
 
 ## 性能分析
 
-1. 安装Chrome辅助插件[xdebug helper](https://chrome.google.com/webstore/detail/eadndfjplgieldjbigjakmdgkmoaaaoc) ([打不开？查看不翻墙安装Chrome方法](../chrome.md))
+1. 安装Chrome辅助插件[xdebug helper](https://chrome.google.com/webstore/detail/eadndfjplgieldjbigjakmdgkmoaaaoc) ([打不开？查看不翻墙安装Chrome插件方法](../chrome.md))
 
 2. 修改php.ini配置文件，加入如下代码，记得重启Apache或者nginx
 
