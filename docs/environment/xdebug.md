@@ -75,7 +75,7 @@ xdebug.remote_port = 9000
 
     - 新建一个PHP文件，写一些测试代码，移动到需要下断点的地方按下<kbd>ctrl+f8</kbd>添加一个断点。
     - 按下<kbd>ctrl+shift+f9</kbd>开启调试模式，此时会从底部弹出一个调试窗口。
-    - 用浏览器访问该PHP程序，将 Chrome辅助插件[xdebug helper](https://chrome.google.com/webstore/detail/eadndfjplgieldjbigjakmdgkmoaaaoc) (需要科学上网) 切换至`Debug`模式，刷新浏览器，正确的情况下此时编辑器会出现调试信息，如图所示
+    - 用浏览器访问该PHP程序，将 Chrome辅助插件[xdebug helper](#性能分析)切换至`Debug`模式，刷新浏览器，正确的情况下此时编辑器会出现调试信息，如图所示
     - 按<kbd>ctrl+shift+f6</kbd>执行下一行代码。
     - 按<kbd>ctrl+shift+f10</kbd>关闭调试。
 
