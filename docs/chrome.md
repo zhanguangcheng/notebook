@@ -1,7 +1,17 @@
 Chrome 相关
 ============
 
-## 插件
+## 不翻墙安装Chrome官方插件
+
+1. 打开网站 [Chrome 扩展程序 下载](http://crx.2333.me/ "Chrome 扩展程序 下载")
+2. 输入Chrome插件的ID，点击<kbd>Get √</kbd>按钮进行下载Chrome扩展程序离线包，下载好之后的后缀名为`crx`。
+> 每个 Chrome 扩展程序 都有一个固定的 ID，例如： `https://chrome.google.com/webstore/detail/cknfnacbckhfpjahnmkblajcpledpfnp`  
+> 在 `https://chrome.google.com/webstore/detail/` 之后的一串字符就是 扩展程序 ID 了  
+> 即：`cknfnacbckhfpjahnmkblajcpledpfnp`
+
+3. 在浏览器地址栏中输入`chrome://extensions/`，打开扩展程序的管理页面，将下载的`crx`扩展程序拖入该页面即完成安装。
+
+## 插件推荐
 
 * [Axure RP Extension](https://www.axure.com/ "谷歌Chrome浏览器查看Axure RP原型") (dogkpdfcklifaemcdfbildhcofnopogp)
 * [crxMouse Chrome Gestures](http://crxmouse.com/ "鼠标手势,超级拖曳等方式控制浏览器") (jlgkpaicikihijadgifklkbpdajbkhjo)
