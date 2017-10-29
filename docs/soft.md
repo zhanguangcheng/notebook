@@ -3,7 +3,7 @@ Windows常用软件
 
 * [7-Zip](http://www.7-zip.org/)
 * [Adobe Reader](https://acrobat.adobe.com/us/en/acrobat/pdf-reader.html)
-* [AxureRP](https://www.axure.com/) $
+* [AxureRP](https://www.axure.com/) $ [高质量原创模板及元件库](http://www.axureux.com)
 * [Beyond Compare](http://www.scootersoftware.com/) $
 * [Chrome](http://www.chrome.com/)
 * [cmder](http://cmder.net/)
