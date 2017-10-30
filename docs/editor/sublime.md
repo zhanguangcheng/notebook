@@ -29,7 +29,7 @@ import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.
 * `AdvancedNewFile`   高级新建文件(<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>N</kbd>)
 * `sublimeLinter`    语法检测基础包
 * `sublimeLinter-php`    php语法检测
-* `editorconfig`    php语法检测 <http://editorconfig.org/>
+* `editorconfig`    统一代码风格 <http://editorconfig.org/>
 * `ini` ini文件语法高亮
 * `CFG Configuration Syntax Highlighting` 配置文件语法高亮
 * `ApacheConf.tmLanguage` Apache配置文件语法高亮
