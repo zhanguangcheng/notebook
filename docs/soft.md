@@ -16,6 +16,7 @@ Windows常用软件
 * [FSCapture](http://www.fscapture.com/)
 * [HDTunePro](http://www.hdtune.com/) $
 * [HeidiSQL](https://www.heidisql.com/)
+* [HEU KMS Activator](https://www.baidu.com/s?wd=HEU%20KMS%20Activator)
 * [KeePass](http://keepass.info/)
 * [licecap](http://www.cockos.com/licecap/)
 * [listary](http://www.listary.com/)
