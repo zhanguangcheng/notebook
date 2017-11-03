@@ -5,44 +5,45 @@ Windows常用软件
 * [Adobe Reader](https://acrobat.adobe.com/us/en/acrobat/pdf-reader.html)
 * [AxureRP](https://www.axure.com/) $ [高质量原创模板及元件库](http://www.axureux.com)
 * [Beyond Compare](http://www.scootersoftware.com/) $
-* [Chrome](http://www.chrome.com/)
-* [cmder](http://cmder.net/)
+* [Chrome](http://www.chrome.com/ "一个浏览器")
+* [cmder](http://cmder.net/ "Portable console emulator for Windows")
 > 中文乱码问题解决:settings->environment->`set LANG=zh_CN.UTF8`
-* [diffuse](https://sourceforge.net/projects/diffuse/)
-* [EditPlus](https://www.editplus.com/) $
-* [Everything](http://www.voidtools.com/)
-* [FileZilla](https://filezilla-project.org/)
-* [Firefox](http://www.firefox.com.cn/)
+* [diffuse](https://sourceforge.net/projects/diffuse/ "文本差异对比")
+* [EditPlus](https://www.editplus.com/ "Windows text editor with FTP and sftp") $
+* [Everything](http://www.voidtools.com/ "文件快搜")
+* [FileZilla](https://filezilla-project.org/ "FTP管理工具")
+* [Firefox](http://www.firefox.com.cn/ "又一个浏览器")
 * [FSCapture](http://www.fscapture.com/)
-* [HDTunePro](http://www.hdtune.com/) $
-* [HeidiSQL](https://www.heidisql.com/)
-* [KeePass](http://keepass.info/)
-* [licecap](http://www.cockos.com/licecap/)
-* [listary](http://www.listary.com/)
-* [native for mysql](https://www.navicat.com/) $
-* [notepad2](http://notepad2.com/)
-* [PHPStorm](https://www.jetbrains.com/phpstorm/) $
-* [Postman](https://www.getpostman.com/)
-* [PuTTY](http://www.putty.org/)
-* [RegexTester](http://www.regextester.com/)
+* [HDTunePro](http://www.hdtune.com/ "硬盘扫描工具") $
+* [HeidiSQL](https://www.heidisql.com/ "数据库管理工具")
+* [KeePass](http://keepass.info/ "密码管理")
+* [licecap](http://www.cockos.com/licecap/ "gif录制")
+* [listary](http://www.listary.com/ "文件搜索，快速启动应用")
+* [native for mysql](https://www.navicat.com/ "数据库管理工具") $
+* [notepad2](http://notepad2.com/ "普通编辑器")
+* [PHPStorm](https://www.jetbrains.com/phpstorm/ "PHP IDE") $
+* [Postman](https://www.getpostman.com/ "接口调试工具")
+* [PuTTY](http://www.putty.org/ "SSH连接工具")
+* [RegexTester](http://www.regextester.com/ "正则在线测试")
 * [Rolan](https://www.irolan.com/ "轻量级启动器")
 * [Rufus](http://rufus.akeo.ie/ "支持各种系统的U盘制作工具")
-* [seer](http://www.1218.io/)
-* [SourceTree](https://www.sourcetreeapp.com/)
-* [SQLiteStudio](https://sqlitestudio.pl)
-* [Sublime Text](http://www.sublimetext.com/)
-* [SuperRecovery](http://www.cjhf.net/) $
-* [TeamViewer](https://www.teamviewer.com/)
+* [seer](http://www.1218.io/ "文件快速预览")
+* [SourceTree](https://www.sourcetreeapp.com/ "图形git管理工具")
+* [SQLiteStudio](https://sqlitestudio.pl "SQLite数据库管理工具")
+* [Sublime Text](http://www.sublimetext.com/ "轻量级编辑器")
+* [SuperRecovery](http://www.cjhf.net/ "超级文件恢复") $
+* [TeamViewer](https://www.teamviewer.com/ "远程连接工具")
 * [Typora](https://typora.io/ "免费跨平台Markdown编辑器 a minimal markdown editor, markdown reader.")
 * [Vim](http://www.vim.org/)
-* [VirtualBox](https://www.virtualbox.org/)
-* [VMware](https://download3.vmware.com/software/wkst/file/VMware-workstation-full-12.5.6-5528349.exe) $
+* [VirtualBox](https://www.virtualbox.org/ "虚拟机")
+* [VMware](https://download3.vmware.com/software/wkst/file/VMware-workstation-full-12.5.6-5528349.exe "虚拟机") $
 > 5A02H-AU243-TZJ49-GTC7K-3C61N
+* [WePE工具箱](http://www.wepe.com.cn/ "微PE工具箱")
 * [WinCacheGrind](https://github.com/ceefour/wincachegrind "XDebug profile分析")
 * [Wireshark](https://www.wireshark.org/ "抓包工具")
 * [WinSCP](https://winscp.net)
-* [Xshell](http://www.netsarang.com/xshell.html)
-* [Zeal](https://zealdocs.org/)
+* [Xshell](http://www.netsarang.com/xshell.html "SSH连接工具")
+* [Zeal](https://zealdocs.org/ "帮助手册大全")
 
 
 常用网站工具

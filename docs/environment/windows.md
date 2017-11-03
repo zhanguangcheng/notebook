@@ -24,7 +24,7 @@ Windows 绿色版软件开发环境
 * 确保你的系统为64位系统
 * Apache配置的`DocumentRoot`目录为`D:/www`, 请务必创建之
 * 如果Apache不能启动, 尝试安装对应的vc库
-* php5apache2_2.dll表示apache2.2.*的版本才能用
+* php5apache2_2.dll表示apache2.2.\*的版本才能用
 
 ## 使用方法
 
