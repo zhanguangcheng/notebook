@@ -1,4 +1,34 @@
 /**
+ * 返回人性化的时间
+ * @param {Number} timestamp 时间搓
+ * @return {String}
+ */
+function timeago(timestamp) {
+    var now = Date.now()
+    var format = function (timestamp) {
+        var d = new Date();
+        d.setTime(timestamp);
+        var fillZero = function (n) {
+            return n < 10 ? '0' + n : n;
+        };
+        return d.getFullYear() + '.' + fillZero(d.getMonth() + 1) + '.' + fillZero(d.getDate());
+    }
+    if (timestamp > now) {
+        return format(timestamp);
+    } else if (now - timestamp < 1000) {
+        return '刚刚';
+    } else if (now - timestamp < 60000) {
+        return Math.floor((now - timestamp) / 1000) + '秒前';
+    } else if (now - timestamp < 3600000) {
+        return Math.floor((now - timestamp) / 60000) + '分钟前';
+    } else if (now - timestamp < 86400000) {
+        return Math.floor((now - timestamp) / 3600000) + '小时前';
+    } else {
+        return format(timestamp);
+    }
+}
+
+/**
  * 函数节流
  * @param  {callBack} fun      callBack
  * @param  {Number} delay    延迟执行时间
