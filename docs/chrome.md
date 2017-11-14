@@ -14,6 +14,7 @@ Chrome 相关
 ## 插件推荐
 
 * [Axure RP Extension](https://www.axure.com/ "谷歌Chrome浏览器查看Axure RP原型") (dogkpdfcklifaemcdfbildhcofnopogp)
+* [CSSViewer](https://github.com/miled/cssviewer "A Google Chrome Extension for fellow Web Developers, Web Designers, and Hobbyists.") (ggfgijbpiheegefliciemofobhmofgce)
 * [crxMouse Chrome Gestures](http://crxmouse.com/ "鼠标手势,超级拖曳等方式控制浏览器") (jlgkpaicikihijadgifklkbpdajbkhjo)
 * [Infinity](http://infinitynewtab.com/ "这是一个可定制的tab页插件, 可以登录账号同步设置") (dbfmnekepjoapopniengjbcpnbljalfg)
 * [JSON-handle](http://jsonhandle.sinaapp.com/ "JSON格式化显示的一个插件") (iahnhfdhidomcpggpaimmmahffihkfnj)
