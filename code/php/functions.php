@@ -156,6 +156,34 @@ function decrypt($data, $key)
 }
 
 /**
+ * 加密
+ * @param  string $text 待加密的字符串
+ * @param  string $key  密码
+ * @return string       返回加密后的字符串
+ */
+function encrypt2($text, $key = 'A8z;5YJv>'){
+    $ivSize = mcrypt_get_iv_size(MCRYPT_RIJNDAEL_256, MCRYPT_MODE_ECB);
+    $iv = mcrypt_create_iv($ivSize, MCRYPT_RAND);
+    $encryptText = mcrypt_encrypt(MCRYPT_RIJNDAEL_256, md5($key), $text, MCRYPT_MODE_ECB, $iv);
+    return trim(strtr(base64_encode($encryptText), array('/'=>'O0O0O', '=' => 'o000o', '+'=>'oo00o')));
+}
+
+/**
+ * 解密
+ * @param  string $text 待解密的字符串
+ * @param  string $key  密码
+ * @return string       返回解密后的字符串
+ */
+function decrypt2($text, $key = 'A8z;5YJv>')
+{
+    $cryptText = base64_decode(strtr($text, array('O0O0O'=>'/', 'o000o' => '=', 'oo00o' => '+')));
+    $ivSize = mcrypt_get_iv_size(MCRYPT_RIJNDAEL_256, MCRYPT_MODE_ECB);
+    $iv = mcrypt_create_iv($ivSize, MCRYPT_RAND);
+    $decryptText = mcrypt_decrypt(MCRYPT_RIJNDAEL_256, md5($key), $cryptText, MCRYPT_MODE_ECB, $iv);
+    return trim($decryptText);
+}
+
+/**
  * 对称编码
  * 不是用于安全传输, 而是用于验证数据的合法来源
  * @param  mixed $data
