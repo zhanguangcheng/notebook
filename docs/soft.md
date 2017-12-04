@@ -45,6 +45,7 @@ Windows常用软件
 * [WinCacheGrind](https://github.com/ceefour/wincachegrind "XDebug profile分析")
 * [Wireshark](https://www.wireshark.org/ "抓包工具")
 * [WinSCP](https://winscp.net)
+* [Winrar](https://www.rarlab.com/)
 * [Xshell](http://www.netsarang.com/xshell.html "SSH连接工具")
 * [Zeal](https://zealdocs.org/ "帮助手册大全")
 
