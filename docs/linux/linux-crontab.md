@@ -67,3 +67,21 @@ crontab [选项]
 * 计划任务配置文件保存的位置： /var/spool/cron/<你的用户名>
 * 计划任务执行记录：/var/log/cron
 * 校验计划任务配置文件：<http://tool.lu/crontab/>
+* 取消计划任务邮件提醒：在配置文件第一行增加`MAILTO=""`
+
+## 执行时间低于1分钟时的解决办法
+
+新建一个sh文件，内容如下，加入计划任务，每分钟执行一次。
+
+```shell
+#!/bin/bash
+
+step=10 #间隔的秒数，不能大于60，最好能整除。
+
+for (( i = 0; i < 60; i=(i+step) )); do
+    $(php '/path/to/file.php')
+    sleep $step
+done
+
+exit 0
+```
