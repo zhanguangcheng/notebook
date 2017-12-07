@@ -125,3 +125,9 @@ xdebug.remote_port = 9000
 * <kbd>ctrl+shift+f8</kbd>:进出Step Out
 * <kbd>ctrl+shift+f9</kbd>:开启调试
 * <kbd>ctrl+shift+f10</kbd>:关闭调试
+
+
+## 扩展阅读
+
+* <https://www.ibm.com/developerworks/cn/opensource/os-php-xdebug/index.html>
+* <https://xdebug.org/docs/>
