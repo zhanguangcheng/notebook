@@ -55,16 +55,16 @@ C:\greenEnvironment\ctags\5.8;
 
 ```bash
 # Apache
-sc create Apache binPath= "C:\greenEnvironment\apache\2.4.25\bin\httpd.exe -k runservice" start= auto
+sc create 0_Apache binPath= "C:\greenEnvironment\apache\2.4.25\bin\httpd.exe -k runservice" start= auto
 
 # MySQL
-sc create MySQL binPath= "C:\greenEnvironment\mysql\5.6.35\bin\mysqld.exe MySQL" start= auto
+sc create 0_MySQL binPath= "C:\greenEnvironment\mysql\5.6.35\bin\mysqld.exe 0_MySQL" start= auto
 
 # Memcached
-sc create Memcached binPath= "C:\greenEnvironment\memcached\1.2.6\memcached.exe -d runservice" start= auto
+sc create 0_Memcached binPath= "C:\greenEnvironment\memcached\1.2.6\memcached.exe -d runservice" start= auto
 
 # Redis
-sc create Redis binPath= "C:\greenEnvironment\redis\3.2.100\redis-server.exe --service-run" start= auto
+sc create 0_Redis binPath= "C:\greenEnvironment\redis\3.2.100\redis-server.exe --service-run" start= auto
 
 # 其他服务命令
 net start 服务名称
