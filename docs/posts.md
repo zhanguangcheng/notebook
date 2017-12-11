@@ -58,6 +58,7 @@
 * [PhpExcel中文帮助手册2](http://blog.csdn.net/yangyuteng/article/details/8463891)
 * [Yii2 干货集](https://github.com/forecho/awesome-yii2)
 * [Composer进阶使用 —— 常用命令和版本约束](https://segmentfault.com/a/1190000005898222)
+* [Windows版的PHP安装imagick扩展](https://mlocati.github.io/articles/php-windows-imagick.html)
 
 ## 小程序
 

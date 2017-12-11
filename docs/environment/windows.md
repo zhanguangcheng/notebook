@@ -5,7 +5,7 @@ Windows 绿色版软件开发环境
 
 * [Apache2.4.25](http://ofyijnqas.bkt.clouddn.com/apache-2.4.25.7z)
 * [MySQL 5.6.35](http://ofyijnqas.bkt.clouddn.com/mysql-5.6.35.7z)
-* [PHP 5.7.3: vc14-ts-x86](http://ofyijnqas.bkt.clouddn.com/php-7.1.3.7z)
+* [PHP 7.1.3: vc14-ts-x86](http://ofyijnqas.bkt.clouddn.com/php-7.1.3.7z)
 * [PHP 5.6.30: vc11-ts-x86](http://ofyijnqas.bkt.clouddn.com/php-5.6.30.7z)
 * [PHP 5.3.28: vc9-ts-x86](http://ofyijnqas.bkt.clouddn.com/php-5.3.28.7z)
 * [nodejs 4.2.3](http://ofyijnqas.bkt.clouddn.com/nodejs-4.2.3.7z)
@@ -106,6 +106,7 @@ MySQL:
 
 PHP扩展:
     http://pecl.php.net/
+    http://windows.php.net/downloads/
     http://windows.php.net/downloads/pecl/releases/
 
 node:
@@ -156,3 +157,7 @@ VC库:
     C:\windows\system32
     C:\windows\syswow64
 ```
+
+* PHP的imagick扩展安装方法:
+
+<https://mlocati.github.io/articles/php-windows-imagick.html>
