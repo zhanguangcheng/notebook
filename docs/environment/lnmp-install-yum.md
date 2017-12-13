@@ -31,7 +31,7 @@ yum -y update
 ```bash
 yum -y install mysql-community-server
 yum -y install nginx
-yum -y install php70w-fpm php70w-cli php70w-gd php70w-pdo php70w-mysql php70w-xml php70w-mbstring php70w-opcac he php70w-pgsql php70w-intl php70w-mcrypt php70w-soap
+yum -y install php70w-fpm php70w-cli php70w-gd php70w-pdo php70w-mysql php70w-xml php70w-mbstring php70w-opcache php70w-pgsql php70w-intl php70w-mcrypt php70w-soap
 ```
 
 
