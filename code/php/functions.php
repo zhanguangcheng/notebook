@@ -325,3 +325,22 @@ function json_encode_unicode($data)
     });
     return mb_decode_numericentity(json_encode($data), array(0x80, 0xffff, 0, 0xffff), 'UTF-8');
 }
+
+/**
+ * 用二维数组创建树结构，树的键名和字段名称可自行修改
+ * @param  array $list 待处理的二维数组
+ * @return array       处理好的树结构数据
+ */
+function array_create_tree($list)
+{
+    $result = array();
+    $list = array_column($list, null, 'id');
+    foreach ($list as $item) {
+        if (isset($list[$item['pid']]) && ! empty($list[$item['pid']])) {
+            $list[$item['pid']]['children'][] = &$list[$item['id']];
+        } else {
+            $result[] = &$list[$item['id']];
+        }
+    }
+    return $result;
+}
