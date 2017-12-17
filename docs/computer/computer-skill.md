@@ -6,6 +6,7 @@ Windows使用技巧
 * `netstat -ano` 查看windows系统端口占用情况
 * `nslookup -q xcx1.com` 查看域名解析情况
 * `start "" "xxx.exe"` 执行文件
+* `telnet 127.0.0.1 3306"` 测试服务器端口是否畅通
 
 ### 开机自启动项注册表位置:(用户)
 

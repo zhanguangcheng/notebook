@@ -182,3 +182,9 @@ terminals.json
 
 ]
 ```
+
+## 快捷键
+
+* <kbd>Ctrl</kbd>+<kbd>K</kbd>,<kbd>Ctrl</kbd>+<kbd>P</kbd> 活动文件跳转
+* <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>鼠标左键</kbd> 列编辑
+
