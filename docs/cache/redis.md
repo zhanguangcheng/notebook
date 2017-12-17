@@ -80,3 +80,4 @@ if ($redis) {
 * [A PHP extension for Redis](https://github.com/phpredis/phpredis)
 * [Redis配置详细介绍](http://blog.csdn.net/neubuffer/article/details/17003909)
 * [PHP Redis中文手册](http://www.cnblogs.com/ikodota/archive/2012/03/05/php_redis_cn.html)
+* [Windows版的Redis安装](https://github.com/MicrosoftArchive/redis)
