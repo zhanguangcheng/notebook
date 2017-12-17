@@ -1,4 +1,14 @@
 /**
+ * 获取范围内的随机数
+ * @param  {Number} min 最小值
+ * @param  {Number} max 最大值
+ * @return {Number}     范围内的数值
+ */
+function random(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+/**
  * 返回人性化的时间
  * @param {Number} timestamp 时间搓
  * @return {String}
