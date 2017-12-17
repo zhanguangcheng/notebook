@@ -154,3 +154,14 @@ map <Leader>q :q<CR>
 map <Leader>w :w<CR>
 map <Leader>x :x<CR>
 ```
+
+
+## 图解VIM
+
+![VIM图解1](../../images/vim-cmd.png)
+![VIM图解2](../../images/vim-cmd2.png)
+
+
+## 更多配置和插件
+
+<https://github.com/zhanguangcheng/vim-config>
