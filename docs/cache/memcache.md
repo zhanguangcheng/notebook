@@ -2,10 +2,16 @@ Memcache的安装和使用
 ===================
 
 ##  Memcache简介:
->高性能的分布式的内存对象缓存系统
->Key-value型存储
+
+官网：<http://memcached.org/>
+
+github地址：<https://github.com/memcached/memcached>
+
+>高性能的分布式的内存对象缓存系统  
+>Key-value型存储 
 
 ## Linux下安装:
+
 1. 需要工具:gcc,make,cmake,autoconf,libtool
 2. 分别到 libevent.org 和 memcached.org下载最新的 stable 版本(稳定版).
 3. 安装memcache之前需要安装libevent
