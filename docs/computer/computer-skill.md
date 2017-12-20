@@ -7,6 +7,20 @@ Windows使用技巧
 * `nslookup -q xcx1.com` 查看域名解析情况
 * `start "" "xxx.exe"` 执行文件
 
+### 实用快捷键
+
+* <kbd>F2</kbd>重命名
+* <kbd>Alt</kbd>+<kbd>Tab</kbd>切换任务
+* <kbd>Win</kbd>+<kbd>E</kbd>打开资源管理器
+* <kbd>Win</kbd>+<kbd>D</kbd>返回桌面
+* <kbd>Win</kbd>+<kbd>R</kbd>运行命令
+* <kbd>Win</kbd>+<kbd>L</kbd>锁电脑
+* <kbd>Win</kbd>+<kbd>Shift</kbd>+<kbd>Esc</kbd>任务管理器
+* <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>N</kbd>新建文件夹
+* <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd>在当前目录打开cmd
+* <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>鼠标左键</kbd>管理员权限运行
+* <kbd>Shift</kbd>+<kbd>鼠标右键</kbd>+<kbd>复制为路径 或者 在此处打开命令窗口</kbd>
+
 ### 开机自启动项注册表位置:(用户)
 
 `[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run]`
