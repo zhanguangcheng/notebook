@@ -59,6 +59,11 @@
 * [Yii2 干货集](https://github.com/forecho/awesome-yii2)
 * [Composer进阶使用 —— 常用命令和版本约束](https://segmentfault.com/a/1190000005898222)
 * [Windows版的PHP安装imagick扩展](https://mlocati.github.io/articles/php-windows-imagick.html)
+* [如何编写一个PHP单元测试用例](https://github.com/yezuozuo/how-to-write-a-phpunit-testcase)
+
+## 数据库相关
+
+* [让应用程序支持emoji字符](https://www.liaoxuefeng.com/article/00145803336427519ae82a6c5b5474682c0c4ba5b47fb33000)
 
 ## 小程序
 
