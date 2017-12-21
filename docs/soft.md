@@ -6,6 +6,7 @@ Windows常用软件
 * [AutoHotkey](https://www.autohotkey.com/ "热键脚本语言")
 * [AxureRP](https://www.axure.com/) $ [高质量原创模板及元件库](http://www.axureux.com)
 * [Beyond Compare](http://www.scootersoftware.com/) $
+* [Cacher](https://www.cacher.io/ "The code snippet organizer for pro developers")
 * [Chocolatey](https://chocolatey.org/ "The package manager for Windows")
 * [Chrome](http://www.chrome.com/ "一个浏览器")
 * [cmder](http://cmder.net/ "Portable console emulator for Windows")
