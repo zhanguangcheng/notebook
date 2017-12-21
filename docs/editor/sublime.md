@@ -56,6 +56,7 @@ import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.
 * <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd> 复制光标所在整行，插入在该行之后
 * <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> 命令面板
 * <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>N</kbd> 新建窗口
+* <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>K</kbd> 删除行
 * <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>M</kbd> 选择括号内的内容（{[()]}按住-继续选择父括号）
 * <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Backspace</kbd> 从光标处删除至行首(<kbd>Ctrl</kbd>+<kbd>K</kbd><kbd>Backspace</kbd>)
 * <kbd>Ctrl</kbd>+<kbd>J</kbd> 合并行（已选择需要合并的多行时）
