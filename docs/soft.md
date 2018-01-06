@@ -42,6 +42,7 @@ Windows常用软件
 * [VMware](https://download3.vmware.com/software/wkst/file/VMware-workstation-full-12.5.6-5528349.exe "虚拟机") $
 > 5A02H-AU243-TZJ49-GTC7K-3C61N
 * [WePE工具箱](http://www.wepe.com.cn/ "微PE工具箱")
+* [WGestures全局鼠标手势](http://www.yingdev.com/projects/wgestures "一个更简单、更现代的鼠标手势。")
 * [WinCacheGrind](https://github.com/ceefour/wincachegrind "XDebug profile分析")
 * [Wireshark](https://www.wireshark.org/ "抓包工具")
 * [WinSCP](https://winscp.net)
