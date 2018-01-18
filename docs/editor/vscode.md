@@ -11,51 +11,6 @@ Visual Studio Code
 * `Bracket Pair Colorizer`
 * `Code Runner`
 * `Commands`
-
-commands.json
-```json
-{
-  "commands": [
-    {
-      "text": "$(file-symlink-directory) Project",
-      "command": "projectManager.listProjectsNewWindow",
-      "tooltip": "Switch Project in new window",
-      "color": "#FFFF00"
-    },
-    {
-      "text": "$(gear) Settings",
-      "command": "workbench.action.openGlobalSettings",
-      "tooltip": "Settings"
-    },
-    {
-      "text": "$(terminal)",
-      "command": "terminals.runTerminal",
-      "tooltip": "Run a terminal"
-    },
-    {
-      "text": "$(server) Compress JS",
-      "command": "terminals.runTerminalByName",
-      "arguments": ["Compress JS"],
-      "tooltip": "压缩JS代码为.min.js",
-      "filterLanguageRegex": "JavaScript"
-    },
-    {
-      "text": "$(server) Compress CSS",
-      "command": "terminals.runTerminalByName",
-      "arguments": ["Compress CSS"],
-      "tooltip": "压缩CSS代码为.min.css",
-      "filterLanguageRegex": "CSS"
-    },
-    {
-      "command": "commands.refresh",
-      "text": "$(sync)",
-      "tooltip": "Refresh commands",
-      "color": "#FFCC00"
-    }
-  ]
-}
-```
-
 * `Diff Tool`
 * `EditorConfig for VS Code`
 * `ESLint`
@@ -72,28 +27,6 @@ commands.json
 * `Sublime Text Keymap`
 * `SVN`
 * `Terminals`
-
-terminals.json
-```json
-{
-  "autorun": false,
-  "terminals": [
-    {
-      "name": "Compress JS",
-      "open": true,
-      "onlySingle": true,
-      "command": "java -jar C:/greenEnvironment/yuicompressor/2.4.8/main.jar --type js -o '.js$:.min.js' [file]"
-    },
-    {
-      "name": "Compress CSS",
-      "open": true,
-      "onlySingle": true,
-      "command": "java -jar C:/greenEnvironment/yuicompressor/2.4.8/main.jar --type css -o '.css$:.min.css' [file]"
-    }
-  ]
-}
-```
-
 * `TortoiseSVN`
 * `VScode Great Ions`
 * `vscode-goto-documentation`
