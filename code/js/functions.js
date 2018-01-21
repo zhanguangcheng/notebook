@@ -57,7 +57,9 @@ function throttle(fun, delay, duration) {
             fun.apply(context, args);
             startTime = curTime;
         } else {
-            timer = setTimeout(fun, delay);
+            timer = setTimeout(function() {
+                fun.apply(context, args);
+            }, delay);
         }
     };
 }
