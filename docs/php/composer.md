@@ -83,8 +83,8 @@ composer config --global --list
 2. 存在则从该文件中读取安装包信息进行安装，确保了该库的每个使用者都能得到相同的依赖版本
 3. 不存在则读取`composer.json`进行安装，安装完毕生成`composer.lock`
 
-> 如果`composer.lock`已经存在了，然后在`composer.json`中增加或删除了包，执行`composer install`程序并不会执行安装，并会抛出警告：需要执行update命令来更新。
-
+> 如果`composer.lock`已经存在了，然后在`composer.json`中增加或删除了包，执行`composer install`程序并不会执行安装，并会抛出警告：需要执行update命令来更新。  
+> 所以推荐的做法是使用`composer require`和`composer remove`来增加或删除了包，之后将`composer.lock`提交到版本库中供其他小伙伴安装。
 
 ### composer update
 
