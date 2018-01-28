@@ -27,6 +27,7 @@ Windows常用软件
 * [notepad2](http://notepad2.com/ "普通编辑器")
 * [PHPStorm](https://www.jetbrains.com/phpstorm/ "PHP IDE") $
 * [Postman](https://www.getpostman.com/ "接口调试工具")
+* [PowerDesigner](http://download.sybase.com/eval/PowerDesigner/PowerDesigner165_Evaluation.exe) [$](http://www.itmop.com/downinfo/115489.html)
 * [PuTTY](http://www.putty.org/ "SSH连接工具")
 * [RegexTester](http://www.regextester.com/ "正则在线测试")
 * [Rolan](https://www.irolan.com/ "轻量级启动器")
@@ -50,7 +51,7 @@ Windows常用软件
 * [Winrar](https://www.rarlab.com/)
 * [Xshell](http://www.netsarang.com/xshell.html "SSH连接工具")
 * [Zeal](https://zealdocs.org/ "帮助手册大全")
-
+* [暴风激活工具](http://www.baofengjihuo.com/ "暴风激活工具_win7激活工具_win10激活密匙_win8激活软件_永久激活所有系统和office")
 
 常用网站工具
 ===============
