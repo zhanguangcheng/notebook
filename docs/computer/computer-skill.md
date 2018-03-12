@@ -21,6 +21,7 @@ Windows使用技巧
 * <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd>在当前目录打开cmd
 * <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>鼠标左键</kbd>管理员权限运行
 * <kbd>Shift</kbd>+<kbd>鼠标右键</kbd>+<kbd>复制为路径 或者 在此处打开命令窗口</kbd>
+* <kbd>Shift</kbd>+<kbd>鼠标滚轮</kbd>横向滚动
 
 ### 开机自启动项注册表位置:(用户)
 
