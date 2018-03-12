@@ -1,4 +1,26 @@
 /**
+ * 获取搜索参数
+ * @param  {String} name       [参数名]
+ * @param  {mixed} defaultVal [默认值]
+ * @return {String|Object}     获取到的参数或者所有参数
+ */
+function getSearchParams(name, defaultVal) {
+    var url = location.search;
+    var params = {};
+    if (url.indexOf("?") != -1) {
+        var str = url.substr(1);
+        strs = str.split("&");
+        for (var i = 0; i < strs.length; i++) {
+            params[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+        }
+    }
+    if (name) {
+        return name in params ? params[name] : defaultVal;
+    }
+    return params;
+}
+
+/**
  * 获取范围内的随机数
  * @param  {Number} min 最小值
  * @param  {Number} max 最大值
