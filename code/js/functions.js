@@ -21,6 +21,24 @@ function getSearchParams(name, defaultVal) {
 }
 
 /**
+ * 添加搜索参数
+ * @param  {String} url       url
+ * @param  {Object} params
+ * @return {String}           url
+ */
+function addSearchParams(url, params) {
+    var delimiter =  url.indexOf("?") === -1 ? '?' : '&';
+    var args = [];
+    for (var key in params) {
+        args.push(key + '=' + params[key]);
+    }
+    if (args.length) {
+        url += delimiter + args.join('&');
+    }
+    return url;
+}
+
+/**
  * 获取范围内的随机数
  * @param  {Number} min 最小值
  * @param  {Number} max 最大值
