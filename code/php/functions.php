@@ -344,3 +344,19 @@ function array_create_tree($list)
     }
     return $result;
 }
+
+/**
+ * 是否是第一次执行
+ *
+ * @param string|int|null $token 标识
+ * @return boolean
+ */
+function is_first($token = null)
+{
+    static $container = [];
+    if (isset($container[$token])) {
+        return false;
+    }
+
+    return $container[$token] = true;
+}
