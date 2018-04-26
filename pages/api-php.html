@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>PHP Cheat Sheet | OverAPI.com</title>
+    <link rel="stylesheet" href="static/css/default.css" type="text/css">
+    <script type="text/javascript" src="static/js/jquery.1.7.min.js"></script>
+    <script type="text/javascript" src="static/js/jquery.masonry.min.js"></script>
+    <script type="text/javascript" src="static/js/jquery.quicksearch.js"></script>
+    <script type="text/javascript" src="static/js/main.js"></script>
+</head>
+<body class="cheat-detail">
+
+<!-- navbar -->
+<div id="navbar">
+    <a id="logo" href="#">OverAPI.com</a>
+    <ul id="navlist" class="nav">
+        <li><a href="api-html.html">HTML</a></li>
+        <li><a href="api-css.html">CSS</a></li>
+        <li><a href="api-javascript.html">JavaScript</a></li>
+        <li><a href="api-jquery.html">jQuery</a></li>
+        <li><a href="api-php.html">PHP</a></li>
+        <li><a href="api-mysql.html">MySQL</a></li>
+        <li><a href="api-git.html">Git</a></li>
+        <li><a href="api-regexp.html">RegExp</a></li>
+    </ul>
+</div>
+
+<!-- search input -->
+<div style="position:fixed;right:105px;top:10px;z-index:200;">
+    <input type="" id="searchApi" placeholder="Search">
+</div>
+
+<!-- loading -->
+<div class="loading">
+    Loading...
+</div>
+
+<!-- content -->
+<div class="content masonry" style="display: none; position: relative; height: 9370px; width: 1230px;">
+
+    <div class="board masonry-brick" style="position: absolute; top: 45px; left: 246px; background: rgba(214, 17, 21, 0.247059);">
+        <h2 class="board-title">Array</h2>
+        <div class="board-card">
+            <h3 class="board-card-title">Array Functions</h3>
+            <ul>
+                <li><a href="http://php.net/manual/zh/function.array.php" title="新建一个数组">array()</a></li>
+                <li><a href="http://php.net/manual/zh/function.array-change-key-case.php" title="返回字符串键名全为小写或大写的数组">array_change_key_case()</a></li>
+                <li><a href="http://php.net/manual/zh/function.array-chunk.php" title="将一个数组分割成多个">array_chunk()</a></li>
+                <li><a href="http://php.net/manual/zh/function.array-column.php" title="返回数组中指定的一列">array_column()</a></li>
+                <li><a href="http://php.net/manual/zh/function.array-combine.php" title="创建一个数组，用一个数组的值作为其键名，另一个数组的值作为其值">array_combine()</a></li>
+                <li><a href="http://php.net/manual/zh/function.array-count-values.php" title="统计数组中所有的值出现的次数">array_count_values()</a></li>
+                <li><a href="http://php.net/manual/zh/function.array-diff.php" title="计算数组的差集">array_diff()</a></li>
+                <li><a href="http://php.net/manual/zh/function.array-diff-assoc.php" title="带索引检查计算数组的差集">array_diff_assoc()</a></li>
+                <li><a href="http://php.net/manual/zh/function.array-diff-key.php" title="使用键名比较计算数组的差集">array_diff_key()</a></li>
+                <li><a href="http://php.net/manual/zh/function.array-diff-uassoc.php" title="用用户提供的回调函数做索引检查来计算数组的差集">array_diff_uassoc()</a></li>
+                <li><a href="http://php.net/manual/zh/function.array-diff-ukey.php" title="用回调函数对键名比较计算数组的差集">array_diff_ukey()</a></li>
+                <li><a href="http://php.net/manual/zh/function.array-fill.php" title="用给定的值填充数组">array_fill()</a></li>
+                <li><a href="http://php.net/manual/zh/function.array-filter.php" title="用回调函数过滤数组中的单元">array_filter()</a></li>
+                <li><a href="http://php.net/manual/zh/function.array-flip.php" title="交换数组中的键和值">array_flip()</a></li>
+                <li><a href="http://php.net/manual/zh/function.array-intersect.php" title="计算数组的交集">array_intersect()</a></li>
+                <li><a href="http://php.net/manual/zh/function.array-intersect-assoc.php" title="带索引检查计算数组的交集">array_intersect_assoc()</a></li>
+                <li><a href="http://php.net/manual/zh/function.array-intersect-key.php" title="使用键名比较计算数组的交集">array_intersect_key()</a></li>
+                <li><a href="http://php.net/manual/zh/function.array-intersect-uassoc.php" title="带索引检查计算数组的交集，用回调函数比较索引">array_intersect_uassoc()</a></li>
+                <li><a href="http://php.net/manual/zh/function.array-intersect-ukey.php" title="用回调函数比较键名来计算数组的交集">array_intersect_ukey()</a></li>
+                <li><a href="http://php.net/manual/zh/function.array-key-exists.php" title="检查给定的键名或索引是否存在于数组中">array_key_exists()</a></li>
+                <li><a href="http://php.net/manual/zh/function.array-keys.php" title="返回数组中部分的或所有的键名">array_keys()</a></li>
+                <li><a href="http://php.net/manual/zh/function.array-map.php" title="将回调函数作用到给定数组的单元上">array_map()</a></li>
+                <li><a href="http://php.net/manual/zh/function.array-merge.php" title="合并一个或多个数组">array_merge()</a></li>
+                <li><a href="http://php.net/manual/zh/function.array-merge-recursive.php" title="递归地合并一个或多个数组">array_merge_recursive()</a></li>
+                <li><a href="http://php.net/manual/zh/function.array-multisort.php" title="对多个数组或多维数组进行排序">array_multisort()</a></li>
+                <li><a href="http://php.net/manual/zh/function.array-pad.php" title="用值将数组填补到指定长度">array_pad()</a></li>
+                <li><a href="http://php.net/manual/zh/function.array-pop.php" title="将数组最后一个单元弹出（出栈）">array_pop()</a></li>
+                <li><a href="http://php.net/manual/zh/function.array-product.php" title="计算数组中所有值的乘积">array_product()</a></li>
+                <li><a href="http://php.net/manual/zh/function.array-push.php" title="将一个或多个单元压入数组的末尾（入栈）">array_push()</a></li>
+                <li><a href="http://php.net/manual/zh/function.array-rand.php" title="从数组中随机取出一个或多个单元">array_rand()</a></li>
+                <li><a href="http://php.net/manual/zh/function.array-reduce.php" title="用回调函数迭代地将数组简化为单一的值">array_reduce()</a></li>
+                <li><a href="http://php.net/manual/zh/function.array-reverse.php" title="返回一个单元顺序相反的数组">array_reverse()</a></li>
+                <li><a href="http://php.net/manual/zh/function.array-search.php" title="在数组中搜索给定的值，如果成功则返回相应的键名">array_search()</a></li>
+                <li><a href="http://php.net/manual/zh/function.array-shift.php" title="将数组开头的单元移出数组">array_shift()</a></li>
+                <li><a href="http://php.net/manual/zh/function.array-slice.php" title="从数组中取出一段">array_slice()</a></li>
+                <li><a href="http://php.net/manual/zh/function.array-splice.php" title="把数组中的一部分去掉并用其它值取代">array_splice()</a></li>
+                <li><a href="http://php.net/manual/zh/function.array-sum.php" title="计算数组中所有值的和">array_sum()</a></li>
+                <li><a href="http://php.net/manual/zh/function.array-udiff.php" title="用回调函数比较数据来计算数组的差集">array_udiff()</a></li>
+                <li><a href="http://php.net/manual/zh/function.array-udiff-assoc.php" title="带索引检查计算数组的差集，用回调函数比较数据">array_udiff_assoc()</a></li>
+                <li><a href="http://php.net/manual/zh/function.array-udiff-uassoc.php" title="带索引检查计算数组的差集，用回调函数比较数据和索引">array_udiff_uassoc()</a></li>
+                <li><a href="http://php.net/manual/zh/function.array-uintersect.php" title="计算数组的交集，用回调函数比较数据">array_uintersect()</a></li>
+                <li><a href="http://php.net/manual/zh/function.array-uintersect-assoc.php" title="带索引检查计算数组的交集，用回调函数比较数据">array_uintersect_assoc()</a></li>
+                <li><a href="http://php.net/manual/zh/function.array-uintersect-uassoc.php" title="带索引检查计算数组的交集，用回调函数比较数据和索引">array_uintersect_uassoc()</a></li>
+                <li><a href="http://php.net/manual/zh/function.array-unique.php" title="移除数组中重复的值">array_unique()</a></li>
+                <li><a href="http://php.net/manual/zh/function.array-unshift.php" title="在数组开头插入一个或多个单元">array_unshift()</a></li>
+                <li><a href="http://php.net/manual/zh/function.array-values.php" title="返回数组中所有的值">array_values()</a></li>
+                <li><a href="http://php.net/manual/zh/function.array-walk.php" title="使用用户自定义函数对数组中的每个元素做回调处理">array_walk()</a></li>
+                <li><a href="http://php.net/manual/zh/function.array-walk-recursive.php" title="对数组中的每个成员递归地应用用户函数">array_walk_recursive()</a></li>
+                <li><a href="http://php.net/manual/zh/function.arsort.php" title="对数组进行逆向排序并保持索引关系">arsort()</a></li>
+                <li><a href="http://php.net/manual/zh/function.asort.php" title="对数组进行排序并保持索引关系">asort()</a></li>
+                <li><a href="http://php.net/manual/zh/function.compact.php" title="建立一个数组，包括变量名和它们的值">compact()</a></li>
+                <li><a href="http://php.net/manual/zh/function.count.php" title="计算数组中的单元数目或对象中的属性个数">count()</a></li>
+                <li><a href="http://php.net/manual/zh/function.current.php" title="返回数组中的当前单元">current()</a></li>
+                <li><a href="http://php.net/manual/zh/function.each.php" title="返回数组中当前的键／值对并将数组指针向前移动一步">each()</a></li>
+                <li><a href="http://php.net/manual/zh/function.end.php" title="将数组的内部指针指向最后一个单元">end()</a></li>
+                <li><a href="http://php.net/manual/zh/function.extract.php" title="从数组中将变量导入到当前的符号表">extract()</a></li>
+                <li><a href="http://php.net/manual/zh/function.in-array.php" title="检查数组中是否存在某个值">in_array()</a></li>
+                <li><a href="http://php.net/manual/zh/function.key.php" title="从关联数组中取得键名">key()</a></li>
+                <li><a href="http://php.net/manual/zh/function.krsort.php" title="对数组按照键名逆向排序">krsort()</a></li>
+                <li><a href="http://php.net/manual/zh/function.ksort.php" title="对数组按照键名排序">ksort()</a></li>
+                <li><a href="http://php.net/manual/zh/function.list.php" title="把数组中的值赋给一些变量">list()</a></li>
+                <li><a href="http://php.net/manual/zh/function.natcasesort.php" title="用“自然排序”算法对数组进行不区分大小写字母的排序" natural="" order"="" algorithm"="">natcasesort()</a></li>
+                <li><a href="http://php.net/manual/zh/function.natsort.php" title="用“自然排序”算法对数组排序" natural="" order"="" algorithm"="">natsort()</a></li>
+                <li><a href="http://php.net/manual/zh/function.next.php" title="将数组中的内部指针向前移动一位">next()</a></li>
+                <li><a href="http://php.net/manual/zh/function.current.php" title="返回数组中的当前单元">pos()</a></li>
+                <li><a href="http://php.net/manual/zh/function.prev.php" title="将数组的内部指针倒回一位">prev()</a></li>
+                <li><a href="http://php.net/manual/zh/function.range.php" title="建立一个包含指定范围单元的数组">range()</a></li>
+                <li><a href="http://php.net/manual/zh/function.reset.php" title="将数组的内部指针指向第一个单元">reset()</a></li>
+                <li><a href="http://php.net/manual/zh/function.rsort.php" title="对数组逆向排序">rsort()</a></li>
+                <li><a href="http://php.net/manual/zh/function.shuffle.php" title="将数组打乱">shuffle()</a></li>
+                <li><a href="http://php.net/manual/zh/function.count.php" title="计算数组中的单元数目或对象中的属性个数">sizeof()</a></li>
+                <li><a href="http://php.net/manual/zh/function.sort.php" title="对数组排序">sort()</a></li>
+                <li><a href="http://php.net/manual/zh/function.uasort.php" title="使用用户自定义的比较函数对数组中的值进行排序并保持索引关联">uasort()</a></li>
+                <li><a href="http://php.net/manual/zh/function.uksort.php" title="使用用户自定义的比较函数对数组中的键名进行排序">uksort()</a></li>
+                <li><a href="http://php.net/manual/zh/function.usort.php" title="使用用户自定义的比较函数对数组中的值进行排序">usort()</a></li>
+            </ul>
+        </div>
+        <div class="board-card">
+            <h3 class="board-card-title">Array Constants</h3>
+            <ul>
+                <li>CASE_LOWER</li>
+                <li class="tip">Used with array_change_key_case() to convert array keys to lower case</li>
+                <li>CASE_UPPER</li>
+                <li class="tip">Used with array_change_key_case() to convert array keys to upper case</li>
+                <li>SORT_ASC</li>
+                <li class="tip">Used with array_multisort() to sort in ascending order</li>
+                <li>SORT_DESC</li>
+                <li class="tip">Used with array_multisort() to sort in descending order</li>
+                <li>SORT_REGULAR</li>
+                <li class="tip">Used to compare items normally</li>
+                <li>SORT_NUMERIC</li>
+                <li class="tip">Used to compare items numerically</li>
+                <li>SORT_STRING</li>
+                <li class="tip">Used to compare items as strings</li>
+                <li>SORT_LOCALE_STRING</li>
+                <li class="tip">Used to compare items as strings, based on the current locale </li>
+                <li>COUNT_NORMAL</li>
+                <li>COUNT_RECURSIVE</li>
+                <li>EXTR_OVERWRITE</li>
+                <li>EXTR_SKIP</li>
+                <li>EXTR_PREFIX_SAME</li>
+                <li>EXTR_PREFIX_ALL</li>
+                <li>EXTR_PREFIX_INVALID</li>
+                <li>EXTR_PREFIX_IF_EXISTS</li>
+                <li>EXTR_IF_EXISTS</li>
+                <li>EXTR_REFS</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="board masonry-brick" style="position: absolute; top: 45px; left: 492px; background: rgba(14, 251, 252, 0.247059);">
+        <h2 class="board-title">String</h2>
+        <div class="board-card">
+            <h3 class="board-card-title">String Functions</h3>
+            <ul>
+                <li><a href="http://php.net/manual/zh/function.addcslashes.php" title="以 C 语言风格使用反斜线转义字符串中的字符">addcslashes()</a></li>
+                <li><a href="http://php.net/manual/zh/function.addslashes.php" title="使用反斜线引用字符串">addslashes()</a></li>
+                <li><a href="http://php.net/manual/zh/function.bin2hex.php" title="函数把包含数据的二进制字符串转换为十六进制值">bin2hex()</a></li>
+                <li><a href="http://php.net/manual/zh/function.rtrim.php" title="删除字符串末端的空白字符（或者其他字符）">chop()</a></li>
+                <li><a href="http://php.net/manual/zh/function.chr.php" title="返回指定的字符">chr()</a></li>
+                <li><a href="http://php.net/manual/zh/function.chunk-split.php" title="将字符串分割成小块">chunk_split()</a></li>
+                <li><a href="http://php.net/manual/zh/function.convert-cyr-string.php" title="将字符由一种 Cyrillic 字符转换成另一种">convert_cyr_string()</a></li>
+                <li><a href="http://php.net/manual/zh/function.convert-uudecode.php" title="解码一个 uuencode 编码的字符串">convert_uudecode()</a></li>
+                <li><a href="http://php.net/manual/zh/function.convert-uuencode.php" title="使用 uuencode 编码一个字符串">convert_uuencode()</a></li>
+                <li><a href="http://php.net/manual/zh/function.count-chars.php" title="返回字符串所用字符的信息">count_chars()</a></li>
+                <li><a href="http://php.net/manual/zh/function.crc32.php" title="计算一个字符串的 crc32 多项式">crc32()</a></li>
+                <li><a href="http://php.net/manual/zh/function.crypt.php" title="单向字符串散列">crypt()</a></li>
+                <li><a href="http://php.net/manual/zh/function.echo.php" title="输出一个或多个字符串">echo()</a></li>
+                <li><a href="http://php.net/manual/zh/function.explode.php" title="使用一个字符串分割另一个字符串">explode()</a></li>
+                <li><a href="http://php.net/manual/zh/function.fprintf.php" title="将格式化后的字符串写入到流">fprintf()</a></li>
+                <li><a href="http://php.net/manual/zh/function.htmlspecialchars.php" title="Convert special characters to HTML entities">get_html_translation_table()</a></li>
+                <li><a href="http://php.net/manual/zh/function.hebrev.php" title="将逻辑顺序希伯来文（logical-Hebrew）转换为视觉顺序希伯来文（visual-Hebrew）">hebrev()</a></li>
+                <li><a href="http://php.net/manual/zh/function.hebrevc.php" title="将逻辑顺序希伯来文（logical-Hebrew）转换为视觉顺序希伯来文（visual-Hebrew），并且转换换行符">hebrevc()</a></li>
+                <li><a href="http://php.net/manual/zh/function.html-entity-decode.php" title="Convert all HTML entities to their applicable characters">html_entity_decode()</a></li>
+                <li><a href="http://php.net/manual/zh/function.htmlentities.php" title="Convert all applicable characters to HTML entities">htmlentities()</a></li>
+                <li><a href="http://php.net/manual/zh/function.htmlspecialchars-decode.php" title="将特殊的 HTML 实体转换回普通字符">htmlspecialchars_decode()</a></li>
+                <li><a href="http://php.net/manual/zh/function.htmlspecialchars.php" title="Convert special characters to HTML entities">htmlspecialchars()</a></li>
+                <li><a href="http://php.net/manual/zh/function.implode.php" title="将一个一维数组的值转化为字符串">implode()</a></li>
+                <li><a href="http://php.net/manual/zh/function.join.php" title="别名 implode(), 将一个一维数组的值转化为字符串">join()</a></li>
+                <li><a href="http://php.net/manual/zh/function.levenshtein.php" title="计算两个字符串之间的编辑距离">levenshtein()</a></li>
+                <li><a href="http://php.net/manual/zh/function.localeconv.php" title="Get numeric formatting information">localeconv()</a></li>
+                <li><a href="http://php.net/manual/zh/function.ltrim.php" title="删除字符串开头的空白字符（或其他字符）">ltrim()</a></li>
+                <li><a href="http://php.net/manual/zh/function.md5.php" title="计算字符串的 MD5 散列值">md5()</a></li>
+                <li><a href="http://php.net/manual/zh/function.md5-file.php" title="计算指定文件的 MD5 散列值">md5_file()</a></li>
+                <li><a href="http://php.net/manual/zh/function.metaphone.php" title="Calculate the metaphone key of a string">metaphone()</a></li>
+                <li><a href="http://php.net/manual/zh/function.money-format.php" title="将数字格式化成货币字符串">money_format()</a></li>
+                <li><a href="http://php.net/manual/zh/function.nl-langinfo.php" title="Query language and locale information">nl_langinfo()</a></li>
+                <li><a href="http://php.net/manual/zh/function.nl2br.php" title="在字符串所有新行之前插入 HTML 换行标记">nl2br()</a></li>
+                <li><a href="http://php.net/manual/zh/function.number-format.php" title="以千位分隔符方式格式化一个数字">number_format()</a></li>
+                <li><a href="http://php.net/manual/zh/function.ord.php" title="返回字符的 ASCII 码值">ord()</a></li>
+                <li><a href="http://php.net/manual/zh/function.parse-str.php" title="将字符串解析成多个变量">parse_str()</a></li>
+                <li><a href="http://php.net/manual/zh/function.print.php" title="输出字符串">print()</a></li>
+                <li><a href="http://php.net/manual/zh/function.printf.php" title="输出格式化字符串">printf()</a></li>
+                <li><a href="http://php.net/manual/zh/function.quoted-printable-decode.php" title="将 quoted-printable 字符串转换为 8-bit 字符串">quoted_printable_decode()</a></li>
+                <li><a href="http://php.net/manual/zh/function.quotemeta.php" title="转义元字符集">quotemeta()</a></li>
+                <li><a href="http://php.net/manual/zh/function.rtrim.php" title="删除字符串末端的空白字符（或者其他字符）">rtrim()</a></li>
+                <li><a href="http://php.net/manual/zh/function.setlocale.php" title="设置地区信息">setlocale()</a></li>
+                <li><a href="http://php.net/manual/zh/function.sha1.php" title="计算字符串的 sha1 散列值">sha1()</a></li>
+                <li><a href="http://php.net/manual/zh/function.sha1-file.php" title="计算文件的 sha1 散列值">sha1_file()</a></li>
+                <li><a href="http://php.net/manual/zh/function.similar-text.php" title="计算两个字符串的相似度">similar_text()</a></li>
+                <li><a href="http://php.net/manual/zh/function.soundex.php" title="Calculate the soundex key of a string">soundex()</a></li>
+                <li><a href="http://php.net/manual/zh/function.sprintf.php" title="Return a formatted string">sprintf()</a></li>
+                <li><a href="http://php.net/manual/zh/function.sscanf.php" title="根据指定格式解析输入的字符">sscanf()</a></li>
+                <li><a href="http://php.net/manual/zh/function.str-ireplace.php" title="str_replace() 的忽略大小写版本">str_ireplace()</a></li>
+                <li><a href="http://php.net/manual/zh/function.str-pad.php" title="使用另一个字符串填充字符串为指定长度">str_pad()</a></li>
+                <li><a href="http://php.net/manual/zh/function.str-repeat.php" title="重复一个字符串">str_repeat()</a></li>
+                <li><a href="http://php.net/manual/zh/function.str-replace.php" title="子字符串替换">str_replace()</a></li>
+                <li><a href="http://php.net/manual/zh/function.str-rot13.php" title="对字符串执行 ROT13 转换">str_rot13()</a></li>
+                <li><a href="http://php.net/manual/zh/function.str-shuffle.php" title="随机打乱一个字符串">str_shuffle()</a></li>
+                <li><a href="http://php.net/manual/zh/function.str-split.php" title="将字符串转换为数组">str_split()</a></li>
+                <li><a href="http://php.net/manual/zh/function.str-word-count.php" title="返回字符串中单词的使用情况">str_word_count()</a></li>
+                <li><a href="http://php.net/manual/zh/function.strcasecmp.php" title="二进制安全比较字符串（不区分大小写）">strcasecmp()</a></li>
+                <li><a href="http://php.net/manual/zh/function.strchr.php" title="别名 strstr(), 查找字符串的首次出现">strchr()</a></li>
+                <li><a href="http://php.net/manual/zh/function.strcmp.php" title="二进制安全字符串比较">strcmp()</a></li>
+                <li><a href="http://php.net/manual/zh/function.strcoll.php" title="基于区域设置的字符串比较">strcoll()</a></li>
+                <li><a href="http://php.net/manual/zh/function.strcspn.php" title="获取不匹配遮罩的起始子字符串的长度">strcspn()</a></li>
+                <li><a href="http://php.net/manual/zh/function.strip-tags.php" title="从字符串中去除 HTML 和 PHP 标记">strip_tags()</a></li>
+                <li><a href="http://php.net/manual/zh/function.addcslashes.php" title="以 C 语言风格使用反斜线转义字符串中的字符">stripcslashes()</a></li>
+                <li><a href="http://php.net/manual/zh/function.addslashes.php" title="使用反斜线引用字符串">stripslashes()</a></li>
+                <li><a href="http://php.net/manual/zh/function.stripos.php" title="查找字符串首次出现的位置（不区分大小写）">stripos()</a></li>
+                <li><a href="http://php.net/manual/zh/function.stristr.php" title="strstr() 函数的忽略大小写版本">stristr()</a></li>
+                <li><a href="http://php.net/manual/zh/function.strlen.php" title="获取字符串长度">strlen()</a></li>
+                <li><a href="http://php.net/manual/zh/function.strnatcasecmp.php" title="使用“自然顺序”算法比较字符串（不区分大小写）" natural="" order"="" algorithm="" (case-insensitive)"="">strnatcasecmp()</a></li>
+                <li><a href="http://php.net/manual/zh/function.strnatcmp.php" title="使用自然排序算法比较字符串" natural="" order"="" algorithm="" (case-sensitive)"="">strnatcmp()</a></li>
+                <li><a href="http://php.net/manual/zh/function.strncasecmp.php" title="二进制安全比较字符串开头的若干个字符（不区分大小写）">strncasecmp()</a></li>
+                <li><a href="http://php.net/manual/zh/function.strncmp.php" title="二进制安全比较字符串开头的若干个字符">strncmp()</a></li>
+                <li><a href="http://php.net/manual/zh/function.strpbrk.php" title="在字符串中查找一组字符的任何一个字符">strpbrk()</a></li>
+                <li><a href="http://php.net/manual/zh/function.strpos.php" title="查找字符串首次出现的位置">strpos()</a></li>
+                <li><a href="http://php.net/manual/zh/function.strrchr.php" title="查找指定字符在字符串中的最后一次出现">strrchr()</a></li>
+                <li><a href="http://php.net/manual/zh/function.strrev.php" title="反转字符串">strrev()</a></li>
+                <li><a href="http://php.net/manual/zh/function.strripos.php" title="计算指定字符串在目标字符串中最后一次出现的位置（不区分大小写）">strripos()</a></li>
+                <li><a href="http://php.net/manual/zh/function.strrpos.php" title="计算指定字符串在目标字符串中最后一次出现的位置">strrpos()</a></li>
+                <li><a href="http://php.net/manual/zh/function.strspn.php" title="计算字符串中全部字符都存在于指定字符集合中的第一段子串的长度。">strspn()</a></li>
+                <li><a href="http://php.net/manual/zh/function.strstr.php" title="查找字符串的首次出现">strstr()</a></li>
+                <li><a href="http://php.net/manual/zh/function.strtok.php" title="标记分割字符串">strtok()</a></li>
+                <li><a href="http://php.net/manual/zh/function.strtolower.php" title="将字符串转化为小写">strtolower()</a></li>
+                <li><a href="http://php.net/manual/zh/function.strtoupper.php" title="将字符串转化为大写">strtoupper()</a></li>
+                <li><a href="http://php.net/manual/zh/function.strtr.php" title="转换指定字符">strtr()</a></li>
+                <li><a href="http://php.net/manual/zh/function.substr.php" title="返回字符串的子串">substr()</a></li>
+                <li><a href="http://php.net/manual/zh/function.substr-compare.php" title="二进制安全比较字符串（从偏移位置比较指定长度）">substr_compare()</a></li>
+                <li><a href="http://php.net/manual/zh/function.substr-count.php" title="计算字串出现的次数">substr_count()</a></li>
+                <li><a href="http://php.net/manual/zh/function.substr-replace.php" title="替换字符串的子串">substr_replace()</a></li>
+                <li><a href="http://php.net/manual/zh/function.trim.php" title="去除字符串首尾处的空白字符（或者其他字符）">trim()</a></li>
+                <li><a href="http://php.net/manual/zh/function.ucfirst.php" title="将字符串的首字母转换为大写">ucfirst()</a></li>
+                <li><a href="http://php.net/manual/zh/function.ucwords.php" title="将字符串中每个单词的首字母转换为大写">ucwords()</a></li>
+                <li><a href="http://php.net/manual/zh/function.vfprintf.php" title="将格式化字符串写入流">vfprintf()</a></li>
+                <li><a href="http://php.net/manual/zh/function.vprintf.php" title="输出格式化字符串">vprintf()</a></li>
+                <li><a href="http://php.net/manual/zh/function.vsprintf.php" title="返回格式化字符串">vsprintf()</a></li>
+                <li><a href="http://php.net/manual/zh/function.wordwrap.php" title="打断字符串为指定数量的字串">wordwrap()</a></li>
+            </ul>
+        </div>
+        <div class="board-card">
+            <h3 class="board-card-title">String Constants</h3>
+            <ul>
+                <li>CRYPT_SALT_LENGTH</li>
+                <li class="tip">Contains the length of the default encryption method for the system. For standard DES encryption, the length is 2</li>
+                <li>CRYPT_STD_DES</li>
+                <li class="tip">Set to 1 if the standard DES-based encryption with a 2 character salt is supported, 0 otherwise</li>
+                <li>CRYPT_EXT_DES</li>
+                <li class="tip">Set to 1 if the extended DES-based encryption with a 9 character salt is supported, 0 otherwise</li>
+                <li>CRYPT_MD5</li>
+                <li class="tip">Set to 1 if the MD5 encryption with a 12 character salt starting with $1$ is supported, 0 otherwise</li>
+                <li>CRYPT_BLOWFISH</li>
+                <li class="tip">Set to 1 if the Blowfish encryption with a 16 character salt starting with $2$ or $2a$ is supported, 0 otherwise0</li>
+                <li>HTML_SPECIALCHARS</li>
+                <li>HTML_ENTITIES</li>
+                <li>ENT_COMPAT</li>
+                <li>ENT_QUOTES</li>
+                <li>ENT_NOQUOTES</li>
+                <li>CHAR_MAX</li>
+                <li>LC_CTYPE</li>
+                <li>LC_NUMERIC</li>
+                <li>LC_TIME</li>
+                <li>LC_COLLATE</li>
+                <li>LC_MONETARY</li>
+                <li>LC_ALL</li>
+                <li>LC_MESSAGES</li>
+                <li>STR_PAD_LEFT</li>
+                <li>STR_PAD_RIGHT</li>
+                <li>STR_PAD_BOTH</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="board masonry-brick" style="position: absolute; top: 45px; left: 738px; background: rgba(158, 134, 255, 0.247059);">
+        <h2 class="board-title">Variable</h2>
+        <div class="board-card">
+            <h3 class="board-card-title">Handling Functions</h3>
+            <ul>
+                <li><a href="http://www.php.net/manual/zh/function.boolval.php" title="获取变量的布尔值">boolval</a></li>
+                <li><a href="http://www.php.net/manual/zh/function.debug-zval-dump.php" title="">debug_zval_dump</a></li>
+                <li><a href="http://www.php.net/manual/zh/function.doubleval.php" title="floatval()的别名, 获取变量的浮点值">doubleval</a></li>
+                <li><a href="http://www.php.net/manual/zh/function.empty.php" title="检查一个变量是否为空">empty</a></li>
+                <li><a href="http://www.php.net/manual/zh/function.floatval.php" title="获取变量的浮点值">floatval</a></li>
+                <li><a href="http://www.php.net/manual/zh/function.get-defined-vars.php" title="返回由所有已定义变量所组成的数组">get_defined_vars</a></li>
+                <li><a href="http://www.php.net/manual/zh/function.get-resource-type.php" title="返回资源（resource）类型">get_resource_type</a></li>
+                <li><a href="http://www.php.net/manual/zh/function.gettype.php" title="获取变量的类型">gettype</a></li>
+                <li><a href="http://www.php.net/manual/zh/function.import-request-variables.php" title="将 GET／POST／Cookie 变量导入到全局作用域中">import_request_variables</a></li>
+                <li><a href="http://www.php.net/manual/zh/function.intval.php" title="获取变量的整数值">intval</a></li>
+                <li><a href="http://www.php.net/manual/zh/function.is-array.php" title="检测变量是否是数组">is_array</a></li>
+                <li><a href="http://www.php.net/manual/zh/function.is-bool.php" title="检测变量是否是布尔型">is_bool</a></li>
+                <li><a href="http://www.php.net/manual/zh/function.is-callable.php" title="检测参数是否为合法的可调用结构">is_callable</a></li>
+                <li><a href="http://www.php.net/manual/zh/function.is-double.php" title="is_float()的别名, 检测变量是否是浮点型">is_double</a></li>
+                <li><a href="http://www.php.net/manual/zh/function.is-float.php" title="检测变量是否是浮点型">is_float</a></li>
+                <li><a href="http://www.php.net/manual/zh/function.is-int.php" title="">is_int</a></li>
+                <li><a href="http://www.php.net/manual/zh/function.is-integer.php" title="is_int()的别名, 检测变量是否是整数">is_integer</a></li>
+                <li><a href="http://www.php.net/manual/zh/function.is-long.php" title="is_int()的别名, 检测变量是否是整数">is_long</a></li>
+                <li><a href="http://www.php.net/manual/zh/function.is-null.php" title="检测变量是否为 <strong><code>NULL</code></strong>">is_null</a></li>
+                <li><a href="http://www.php.net/manual/zh/function.is-numeric.php" title="检测变量是否为数字或数字字符串">is_numeric</a></li>
+                <li><a href="http://www.php.net/manual/zh/function.is-object.php" title="检测变量是否是一个对象">is_object</a></li>
+                <li><a href="http://www.php.net/manual/zh/function.is-real.php" title="is_float()的别名, 检测变量是否是浮点型">is_real</a></li>
+                <li><a href="http://www.php.net/manual/zh/function.is-resource.php" title="检测变量是否为资源类型">is_resource</a></li>
+                <li><a href="http://www.php.net/manual/zh/function.is-scalar.php" title="检测变量是否是一个标量">is_scalar</a></li>
+                <li><a href="http://www.php.net/manual/zh/function.is-string.php" title="检测变量是否是字符串">is_string</a></li>
+                <li><a href="http://www.php.net/manual/zh/function.isset.php" title="检测变量是否设置">isset</a></li>
+                <li><a href="http://www.php.net/manual/zh/function.print-r.php" title="打印关于变量的易于理解的信息。">print_r</a></li>
+                <li><a href="http://www.php.net/manual/zh/function.serialize.php" title="产生一个可存储的值的表示">serialize</a></li>
+                <li><a href="http://www.php.net/manual/zh/function.settype.php" title="设置变量的类型">settype</a></li>
+                <li><a href="http://www.php.net/manual/zh/function.strval.php" title="获取变量的字符串值">strval</a></li>
+                <li><a href="function.unserialize.php" title="Creates a PHP value from a stored representation">unserialize</a></li>
+                <li><a href="http://www.php.net/manual/zh/function.unset.php" title="释放给定的变量">unset</a></li>
+                <li><a href="http://www.php.net/manual/zh/function.var-dump.php" title="打印变量的相关信息">var_dump</a></li>
+                <li><a href="http://www.php.net/manual/zh/function.var-export.php" title="输出或返回一个变量的字符串表示">var_export</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="board masonry-brick" style="position: absolute; top: 45px; left: 984px; background: rgba(60, 255, 20, 0.247059);">
+        <h2 class="board-title">Date/Time</h2>
+        <div class="board-card">
+            <h3 class="board-card-title">Date/Time Functions</h3>
+            <ul>
+                <li><a href="http://php.net/manual/zh/function.checkdate.php" title="验证一个格里高里日期">checkdate()</a></li>
+                <li><a href="http://php.net/manual/zh/function.date-default-timezone-get.php" title="取得一个脚本中所有日期时间函数所使用的默认时区">date_default_timezone_get()</a></li>
+                <li><a href="http://php.net/manual/zh/function.date-default-timezone-set.php" title="设定用于一个脚本中所有日期时间函数的默认时区">date_default_timezone_set()</a></li>
+                <li><a href="http://php.net/manual/zh/function.date-sunrise.php" title="返回给定的日期与地点的日出时间">date_sunrise()</a></li>
+                <li><a href="http://php.net/manual/zh/function.date-sunset.php" title="返回给定的日期与地点的日落时间">date_sunset()</a></li>
+                <li><a href="http://php.net/manual/zh/function.date.php" title="格式化一个本地时间／日期">date()</a></li>
+                <li><a href="http://php.net/manual/zh/function.getdate.php" title="取得日期／时间信息">getdate()</a></li>
+                <li><a href="http://php.net/manual/zh/function.gettimeofday.php" title="取得当前时间">gettimeofday()</a></li>
+                <li><a href="http://php.net/manual/zh/function.gmdate.php" title="格式化一个 GMT/UTC 日期／时间">gmdate()</a></li>
+                <li><a href="http://php.net/manual/zh/function.gmmktime.php" title="取得 GMT 日期的 UNIX 时间戳">gmmktime()</a></li>
+                <li><a href="http://php.net/manual/zh/function.gmstrftime.php" title="根据区域设置格式化 GMT/UTC 时间／日期">gmstrftime()</a></li>
+                <li><a href="http://php.net/manual/zh/function.idate.php" title="将本地时间日期格式化为整数">idate()</a></li>
+                <li><a href="http://php.net/manual/zh/function.localtime.php" title="取得本地时间">localtime()</a></li>
+                <li><a href="http://php.net/manual/zh/function.microtime.php" title="返回当前 Unix 时间戳和微秒数">microtime()</a></li>
+                <li><a href="http://php.net/manual/zh/function.mktime.php" title="取得一个日期的 Unix 时间戳">mktime()</a></li>
+                <li><a href="http://php.net/manual/zh/function.strftime.php" title="根据区域设置格式化本地时间／日期">strftime()</a></li>
+                <li><a href="http://php.net/manual/zh/function.strftime.php" title="根据区域设置格式化本地时间／日期">strptime()</a></li>
+                <li><a href="http://php.net/manual/zh/function.strtotime.php" title="将任何英文文本的日期时间描述解析为 Unix 时间戳">strtotime()</a></li>
+                <li><a href="http://php.net/manual/zh/function.time.php" title="返回当前的 Unix 时间戳">time()</a></li>
+            </ul>
+        </div>
+        <div class="board-card">
+            <h3 class="board-card-title">Date/Time Constants</h3>
+            <ul>
+                <li>DATE_ATOM</li>
+                <li class="tip">Atom (example: 2005-08-15T16:13:03+0000)</li>
+                <li>DATE_COOKIE</li>
+                <li class="tip">HTTP Cookies (example: Sun, 14 Aug 2005 16:13:03 UTC)</li>
+                <li>DATE_ISO8601</li>
+                <li class="tip">ISO-8601 (example: 2005-08-14T16:13:03+0000)</li>
+                <li>DATE_RFC822</li>
+                <li class="tip">RFC 822 (example: Sun, 14 Aug 2005 16:13:03 UTC)</li>
+                <li>DATE_RFC850</li>
+                <li class="tip">RFC 850 (example: Sunday, 14-Aug-05 16:13:03 UTC)</li>
+                <li>DATE_RFC1036</li>
+                <li class="tip">RFC 1036 (example: Sunday, 14-Aug-05 16:13:03 UTC)</li>
+                <li>DATE_RFC1123</li>
+                <li class="tip">RFC 1123 (example: Sun, 14 Aug 2005 16:13:03 UTC)</li>
+                <li>DATE_RFC2822</li>
+                <li class="tip">RFC 2822 (Sun, 14 Aug 2005 16:13:03 +0000)</li>
+                <li>DATE_RSS</li>
+                <li class="tip">RSS (Sun, 14 Aug 2005 16:13:03 UTC)</li>
+                <li>DATE_W3C</li>
+                <li class="tip">World Wide Web Consortium (example: 2005-08-14T16:13:03+0000)</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="board masonry-brick" style="position: absolute; top: 337px; left: 0px; background: rgba(44, 158, 52, 0.247059);">
+        <h2 class="board-title">Directory</h2>
+        <div class="board-card">
+            <h3 class="board-card-title">Directory Functions</h3>
+            <ul>
+                <li><a href="http://php.net/manual/zh/function.chdir.php" title="改变目录">chdir()</a></li>
+                <li><a href="http://php.net/manual/zh/function.chroot.php" title="改变根目录">chroot()</a></li>
+                <li><a href="http://php.net/manual/zh/function.dir.php" title="返回一个 Directory 类实例">dir()</a></li>
+                <li><a href="http://php.net/manual/zh/function.closedir.php" title="关闭目录句柄">closedir()</a></li>
+                <li><a href="http://php.net/manual/zh/function.getcwd.php" title="取得当前工作目录">getcwd()</a></li>
+                <li><a href="http://php.net/manual/zh/function.opendir.php" title="打开目录句柄">opendir()</a></li>
+                <li><a href="http://php.net/manual/zh/function.readdir.php" title="从目录句柄中读取条目">readdir()</a></li>
+                <li><a href="http://php.net/manual/zh/function.rewinddir.php" title="倒回目录句柄">rewinddir()</a></li>
+                <li><a href="http://php.net/manual/zh/function.scandir.php" title="列出指定路径中的文件和目录">scandir()</a></li>
+            </ul>
+        </div>
+        <div class="board-card">
+            <h3 class="board-card-title">Directory Constants</h3>
+            <ul>
+                <li>DIRECTORY_SEPARATOR</li>
+                <li>PATH_SEPARATOR</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="board masonry-brick" style="position: absolute; top: 664px; left: 0px; background: rgba(225, 211, 20, 0.247059);">
+        <h2 class="board-title">Error</h2>
+        <div class="board-card">
+            <h3 class="board-card-title">Error Functions</h3>
+            <ul>
+                <li><a href="http://php.net/manual/zh/function.debug-backtrace.php" title="产生一条回溯跟踪(backtrace)">debug_backtrace()</a></li>
+                <li><a href="http://php.net/manual/zh/function.debug-print-backtrace.php" title="打印一条回溯。">debug_print_backtrace()</a></li>
+                <li><a href="http://php.net/manual/zh/function.error-get-last.php" title="获取最后发生的错误">error_get_last()</a></li>
+                <li><a href="http://php.net/manual/zh/function.error-log.php" title="发送错误信息到某个地方">error_log()</a></li>
+                <li><a href="http://php.net/manual/zh/function.error-reporting.php" title="设置应该报告何种 PHP 错误">error_reporting()</a></li>
+                <li><a href="http://php.net/manual/zh/function.restore-error-handler.php" title="还原之前的错误处理函数">restore_error_handler()</a></li>
+                <li><a href="http://php.net/manual/zh/function.restore-exception-handler.php" title="恢复之前定义过的异常处理函数。">restore_exception_handler()</a></li>
+                <li><a href="http://php.net/manual/zh/function.set-error-handler.php" title="设置一个用户定义的错误处理函数">set_error_handler()</a></li>
+                <li><a href="http://php.net/manual/zh/function.set-exception-handler.php" title="设置一个用户定义的异常处理函数。">set_exception_handler()</a></li>
+                <li><a href="http://php.net/manual/zh/function.trigger-error.php" title="产生一个用户级别的 error/warning/notice 信息">trigger_error()</a></li>
+                <li><a href="http://php.net/manual/zh/function.user-error.php" title="trigger_error()的别名, 产生一个用户级别的 error/warning/notice 信息">user_error()</a></li>
+            </ul>
+        </div>
+        <div class="board-card">
+            <h3 class="board-card-title">Error Constants</h3>
+            <ul>
+                <li><span class="right">E_ERROR</span><span>1</span></li>
+                <li class="tip">Fatal run-time errors. Errors that cannot be recovered from. Execution of the script is halted</li>
+                <li><span class="right">E_WARNING</span><span>2</span></li>
+                <li class="tip">Non-fatal run-time errors. Execution of the script is not halted</li>
+                <li><span class="right">E_PARSE</span><span>4</span></li>
+                <li class="tip">Compile-time parse errors. Parse errors should only be generated by the parser</li>
+                <li><span class="right">E_NOTICE</span><span>8</span></li>
+                <li class="tip">Run-time notices. The script found something that might be an error, but could also happen when running a script normally</li>
+                <li><span class="right">E_CORE_ERROR</span><span>16</span></li>
+                <li class="tip">Fatal errors at PHP startup. This is like an E_ERROR in the PHP core</li>
+                <li><span class="right">E_CORE_WARNING</span><span>32</span></li>
+                <li class="tip">Non-fatal errors at PHP startup. This is like an E_WARNING in the PHP core</li>
+                <li><span class="right">E_COMPILE_ERROR</span><span>64</span></li>
+                <li class="tip">Fatal compile-time errors. This is like an E_ERROR generated by the Zend Scripting Engine</li>
+                <li><span class="right">E_COMPILE_WARNING</span><span>128</span></li>
+                <li class="tip">Non-fatal compile-time errors. This is like an E_WARNING generated by the Zend Scripting Engine</li>
+                <li><span class="right">E_USER_ERROR</span><span>256</span></li>
+                <li class="tip">Fatal user-generated error. This is like an E_ERROR set by the programmer using the PHP function trigger_error()</li>
+                <li><span class="right">E_USER_WARNING</span><span>512</span></li>
+                <li class="tip">Non-fatal user-generated warning. This is like an E_WARNING set by the programmer using the PHP function trigger_error()</li>
+                <li><span class="right">E_USER_NOTICE</span><span>1024</span></li>
+                <li class="tip">User-generated notice. This is like an E_NOTICE set by the programmer using the PHP function trigger_error()</li>
+                <li><span class="right">E_STRICT</span><span>2048</span></li>
+                <li class="tip">Run-time notices. PHP suggest changes to your code to help interoperability and compatibility of the code</li>
+                <li><span class="right">E_RECOVERABLE_ERROR</span><span>4096</span></li>
+                <li class="tip">Catchable fatal error. This is like an E_ERROR but can be caught by a user defined handle (see also set_error_handler())</li>
+                <li><span class="right">E_ALL</span><span>6143</span></li>
+                <li class="tip">All errors and warnings, except of level E_STRICT</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="board masonry-brick" style="position: absolute; top: 703px; left: 738px; background: rgba(100, 117, 121, 0.247059);">
+        <h2 class="board-title">Math</h2>
+        <div class="board-card">
+            <h3 class="board-card-title">Math Functions</h3>
+            <ul>
+                <li><a href="http://php.net/manual/zh/function.abs.php" title="绝对值">abs()</a></li>
+                <li><a href="http://php.net/manual/zh/function.acos.php" title="反余弦">acos()</a></li>
+                <li><a href="http://php.net/manual/zh/function.acosh.php" title="反双曲余弦">acosh()</a></li>
+                <li><a href="http://php.net/manual/zh/function.asin.php" title="反正弦">asin()</a></li>
+                <li><a href="http://php.net/manual/zh/function.asinh.php" title="反双曲正弦">asinh()</a></li>
+                <li><a href="http://php.net/manual/zh/function.atan.php" title="反正切">atan()</a></li>
+                <li><a href="http://php.net/manual/zh/function.atan2.php" title="两个参数的反正切">atan2()</a></li>
+                <li><a href="http://php.net/manual/zh/function.atanh.php" title="反双曲正切">atanh()</a></li>
+                <li><a href="http://php.net/manual/zh/function.base-convert.php" title="在任意进制之间转换数字">base_convert()</a></li>
+                <li><a href="http://php.net/manual/zh/function.bindec.php" title="二进制转换为十进制">bindec()</a></li>
+                <li><a href="http://php.net/manual/zh/function.ceil.php" title="进一法取整">ceil()</a></li>
+                <li><a href="http://php.net/manual/zh/function.cos.php" title="余弦">cos()</a></li>
+                <li><a href="http://php.net/manual/zh/function.cosh.php" title="双曲余弦">cosh()</a></li>
+                <li><a href="http://php.net/manual/zh/function.decbin.php" title="十进制转换为二进制">decbin()</a></li>
+                <li><a href="http://php.net/manual/zh/function.dechex.php" title="十进制转换为十六进制">dechex()</a></li>
+                <li><a href="http://php.net/manual/zh/function.decoct.php" title="十进制转换为八进制">decoct()</a></li>
+                <li><a href="http://php.net/manual/zh/function.deg2rad.php" title="将角度转换为弧度">deg2rad()</a></li>
+                <li><a href="http://php.net/manual/zh/function.exp.php" title="计算 <strong><code>e</code></strong> 的指数">exp()</a></li>
+                <li><a href="http://php.net/manual/zh/function.expm1.php" title="返回 exp(number) - 1，甚至当 number 的值接近零也能计算出准确结果">expm1()</a></li>
+                <li><a href="http://php.net/manual/zh/function.floor.php" title="舍去法取整">floor()</a></li>
+                <li><a href="http://php.net/manual/zh/function.fmod.php" title="返回除法的浮点数余数">fmod()</a></li>
+                <li><a href="http://php.net/manual/zh/function.rand.php" title="产生一个随机整数">getrandmax()</a><p></p></li>
+                <li><a href="http://php.net/manual/zh/function.hexdec.php" title="十六进制转换为十进制">hexdec()</a></li>
+                <li><a href="http://php.net/manual/zh/function.hypot.php" title="计算一直角三角形的斜边长度">hypot()</a></li>
+                <li><a href="http://php.net/manual/zh/function.is-finite.php" title="判断是否为有限值">is_finite()</a></li>
+                <li><a href="http://php.net/manual/zh/function.is-infinite.php" title="判断是否为无限值">is_infinite()</a></li>
+                <li><a href="http://php.net/manual/zh/function.is-nan.php" title="判断是否为合法数值">is_nan()</a></li>
+                <li><a href="http://php.net/manual/zh/function.lcg-value.php" title="组合线性同余发生器">lcg_value()</a></li>
+                <li><a href="http://php.net/manual/zh/function.log.php" title="自然对数">log()</a></li>
+                <li><a href="http://php.net/manual/zh/function.log10.php" title="以 10 为底的对数">log10()</a></li>
+                <li><a href="http://php.net/manual/zh/function.log.php" title="自然对数">log1p()</a></li>
+                <li><a href="http://php.net/manual/zh/function.max.php" title="找出最大值">max()</a></li>
+                <li><a href="http://php.net/manual/zh/function.min.php" title="找出最小值">min()</a></li>
+                <li><a href="http://php.net/manual/zh/function.mt-rand.php" title="生成更好的随机数">mt_getrandmax()</a></li>
+                <li><a href="http://php.net/manual/zh/function.mt-rand.php" title="生成更好的随机数">mt_rand()</a></li>
+                <li><a href="http://php.net/manual/zh/function.mt-srand.php" title="播下一个更好的随机数发生器种子">mt_srand()</a></li>
+                <li><a href="http://php.net/manual/zh/function.octdec.php" title="八进制转换为十进制">octdec()</a></li>
+                <li><a href="http://php.net/manual/zh/function.pi.php" title="得到圆周率值">pi()</a></li>
+                <li><a href="http://php.net/manual/zh/function.pow.php" title="指数表达式">pow()</a></li>
+                <li><a href="http://php.net/manual/zh/function.rad2deg.php" title="将弧度数转换为相应的角度数">rad2deg()</a></li>
+                <li><a href="http://php.net/manual/zh/function.rand.php" title="产生一个随机整数">rand()</a></li>
+                <li><a href="http://php.net/manual/zh/function.round.php" title="对浮点数进行四舍五入">round()</a></li>
+                <li><a href="http://php.net/manual/zh/function.sin.php" title="正弦">sin()</a></li>
+                <li><a href="http://php.net/manual/zh/function.sinh.php" title="双曲正弦">sinh()</a></li>
+                <li><a href="http://php.net/manual/zh/function.sqrt.php" title="平方根">sqrt()</a></li>
+                <li><a href="http://php.net/manual/zh/function.srand.php" title="播下随机数发生器种子">srand()</a></li>
+                <li><a href="http://php.net/manual/zh/function.tan.php" title="正切">tan()</a></li>
+                <li><a href="http://php.net/manual/zh/function.tanh.php" title="双曲正切">tanh()</a></li>
+            </ul>
+        </div>
+        <div class="board-card">
+            <h3 class="board-card-title">Math Constants</h3>
+            <ul>
+                <li>M_E</li>
+                <li class="tip">Returns e (approx. 2.718)</li>
+                <li>M_EULER</li>
+                <li class="tip">Returns Euler's constant (approx. 0.577)</li>
+                <li>M_LNPI</li>
+                <li class="tip">Returns the natural logarithm of PI (approx. 1.144)</li>
+                <li>M_LN2</li>
+                <li class="tip">Returns the natural logarithm of 2 (approx. 0.693)</li>
+                <li>M_LN10</li>
+                <li class="tip">Returns the natural logarithm of 10 (approx. 2.302)</li>
+                <li>M_LOG2E</li>
+                <li class="tip">Returns the base-2 logarithm of E (approx. 1.442)</li>
+                <li>M_LOG10E</li>
+                <li class="tip">Returns the base-10 logarithm of E (approx. 0.434)</li>
+                <li>M_PI</li>
+                <li class="tip">Returns PI (approx. 3.14159)</li>
+                <li>M_PI_2</li>
+                <li class="tip">Returns PI/2 (approx. 1.570)</li>
+                <li>M_PI_4</li>
+                <li class="tip">Returns PI/4 (approx. 0.785)</li>
+                <li>M_1_PI</li>
+                <li class="tip">Returns 1/PI (approx. 0.318)</li>
+                <li>M_2_PI</li>
+                <li class="tip">Returns 2/PI (approx. 0.636)</li>
+                <li>M_SQRTPI</li>
+                <li class="tip">Returns the square root of PI (approx. 1.772)</li>
+                <li>M_2_SQRTPI</li>
+                <li class="tip">Returns 2/square root of PI (approx. 1.128)</li>
+                <li>M_SQRT1_2</li>
+                <li class="tip">Returns the square root of 1/2 (approx. 0.707)</li>
+                <li>M_SQRT2</li>
+                <li class="tip">Returns the square root of 2 (approx. 1.414)</li>
+                <li>M_SQRT3</li>
+                <li class="tip">Returns the square root of 3 (approx. 1.732)</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="board masonry-brick" style="position: absolute; top: 991px; left: 984px; background: rgba(251, 34, 240, 0.247059);">
+        <h2 class="board-title">Filesystem</h2>
+        <div class="board-card">
+            <h3 class="board-card-title">Filesystem Functions</h3>
+            <ul>
+                <li><a href="http://php.net/manual/zh/function.basename.php" title="返回路径中的文件名部分">basename()</a></li>
+                <li><a href="http://php.net/manual/zh/function.chgrp.php" title="改变文件所属的组">chgrp()</a></li>
+                <li><a href="http://php.net/manual/zh/function.chmod.php" title="改变文件模式">chmod()</a></li>
+                <li><a href="http://php.net/manual/zh/function.chown.php" title="改变文件的所有者">chown()</a></li>
+                <li><a href="http://php.net/manual/zh/function.clearstatcache.php" title="清除文件状态缓存">clearstatcache()</a></li>
+                <li><a href="http://php.net/manual/zh/function.copy.php" title="拷贝文件">copy()</a></li>
+                <li><span title="Delete a file">delete()</span></li>
+                <li><a href="http://php.net/manual/zh/function.dirname.php" title="返回路径中的目录部分">dirname()</a></li>
+                <li><a href="http://php.net/manual/zh/function.disk-free-space.php" title="返回目录中的可用空间">disk_free_space()</a></li>
+                <li><a href="http://php.net/manual/zh/function.disk-total-space.php" title="返回一个目录的磁盘总大小">disk_total_space()</a></li>
+                <li><a href="http://php.net/manual/zh/function.disk-free-space.php" title="返回目录中的可用空间">diskfreespace()</a></li>
+                <li><a href="http://php.net/manual/zh/function.fclose.php" title="关闭一个已打开的文件指针">fclose()</a></li>
+                <li><a href="http://php.net/manual/zh/function.feof.php" title="测试文件指针是否到了文件结束的位置">feof()</a></li>
+                <li><a href="http://php.net/manual/zh/function.fflush.php" title="将缓冲内容输出到文件">fflush()</a></li>
+                <li><a href="http://php.net/manual/zh/function.fgetc.php" title="从文件指针中读取字符">fgetc()</a></li>
+                <li><a href="http://php.net/manual/zh/function.fgetcsv.php" title="从文件指针中读入一行并解析 CSV 字段">fgetcsv()</a></li>
+                <li><a href="http://php.net/manual/zh/function.fgets.php" title="从文件指针中读取一行">fgets()</a></li>
+                <li><a href="http://php.net/manual/zh/function.fgetss.php" title="从文件指针中读取一行并过滤掉 HTML 标记">fgetss()</a></li>
+                <li><a href="http://php.net/manual/zh/function.file.php" title="把整个文件读入一个数组中">file()</a></li>
+                <li><a href="http://php.net/manual/zh/function.file-exists.php" title="检查文件或目录是否存在">file_exists()</a></li>
+                <li><a href="http://php.net/manual/zh/function.file-get-contents.php" title="将整个文件读入一个字符串">file_get_contents()</a></li>
+                <li><a href="http://php.net/manual/zh/function.file-put-contents.php" title="将一个字符串写入文件">file_put_contents</a></li>
+                <li><a href="http://php.net/manual/zh/function.fileatime.php" title="取得文件的上次访问时间">fileatime()</a></li>
+                <li><a href="http://php.net/manual/zh/function.filectime.php" title="取得文件的 inode 修改时间">filectime()</a></li>
+                <li><a href="http://php.net/manual/zh/function.filegroup.php" title="取得文件的组">filegroup()</a></li>
+                <li><a href="http://php.net/manual/zh/function.fileinode.php" title="取得文件的 inode">fileinode()</a></li>
+                <li><a href="http://php.net/manual/zh/function.filemtime.php" title="取得文件修改时间">filemtime()</a></li>
+                <li><a href="http://php.net/manual/zh/function.fileowner.php" title="取得文件的所有者">fileowner()</a></li>
+                <li><a href="http://php.net/manual/zh/function.fileperms.php" title="取得文件的权限">fileperms()</a></li>
+                <li><a href="http://php.net/manual/zh/function.filesize.php" title="取得文件大小">filesize()</a></li>
+                <li><a href="http://php.net/manual/zh/function.filetype.php" title="取得文件类型">filetype()</a></li>
+                <li><a href="http://php.net/manual/zh/function.flock.php" title="轻便的咨询文件锁定">flock()</a></li>
+                <li><a href="http://php.net/manual/zh/function.fnmatch.php" title="用模式匹配文件名">fnmatch()</a></li>
+                <li><a href="http://php.net/manual/zh/function.fopen.php" title="打开文件或者 URL">fopen()</a></li>
+                <li><a href="http://php.net/manual/zh/function.fpassthru.php" title="输出文件指针处的所有剩余数据">fpassthru()</a></li>
+                <li><a href="http://php.net/manual/zh/function.fputcsv.php" title="将行格式化为 CSV 并写入文件指针">fputcsv()</a></li>
+                <li><a href="http://php.net/manual/zh/function.fwrite.php" title="写入文件（可安全用于二进制文件）">fputs()</a></li>
+                <li><a href="http://php.net/manual/zh/function.fread.php" title="读取文件（可安全用于二进制文件）">fread()</a></li>
+                <li><a href="http://php.net/manual/zh/function.fscanf.php" title="从文件中格式化输入">fscanf()</a></li>
+                <li><a href="http://php.net/manual/zh/function.fseek.php" title="在文件指针中定位">fseek()</a></li>
+                <li><a href="http://php.net/manual/zh/function.fstat.php" title="通过已打开的文件指针取得文件信息">fstat()</a></li>
+                <li><a href="http://php.net/manual/zh/function.ftell.php" title="返回文件指针读/写的位置">ftell()</a></li>
+                <li><a href="http://php.net/manual/zh/function.ftruncate.php" title="将文件截断到给定的长度">ftruncate()</a></li>
+                <li><a href="http://php.net/manual/zh/function.fwrite.php" title="写入文件（可安全用于二进制文件）">fwrite()</a></li>
+                <li><a href="http://php.net/manual/zh/function.glob.php" title="寻找与模式匹配的文件路径">glob()</a></li>
+                <li><a href="http://php.net/manual/zh/function.is-dir.php" title="判断给定文件名是否是一个目录">is_dir()</a></li>
+                <li><a href="http://php.net/manual/zh/function.is-executable.php" title="判断给定文件名是否可执行">is_executable()</a></li>
+                <li><a href="http://php.net/manual/zh/function.is-file.php" title="判断给定文件名是否为一个正常的文件">is_file()</a></li>
+                <li><a href="http://php.net/manual/zh/function.is-link.php" title="判断给定文件名是否为一个符号连接">is_link()</a></li>
+                <li><a href="http://php.net/manual/zh/function.is-readable.php" title="判断给定文件名是否可读">is_readable()</a></li>
+                <li><a href="http://php.net/manual/zh/function.is-uploaded-file.php" title="判断文件是否是通过 HTTP POST 上传的">is_uploaded_file()</a></li>
+                <li><a href="http://php.net/manual/zh/function.is-writable.php" title="判断给定的文件名是否可写">is_writable()</a></li>
+                <li><a href="http://php.net/manual/zh/function.is-writable.php" title="判断给定的文件名是否可写">is_writeable()</a></li>
+                <li><a href="http://php.net/manual/zh/function.link.php" title="建立一个硬连接">link()</a></li>
+                <li><a href="http://php.net/manual/zh/function.linkinfo.php" title="获取一个连接的信息">linkinfo()</a></li>
+                <li><a href="http://php.net/manual/zh/function.lstat.php" title="给出一个文件或符号连接的信息">lstat()</a></li>
+                <li><a href="http://php.net/manual/zh/function.mkdir.php" title="新建目录">mkdir()</a></li>
+                <li><a href="http://php.net/manual/zh/function.move-uploaded-file.php" title="将上传的文件移动到新位置">move_uploaded_file()</a></li>
+                <li><a href="http://php.net/manual/zh/function.parse-ini-file.php" title="解析一个配置文件">parse_ini_file()</a></li>
+                <li><a href="http://php.net/manual/zh/function.pathinfo.php" title="返回文件路径的信息">pathinfo()</a></li>
+                <li><a href="http://php.net/manual/zh/function.popen.php" title="打开进程文件指针">pclose()</a></li>
+                <li><a href="http://php.net/manual/zh/function.popen.php" title="打开进程文件指针">popen()</a></li>
+                <li><a href="http://php.net/manual/zh/function.readfile.php" title="输出文件">readfile()</a></li>
+                <li><a href="http://php.net/manual/zh/function.readlink.php" title="返回符号连接指向的目标">readlink()</a></li>
+                <li><a href="http://php.net/manual/zh/function.realpath.php" title="返回规范化的绝对路径名">realpath()</a></li>
+                <li><a href="http://php.net/manual/zh/function.rename.php" title="重命名一个文件或目录">rename()</a></li>
+                <li><a href="http://php.net/manual/zh/function.rewind.php" title="倒回文件指针的位置">rewind()</a></li>
+                <li><a href="http://php.net/manual/zh/function.rmdir.php" title="删除目录">rmdir()</a></li>
+                <li><a href="http://php.net/manual/zh/function.set-file-buffer.php" title="stream_set_write_buffer()的别名, Sets write file buffering on the given stream">set_file_buffer()</a></li>
+                <li><a href="http://php.net/manual/zh/function.stat.php" title="给出文件的信息">stat()</a></li>
+                <li><a href="http://php.net/manual/zh/function.symlink.php" title="建立符号连接">symlink()</a></li>
+                <li><a href="http://php.net/manual/zh/function.tempnam.php" title="建立一个具有唯一文件名的文件">tempnam()</a></li>
+                <li><a href="http://php.net/manual/zh/function.tmpfile.php" title="建立一个临时文件">tmpfile()</a></li>
+                <li><a href="http://php.net/manual/zh/function.touch.php" title="设定文件的访问和修改时间">touch()</a></li>
+                <li><a href="http://php.net/manual/zh/function.umask.php" title="改变当前的 umask">umask()</a></li>
+                <li><a href="http://php.net/manual/zh/function.unlink.php" title="删除文件">unlink()</a></li>
+            </ul>
+        </div>
+        <div class="board-card">
+            <h3 class="board-card-title">Filesystem Constants</h3>
+            <ul>
+                <li>GLOB_BRACE</li>
+                <li>GLOB_ONLYDIR</li>
+                <li>GLOB_MARK</li>
+                <li>GLOB_NOSORT</li>
+                <li>GLOB_NOCHECK</li>
+                <li>GLOB_NOESCAPE</li>
+                <li>PATHINFO_DIRNAME</li>
+                <li>PATHINFO_BASENAME</li>
+                <li>PATHINFO_EXTENSION</li>
+                <li>FILE_USE_INCLUDE_PATH</li>
+                <li>FILE_APPEND</li>
+                <li>FILE_IGNORE_NEW_LINES</li>
+                <li>FILE_SKIP_EMPTY_LINES</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="board masonry-brick" style="position: absolute; top: 1970px; left: 246px; background: rgba(214, 17, 21, 0.247059);">
+        <h2 class="board-title">Filter</h2>
+        <div class="board-card">
+            <h3 class="board-card-title">Filter Functions</h3>
+            <ul>
+                <li><a href="http://php.net/manual/zh/function.filter-has-var.php" title="Checks if variable of specified type exists">filter_has_var()</a></li>
+                <li><a href="http://php.net/manual/zh/function.filter-id.php" title="返回与某个特定名称的过滤器相关联的id">filter_id()</a></li>
+                <li><a href="http://php.net/manual/zh/function.filter-input.php" title="通过名称获取特定的外部变量，并且可以通过过滤器处理它">filter_input()</a></li>
+                <li><a href="http://php.net/manual/zh/function.filter-input-array.php" title="获取一系列外部变量，并且可以通过过滤器处理它们">filter_input_array()</a></li>
+                <li><a href="http://php.net/manual/zh/function.filter-list.php" title="返回所支持的过滤器列表">filter_list()</a></li>
+                <li><a href="http://php.net/manual/zh/function.filter-var-array.php" title="获取多个变量并且过滤它们">filter_var_array()</a></li>
+                <li><a href="http://php.net/manual/zh/function.filter-var.php" title="使用特定的过滤器过滤一个变量">filter_var()</a></li>
+            </ul>
+        </div>
+        <div class="board-card">
+            <h3 class="board-card-title">Filters</h3>
+            <ul>
+                <li><a href="http://php.net/manual/zh/filter.constants.php#constant.filter-callback" title="Call a user-defined function to filter data">FILTER_CALLBACK</a></li>
+                <li><a href="http://php.net/manual/zh/filter.constants.php#constant.filter-sanitize-string" title="Strip tags, optionally strip or encode special characters">FILTER_SANITIZE_STRING</a></li>
+                <li><a href="http://php.net/manual/zh/filter.constants.php#constant.filter-sanitize-stripped" title="Alias of " string"="" filter"="">FILTER_SANITIZE_STRIPPED</a></li>
+                <li><a href="http://php.net/manual/zh/filter.constants.php#constant.filter-sanitize-encoded" title="URL-encode string, optionally strip or encode special characters">FILTER_SANITIZE_ENCODED</a></li>
+                <li><a href="http://php.net/manual/zh/filter.constants.php#constant.filter-sanitize-special-chars" title="HTML-escape '<>&amp; and characters with ASCII value less than 32">FILTER_SANITIZE_SPECIAL_CHARS</a></li>
+                <li><a href="http://php.net/manual/zh/filter.constants.php#constant.filter-sanitize-email" title="Remove all characters, except letters, digits and !#$%&amp;'*+-/=?^_`{|}~@.[]">FILTER_SANITIZE_EMAIL</a></li>
+                <li><a href="http://php.net/manual/zh/filter.constants.php#constant.filter-sanitize-url" title="Remove all characters, except letters, digits and $-_.+!*'(),{}|\\^~[]`<>#%;/?:@&amp;=">FILTER_SANITIZE_URL</a></li>
+                <li><a href="http://php.net/manual/zh/filter.constants.php#constant.filter-sanitize-number-int" title="Remove all characters, except digits and +-">FILTER_SANITIZE_NUMBER_INT</a></li>
+                <li><a href="http://php.net/manual/zh/filter.constants.php#constant.filter-sanitize-number-float" title="remove all characters, except digits, +- and optionally .,ee">filter_sanitize_number_float</a></li>
+                <li><a href="http://php.net/manual/zh/filter.constants.php#constant.filter-sanitize-magic-quotes" title="apply addslashes()">filter_sanitize_magic_quotes</a></li>
+                <li><a href="http://php.net/manual/zh/filter.constants.php#constant.filter-unsafe-raw" title="Do nothing, optionally strip or encode special characters">FILTER_UNSAFE_RAW</a></li>
+                <li><a href="http://php.net/manual/zh/filter.constants.php#constant.filter-validate-int" title="Validate value as integer, optionally from the specified range">FILTER_VALIDATE_INT</a></li>
+                <li><a href="http://php.net/manual/zh/filter.constants.php#constant.filter-validate-boolean" title="Return TRUE for '1', 'true', 'on' and 'yes', FALSE for '0', 'false', 'off', 'no', and '', NULL otherwise">FILTER_VALIDATE_BOOLEAN</a></li>
+                <li><a href="http://php.net/manual/zh/filter.constants.php#constant.filter-validate-float" title="Validate value as float">FILTER_VALIDATE_FLOAT</a></li>
+                <li><a href="http://php.net/manual/zh/filter.constants.php#constant.filter-validate-regexp" title="Validate value against regexp, a Perl-compatible regular expression">FILTER_VALIDATE_REGEXP</a></li>
+                <li><a href="http://php.net/manual/zh/filter.constants.php#constant.filter-validate-url" title="Validate value as URL, optionally with required components">FILTER_VALIDATE_URL</a></li>
+                <li><a href="http://php.net/manual/zh/filter.constants.php#constant.filter-validate-email" title="Validate value as e-mail">FILTER_VALIDATE_EMAIL</a></li>
+                <li><a href="http://php.net/manual/zh/filter.constants.php#constant.filter-validate-ip" title="Validate value as IP address, optionally only IPv4 or IPv6 or not from private or reserved ranges">FILTER_VALIDATE_IP</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="board masonry-brick" style="position: absolute; top: 1998px; left: 0px; background: rgba(14, 251, 252, 0.247059);">
+        <h2 class="board-title">Calendar</h2>
+        <div class="board-card">
+            <h3 class="board-card-title">Calendar Functions</h3>
+            <ul>
+                <li><a href="http://php.net/manual/zh/function.cal-days-in-month.php" title="返回某个历法中某年中某月的天数">cal_days_in_month()</a></li>
+                <li><a href="http://php.net/manual/zh/function.cal-from-jd.php" title="转换Julian Day计数到一个支持的历法。">cal_from_jd()</a></li>
+                <li><a href="http://php.net/manual/zh/function.cal-info.php" title="返回选定历法的信息">cal_info()</a></li>
+                <li><a href="http://php.net/manual/zh/function.cal-to-jd.php" title="从一个支持的历法转变为Julian Day计数。">cal_to_jd()</a></li>
+                <li><a href="http://php.net/manual/zh/function.easter-date.php" title="得到指定年份的复活节午夜时的Unix时间戳。">easter_date()</a></li>
+                <li><a href="http://php.net/manual/zh/function.easter-days.php" title="得到指定年份的3月21日到复活节之间的天数">easter_days()</a></li>
+                <li><a href="http://php.net/manual/zh/function.frenchtojd.php" title="从一个French Republican历法的日期得到Julian Day计数。">FrenchToJD()</a></li>
+                <li><a href="http://php.net/manual/zh/function.gregoriantojd.php" title="转变一个Gregorian历法日期到Julian Day计数">GregorianToJD()</a></li>
+                <li><a href="http://php.net/manual/zh/function.jddayofweek.php" title="返回星期的日期">JDDayOfWeek()</a></li>
+                <li><a href="http://php.net/manual/zh/function.jdmonthname.php" title="返回月份的名称">JDMonthName()</a></li>
+                <li><a href="http://php.net/manual/zh/function.jdtofrench.php" title="转变一个Julian Day计数到French Republican历法的日期">JDToFrench()</a></li>
+                <li><a href="http://php.net/manual/zh/function.jdtogregorian.php" title="转变一个Julian Day计数为Gregorian历法日期">JDToGregorian()</a></li>
+                <li><a href="http://php.net/manual/zh/function.jdtojewish.php" title="转换一个julian天数为Jewish历法的日期">jdtojewish()</a></li>
+                <li><a href="http://php.net/manual/zh/function.jdtojulian.php" title="转变一个Julian Day计数到Julian历法的日期">JDToJulian()</a></li>
+                <li><a href="http://php.net/manual/zh/function.jdtounix.php" title="转变Julian Day计数为一个Unix时间戳">jdtounix()</a></li>
+                <li><a href="http://php.net/manual/zh/function.jewishtojd.php" title="转变一个Jewish历法的日期为一个Julian Day计数">JewishToJD()</a></li>
+                <li><a href="http://php.net/manual/zh/function.juliantojd.php" title="转变一个Julian历法的日期为Julian Day计数">JulianToJD()</a></li>
+                <li><a href="http://php.net/manual/zh/function.unixtojd.php" title="转变Unix时间戳为Julian Day计数">unixtojd()</a></li>
+            </ul>
+        </div>
+        <div class="board-card">
+            <h3 class="board-card-title">Calendar Constants</h3>
+            <ul>
+                <li>CAL_GREGORIAN</li>
+                <li class="tip">Gregorian calendar</li>
+                <li>CAL_JULIAN</li>
+                <li class="tip">Julian calendar</li>
+                <li>CAL_JEWISH</li>
+                <li class="tip">Jewish calendar</li>
+                <li>CAL_FRENCH</li>
+                <li class="tip">French Republican calendar</li>
+                <li>CAL_NUM_CALS</li>
+                <li>CAL_DOW_DAYNO</li>
+                <li>CAL_DOW_SHORT</li>
+                <li>CAL_DOW_LONG</li>
+                <li>CAL_MONTH_GREGORIAN_SHORT</li>
+                <li>CAL_MONTH_GREGORIAN_LONG</li>
+                <li>CAL_MONTH_JULIAN_SHORT</li>
+                <li>CAL_MONTH_JULIAN_LONG</li>
+                <li>CAL_MONTH_JEWISH</li>
+                <li>CAL_MONTH_FRENCH</li>
+                <li>CAL_EASTER_DEFAULT</li>
+                <li>CAL_EASTER_ROMAN</li>
+                <li>CAL_EASTER_ALWAYS_GREGORIAN</li>
+                <li>CAL_EASTER_ALWAYS_JULIAN</li>
+                <li>CAL_JEWISH_ADD_ALAFIM_GERESH</li>
+                <li>CAL_JEWISH_ADD_ALAFIM</li>
+                <li>CAL_JEWISH_ADD_GERESHAYIM</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="board masonry-brick" style="position: absolute; top: 2344px; left: 492px; background: rgba(158, 134, 255, 0.247059);">
+        <h2 class="board-title">FTP</h2>
+        <div class="board-card">
+            <h3 class="board-card-title">FTP Functions</h3>
+            <ul>
+                <li><a href="http://php.net/manual/zh/function.ftp-alloc.php" title="为要上传的文件分配空间">ftp_alloc()</a></li>
+                <li><a href="http://php.net/manual/zh/function.ftp-cdup.php" title="切换到当前目录的父目录">ftp_cdup()</a></li>
+                <li><a href="http://php.net/manual/zh/function.ftp-chdir.php" title="在 FTP 服务器上改变当前目录">ftp_chdir()</a></li>
+                <li><a href="http://php.net/manual/zh/function.ftp-chmod.php" title="设置 FTP 服务器上的文件权限">ftp_chmod()</a></li>
+                <li><a href="http://php.net/manual/zh/function.ftp-close.php" title="关闭一个 FTP 连接">ftp_close()</a></li>
+                <li><a href="http://php.net/manual/zh/function.ftp-connect.php" title="建立一个新的 FTP 连接">ftp_connect()</a></li>
+                <li><a href="http://php.net/manual/zh/function.ftp-delete.php" title="删除 FTP 服务器上的一个文件">ftp_delete()</a></li>
+                <li><a href="http://php.net/manual/zh/function.ftp-exec.php" title="请求运行一条 FTP 命令">ftp_exec()</a></li>
+                <li><a href="http://php.net/manual/zh/function.ftp-fget.php" title="从 FTP 服务器上下载一个文件并保存到本地一个已经打开的文件中">ftp_fget()</a></li>
+                <li><a href="http://php.net/manual/zh/function.ftp-fput.php" title="上传一个已经打开的文件到 FTP 服务器">ftp_fput()</a></li>
+                <li><a href="http://php.net/manual/zh/function.ftp-get-option.php" title="返回当前 FTP 连接的各种不同的选项设置">ftp_get_option()</a></li>
+                <li><a href="http://php.net/manual/zh/function.ftp-get.php" title="从 FTP 服务器上下载一个文件">ftp_get()</a></li>
+                <li><a href="http://php.net/manual/zh/function.ftp-login.php" title="登录 FTP 服务器">ftp_login()</a></li>
+                <li><a href="http://php.net/manual/zh/function.ftp-mdtm.php" title="返回指定文件的最后修改时间">ftp_mdtm()</a></li>
+                <li><a href="http://php.net/manual/zh/function.ftp-mkdir.php" title="建立新目录">ftp_mkdir()</a></li>
+                <li><a href="http://php.net/manual/zh/function.ftp-nb-continue.php" title="连续获取／发送文件（non-blocking）">ftp_nb_continue()</a></li>
+                <li><a href="http://php.net/manual/zh/function.ftp-nb-fget.php" title="从 FTP 服务器获取文件并写入到一个打开的文件（非阻塞）">ftp_nb_fget()</a></li>
+                <li><a href="http://php.net/manual/zh/function.ftp-nb-fput.php" title="将文件存储到 FTP 服务器 （非阻塞）">ftp_nb_fput()</a></li>
+                <li><a href="http://php.net/manual/zh/function.ftp-nb-get.php" title="从 FTP 服务器上获取文件并写入本地文件（non-blocking）">ftp_nb_get()</a></li>
+                <li><a href="http://php.net/manual/zh/function.ftp-nb-put.php" title="存储一个文件至 FTP 服务器（non-blocking）">ftp_nb_put()</a></li>
+                <li><a href="http://php.net/manual/zh/function.ftp-nlist.php" title="返回给定目录的文件列表">ftp_nlist()</a></li>
+                <li><a href="http://php.net/manual/zh/function.ftp-pasv.php" title="返回当前 FTP 被动模式是否打开">ftp_pasv()</a></li>
+                <li><a href="http://php.net/manual/zh/function.ftp-put.php" title="上传文件到 FTP 服务器">ftp_put()</a></li>
+                <li><a href="http://php.net/manual/zh/function.ftp-pwd.php" title="返回当前目录名">ftp_pwd()</a></li>
+                <li><a href="http://php.net/manual/zh/function.ftp-close.php" title="关闭一个 FTP 连接">ftp_quit()</a></li>
+                <li><a href="http://php.net/manual/zh/function.ftp-raw.php" title="向 FTP 服务器发送命令">ftp_raw()</a></li>
+                <li><a href="http://php.net/manual/zh/function.ftp-rawlist.php" title="返回指定目录下文件的详细列表">ftp_rawlist()</a></li>
+                <li><a href="http://php.net/manual/zh/function.ftp-rename.php" title="更改 FTP 服务器上的文件或目录名">ftp_rename()</a></li>
+                <li><a href="http://php.net/manual/zh/function.ftp-rmdir.php" title="删除 FTP 服务器上的一个目录">ftp_rmdir()</a></li>
+                <li><a href="http://php.net/manual/zh/function.ftp-set-option.php" title="设置各种 FTP 运行时选项">ftp_set_option()</a></li>
+                <li><a href="http://php.net/manual/zh/function.ftp-site.php" title="向服务器发送 SITE 命令">ftp_site()</a></li>
+                <li><a href="http://php.net/manual/zh/function.ftp-size.php" title="返回指定文件的大小">ftp_size()</a></li>
+                <li><a href="http://php.net/manual/zh/function.ftp-ssl-connect.php" title="打开 SSL-FTP 连接">ftp_ssl_connect()</a></li>
+                <li><a href="http://php.net/manual/zh/function.ftp-systype.php" title="返回远程 FTP 服务器的操作系统类型">ftp_systype()</a></li>
+            </ul>
+        </div>
+        <div class="board-card">
+            <h3 class="board-card-title">FTP Constants</h3>
+            <ul>
+                <li>FTP_ASCII</li>
+                <li>FTP_TEXT</li>
+                <li>FTP_BINARY</li>
+                <li>FTP_IMAGE</li>
+                <li>FTP_TIMEOUT_SEC</li>
+                <li>FTP_AUTOSEEK</li>
+                <li>FTP_AUTORESUME</li>
+                <li class="tip">Determine resume position and start position for get and put requests automatically</li>
+                <li>FTP_FAILED</li>
+                <li class="tip">Asynchronous transfer has failed</li>
+                <li>FTP_FINISHED</li>
+                <li class="tip">Asynchronous transfer has finished</li>
+                <li>FTP_MOREDATA</li>
+                <li class="tip">Asynchronous transfer is still active</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="board masonry-brick" style="position: absolute; top: 2344px; left: 738px; background: rgba(60, 255, 20, 0.247059);">
+        <h2 class="board-title">HTTP</h2>
+        <div class="board-card">
+            <h3 class="board-card-title">HTTP Functions</h3>
+            <ul>
+                <li><a href="http://php.net/manual/zh/function.header.php" title="发送原生 HTTP 头">header()</a></li>
+                <li><a href="http://php.net/manual/zh/function.headers-list.php" title="Returns a list of response headers sent (or ready to send)">headers_list()</a></li>
+                <li><a href="http://php.net/manual/zh/function.headers-sent.php" title="Checks if or where headers have been sent">headers_sent()</a></li>
+                <li><a href="http://php.net/manual/zh/function.setcookie.php" title="Send a cookie">setcookie()</a></li>
+                <li><a href="http://php.net/manual/zh/function.setrawcookie.php" title="Send a cookie without urlencoding the cookie value">setrawcookie()</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="board masonry-brick" style="position: absolute; top: 2538px; left: 738px; background: rgba(44, 158, 52, 0.247059);">
+        <h2 class="board-title">Libxml</h2>
+        <div class="board-card">
+            <h3 class="board-card-title">Libxml Functions</h3>
+            <ul>
+                <li><a href="http://php.net/manual/zh/function.libxml-clear-errors.php" title="Clear libxml error buffer">libxml_clear_errors()</a></li>
+                <li><a href="http://php.net/manual/zh/function.libxml-get-errors.php" title="Retrieve array of errors">libxml_get_errors()</a></li>
+                <li><a href="http://php.net/manual/zh/function.libxml-get-last-error.php" title="Retrieve last error from libxml">libxml_get_last_error()</a></li>
+                <li><span title="Set the streams context for the next libxml document load or write">libxml_set_streams_context()</span></li>
+                <li><a href="http://php.net/manual/zh/function.libxml-use-internal-errors.php" title="Disable libxml errors and allow user to fetch error information as needed">libxml_use_internal_errors()</a></li>
+            </ul>
+        </div>
+        <div class="board-card">
+            <h3 class="board-card-title">Libxml Constants</h3>
+            <ul>
+                <li>LIBXML_COMPACT</li>
+                <li class="tip">Set small nodes allocation optimization. This may improve the application performance</li>
+                <li>LIBXML_DTDATTR</li>
+                <li class="tip">Set default DTD attributes</li>
+                <li>LIBXML_DTDLOAD</li>
+                <li class="tip">Load external subset</li>
+                <li>LIBXML_DTDVALID</li>
+                <li class="tip">Validate with the DTD</li>
+                <li>LIBXML_NOBLANKS</li>
+                <li class="tip">Remove blank nodes</li>
+                <li>LIBXML_NOCDATA</li>
+                <li class="tip">Set CDATA as text nodes</li>
+                <li>LIBXML_NOEMPTYTAG</li>
+                <li class="tip">Change empty tags (e.g. &lt;br/&gt; to &lt;br&gt;&lt;/br&gt;), only available in the DOMDocument-&gt;save() and DOMDocument-&gt;saveXML() functions</li>
+                <li>LIBXML_NOENT</li>
+                <li class="tip">Substitute entities</li>
+                <li>LIBXML_NOERROR</li>
+                <li class="tip">Do not show error reports</li>
+                <li>LIBXML_NONET</li>
+                <li class="tip">Stop network access while loading documents</li>
+                <li>LIBXML_NOWARNING</li>
+                <li class="tip">Do not show warning reports</li>
+                <li>LIBXML_NOXMLDECL</li>
+                <li class="tip">Drop the XML declaration when saving a document</li>
+                <li>LIBXML_NSCLEAN</li>
+                <li class="tip">Remove excess namespace declarations</li>
+                <li>LIBXML_XINCLUDE</li>
+                <li class="tip">Use XInclude substitution</li>
+                <li>LIBXML_ERR_ERROR</li>
+                <li class="tip">Get recoverable errors</li>
+                <li>LIBXML_ERR_FATAL</li>
+                <li class="tip">Get fatal errors</li>
+                <li>LIBXML_ERR_NONE</li>
+                <li class="tip">Get no errors</li>
+                <li>LIBXML_ERR_WARNING</li>
+                <li class="tip">Get simple warnings</li>
+                <li>LIBXML_VERSION</li>
+                <li class="tip">Get libxml version (e.g. 20605 or 20617)</li>
+                <li>LIBXML_DOTTED_VERSION</li>
+                <li class="tip">Get dotted libxml version (e.g. 2.6.5 or 2.6.17)</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="board masonry-brick" style="position: absolute; top: 2549px; left: 246px; background: rgba(225, 211, 20, 0.247059);">
+        <h2 class="board-title">Mail</h2>
+        <div class="board-card">
+            <h3 class="board-card-title">Mail Functions</h3>
+            <ul>
+                <li><span title="Calculates the hash value needed by the EZMLM mailing list system">ezmlm_hash()</span></li>
+                <li><a href="http://php.net/manual/zh/function.mail.php" title="发送邮件">mail()</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="board masonry-brick" style="position: absolute; top: 2626px; left: 984px; background: rgba(100, 117, 121, 0.247059);">
+        <h2 class="board-title">Misc.</h2>
+        <div class="board-card">
+            <h3 class="board-card-title">Misc. Functions</h3>
+            <ul>
+                <li><a href="http://php.net/manual/zh/function.connection-aborted.php" title="检查客户端是否已经断开">connection_aborted()</a></li>
+                <li><a href="http://php.net/manual/zh/function.connection-status.php" title="返回连接的状态位">connection_status()</a></li>
+                <li><span title="Deprecated in PHP 4.0.5">connection_timeout()</span></li>
+                <li><a href="http://php.net/manual/zh/function.constant.php" title="返回一个常量的值">constant()</a></li>
+                <li><a href="http://php.net/manual/zh/function.define.php" title="定义一个常量">define()</a></li>
+                <li><a href="http://php.net/manual/zh/function.defined.php" title="检查某个名称的常量是否存在">defined()</a></li>
+                <li><a href="http://php.net/manual/zh/function.die.php" title="等同于exit(), 输出一个消息并且退出当前脚本">die()</a></li>
+                <li><a href="http://php.net/manual/zh/function.eval.php" title="把字符串作为PHP代码执行">eval()</a></li>
+                <li><a href="http://php.net/manual/zh/function.exit.php" title="输出一个消息并且退出当前脚本">exit()</a></li>
+                <li><a href="http://php.net/manual/zh/function.get-browser.php" title="获取浏览器具有的功能">get_browser()</a></li>
+                <li><a href="http://php.net/manual/zh/function.highlight-file.php" title="语法高亮一个文件">highlight_file()</a></li>
+                <li><a href="http://php.net/manual/zh/function.highlight-string.php" title="字符串的语法高亮">highlight_string()</a></li>
+                <li><a href="http://php.net/manual/zh/function.ignore-user-abort.php" title="设置客户端断开连接时是否中断脚本的执行">ignore_user_abort()</a></li>
+                <li><a href="http://php.net/manual/zh/function.pack.php" title="Pack data into binary string">pack()</a></li>
+                <li><span title="http://php.net/manual/zh/function.php-check-syntax.php">php_check_syntax()</span></li>
+                <li><a href="http://php.net/manual/zh/function.php-strip-whitespace.php" title="返回删除注释和空格后的PHP源码">php_strip_whitespace()</a></li>
+                <li><a href="http://php.net/manual/zh/function.highlight-file.php" title="语法高亮一个文件">show_source()</a></li>
+                <li><a href="http://php.net/manual/zh/function.sleep.php" title="延缓执行">sleep()</a></li>
+                <li><a href="http://php.net/manual/zh/function.time-nanosleep.php" title="延缓执行若干秒和纳秒">time_nanosleep()</a></li>
+                <li><a href="http://php.net/manual/zh/function.time-sleep-until.php" title="使脚本睡眠到指定的时间为止。">time_sleep_until()</a></li>
+                <li><a href="http://php.net/manual/zh/function.uniqid.php" title="生成一个唯一ID">uniqid()</a></li>
+                <li><a href="http://php.net/manual/zh/function.unpack.php" title="Unpack data from binary string">unpack()</a></li>
+                <li><a href="http://php.net/manual/zh/function.usleep.php" title="以指定的微秒数延迟执行">usleep()</a></li>
+            </ul>
+        </div>
+        <div class="board-card">
+            <h3 class="board-card-title">Misc. Constants</h3>
+            <ul>
+                <li>CONNECTION_ABORTED</li>
+                <li>CONNECTION_NORMAL</li>
+                <li>CONNECTION_TIMEOUT</li>
+                <li>__COMPILER_HALT_OFFSET__</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="board masonry-brick" style="position: absolute; top: 2697px; left: 246px; background: rgba(251, 34, 240, 0.247059);">
+        <h2 class="board-title">MySQLi</h2>
+        <div class="board-card">
+            <h3 class="board-card-title">MySQLi Class</h3>
+            <ul>
+                <li><a href="http://php.net/manual/zh/mysqli.affected-rows.php" title="Gets the number of affected rows in a previous MySQL operation">mysqli::$affected_rows</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.autocommit.php" title="Turns on or off auto-committing database modifications">mysqli::autocommit()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.change-user.php" title="Changes the user of the specified database connection">mysqli::change_user()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.character-set-name.php" title="Returns the default character set for the database connection">mysqli::character_set_name()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.client-info.php" title="Get MySQL client info">mysqli::$client_info</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.client-version.php" title="Returns the MySQL client version as a string">mysqli::$client_version</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.close.php" title="Closes a previously opened database connection">mysqli::close()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.commit.php" title="Commits the current transaction">mysqli::commit()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.connect-errno.php" title="Returns the error code from last connect call">mysqli::$connect_errno</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.connect-error.php" title="Returns a string description of the last connect error">mysqli::$connect_error</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.construct.php" title="Open a new connection to the MySQL server">mysqli::__construct()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.debug.php" title="Performs debugging operations">mysqli::debug()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.dump-debug-info.php" title="Dump debugging information into the log">mysqli::dump_debug_info()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.errno.php" title="Returns the error code for the most recent function call">mysqli::$errno</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.error-list.php" title="Returns a list of errors from the last command executed">mysqli::$error_list</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.error.php" title="Returns a string description of the last error">mysqli::$error</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.field-count.php" title="Returns the number of columns for the most recent query">mysqli::$field_count</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.get-charset.php" title="Returns a character set object">mysqli::get_charset()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.get-client-info.php" title="Get MySQL client info">mysqli::get_client_info()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.get-client-stats.php" title="Returns client per-process statistics">mysqli_get_client_stats()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.get-client-version.php" title="Returns the MySQL client version as a string">mysqli_get_client_version()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.get-connection-stats.php" title="Returns statistics about the client connection">mysqli::get_connection_stats()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.get-host-info.php" title="Returns a string representing the type of connection used">mysqli::$host_info</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.get-proto-info.php" title="Returns the version of the MySQL protocol used">mysqli::$protocol_version</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.get-server-info.php" title="Returns the version of the MySQL server">mysqli::$server_info</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.get-server-version.php" title="Returns the version of the MySQL server as an integer">mysqli::$server_version</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.get-warnings.php" title="Get result of SHOW WARNINGS">mysqli::get_warnings()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.info.php" title="Retrieves information about the most recently executed query">mysqli::$info</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.init.php" title="Initializes MySQLi and returns a resource for use with mysqli_real_connect()">mysqli::init()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.insert-id.php" title="Returns the auto generated id used in the last query">mysqli::$insert_id</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.kill.php" title="Asks the server to kill a MySQL thread">mysqli::kill()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.more-results.php" title="Check if there are any more query results from a multi query">mysqli::more_results()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.multi-query.php" title="Performs a query on the database">mysqli::multi_query()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.next-result.php" title="Prepare next result from multi_query">mysqli::next_result()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.options.php" title="Set options">mysqli::options()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.ping.php" title="Pings a server connection, or tries to reconnect if the connection has gone down">mysqli::ping()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.poll.php" title="Poll connections">mysqli::poll()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.prepare.php" title="Prepare an SQL statement for execution">mysqli::prepare()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.query.php" title="Performs a query on the database">mysqli::query()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.real-connect.php" title="Opens a connection to a mysql server">mysqli::real_connect()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.real-escape-string.php" title="Escapes special characters in a string for use in an SQL statement, taking into account the current charset of the connection">mysqli::real_escape_string()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.real-query.php" title="Execute an SQL query">mysqli::real_query()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.reap-async-query.php" title="Get result from async query">mysqli::reap_async_query()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.refresh.php" title="Refreshes">mysqli::refresh()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.rollback.php" title="Rolls back current transaction">mysqli::rollback()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.rpl-query-type.php" title="Returns RPL query type">mysqli::rpl_query_type()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.select-db.php" title="Selects the default database for database queries">mysqli::select_db()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.send-query.php" title="Send the query and return">mysqli::send_query()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.set-charset.php" title="Sets the default client character set">mysqli::set_charset()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.set-local-infile-default.php" title="Unsets user defined handler for load local infile command">mysqli::set_local_infile_default()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.set-local-infile-handler.php" title="Set callback function for LOAD DATA LOCAL INFILE command">mysqli::set_local_infile_handler()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.sqlstate.php" title="Returns the SQLSTATE error from previous MySQL operation">mysqli::$sqlstate</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.ssl-set.php" title="Used for establishing secure connections using SSL">mysqli::ssl_set()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.stat.php" title="Gets the current system status">mysqli::stat()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.stmt-init.php" title="Initializes a statement and returns an object for use with mysqli_stmt_prepare">mysqli::stmt_init()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.store-result.php" title="Transfers a result set from the last query">mysqli::store_result()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.thread-id.php" title="Returns the thread ID for the current connection">mysqli::$thread_id</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.thread-safe.php" title="Returns whether thread safety is given or not">mysqli::thread_safe()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.use-result.php" title="Initiate a result set retrieval">mysqli::use_result()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli.warning-count.php" title="Returns the number of warnings from the last query for the given link">mysqli::$warning_count</a></li>
+            </ul>
+        </div>
+        <div class="board-card">
+            <h3 class="board-card-title">MySQLi Stmt Class</h3>
+            <ul>
+                <li><a href="http://php.net/manual/zh/mysqli-stmt.affected-rows.php" title="Returns the total number of rows changed, deleted, or inserted by the last executed statement">mysqli_stmt::$affected_rows</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli-stmt.attr-get.php" title="Used to get the current value of a statement attribute">mysqli_stmt::attr_get()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli-stmt.attr-set.php" title="Used to modify the behavior of a prepared statement">mysqli_stmt::attr_set()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli-stmt.bind-param.php" title="Binds variables to a prepared statement as parameters">mysqli_stmt::bind_param()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli-stmt.bind-result.php" title="Binds variables to a prepared statement for result storage">mysqli_stmt::bind_result()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli-stmt.close.php" title="Closes a prepared statement">mysqli_stmt::close()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli-stmt.data-seek.php" title="Seeks to an arbitrary row in statement result set">mysqli_stmt::data_seek()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli-stmt.errno.php" title="Returns the error code for the most recent statement call">mysqli_stmt::$errno</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli-stmt.error-list.php" title="Returns a list of errors from the last statement executed">mysqli_stmt::$error_list</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli-stmt.error.php" title="Returns a string description for last statement error">mysqli_stmt::$error</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli-stmt.execute.php" title="Executes a prepared Query">mysqli_stmt::execute()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli-stmt.fetch.php" title="Fetch results from a prepared statement into the bound variables">mysqli_stmt::fetch()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli-stmt.field-count.php" title="Returns the number of field in the given statement">mysqli_stmt::$field_count</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli-stmt.free-result.php" title="Frees stored result memory for the given statement handle">mysqli_stmt::free_result()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli-stmt.get-result.php" title="Gets a result set from a prepared statement">mysqli_stmt::get_result()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli-stmt.get-warnings.php" title="Get result of SHOW WARNINGS">mysqli_stmt::get_warnings()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli-stmt.insert-id.php" title="Get the ID generated from the previous INSERT operation">mysqli_stmt::$insert_id</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli-stmt.more-results.php" title="Check if there are more query results from a multiple query">mysqli_stmt::more_results()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli-stmt.next-result.php" title="Reads the next result from a multiple query">mysqli_stmt::next_result()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli-stmt.num-rows.php" title="Return the number of rows in statements result set">mysqli_stmt::$num_rows</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli-stmt.param-count.php" title="Returns the number of parameter for the given statement">mysqli_stmt::$param_count</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli-stmt.prepare.php" title="Prepare an SQL statement for execution">mysqli_stmt::prepare()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli-stmt.reset.php" title="Resets a prepared statement">mysqli_stmt::reset()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli-stmt.result-metadata.php" title="Returns result set metadata from a prepared statement">mysqli_stmt::result_metadata()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli-stmt.send-long-data.php" title="Send data in blocks">mysqli_stmt::send_long_data()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli-stmt.sqlstate.php" title="Returns SQLSTATE error from previous statement operation">mysqli_stmt::$sqlstate</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli-stmt.store-result.php" title="Transfers a result set from a prepared statement">mysqli_stmt::store_result()</a></li>
+            </ul>
+        </div>
+        <div class="board-card">
+            <h3 class="board-card-title">MySQLi Result Class</h3>
+            <ul>
+                <li><a href="http://php.net/manual/zh/mysqli-result.current-field.php" title="Get current field offset of a result pointer">mysqli_result::$current_field</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli-result.data-seek.php" title="Adjusts the result pointer to an arbitrary row in the result">mysqli_result::data_seek()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli-result.fetch-all.php" title="Fetches all result rows as an associative array, a numeric array, or both">mysqli_result::fetch_all()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli-result.fetch-array.php" title="Fetch a result row as an associative, a numeric array, or both">mysqli_result::fetch_array()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli-result.fetch-assoc.php" title="Fetch a result row as an associative array">mysqli_result::fetch_assoc()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli-result.fetch-field-direct.php" title="Fetch meta-data for a single field">mysqli_result::fetch_field_direct()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli-result.fetch-field.php" title="Returns the next field in the result set">mysqli_result::fetch_field()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli-result.fetch-fields.php" title="Returns an array of objects representing the fields in a result set">mysqli_result::fetch_fields()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli-result.fetch-object.php" title="Returns the current row of a result set as an object">mysqli_result::fetch_object()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli-result.fetch-row.php" title="Get a result row as an enumerated array">mysqli_result::fetch_row()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli-result.field-count.php" title="Get the number of fields in a result">mysqli_result::$field_count</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli-result.field-seek.php" title="Set result pointer to a specified field offset">mysqli_result::field_seek()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli-result.free.php" title="Frees the memory associated with a result">mysqli_result::free()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli-result.lengths.php" title="Returns the lengths of the columns of the current row in the result set">mysqli_result::$lengths</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli-result.num-rows.php" title="Gets the number of rows in a result">mysqli_result::$num_rows</a></li>
+            </ul>
+        </div>
+        <div class="board-card">
+            <h3 class="board-card-title">MySQLi Driver Class</h3>
+            <ul>
+                <li><a href="http://php.net/manual/zh/mysqli-driver.embedded-server-end.php" title="Stop embedded server">mysqli_driver::embedded_server_end()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli-driver.embedded-server-start.php" title="Initialize and start embedded server">mysqli_driver::embedded_server_start()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli-driver.report-mode.php" title="Enables or disables internal report functions">mysqli_driver::$report_mode</a></li>
+                <li><a href="http://php.net/manual/zh/class.mysqli-driver.php" title="The Client API header version">mysqli_driver::$client_info</a></li>
+                <li><a href="http://php.net/manual/zh/class.mysqli-driver.php" title="The Client version">mysqli_driver::$client_version</a></li>
+                <li><a href="http://php.net/manual/zh/class.mysqli-driver.php" title="The MySQLi Driver version">mysqli_driver::$driver_version</a></li>
+                <li><a href="http://php.net/manual/zh/class.mysqli-driver.php" title="Whether MySQLi Embedded support is enabled">mysqli_driver::$embedded</a></li>
+                <li><a href="http://php.net/manual/zh/class.mysqli-driver.php" title="Allow or prevent reconnect (see the mysqli.reconnect INI directive)">mysqli_driver::$reconnect</a></li>
+                <li><a href="http://php.net/manual/zh/class.mysqli-driver.php" title="Set to MYSQLI_REPORT_OFF, MYSQLI_REPORT_ALL or any combination of MYSQLI_REPORT_STRICT (throw Exceptions for errors), MYSQLI_REPORT_ERROR (report errors) and MYSQLI_REPORT_INDEX (errors regarding indexes).">mysqli_driver::$report_mode</a></li>
+            </ul>
+        </div>
+        <div class="board-card">
+            <h3 class="board-card-title">MySQLi Warning Class</h3>
+            <ul>
+                <li><a href="http://php.net/manual/zh/mysqli-warning.construct.php" title="The __construct purpose">mysqli_warning::__construct()</a></li>
+                <li><a href="http://php.net/manual/zh/mysqli-warning.next.php" title="The next purpose">mysqli_warning::next()</a></li>
+                <li><a href="http://php.net/manual/zh/class.mysqli-warning.php" title="Message string">mysqli_warning::$message</a></li>
+                <li><a href="http://php.net/manual/zh/class.mysqli-warning.php" title="SQL state">mysqli_warning::$sqlstate</a></li>
+                <li><a href="http://php.net/manual/zh/class.mysqli-warning.php" title="The MySQLi Driver version">mysqli_warning::$errno</a></li>
+            </ul>
+        </div>
+        <div class="board-card">
+            <h3 class="board-card-title">MySQL Constants</h3>
+            <ul>
+                <li>MYSQLI_READ_DEFAULT_GROUP</li>
+                <li class="tip">Read options from the named group from my.cnf or the file specified with MYSQLI_READ_DEFAULT_FILE</li>
+                <li>MYSQLI_READ_DEFAULT_FILE</li>
+                <li class="tip">Read options from the named option file instead of from my.cnf</li>
+                <li>MYSQLI_OPT_CONNECT_TIMEOUT</li>
+                <li class="tip">Connect timeout in seconds</li>
+                <li>MYSQLI_OPT_LOCAL_INFILE</li>
+                <li class="tip">Enables command LOAD LOCAL INFILE</li>
+                <li>MYSQLI_INIT_COMMAND</li>
+                <li class="tip">Command to execute when connecting to MySQL server. Will automatically be re-executed when reconnecting.</li>
+                <li>MYSQLI_CLIENT_SSL</li>
+                <li class="tip">Use SSL (encrypted protocol). This option should not be set by application programs; it is set internally in the MySQL client library</li>
+                <li>MYSQLI_CLIENT_COMPRESS</li>
+                <li class="tip">Use compression protocol</li>
+                <li>MYSQLI_CLIENT_INTERACTIVE</li>
+                <li class="tip">Allow interactive_timeout seconds (instead of wait_timeout seconds) of inactivity before closing the connection. The client's session wait_timeout variable will be set to the value of the session interactive_timeout variable.</li>
+                <li>MYSQLI_CLIENT_IGNORE_SPACE</li>
+                <li class="tip">Allow spaces after function names. Makes all functions names reserved words.</li>
+                <li>MYSQLI_CLIENT_NO_SCHEMA</li>
+                <li class="tip">Don't allow the db_name.tbl_name.col_name syntax.</li>
+                <li>MYSQLI_CLIENT_MULTI_QUERIES</li>
+                <li class="tip">Allows multiple semicolon-delimited queries in a single mysqli_query() call.</li>
+                <li>MYSQLI_STORE_RESULT</li>
+                <li class="tip">For using buffered resultsets</li>
+                <li>MYSQLI_USE_RESULT</li>
+                <li class="tip">For using unbuffered resultsets</li>
+                <li>MYSQLI_ASSOC</li>
+                <li class="tip">Columns are returned into the array having the fieldname as the array index.</li>
+                <li>MYSQLI_NUM</li>
+                <li class="tip">Columns are returned into the array having an enumerated index.</li>
+                <li>MYSQLI_BOTH</li>
+                <li class="tip">Columns are returned into the array having both a numerical index and the fieldname as the associative index.</li>
+                <li>MYSQLI_NOT_NULL_FLAG</li>
+                <li class="tip">Indicates that a field is defined as NOT NULL</li>
+                <li>MYSQLI_PRI_KEY_FLAG</li>
+                <li class="tip">Field is part of a primary index</li>
+                <li>MYSQLI_UNIQUE_KEY_FLAG</li>
+                <li class="tip">Field is part of a unique index.</li>
+                <li>MYSQLI_MULTIPLE_KEY_FLAG</li>
+                <li class="tip">Field is part of an index.</li>
+                <li>MYSQLI_BLOB_FLAG</li>
+                <li class="tip">Field is defined as BLOB</li>
+                <li>MYSQLI_UNSIGNED_FLAG</li>
+                <li class="tip">Field is defined as UNSIGNED</li>
+                <li>MYSQLI_ZEROFILL_FLAG</li>
+                <li class="tip">Field is defined as ZEROFILL</li>
+                <li>MYSQLI_AUTO_INCREMENT_FLAG</li>
+                <li class="tip">Field is defined as AUTO_INCREMENT</li>
+                <li>MYSQLI_TIMESTAMP_FLAG</li>
+                <li class="tip">Field is defined as TIMESTAMP</li>
+                <li>MYSQLI_SET_FLAG</li>
+                <li class="tip">Field is defined as SET</li>
+                <li>MYSQLI_NUM_FLAG</li>
+                <li class="tip">Field is defined as NUMERIC</li>
+                <li>MYSQLI_PART_KEY_FLAG</li>
+                <li class="tip">Field is part of an multi-index</li>
+                <li>MYSQLI_GROUP_FLAG</li>
+                <li class="tip">Field is part of GROUP BY</li>
+                <li>MYSQLI_TYPE_DECIMAL</li>
+                <li class="tip">Field is defined as DECIMAL</li>
+                <li>MYSQLI_TYPE_NEWDECIMAL</li>
+                <li class="tip">Precision math DECIMAL or NUMERIC field (MySQL 5.0.3 and up)</li>
+                <li>MYSQLI_TYPE_BIT</li>
+                <li class="tip">Field is defined as BIT (MySQL 5.0.3 and up)</li>
+                <li>MYSQLI_TYPE_TINY</li>
+                <li class="tip">Field is defined as TINYINT</li>
+                <li>MYSQLI_TYPE_SHORT</li>
+                <li class="tip">Field is defined as SMALLINT</li>
+                <li>MYSQLI_TYPE_LONG</li>
+                <li class="tip">Field is defined as INT</li>
+                <li>MYSQLI_TYPE_FLOAT</li>
+                <li class="tip">Field is defined as FLOAT</li>
+                <li>MYSQLI_TYPE_DOUBLE</li>
+                <li class="tip">Field is defined as DOUBLE</li>
+                <li>MYSQLI_TYPE_NULL</li>
+                <li class="tip">Field is defined as DEFAULT NULL</li>
+                <li>MYSQLI_TYPE_TIMESTAMP</li>
+                <li class="tip">Field is defined as TIMESTAMP</li>
+                <li>MYSQLI_TYPE_LONGLONG</li>
+                <li class="tip">Field is defined as BIGINT</li>
+                <li>MYSQLI_TYPE_INT24</li>
+                <li class="tip">Field is defined as MEDIUMINT</li>
+                <li>MYSQLI_TYPE_DATE</li>
+                <li class="tip">Field is defined as DATE</li>
+                <li>MYSQLI_TYPE_TIME</li>
+                <li class="tip">Field is defined as TIME</li>
+                <li>MYSQLI_TYPE_DATETIME</li>
+                <li class="tip">Field is defined as DATETIME</li>
+                <li>MYSQLI_TYPE_YEAR</li>
+                <li class="tip">Field is defined as YEAR</li>
+                <li>MYSQLI_TYPE_NEWDATE</li>
+                <li class="tip">Field is defined as DATE</li>
+                <li>MYSQLI_TYPE_INTERVAL</li>
+                <li class="tip">Field is defined as INTERVAL</li>
+                <li>MYSQLI_TYPE_ENUM</li>
+                <li class="tip">Field is defined as ENUM</li>
+                <li>MYSQLI_TYPE_SET</li>
+                <li class="tip">Field is defined as SET</li>
+                <li>MYSQLI_TYPE_TINY_BLOB</li>
+                <li class="tip">Field is defined as TINYBLOB</li>
+                <li>MYSQLI_TYPE_MEDIUM_BLOB</li>
+                <li class="tip">Field is defined as MEDIUMBLOB</li>
+                <li>MYSQLI_TYPE_LONG_BLOB</li>
+                <li class="tip">Field is defined as LONGBLOB</li>
+                <li>MYSQLI_TYPE_BLOB</li>
+                <li class="tip">Field is defined as BLOB</li>
+                <li>MYSQLI_TYPE_VAR_STRING</li>
+                <li class="tip">Field is defined as VARCHAR</li>
+                <li>MYSQLI_TYPE_STRING</li>
+                <li class="tip">Field is defined as CHAR or BINARY</li>
+                <li>MYSQLI_TYPE_CHAR</li>
+                <li class="tip">Field is defined as TINYINT. For CHAR, see MYSQLI_TYPE_STRING</li>
+                <li>MYSQLI_TYPE_GEOMETRY</li>
+                <li class="tip">Field is defined as GEOMETRY</li>
+                <li>MYSQLI_NEED_DATA</li>
+                <li class="tip">More data available for bind variable</li>
+                <li>MYSQLI_NO_DATA</li>
+                <li class="tip">No more data available for bind variable</li>
+                <li>MYSQLI_DATA_TRUNCATED</li>
+                <li class="tip">Data truncation occurred. Available since PHP 5.1.0 and MySQL 5.0.5.</li>
+                <li>MYSQLI_ENUM_FLAG</li>
+                <li class="tip">Field is defined as ENUM. Available since PHP 5.3.0.</li>
+                <li>MYSQLI_CURSOR_TYPE_FOR_UPDATE</li>
+                <li class="tip"></li>
+                <li>MYSQLI_CURSOR_TYPE_NO_CURSOR</li>
+                <li class="tip"></li>
+                <li>MYSQLI_CURSOR_TYPE_READ_ONLY</li>
+                <li class="tip"></li>
+                <li>MYSQLI_CURSOR_TYPE_SCROLLABLE</li>
+                <li class="tip"></li>
+                <li>MYSQLI_STMT_ATTR_CURSOR_TYPE</li>
+                <li class="tip"></li>
+                <li>MYSQLI_STMT_ATTR_PREFETCH_ROWS</li>
+                <li class="tip"></li>
+                <li>MYSQLI_STMT_ATTR_UPDATE_MAX_LENGTH</li>
+                <li class="tip"></li>
+                <li>MYSQLI_SET_CHARSET_NAME</li>
+                <li class="tip"></li>
+                <li>MYSQLI_REPORT_INDEX</li>
+                <li class="tip">Report if no index or bad index was used in a query.</li>
+                <li>MYSQLI_REPORT_ERROR</li>
+                <li class="tip">Report errors from mysqli function calls.</li>
+                <li>MYSQLI_REPORT_STRICT</li>
+                <li class="tip">Throw a mysqli_sql_exception for errors instead of warnings.</li>
+                <li>MYSQLI_REPORT_ALL</li>
+                <li class="tip">Set all options on (report all).</li>
+                <li>MYSQLI_REPORT_OFF</li>
+                <li class="tip">Turns reporting off.</li>
+                <li>MYSQLI_DEBUG_TRACE_ENABLED</li>
+                <li class="tip">Is set to 1 if mysqli_debug() functionality is enabled.</li>
+                <li>MYSQLI_SERVER_QUERY_NO_GOOD_INDEX_USED</li>
+                <li class="tip"></li>
+                <li>MYSQLI_SERVER_QUERY_NO_INDEX_USED</li>
+                <li class="tip"></li>
+                <li>MYSQLI_REFRESH_GRANT</li>
+                <li class="tip">Refreshes the grant tables.</li>
+                <li>MYSQLI_REFRESH_LOG</li>
+                <li class="tip">Flushes the logs, like executing the FLUSH LOGS SQL statement.</li>
+                <li>MYSQLI_REFRESH_TABLES</li>
+                <li class="tip">Flushes the table cache, like executing the FLUSH TABLES SQL statement.</li>
+                <li>MYSQLI_REFRESH_HOSTS</li>
+                <li class="tip">Flushes the host cache, like executing the FLUSH HOSTS SQL statement.</li>
+                <li>MYSQLI_REFRESH_STATUS</li>
+                <li class="tip">Reset the status variables, like executing the FLUSH STATUS SQL statement.</li>
+                <li>MYSQLI_REFRESH_THREADS</li>
+                <li class="tip">Flushes the thread cache.</li>
+                <li>MYSQLI_REFRESH_SLAVE</li>
+                <li class="tip">On a slave replication server: resets the master server information, and restarts the slave. Like executing the RESET SLAVE SQL statement.</li>
+                <li>MYSQLI_REFRESH_MASTER</li>
+                <li class="tip">On a master replication server: removes the binary log files listed in the binary log index, and truncates the index file. Like executing the RESET MASTER SQL statement.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="board masonry-brick" style="position: absolute; top: 3033px; left: 0px; background: rgba(214, 17, 21, 0.247059);">
+        <h2 class="board-title">SimpleXML</h2>
+        <div class="board-card">
+            <h3 class="board-card-title">SimpleXML Functions</h3>
+            <ul>
+                <li><a href="http://php.net/manual/zh/simplexmlelement.construct.php" title="Creates a new SimpleXMLElement object">__construct()</a></li>
+                <li><a href="http://php.net/manual/zh/simplexmlelement.addattribute.php" title="Adds an attribute to the SimpleXML element">addAttribute()</a></li>
+                <li><a href="http://php.net/manual/zh/simplexmlelement.addchild.php" title="Adds a child element the SimpleXML element">addChild()</a></li>
+                <li><a href="http://php.net/manual/zh/simplexmlelement.asxml.php" title="Gets an XML string from a SimpleXML element">asXML()</a></li>
+                <li><a href="http://php.net/manual/zh/simplexmlelement.attributes.php" title="Gets a SimpleXML element's attributes">attributes()</a></li>
+                <li><a href="http://php.net/manual/zh/simplexmlelement.children.php" title="Gets the children of a specified node">children()</a></li>
+                <li><a href="http://php.net/manual/zh/simplexmlelement.getdocnamespaces.php" title="Gets the namespaces of an XML document">getDocNamespaces()</a></li>
+                <li><a href="http://php.net/manual/zh/simplexmlelement.getname.php" title="Gets the name of a SimpleXML element">getName()</a></li>
+                <li><a href="http://php.net/manual/zh/simplexmlelement.getnamespaces.php" title="Gets the namespaces from XML data">getNamespace()</a></li>
+                <li><a href="http://php.net/manual/zh/simplexmlelement.registerxpathnamespace.php" title="Creates a namespace context for the next XPath query">registerXPathNamespace()</a></li>
+                <li><a href="http://php.net/manual/zh/function.simplexml-import-dom.php" title="Get a <em>SimpleXMLElement</em> object from a DOM node.">simplexml_import_dom()</a></li>
+                <li><a href="http://php.net/manual/zh/function.simplexml-load-file.php" title="Interprets an XML file into an object">simplexml_load_file()</a></li>
+                <li><a href="http://php.net/manual/zh/function.simplexml-load-string.php" title="Interprets a string of XML into an object">simplexml_load_string()</a></li>
+                <li><a href="http://php.net/manual/zh/simplexmlelement.xpath.php" title="Runs an XPath query on XML data">xpath()</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="board masonry-brick" style="position: absolute; top: 3235px; left: 984px; background: rgba(14, 251, 252, 0.247059);">
+        <h2 class="board-title">XML Parser</h2>
+        <div class="board-card">
+            <h3 class="board-card-title">XML Parser Functions</h3>
+            <ul>
+                <li><a href="http://php.net/manual/zh/function.utf8-decode.php" title="将用 UTF-8 方式编码的 ISO-8859-1 字符串转换成单字节的 ISO-8859-1 字符串。">utf8_decode()</a></li>
+                <li><a href="http://php.net/manual/zh/function.utf8-encode.php" title="将 ISO-8859-1 编码的字符串转换为 UTF-8 编码">utf8_encode()</a></li>
+                <li><a href="http://php.net/manual/zh/function.xml-error-string.php" title="获取 XML 解析器的错误字符串">xml_error_string()</a></li>
+                <li><a href="http://php.net/manual/zh/function.xml-get-current-byte-index.php" title="获取 XML 解析器的当前字节索引">xml_get_current_byte_index()</a></li>
+                <li><a href="http://php.net/manual/zh/function.xml-get-current-column-number.php" title="获取 XML 解析器的当前列号">xml_get_current_column_number()</a></li>
+                <li><a href="http://php.net/manual/zh/function.xml-get-current-line-number.php" title="获取 XML 解析器的当前行号">xml_get_current_line_number()</a></li>
+                <li><a href="http://php.net/manual/zh/function.xml-get-error-code.php" title="获取 XML 解析器错误代码">xml_get_error_code()</a></li>
+                <li><a href="http://php.net/manual/zh/function.xml-parse.php" title="开始解析一个 XML 文档">xml_parse()</a></li>
+                <li><a href="http://php.net/manual/zh/function.xml-parse-into-struct.php" title="将 XML 数据解析到数组中">xml_parse_into_struct()</a></li>
+                <li><a href="http://php.net/manual/zh/function.xml-parser-create-ns.php" title="生成一个支持命名空间的 XML 解析器">xml_parser_create_ns()</a></li>
+                <li><a href="http://php.net/manual/zh/function.xml-parser-create.php" title="建立一个 XML 解析器">xml_parser_create()</a></li>
+                <li><a href="http://php.net/manual/zh/function.xml-parser-free.php" title="释放指定的 XML 解析器">xml_parser_free()</a></li>
+                <li><a href="http://php.net/manual/zh/function.xml-parser-get-option.php" title="从 XML 解析器获取选项设置信息">xml_parser_get_option()</a></li>
+                <li><a href="http://php.net/manual/zh/function.xml-parser-set-option.php" title="为指定 XML 解析进行选项设置">xml_parser_set_option()</a></li>
+                <li><a href="http://php.net/manual/zh/function.xml-set-character-data-handler.php" title="建立字符数据处理器">xml_set_character_data_handler()</a></li>
+                <li><a href="http://php.net/manual/zh/function.xml-set-default-handler.php" title="建立默认处理器">xml_set_default_handler()</a></li>
+                <li><a href="http://php.net/manual/zh/function.xml-set-element-handler.php" title="建立起始和终止元素处理器">xml_set_element_handler()</a></li>
+                <li>xml_set_end_namespace_decl_handler()</li>
+                <li class="tip">Set handler function for the end of namespace declarations</li>
+                <li><a href="http://php.net/manual/zh/function.xml-set-external-entity-ref-handler.php" title="建立外部实体指向处理器">xml_set_external_entity_ref_handler()</a></li>
+                <li><a href="http://php.net/manual/zh/function.xml-set-notation-decl-handler.php" title="建立注释声明处理器">xml_set_notation_decl_handler()</a></li>
+                <li><a href="http://php.net/manual/zh/function.xml-set-object.php" title="在对象中使用 XML 解析器">xml_set_object()</a></li>
+                <li><a href="http://php.net/manual/zh/function.xml-set-processing-instruction-handler.php" title="建立处理指令（PI）处理器">xml_set_processing_instruction_handler()</a></li>
+                <li>xml_set_start_namespace_decl_handler()</li>
+                <li class="tip">Set handler function for the start of namespace declarations</li>
+                <li><a href="http://php.net/manual/zh/function.xml-set-unparsed-entity-decl-handler.php" title="建立未解析实体定义声明处理器">xml_set_unparsed_entity_decl_handler()</a></li>
+            </ul>
+        </div>
+        <div class="board-card">
+            <h3 class="board-card-title">XML Parser Constants</h3>
+            <ul>
+                <li>XML_ERROR_NONE (integer)</li>
+                <li>XML_ERROR_NO_MEMORY (integer)</li>
+                <li>XML_ERROR_SYNTAX (integer)</li>
+                <li>XML_ERROR_NO_ELEMENTS (integer)</li>
+                <li>XML_ERROR_INVALID_TOKEN (integer)</li>
+                <li>XML_ERROR_UNCLOSED_TOKEN (integer)</li>
+                <li>XML_ERROR_PARTIAL_CHAR (integer)</li>
+                <li>XML_ERROR_TAG_MISMATCH (integer)</li>
+                <li>XML_ERROR_DUPLICATE_ATTRIBUTE (integer)</li>
+                <li>XML_ERROR_JUNK_AFTER_DOC_ELEMENT (integer)</li>
+                <li>XML_ERROR_PARAM_ENTITY_REF (integer)</li>
+                <li>XML_ERROR_UNDEFINED_ENTITY (integer)</li>
+                <li>XML_ERROR_RECURSIVE_ENTITY_REF (integer)</li>
+                <li>XML_ERROR_ASYNC_ENTITY (integer)</li>
+                <li>XML_ERROR_BAD_CHAR_REF (integer)</li>
+                <li>XML_ERROR_BINARY_ENTITY_REF (integer)</li>
+                <li>XML_ERROR_ATTRIBUTE_EXTERNAL_ENTITY_REF (integer)</li>
+                <li>XML_ERROR_MISPLACED_XML_PI (integer)</li>
+                <li>XML_ERROR_UNKNOWN_ENCODING (integer)</li>
+                <li>XML_ERROR_INCORRECT_ENCODING (integer)</li>
+                <li>XML_ERROR_UNCLOSED_CDATA_SECTION (integer)</li>
+                <li>XML_ERROR_EXTERNAL_ENTITY_HANDLING (integer)</li>
+                <li>XML_OPTION_CASE_FOLDING (integer)</li>
+                <li>XML_OPTION_TARGET_ENCODING (integer)</li>
+                <li>XML_OPTION_SKIP_TAGSTART (integer)</li>
+                <li>XML_OPTION_SKIP_WHITE (integer)</li>
+            </ul>
+        </div>
+    </div>
+
+        <div class="board masonry-brick" style="position: absolute; top: 3350px; left: 492px; background: rgba(158, 134, 255, 0.247059);">
+        <h2 class="board-title">OOP</h2>
+        <div class="board-card">
+            <h3 class="board-card-title">Magic Methods</h3>
+            <ul>
+                <li><a href="http://www.php.net/manual/zh/language.oop5.decon.php#object.construct" title="Classes which have a constructor method call this method on each newly-created object, so it is suitable for any initialization that the object may need before it is used. ">__construct()</a></li>
+                <li><a href="http://www.php.net/manual/zh/language.oop5.decon.php#object.destruct" title="Called as soon as there are no other references to a particular object, or in any order during the shutdown sequence. ">__destruct()</a></li>
+                <li><a href="http://www.php.net/manual/zh/language.oop5.overloading.php#object.callstatic" title="Triggered when invoking inaccessible methods in a static context. ">__callStatic()</a></li>
+                <li><a href="http://www.php.net/manual/zh/language.oop5.overloading.php#object.call" title="Triggered when invoking inaccessible methods in an object context. ">__call()</a></li>
+                <li><a href="http://www.php.net/manual/zh/language.oop5.overloading.php#object.get" title="Utilized for reading data from inaccessible properties. ">__get()</a></li>
+                <li><a href="http://www.php.net/manual/zh/language.oop5.overloading.php#object.set" title="Run when writing data to inaccessible properties. ">__set()</a></li>
+                <li><a href="http://www.php.net/manual/zh/language.oop5.overloading.php#object.isset" title="Triggered by calling isset() or empty() on inaccessible properties. ">__isset()</a></li>
+                <li><a href="http://www.php.net/manual/zh/language.oop5.overloading.php#object.unset" title="Invoked when unset() is used on inaccessible properties. ">__unset()</a></li>
+                <li><a href="http://www.php.net/manual/zh/language.oop5.magic.php#object.sleep" title=" The intended use of __sleep() is to commit pending data or perform similar cleanup tasks. Also, the function is useful if you have very large objects which do not need to be saved completely. ">__sleep()</a></li>
+                <li><a href="http://www.php.net/manual/zh/language.oop5.magic.php#object.wakeup" title="The intended use of __wakeup() is to reestablish any database connections that may have been lost during serialization and perform other reinitialization tasks. ">__wakeup()</a></li>
+                <li><a href="http://www.php.net/manual/zh/language.oop5.magic.php#object.tostring" title="Allows a class to decide how it will react when it is treated like a string. ">__toString()</a></li>
+                <li><a href="http://www.php.net/manual/zh/language.oop5.magic.php#object.invoke" title="Called when a script tries to call an object as a function. ">__invoke()</a></li>
+                <li><a href="http://www.php.net/manual/zh/language.oop5.magic.php#object.set-state" title="Called for classes exported by var_export() since PHP 5.1.0. ">__set_state()</a></li>
+                <li><a href="http://www.php.net/manual/zh/language.oop5.cloning.php#object.clone" title="Once the cloning is complete, if a __clone() method is defined, then the newly created object's __clone() method will be called, to allow any necessary properties that need to be changed. ">__clone()</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="board masonry-brick" style="position: absolute; top: 3371px; left: 0px; background: rgba(60, 255, 20, 0.247059);">
+        <h2 class="board-title">Zip</h2>
+        <div class="board-card">
+            <h3 class="board-card-title">Zip Functions</h3>
+            <ul>
+                <li><a href="http://php.net/manual/zh/function.zip-close.php" title="关闭一个ZIP档案文件">zip_close()</a></li>
+                <li><a href="http://php.net/manual/zh/function.zip-entry-close.php" title="关闭目录项">zip_entry_close()</a></li>
+                <li><a href="http://php.net/manual/zh/function.zip-entry-compressedsize.php" title="检索目录项压缩过后的大小">zip_entry_compressedsize()</a></li>
+                <li><a href="http://php.net/manual/zh/function.zip-entry-compressionmethod.php" title="检索目录实体的压缩方法">zip_entry_compressionmethod()</a></li>
+                <li><a href="http://php.net/manual/zh/function.zip-entry-filesize.php" title="检索目录实体的实际大小">zip_entry_filesize()</a></li>
+                <li><a href="http://php.net/manual/zh/function.zip-entry-name.php" title="检索目录项的名称">zip_entry_name()</a></li>
+                <li><a href="http://php.net/manual/zh/function.zip-entry-open.php" title="打开用于读取的目录实体">zip_entry_open()</a></li>
+                <li><a href="http://php.net/manual/zh/function.zip-entry-read.php" title="读取一个打开了的压缩目录实体">zip_entry_read()</a></li>
+                <li><a href="http://php.net/manual/zh/function.zip-open.php" title="打开ZIP存档文件">zip_open()</a></li>
+                <li><a href="http://php.net/manual/zh/function.zip-read.php" title="读取ZIP存档文件中下一项">zip_read()</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
