@@ -56,8 +56,18 @@ systemctl enable mysqld php-fpm nginx
 
 ## 注意事项
 
-* 防火墙 firewalld `systemctl stop firewalld`
-* selinux `setenforce 0`
+**防火墙 firewalld**
+```bash
+systemctl stop firewalld
+```
+
+**临时关闭 selinux**
+
+> 永久关闭在配置文件`/etc/selinux/config`中
+
+```bash
+setenforce 0
+```
 
 *[nginx配置](https://github.com/zhanguangcheng/notebook/tree/master/code/nginx/etc/nginx)*
 
