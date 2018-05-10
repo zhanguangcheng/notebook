@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>评价选择星星逻辑</title>
+    <!-- 
+        评价选择星星逻辑 0~5分
+    -->
+</head>
+<body>
+    <style>
+        .comment-star,.star-choose {background: url(data:image/jpeg;base64,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) repeat-x left top; height: 24px; width: 120px;}
+        .star-5 {width: 12px; background-position: left -48px}
+        .star-10 {width: 24px; background-position: left -48px}
+        .star-15 {width: 36px; background-position: left -48px}
+        .star-20 {width: 48px; background-position: left -48px}
+        .star-25 {width: 60px; background-position: left -48px}
+        .star-30 {width: 72px; background-position: left -24px}
+        .star-35 {width: 84px; background-position: left -24px}
+        .star-40 {width: 96px; background-position: left -24px}
+        .star-45 {width: 108px; background-position: left -24px}
+        .star-50 {width: 120px; background-position: left -72px}
+    </style>
+
+    <div class="comment-star">
+        <div class="star-choose"></div>
+    </div>
+
+    <script src="http://cdn.bootcss.com/jquery/1.8.3/jquery.min.js"></script>
+    <script>
+        var chooseStar = 0;
+        var getStar = function(x) {
+            return Math.ceil((x / 24).toFixed(1) / 0.5) / 2;
+        };
+        $('.comment-star').on('mousemove', function(event) {
+            $('.star-choose', this).attr('class', 'star-choose star-' + getStar(event.offsetX) * 10);
+        }).on('mouseleave', function(event) {
+            $('.star-choose', this).attr('class', 'star-choose star-' + chooseStar * 10);
+        }).on('click', function(event) {
+            chooseStar = getStar(event.offsetX);
+            alert(chooseStar);
+        });
+    </script>
+</body>
+</html>
