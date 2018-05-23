@@ -94,7 +94,9 @@ header("Content-Disposition: attachment; filename=$filename");
 ```
 
 ## PHP 模拟 HTTP 基本认证（Basic Authentication）
+
 ```php
+// 认证
 function validate()
 {
     $users = ['admin' => '123456'];
@@ -114,7 +116,10 @@ if (!validate()) {
 
 echo 'successful';
 ```
-
+```php
+// 发送头信息请求认证
+$header[] = 'Authorization: Basic ' . base64_encode('admin:123456')
+```
 
 
 ## 批量编辑多条数据时的 数据分类技巧 (数字为id)
