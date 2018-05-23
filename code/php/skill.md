@@ -93,6 +93,30 @@ $filename = rawurlencode('中文.zip');
 header("Content-Disposition: attachment; filename=$filename"); 
 ```
 
+## PHP 模拟 HTTP 基本认证（Basic Authentication）
+```php
+function validate()
+{
+    $users = ['admin' => '123456'];
+    return isset($_SERVER['PHP_AUTH_USER']) 
+        && isset($_SERVER['PHP_AUTH_PW']) 
+        && isset($users[$_SERVER['PHP_AUTH_USER']])
+        && $users[$_SERVER['PHP_AUTH_USER']] === $_SERVER['PHP_AUTH_PW'];
+    return true;
+}
+
+if (!validate()) {
+    http_response_code(401);
+    header('WWW-Authenticate:Basic realm="My Website"');
+    echo 'failed';
+    exit(-1);
+}
+
+echo 'successful';
+```
+
+
+
 ## 批量编辑多条数据时的 数据分类技巧 (数字为id)
 
 ```php
