@@ -360,3 +360,16 @@ function is_first($token = null)
 
     return $container[$token] = true;
 }
+
+/**
+ * 字符串转数组
+ * 主要是使用(,)作为默认分隔符和防止错误的数据类型和空字符串，比如null
+ *
+ * @param string $string
+ * @param string $delimiter
+ * @return array
+ */
+function string_to_array($string, $delimiter = ',')
+{
+    return is_string($string) && $string !== '' ? explode($delimiter, $string) : [];
+}
