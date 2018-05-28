@@ -16,6 +16,7 @@ Windows常用软件
 * [Everything](http://www.voidtools.com/ "文件快搜")
 * [FileZilla](https://filezilla-project.org/ "FTP管理工具")
 * [Firefox](http://www.firefox.com.cn/ "又一个浏览器")
+* [Free Download Manager](https://www.freedownloadmanager.org/ "下载工具")
 * [FSCapture](http://www.fscapture.com/)
 * [HDTunePro](http://www.hdtune.com/ "硬盘扫描工具") $
 * [HeidiSQL](https://www.heidisql.com/ "数据库管理工具")
