@@ -74,6 +74,8 @@ composer config --global --list
 *参数*
 
 * --prefer-dist 从 dist 获取包
+* --dev 安装 `require-dev` 字段中列出的包（这是一个默认值）。
+* --no-dev: 跳过 `require-dev` 字段中列出的包。
 
 根据`composer`配置文件并将其安装/卸载到`vendor`目录下
 
@@ -92,6 +94,8 @@ composer config --global --list
 
 * --prefer-dist 从 dist 获取包  
 * --lock: 仅更新 lock 文件的 hash，取消有关 lock 文件过时的警告。
+* --dev 安装 `require-dev` 字段中列出的包（这是一个默认值）。
+* --no-dev: 跳过 `require-dev` 字段中列出的包。
 
 根据`composer.json`中的版本约束来更新包，并且升级`composer.lock`，包括在`composer.json`中新增或删除的包。  
 如果只想安装`composer.json`中新增的包，又不更新原来的包，则加上--lock参数：`composer update --lock`
