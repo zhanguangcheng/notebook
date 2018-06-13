@@ -373,3 +373,16 @@ function string_to_array($string, $delimiter = ',')
 {
     return is_string($string) && $string !== '' ? explode($delimiter, $string) : [];
 }
+
+/**
+ * 数组转字符串
+ * 主要是使用(,)作为默认分隔符和防止错误的数据类型
+ *
+ * @param array $array
+ * @param string $delimiter
+ * @return string
+ */
+function array_to_string($array, $delimiter = ',')
+{
+    return is_array($array) ? implode($delimiter, $array) : '';
+}
