@@ -1,1 +1,0 @@
-# server default configure directory
