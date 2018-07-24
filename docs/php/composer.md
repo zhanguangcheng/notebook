@@ -48,6 +48,8 @@ composer --version
 
 ```bash
 composer config -g repo.packagist composer https://packagist.phpcomposer.com
+# or
+composer config -g repo.packagist composer https://packagist.laravel-china.org
 ```
 
 局部(当前项目生效)
