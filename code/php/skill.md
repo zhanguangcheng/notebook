@@ -197,3 +197,34 @@ var_dump($data ^ $status);
 31位: PHP中的int为4字节, 一个字节8个位, 共32位, 去掉高位符号位, 剩31位可用  
 超过31位的可以使用gmp扩展计算更大的数据  
 <http://php.net/manual/zh/book.gmp.php>
+
+## 中文按照拼音排序
+
+```php
+$data = ['詹', '啊', '过', '国', '果', '郭'];
+$coll = new \Collator('zh-cn');
+usort($data, [$coll, 'compare']);
+var_dump($data);// output： ['啊', '郭', '国', '果', '过', '詹']
+```
+
+## 中文转拼音
+
+```php
+$data = transliterator_transliterate('Any-Latin; Latin-ASCII; Upper()', '詹');
+var_dump($data);// output: ZHAN
+```
+
+## 处理大于2038年的时间数据
+> 最大支持到 9999-12-31 23:59:59
+
+```php
+// 日期转时间戳
+$obj = new DateTime("9999-12-31 23:59:59");
+echo $obj->format("U"); // output: string: 253402271999
+
+
+// 时间戳转日期
+$obj = new DateTime("@253402271999");
+$obj->setTimezone(timezone_open('Asia/ShangHai')); 
+echo $obj->format("Y-m-d H:i:s"); // output: 9999-12-31 23:59:59
+```
