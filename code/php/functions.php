@@ -386,3 +386,28 @@ function array_to_string($array, $delimiter = ',')
 {
     return is_array($array) ? implode($delimiter, $array) : '';
 }
+
+/**
+ * 生成随机数
+ * @param  integer $length 字节长度
+ * @return string
+ */
+function generate_random_token($length = 16)
+{
+    if (function_exists('random_bytes')) {
+        return bin2hex(random_bytes($length));
+    }
+    if (function_exists('openssl_random_pseudo_bytes')) {
+        return bin2hex(openssl_random_pseudo_bytes($length));
+    }
+    if (function_exists('mcrypt_create_iv')) {
+        return bin2hex(mcrypt_create_iv($length, MCRYPT_DEV_URANDOM));
+    }
+    if (@file_exists('/dev/urandom')) { // Get 100 bytes of random data
+        return bin2hex(file_get_contents('/dev/urandom', false, null, 0, $length));
+    }
+    // Last resort which you probably should just get rid of:
+    $randomData = mt_rand() . mt_rand() . mt_rand() . mt_rand() . microtime(true) . uniqid(mt_rand(), true);
+
+    return substr(hash('sha512', $randomData), 0, $length * 2);
+}
