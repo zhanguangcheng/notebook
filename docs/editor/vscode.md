@@ -15,6 +15,7 @@ Visual Studio Code
 * `EditorConfig for VS Code`
 * `ESLint`
 * `Git History`
+* `GitHub Plus Theme`
 * `HTML CSS Support`
 * `Monokai Pro`
 * `PHP Debug`
@@ -27,49 +28,135 @@ Visual Studio Code
 * `Sublime Text Keymap`
 * `SVN`
 * `Terminals`
+* `Todo Tree`
 * `TortoiseSVN`
+* `Translator`
 * `VScode Great Ions`
 * `vscode-goto-documentation`
+* `vscode-random`
 
 
 ## 惯例配置
 
 ```json
 {
+    "debug.inlineValues": true,
+    "debug.internalConsoleOptions": "neverOpen",
+    "debug.showInStatusBar": "always",
+    "editor.acceptSuggestionOnEnter": "off",
+    "editor.find.autoFindInSelection": true,
     "editor.fontSize": 16,
+    "editor.formatOnPaste": true,
+    "editor.lineHeight": 24,
+    "editor.minimap.renderCharacters": false,
+    "editor.minimap.showSlider": "always",
+    "editor.mouseWheelScrollSensitivity": 5,
+    "editor.mouseWheelZoom": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.quickSuggestionsDelay": 100,
+    "editor.renderWhitespace": "all",
     "editor.rulers": [
         120
     ],
-    "editor.lineHeight": 24,
-    "editor.mouseWheelZoom": true,
-    "editor.mouseWheelScrollSensitivity": 5,
     "editor.smoothScrolling": true,
-    "editor.multiCursorModifier": "ctrlCmd",
     "editor.snippetSuggestions": "top",
-    "editor.formatOnPaste": true,
-    "editor.renderWhitespace": "all",
-    "editor.renderIndentGuides": false,
-    "editor.wordWrap": "on",
-    "editor.minimap.showSlider": "always",
-    "editor.minimap.renderCharacters": false,
-    "files.autoSave": "onWindowChange",
+    "emmet.triggerExpansionOnTab": true,
+    "explorer.autoReveal": false,
+    "extensions.ignoreRecommendations": true,
+    "files.autoSave": "onFocusChange",
     "files.eol": "\n",
-
-    "php.validate.run": "onType",
-    "php.validate.executablePath": "C:/greenEnvironment/php/7.2.0/php.exe",
-        
     "git.confirmSync": false,
     "git.path": "C:/greenEnvironment/git/2.12.1/bin/git.exe",
-    "workbench.colorTheme": "Monokai Pro (Filter Machine)",
-    "workbench.panel.location": "bottom",
+    "search.useIgnoreFiles": false,
+    "window.newWindowDimensions": "maximized",
+    "window.title": "${rootName}@${activeEditorMedium}",
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.editor.openPositioning": "last",
     "workbench.iconTheme": "vscode-great-icons",
-    "explorer.autoReveal": false,
-    "window.title": "${dirty}${rootName}${separator}${activeEditorLong}",
-    "emmet.triggerExpansionOnTab": true,
+    
+    "php.validate.run": "onType",
+    "php.validate.executablePath": "C:/greenEnvironment/php/7.2.0/php.exe",
+    "diffEditor.renderSideBySide": false,
     "namespaceResolver.showMessageOnStatusBar": true,
-    "sublimeTextKeymap.promptV3Features": true,
     "namespaceResolver.autoSort": false,
-    "terminal.integrated.fontSize": 18
+    "namespaceResolver.sortAlphabetically": true,
+    "terminal.integrated.fontSize": 18,
+    "todo-tree.regex": "((//|#|<!--|;|/\\*|\\*)\\s*($TAGS)|^\\s*- \\[ \\])",
+    "todo-tree.expanded": true,
+    "todo-tree.flat": true,
+    "commands.commands": [
+        {
+            "text": "$(file-symlink-directory)",
+            "command": "projectManager.listProjectsNewWindow",
+            "tooltip": "Switch Project in new window",
+        },
+        {
+            "text": "$(gear)",
+            "command": "workbench.action.openGlobalSettings",
+            "tooltip": "Settings"
+        },
+        {
+            "text": "$(server) Compress JS",
+            "command": "terminals.runTerminalByName",
+            "arguments": [
+                "Compress JS"
+            ],
+            "tooltip": "压缩JS代码为.min.js",
+            "filterLanguageRegex": "JavaScript"
+        },
+        {
+            "text": "$(server) Compress CSS",
+            "command": "terminals.runTerminalByName",
+            "arguments": [
+                "Compress CSS"
+            ],
+            "tooltip": "压缩CSS代码为.min.css",
+            "filterLanguageRegex": "CSS"
+        },
+        {
+            "command": "translator.translate",
+            "text": "$(book)",
+            "tooltip": "Translate"
+        },
+        {
+            "command": "editor.action.sortLinesAscending",
+            "text": "$(arrow-up)",
+            "tooltip": "Sort lines"
+        }
+    ],
+    "terminals.terminals": [
+        {
+            "name": "Compress JS",
+            "open": true,
+            "onlySingle": true,
+            "command": "java -jar C:/greenEnvironment/yuicompressor/2.4.8/main.jar --type js -o '.js$:.min.js' [file]"
+        },
+        {
+            "name": "Compress CSS",
+            "open": true,
+            "onlySingle": true,
+            "command": "java -jar C:/greenEnvironment/yuicompressor/2.4.8/main.jar --type css -o '.css$:.min.css' [file]"
+        }
+    ],
+    "launch": {
+        "version": "0.2.0",
+        "configurations": [
+            {
+                "name": "XDebug",
+                "type": "php",
+                "request": "launch",
+                "port": 9000
+            },
+            {
+                "name": "Launch currently open script",
+                "type": "php",
+                "request": "launch",
+                "program": "${file}",
+                "cwd": "${fileDirname}",
+                "port": 9000
+            }
+        ]
+    }
 }
 ```
 
