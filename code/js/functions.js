@@ -1,4 +1,25 @@
 /**
+ * 简单模板替换
+ * ```javascript
+ * render('<option value="{value}"{selected}>{name}</option>', {
+ *     value: 1,
+ *     selected: ' selected',
+ *     name: 'Grass'
+ * });
+ * output: <option value="1" selected>Grass</option>
+ * ```
+ * @param  string template
+ * @param  object data 待替换的数据
+ * @return string 替换的好字符串
+ */
+function render(template, data) {
+    var pattern = /\{(\w+)\}(?!})/g;
+    return template.replace(pattern, function (match, key, value) {
+        return key in data ? data[key] : '';
+    });
+}
+
+/**
  * 获取搜索参数
  * @param  {String} name       [参数名]
  * @param  {mixed} defaultVal [默认值]
