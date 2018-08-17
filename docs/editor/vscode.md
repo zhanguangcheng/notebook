@@ -21,6 +21,7 @@ Visual Studio Code
 * `PHP Debug`
 * `PHP DocBlocker`
 * `PHP Intelephense`
+* `PHP Intellisense - Crane`
 * `PHP Namespace Resolver`
 * `Project Manager`
 * `RSPG - Random String or Password Generator`
@@ -49,7 +50,6 @@ Visual Studio Code
     "editor.formatOnPaste": true,
     "editor.lineHeight": 24,
     "editor.minimap.renderCharacters": false,
-    "editor.minimap.showSlider": "always",
     "editor.mouseWheelScrollSensitivity": 5,
     "editor.mouseWheelZoom": true,
     "editor.multiCursorModifier": "ctrlCmd",
@@ -66,16 +66,17 @@ Visual Studio Code
     "files.autoSave": "onFocusChange",
     "files.eol": "\n",
     "git.confirmSync": false,
-    "git.path": "C:/greenEnvironment/git/2.12.1/bin/git.exe",
     "search.useIgnoreFiles": false,
     "window.newWindowDimensions": "maximized",
     "window.title": "${rootName}@${activeEditorMedium}",
+    "workbench.colorCustomizations": {
+        "editor.findMatchBackground": "#ff6666",
+        "editor.selectionHighlightBackground": "#a98ff0c5"
+    },
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "workbench.editor.openPositioning": "last",
     "workbench.iconTheme": "vscode-great-icons",
     
-    "php.validate.run": "onType",
-    "php.validate.executablePath": "C:/greenEnvironment/php/7.2.0/php.exe",
     "diffEditor.renderSideBySide": false,
     "namespaceResolver.showMessageOnStatusBar": true,
     "namespaceResolver.autoSort": false,
@@ -170,8 +171,6 @@ Visual Studio Code
     { "key": "alt+j", "command": "cursorDown", "when": "editorTextFocus" },
     { "key": "alt+k", "command": "cursorUp", "when": "editorTextFocus" },
 
-    { "key": "alt+j", "command": "repl.action.historyNext", "when": "editorTextFocus && inDebugRepl && onLastDebugReplLine" },
-    { "key": "alt+k", "command": "repl.action.historyPrevious", "when": "editorTextFocus && inDebugRepl && onFirsteDebugReplLine" },
     { "key": "alt+j", "command": "showNextParameterHint", "when": "editorTextFocus && parameterHintsMultipleSignatures && parameterHintsVisible" },
     { "key": "alt+k", "command": "showPrevParameterHint", "when": "editorTextFocus && parameterHintsMultipleSignatures && parameterHintsVisible" },
     { "key": "alt+j", "command": "selectNextSuggestion", "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible" },
@@ -193,6 +192,8 @@ Visual Studio Code
 
     { "key": "alt+ctrl+shift+h", "command": "cursorWordStartLeftSelect", "when": "editorTextFocus" },
     { "key": "alt+ctrl+shift+l", "command": "cursorWordStartRightSelect", "when": "editorTextFocus" },
+    { "key": "alt+ctrl+shift+k", "command": "cursorPageUp", "when": "textInputFocus" },
+    { "key": "alt+ctrl+shift+j", "command": "cursorPageDown", "when": "textInputFocus" },
 
     { "key": "alt+.","command": "editor.action.indentLines", "when": "editorTextFocus && !editorReadonly" },
     { "key": "alt+,","command": "editor.action.outdentLines", "when": "editorTextFocus && !editorReadonly" },
