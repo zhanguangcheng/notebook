@@ -1,4 +1,47 @@
 /**
+ * 模拟PHP的date函数，目前支持Y m d H i s u y w
+ * ```javascript
+ * date('Y-m-d H:i:s')
+ * // output:2018-08-27 20:13:46
+ * ```
+ * @param string format
+ * @param number timestamp
+ * @return string
+ */
+var date = (function () {
+    var zeroFill = function (number) {
+        if (typeof number === 'number') {
+            return number < 10 ? '0' + number : number;
+        }
+        return number;
+    };
+    var formatMap = {
+        Y: function (d) { return d.getFullYear(); },
+        y: function (d) { return d.getFullYear().toString().substr(-2); },
+        m: function (d) { return zeroFill(d.getMonth() + 1); },
+        d: function (d) { return zeroFill(d.getDate()); },
+        H: function (d) { return zeroFill(d.getHours()); },
+        i: function (d) { return zeroFill(d.getMinutes()); },
+        s: function (d) { return zeroFill(d.getSeconds()); },
+        u: function (d) { return d.getMilliseconds(); },
+        w: function (d) { return d.getDay(); }
+    };
+    var pattern = /([YymdHisuw])/g;
+    return function (format, timestamp) {
+        var d = new Date();
+        if (timestamp !== undefined) {
+            d.setTime(timestamp);
+        }
+        return format.replace(pattern, function (match, key, value) {
+            if (key in formatMap) {
+                return formatMap[key].call(null, d);
+            }
+            return '';
+        });
+    };
+})();
+
+/**
  * 简单模板替换
  * ```javascript
  * render('<option value="{value}"{selected}>{name}</option>', {
