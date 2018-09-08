@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>飞行的广告</title>
+</head>
+<body>
+    <!-- 模拟滚动条 -->
+    <div style="height:1500px"></div>
+
+    <script>
+        var data = [
+            {
+                image: 'https://gitee.com/zhanguangcheng/static/raw/master/images/4009776_16-010035_499.jpg'
+            },
+            {
+                image: 'https://gitee.com/zhanguangcheng/static/raw/master/images/4009776_16-010035_499.jpg',
+                link: 'http://github.com/zhanguangcheng',
+                config: {
+                    delay: 10,// 移动时间(ms)
+                    stepX: 2,// X移动间隔(px)
+                    stepY: 2,// Y移动间隔(px)
+                    positionTop: 100,// 起始X坐标
+                    positionLeft: 500// 起始Y坐标
+                },
+                boxStyle: {
+                    borderRadius: '50%',
+                    overflow: 'hidden'
+                },
+                imageStyle: {
+                    width: '100px',
+                    height: '100px'
+                }
+            }
+        ];
+
+        flyBlock(data);
+
+        /**
+         * 飞行的Block
+         */
+        function flyBlock(data) {
+            var getValue = function(config, key, defaultValue) {
+                if (typeof config === 'object' && key in config) {
+                    return config[key];
+                }
+                return defaultValue || null;
+            };
+            function Block(item) {
+                this.item = item;
+                this.timer = null;
+                
+                this.delay = getValue(item.config, 'delay', 10);
+                this.stepX = getValue(item.config, 'stepX', 1);
+                this.stepY = getValue(item.config, 'stepY', 1);
+                this.positionTop = getValue(item.config, 'positionTop', 0);
+                this.positionLeft = getValue(item.config, 'positionLeft', 0);
+            };
+            Block.prototype.create = function () {
+                var item = this.item;
+                var box = document.createElement('div');
+                var a = document.createElement('a');
+                var img = document.createElement('img');
+                var close = document.createElement('span');
+                box.className = 'fly-block';
+                box.style.position = 'fixed';
+                box.style.top = 0;
+                box.style.left = 0;
+                if (item.boxStyle) {
+                    for (var key in item.boxStyle) {
+                        box.style[key] = item.boxStyle[key];
+                    }
+                }
+                img.src = item.image;
+                img.style.width = getValue(item, 'width', 'auto');
+                img.style.height = getValue(item, 'height', 'auto');
+                img.style.float = 'left';
+                img.style.border = 'none';
+                if (item.imageStyle) {
+                    for (var key in item.imageStyle) {
+                        img.style[key] = item.imageStyle[key];
+                    }
+                }
+                if (item.link) {
+                    a.href = item.link;
+                }
+                close.innerHTML = '✖';
+                close.style.position = 'absolute';
+                close.style.right = 0;
+                close.style.top = 0;
+                close.style.fontSize = '14px';
+                close.style.lineHeight = '14px';
+                close.style.cursor = 'default';
+                close.style.display = 'none';
+                close.title = '点击关闭';
+                close.onclick = function() {
+                    this.parentNode.parentNode.removeChild(this.parentNode);
+                };
+                a.appendChild(img);
+                box.appendChild(a);
+                box.appendChild(close);
+                return box;
+            };
+            Block.prototype.start = function() {
+                var self = this;
+                var box = this.create();
+                box.onmouseenter = function () {
+                    clearInterval(self.timer);
+                    box.getElementsByTagName('span')[0].style.display = '';
+                };
+                box.onmouseleave = function () {
+                    self.timer = setInterval(run, self.delay);
+                    box.getElementsByTagName('span')[0].style.display = 'none';
+                };
+                document.body.appendChild(box);
+                var run = function() {
+                    var viewWidth = window.innerWidth || document.documentElement.clientWidth;
+                    var viewHeight = window.innerHeight || document.documentElement.clientHeight;
+
+                    if (self.positionLeft > viewWidth - box.offsetWidth) {
+                        self.stepX = -self.stepX;
+                        self.positionLeft = viewWidth - box.offsetWidth;
+                    }
+                    if (self.positionLeft < 0) {
+                        self.stepX = -self.stepX;
+                        self.positionLeft = 0;
+                    }
+                    if (self.positionTop > viewHeight - box.offsetHeight) {
+                        self.stepY = -self.stepY;
+                        self.positionTop = viewHeight - box.offsetHeight;
+                    }
+                    if (self.positionTop < 0) {
+                        self.stepY = -self.stepY;
+                        self.positionTop = 0;
+                    }
+
+                    self.positionLeft += self.stepX;
+                    self.positionTop += self.stepY;
+                    box.style.left = self.positionLeft + 'px';
+                    box.style.top = self.positionTop + 'px';
+                };
+                // self.timer = setInterval(run, self.delay);
+            };
+            for (var i = 0; i < data.length; i++) {
+                new Block(data[i]).start();
+            }
+        }
+    </script>
+</body>
+</html>
