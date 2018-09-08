@@ -5,6 +5,7 @@ Windows常用软件
 * [Adobe Reader](https://acrobat.adobe.com/us/en/acrobat/pdf-reader.html)
 * [AutoHotkey](https://www.autohotkey.com/ "热键脚本语言")
 * [AxureRP](https://www.axure.com/) $ [高质量原创模板及元件库](http://www.axureux.com)
+* [Bandizip](http://www.bandizip.com/)
 * [Beyond Compare](http://www.scootersoftware.com/) $
 * [Cacher](https://www.cacher.io/ "The code snippet organizer for pro developers")
 * [Chocolatey](https://chocolatey.org/ "The package manager for Windows")
