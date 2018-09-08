@@ -139,7 +139,7 @@
                     box.style.left = self.positionLeft + 'px';
                     box.style.top = self.positionTop + 'px';
                 };
-                // self.timer = setInterval(run, self.delay);
+                self.timer = setInterval(run, self.delay);
             };
             for (var i = 0; i < data.length; i++) {
                 new Block(data[i]).start();
