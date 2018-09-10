@@ -28,7 +28,7 @@ Visual Studio Code
 * `Settings Sync`
 * `Sublime Text Keymap`
 * `SVN`
-* `Terminals`
+* `Terminals Manager`
 * `Todo Tree`
 * `TortoiseSVN`
 * `Translator`
@@ -184,7 +184,9 @@ Visual Studio Code
 
     { "key": "ctrl+alt+h","command": "cursorWordStartLeft", "when": "editorTextFocus" },
     { "key": "ctrl+alt+l","command": "cursorWordStartRight", "when": "editorTextFocus" },
-
+    { "key": "ctrl+alt+j", "command": "editor.action.moveLinesDownAction", "when": "editorTextFocus" },
+    { "key": "ctrl+alt+k", "command": "editor.action.moveLinesUpAction", "when": "editorTextFocus" },
+    
     { "key": "alt+shift+h", "command": "cursorLeftSelect", "when": "editorTextFocus" },
     { "key": "alt+shift+l", "command": "cursorRightSelect", "when": "editorTextFocus" },
     { "key": "alt+shift+j", "command": "cursorDownSelect", "when": "editorTextFocus" },
