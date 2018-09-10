@@ -94,7 +94,7 @@ function addSearchParams(url, params) {
     var delimiter =  url.indexOf("?") === -1 ? '?' : '&';
     var args = [];
     for (var key in params) {
-        args.push(key + '=' + params[key]);
+        args.push(encodeURIComponent(key) + '=' + encodeURIComponent(params[key]));
     }
     if (args.length) {
         url += delimiter + args.join('&');
