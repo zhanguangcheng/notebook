@@ -250,10 +250,9 @@ function download($file, $filename = null)
  */
 function auto_version($file)
 {
+    $ver = 1;
     if (file_exists($_SERVER['DOCUMENT_ROOT'] . $file)) {
         $ver = date('YmdHis', filemtime($_SERVER['DOCUMENT_ROOT'] . $file));
-    } else {
-        $ver = 1;
     }
     return $file . '?v=' . $ver;
 }
@@ -353,7 +352,7 @@ function array_create_tree($list)
  */
 function is_first($token = null)
 {
-    static $container = [];
+    static $container = array();
     if (isset($container[$token])) {
         return false;
     }
