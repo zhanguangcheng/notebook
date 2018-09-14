@@ -27,6 +27,7 @@ Windows常用软件
 * [listary](http://www.listary.com/ "文件搜索，快速启动应用")
 * [native for mysql](https://www.navicat.com/ "数据库管理工具") $
 * [notepad2](http://notepad2.com/ "普通编辑器")
+* [OBS Studio](https://obsproject.com/ "免费且开源的用于视频录制以及直播串流的软件")
 * [PHPStorm](https://www.jetbrains.com/phpstorm/ "PHP IDE") $
 * [Postman](https://www.getpostman.com/ "接口调试工具")
 * [PowerDesigner](http://download.sybase.com/eval/PowerDesigner/PowerDesigner165_Evaluation.exe) [$](http://www.itmop.com/downinfo/115489.html)
