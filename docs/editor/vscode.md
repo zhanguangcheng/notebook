@@ -8,6 +8,7 @@ Visual Studio Code
 * `Align`
 * `Apache Conf`
 * `AutoFileName`
+* `bootcdn`
 * `Bracket Pair Colorizer`
 * `Code Runner`
 * `Commands`
