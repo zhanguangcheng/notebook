@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 50px;margin:0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        文档&demo: https://select2.org/
+     -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/select2/4.0.5/css/select2.min.css">
+    <script src='https://cdn.bootcss.com/jquery/1.8.3/jquery.min.js'></script>
+    <script src="https://cdn.bootcss.com/select2/4.0.5/js/select2.full.min.js"></script>
+
+    <h2>demo1:基本使用</h2>
+    <select class="demo1">
+        <option value="">请选择城市</option>
+        <option value="1">上海</option>
+        <option value="2">成都</option>
+        <option value="3">重庆</option>
+    </select>
+    <script>
+        $('.demo1').select2();
+    </script>
+    <hr>
+
+    <h2>demo2:常用配置</h2>
+    <p>配置：语言、提示语、宽度、自定义数据、多选、最多选择数限制、允许清空全部、全局设置</p>
+    <select class="demo2"></select>
+    <!-- 设置语言: 在select2之后导入对应的语言包即可 -->
+    <script src="https://cdn.bootcss.com/select2/4.0.5/js/i18n/zh-CN.js"></script>
+    <script>
+        // 全局设置
+        $.fn.select2.defaults.set("width", "100%");
+
+        $('.demo2').select2({
+            placeholder: '请选择城市',// 自定义提示语
+            width: '100%',
+            multiple: true,// 开启多选
+            maximumSelectionLength: 2,// 最多选2个
+            allowClear: true,// 允许清空全部
+            data: [// 自定义数据
+                {id:1,text:'上海'},
+                {id:2,text:'成都'},
+                {id:3,text:'重庆'},
+            ],
+        });
+    </script>
+    <hr>
+
+    <h2>demo3:数据来源于ajax</h2>
+    <p>使用ajax数据、自定义结果模版</p>
+    <select class="demo3"></select>
+    <style>
+        .select2-result-repository {
+            padding-top: 4px;
+            padding-bottom: 3px
+        }
+
+        .select2-result-repository__avatar {
+            float: left;
+            width: 60px;
+            margin-right: 10px;
+        }
+
+        .select2-result-repository__avatar img {
+            width: 100%;
+            height: auto;
+            border-radius: 2px;
+        }
+
+        .select2-result-repository__meta {
+            margin-left: 70px
+        }
+
+        .select2-result-repository__title {
+            color: black;
+            font-weight: 700;
+            word-wrap: break-word;
+            line-height: 1.1;
+            margin-bottom: 4px
+        }
+
+        .select2-result-repository__forks,.select2-result-repository__stargazers {
+            margin-right: 1em
+        }
+
+        .select2-result-repository__forks,.select2-result-repository__stargazers,.select2-result-repository__watchers {
+            display: inline-block;
+            color: #aaa;
+            font-size: 11px
+        }
+
+        .select2-result-repository__description {
+            font-size: 13px;
+            color: #777;
+            margin-top: 4px
+        }
+
+        .select2-results__option--highlighted .select2-result-repository__title {
+            color: white
+        }
+
+        .select2-results__option--highlighted .select2-result-repository__forks,.select2-results__option--highlighted .select2-result-repository__stargazers,.select2-results__option--highlighted .select2-result-repository__description,.select2-results__option--highlighted .select2-result-repository__watchers {
+            color: #c6dcef
+        }
+    </style>
+    <script>
+        $('.demo3').select2({
+            ajax: {
+                url: "https://api.github.com/search/repositories",
+                dataType: 'json',
+                delay: 500,
+                data: function (params) {
+                    return {
+                        q: params.term, // search term
+                        page: params.page
+                    };
+                },
+                processResults: function (data, params) {
+                    // parse the results into the format expected by Select2
+                    // since we are using custom formatting functions we do not need to
+                    // alter the remote JSON data, except to indicate that infinite
+                    // scrolling can be used
+                    params.page = params.page || 1;
+
+                    return {
+                        results: data.items,
+                        pagination: {
+                            more: (params.page * 30) < data.total_count
+                        }
+                    };
+                },
+                cache: true
+            },
+            placeholder: '在Github仓库中搜索',
+            escapeMarkup: function (markup) { return markup; }, // let our custom formatter work
+            minimumInputLength: 1,
+            templateResult: formatRepo,
+            templateSelection: formatRepoSelection
+        });
+        function formatRepo(repo) {
+            if (repo.loading) {
+                return repo.text;
+            }
+
+            var markup = "<div class='select2-result-repository clearfix'>" +
+                "<div class='select2-result-repository__avatar'><img src='" + repo.owner.avatar_url + "' /></div>" +
+                "<div class='select2-result-repository__meta'>" +
+                "<div class='select2-result-repository__title'>" + repo.full_name + "</div>";
+
+            if (repo.description) {
+                markup += "<div class='select2-result-repository__description'>" + repo.description + "</div>";
+            }
+
+            markup += "<div class='select2-result-repository__statistics'>" +
+                "<div class='select2-result-repository__forks'><i class='fa fa-flash'></i> " + repo.forks_count + " Forks</div>" +
+                "<div class='select2-result-repository__stargazers'><i class='fa fa-star'></i> " + repo.stargazers_count + " Stars</div>" +
+                "<div class='select2-result-repository__watchers'><i class='fa fa-eye'></i> " + repo.watchers_count + " Watchers</div>" +
+                "</div>" +
+                "</div></div>";
+
+            return markup;
+        }
+        function formatRepoSelection(repo) {
+            return repo.full_name || repo.text;
+        }
+    </script>
+    <hr>
+
+    <h2>demo4:自定义搜索过程</h2>
+    <p>实现中文,首拼,全拼都能搜索</p>
+    <select class="demo4"></select>
+    <script>
+        $('.demo4').select2({
+            data: [// 自定义数据
+                { id: 1, text: '上海', py1: 'sh', py2: 'shanghai'},
+                { id: 2, text: '成都', py1: 'cd', py2: 'chengdu'},
+                { id: 3, text: '重庆', py1: 'cq', py2: 'chongqing'},
+            ],
+            /**
+             * 自定义搜索过程
+             * @param object params  搜索的参数 [term, text]
+             * @param object data 单个数据 [id, text...]
+             */
+            matcher: function(params, data) {
+                // 搜索的参数为空, 则不搜索
+                if ($.trim(params.term) === '') {
+                    return data;
+                }
+                if (typeof data.text === 'undefined') {
+                    return null;
+                }
+
+                // 返回data表示当前数据搜索成功
+                if (
+                    data.text.indexOf(params.term) > -1
+                    || data.py1.indexOf(params.term) > -1
+                    || data.py2.indexOf(params.term) > -1
+                ) {
+                    return data;
+                }
+
+                // 返回null表示当前数据搜索失败
+                return null;
+            }
+        });
+    </script>
+    <hr>
+</body>
+
+</html>
