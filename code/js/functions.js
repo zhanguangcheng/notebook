@@ -198,8 +198,8 @@ function trim(str){
 /**
  * cookie工具
  * @param  {string} name    键
- * @param  {string} value   值
- * @param  {object} options 选项 {expires: "", domain: "", path: ""}
+ * @param  {string} value   值 传入空值表示删除
+ * @param  {object} options 选项 {expires: 7, domain: "", path: "/"}
  * @return {string}         获取cookie返回值 | 设置不返回
  */
 function cookie(name, value, options) {
@@ -224,7 +224,7 @@ function cookie(name, value, options) {
         }
         if (options.expires) {
             var d = new Date();
-            d.setDate(d.getDate() + options.expires);
+            d.setDate(d.getDate() + parseInt(options.expires));
             value += "; expires=" + d.toUTCString();
         }
         if (options.domain) {
@@ -232,6 +232,8 @@ function cookie(name, value, options) {
         }
         if (options.path) {
             value += "; path=" + options.path;
+        } else {
+            value += "; path=/";
         }
         document.cookie = name + "=" + value;
     }
