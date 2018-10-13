@@ -44,6 +44,7 @@
 * [Javascript模块化编程（三）：require.js的用法](http://www.ruanyifeng.com/blog/2012/11/require_js.html)
 * [requireJS 从概念到实战](http://www.cnblogs.com/HCJJ/p/6611669.html)
 * [RequireJS进阶:配置文件的学习](https://segmentfault.com/a/1190000002401665)
+* [阮一峰:JavaScript 教程](https://wangdoc.com/javascript/)
 
 ## PHP
 
