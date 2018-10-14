@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>拖拽移动元素 demo</title>
+    <style>
+        body {
+            margin:0;
+        }
+        .item {
+            width: 100px;height:100px;position:absolute;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="item" style="background:rgb(255, 140, 0)"></div>
+        <div class="item" style="background:rgb(23, 255, 255)"></div>
+        <div class="item" style="background:rgb(51, 255, 0)"></div>
+    </div>
+    <script>
+        var container = document.getElementById('container');
+        var currentElement = null;
+        var isMouseDown = false;
+        var w = h = 0;
+        container.onmousedown = function(event) {
+            if (event.target.className === 'item') {
+                isMouseDown = true;
+                w = event.pageX - event.target.offsetLeft;
+                h = event.pageY - event.target.offsetTop;
+                currentElement = event.target;
+            }
+        };
+        document.onmousemove = function (event) {
+            if (isMouseDown) {
+                currentElement.style.left = event.pageX - w + 'px';
+                currentElement.style.top = event.pageY - h + 'px';
+            }
+        };
+        document.onmouseup = function (event) {
+            if (isMouseDown) {
+                isMouseDown = false;
+            }
+        };
+    </script>
+</body>
+</html>
