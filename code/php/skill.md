@@ -228,3 +228,24 @@ $obj = new DateTime("@253402271999");
 $obj->setTimezone(timezone_open('Asia/ShangHai')); 
 echo $obj->format("Y-m-d H:i:s"); // output: 9999-12-31 23:59:59
 ```
+
+## 让SESSION不依赖COOKIE
+
+> 用途:写无状态应用时，比如手机端api。
+
+```php
+session_id($_GET['token']);
+session_start();
+// 开始使用...
+```
+
+## 提高COOKIE安全性
+
+> 设置COOKIE的httpOnly为true来增加安全，这样js就无法操作了，避免了一些XSS攻击。
+```php
+// 1. 全局配置
+ini_set('session.cookie_httponly', true);
+
+// 2. 单个设置, setcookie()的第7个参数设置为true
+bool setcookie ( string $name [, string $value = "" [, int $expire = 0 [, string $path = "" [, string $domain = "" [, bool $secure = false [, bool $httponly = false ]]]]]] )
+```
