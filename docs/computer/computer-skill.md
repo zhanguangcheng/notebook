@@ -6,7 +6,7 @@ Windows使用技巧
 * `netstat -ano` 查看windows系统端口占用情况
 * `nslookup -q xcx1.com` 查看域名解析情况
 * `start "" "xxx.exe"` 执行文件
-* `telnet 127.0.0.1 3306"` 测试服务器端口是否畅通
+* `telnet 127.0.0.1 3306` 测试服务器端口是否畅通
 
 ### 实用快捷键
 
@@ -16,7 +16,7 @@ Windows使用技巧
 * <kbd>Win</kbd>+<kbd>D</kbd>返回桌面
 * <kbd>Win</kbd>+<kbd>R</kbd>运行命令
 * <kbd>Win</kbd>+<kbd>L</kbd>锁电脑
-* <kbd>Win</kbd>+<kbd>Shift</kbd>+<kbd>Esc</kbd>任务管理器
+* <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Esc</kbd>任务管理器
 * <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>N</kbd>新建文件夹
 * <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd>在当前目录打开cmd
 * <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>鼠标左键</kbd>管理员权限运行
@@ -34,9 +34,12 @@ Windows使用技巧
 
 ### 关于BOM
 
-如果网站中出现空白行,可能是utf8+bom所导致的
-如果在网页中能看见这个字符&#65279;就是utf8+bom
-用window(xp 7 测试)自带的编辑器(notepad)修改后会自动保存为+bom的格式
+如果网站中出现空白行，或者样式错乱，可能是utf8+bom所导致的。
+如果在网页中能看见这个字符`&#65279`就是utf8+bom。
+使用window xp、Win7、Win10测试自带的编辑器(notepad)修改后会自动保存为utf-8+bom的格式
+
+字节表示为:
+`\xEF\xBB\xBF`
 
 ### 添加右键菜单,带图标
 
