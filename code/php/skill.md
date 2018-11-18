@@ -104,7 +104,6 @@ function validate()
         && isset($_SERVER['PHP_AUTH_PW']) 
         && isset($users[$_SERVER['PHP_AUTH_USER']])
         && $users[$_SERVER['PHP_AUTH_USER']] === $_SERVER['PHP_AUTH_PW'];
-    return true;
 }
 
 if (!validate()) {
@@ -148,7 +147,7 @@ $num = 11;
 // 需求1:限制数值不能大于10
 
 // 三元表达式方法
-echo $num > 10 ? $num : $num;
+echo $num > 10 ? 10 : $num;
 
 // min()方法
 echo min(10, $num);
