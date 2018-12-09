@@ -38,7 +38,7 @@ function gen1() {
 $gen1 = gen1();
 var_dump($gen1);// class Generator#1 (0) {}
 ```
-辨别普通函数和generator函数的区别就在于看函数内部是否使用了yield关键字  
+辨别普通函数和generator函数的区别就在于看函数内部是否使用了yield关键字。  
 创建生成器的方式是申明一个函数，内部使用`yield`关键字“产出”值，调用该函数时会自动返回一个Generator对象。  
 如果您试图实例化一个`Generator`，将会抛出一个`Fatal Error`。
 
@@ -51,7 +51,7 @@ foreach ($gen1 as $key => $value) {
 ```
 
 在内部会为生成的值配对连续的整型索引，就像一个非关联的数组。  
-因为Generator函数实现了Iterator接口，所以可直接遍历，也可以像这样手动获取
+因为Generator函数实现了[Iterator](http://php.net/manual/zh/class.iterator.php)接口，所以可直接遍历，也可以像这样手动获取
 
 ```php
 $gen1->current();// int(1)
