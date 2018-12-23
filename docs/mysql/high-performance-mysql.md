@@ -137,7 +137,59 @@ MySQL存储引擎
 
 针对系统设计的一种压力测试，通常的目标是为了掌握系统的行为。
 
+### 基准测试策略
+
+* 整体测试
+* 单独测试
+
+### 测试指标
+
+* 吞吐量
+    单位时间内的事务处理数
+* 响应时间或延迟* 并发性
+* 可扩展性
+
+### 获取系统性能和状态
+* cpu使用率
+* 磁盘I/O
+* 网络流量统计
+* `show global status`
+* `show engine innodb status`
+* `show full processlist`
+
+绘图工具gnuplot
+
+### 测试工具
+
+* 集成测试
+    * [ab](http://httpd.apache.org/docs/2.0/programs/ab.html)
+    * [http_load](http://www.acme.com/software/http_load/)
+* 单组建测试
+    * [sysbench](https://github.com/akopytov/sysbench)
+    * [mysqlslap](https://dev.mysql.com/doc/refman/8.0/en/mysqlslap.html)
+    * mysql函数benchmark()
+
 ## 3.服务器性能剖析
+
+测量任务所花费的时间，然后对结果进行统计和排序，将重要的任务放在前面
+数据库测量
+
+
+### 应用程序测量
+* [NEW Relic](https://newrelic.com/)
+* [xhprof](http://pecl.php.net/package/xhprof)
+* [ifp](http://code.google.com/p/instrumentation-for-php)
+
+
+### 剖析mysql查询
+* 慢查询日志，开销最低，精度最高
+* 工具pt-query-digest
+* `show profile`
+* `flush status` `show status`
+* 使用Performance Schema
+* explain是估计得到的结果
+* 计数器是实际的测量结果
+
 ## 4.Schema与数据类型优化
 ## 5.创建高性能的索引
 ## 6.查询性能优化
