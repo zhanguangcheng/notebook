@@ -42,6 +42,23 @@ var date = (function () {
 })();
 
 /**
+ * 将一个数组分割成多个
+ * @param  {array} arr  需要操作的数组
+ * @param  {number} size 每个数组的单元数目
+ * @return {array}
+ */
+function arrayChunk(arr, size)
+{
+    var size = size || arr.length + 1;
+    var ret = [];
+    var group = Math.ceil(arr.length/size);
+    for (var i=0; i<group; i++) {
+        ret.push(arr.slice(i*size, i*size + size));
+    }
+    return ret;
+}
+
+/**
  * 简单模板替换
  * ```javascript
  * render('<option value="{value}"{selected}>{name}</option>', {
