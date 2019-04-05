@@ -89,6 +89,18 @@ Windows Registry Editor Version 5.00
 
 桌面空白处右键->图形选项->快捷键->禁用
 
+### win10默认应用总是改回系统默认应用
+使用管理员权限执行
+```bash
+sfc /scannow
+```
+或者修复Windows组件
+```bash
+Dism /Online /Cleanup-Image /CheckHealth
+Dism /Online /Cleanup-Image /RestoreHealth
+```
+原始答案：
+<https://answers.microsoft.com/zh-hans/windows/forum/windows_10-other_settings/win10%E9%BB%98%E8%AE%A4%E5%BA%94%E7%94%A8%E6%80%BB/e2f4735e-d0af-4d30-af7a-d01b83541eb8?page=1>
 
 ### 各种品牌的电脑进入U盘的快捷键
 

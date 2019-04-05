@@ -61,6 +61,7 @@
 * [Composer进阶使用 —— 常用命令和版本约束](https://segmentfault.com/a/1190000005898222)
 * [Windows版的PHP安装imagick扩展](https://mlocati.github.io/articles/php-windows-imagick.html)
 * [如何编写一个PHP单元测试用例](https://github.com/yezuozuo/how-to-write-a-phpunit-testcase)
+* [PHP性能追踪及分析工具xhprof的安装与使用](https://www.cnblogs.com/maxincai/p/6001459.html)
 
 ## 数据库相关
 
@@ -79,12 +80,17 @@
 ## 版本管理
 
 * [git merge和rebase的区别](http://www.cnblogs.com/xueweihan/p/5743327.html)
+* [利用git push向服务器一键部署代码](https://zhuanlan.zhihu.com/p/19757507)
 
 ## RegExp
 
 * [20个正则表达式](http://www.jianshu.com/p/e7bb97218946)
 * [JavaScript常用正则表达式](https://github.com/xiayulei/notebook/issues/24)
 * [脚本之家-常用正则表达式](http://www.jb51.net/tools/regex.htm)
+
+## 接口
+
+* [利用apidoc在注释里写API文档](https://www.jianshu.com/p/a799c23234b8)
 
 ## 编辑器
 
@@ -94,3 +100,17 @@
 ## 面试题
 
 * [面试问什么问题才能检验出一个 PHP 开发者的真实水平](https://zhuanlan.zhihu.com/p/25518629)
+
+## 博客
+
+* <https://blog.csdn.net/nuli888>
+
+## 书籍
+
+* [PHP之道](https://laravel-china.github.io/php-the-right-way/)
+* [Modern PHP](https://book.douban.com/subject/26635862/)
+* [Pro Git](https://progit.bootcss.com/)
+
+## 其他
+* <http://www.sonimei.cn/>
+* [语义化版本](semver.org)
