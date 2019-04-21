@@ -12,6 +12,7 @@ Visual Studio Code
 * `Bracket Pair Colorizer`
 * `Code Runner`
 * `Commands`
+* `Comment Translate`
 * `Diff Tool`
 * `EditorConfig for VS Code`
 * `ESLint`
