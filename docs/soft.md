@@ -2,37 +2,40 @@ Windows常用软件
 ===============
 
 * [7-Zip](http://www.7-zip.org/)
-* [Adobe Reader](https://acrobat.adobe.com/us/en/acrobat/pdf-reader.html)
+* [Adobe Reader](https://acrobat.adobe.com/cn/zh-Hans/acrobat/pdf-reader.html)
 * [AutoHotkey](https://www.autohotkey.com/ "热键脚本语言")
 * [AxureRP](https://www.axure.com/) $ [高质量原创模板及元件库](http://www.axureux.com)
-* [Bandizip](http://www.bandizip.com/)
+* [Bandizip](http://www.bandizip.com/ "优秀的压缩软件")
 * [Beyond Compare](http://www.scootersoftware.com/) $
 * [Cacher](https://www.cacher.io/ "The code snippet organizer for pro developers")
 * [Chocolatey](https://chocolatey.org/ "The package manager for Windows")
-* [Chrome](http://www.chrome.com/ "一个浏览器")
 * [cmder](http://cmder.net/ "Portable console emulator for Windows")
 > 中文乱码问题解决:settings->environment->`set LANG=zh_CN.UTF8`
 * [diffuse](https://sourceforge.net/projects/diffuse/ "文本差异对比")
+* [Ditto](https://www.ditto.com/ "剪切板增强")
 * [EditPlus](https://www.editplus.com/ "Windows text editor with FTP and sftp") $
 * [Everything](http://www.voidtools.com/ "文件快搜")
 * [FileZilla](https://filezilla-project.org/ "FTP管理工具")
-* [Firefox](http://www.firefox.com.cn/ "又一个浏览器")
+* [Firefox](http://www.firefox.com.cn/ "一个浏览器")
 * [Free Download Manager](https://www.freedownloadmanager.org/ "下载工具")
-* [FSCapture](http://www.fscapture.com/)
+* [FSCapture](http://www.fscapture.com/) $
+* [Geek Uninstaller](https://geekuninstaller.com/ "强力软件卸载工具")
+* [Google Chrome](https://www.google.cn/chrome/ "一个浏览器")
 * [HDTunePro](http://www.hdtune.com/ "硬盘扫描工具") $
 * [HeidiSQL](https://www.heidisql.com/ "数据库管理工具")
 * [HEU KMS Activator](https://www.baidu.com/s?wd=HEU%20KMS%20Activator "Windows Office激活工具")
+* [Honeyview](http://www.bandisoft.com/honeyview/ "Honeyview是一款快速图像查看器")
 * [KeePass](http://keepass.info/ "密码管理")
-* [licecap](http://www.cockos.com/licecap/ "gif录制")
-* [listary](http://www.listary.com/ "文件搜索，快速启动应用")
-* [native for mysql](https://www.navicat.com/ "数据库管理工具") $
+* [LICEcap](http://www.cockos.com/licecap/ "gif录制")
+* [Listary](http://www.listary.com/ "文件搜索，快速启动应用")
+* [Navicat Premium](https://www.navicat.com.cn/products/navicat-premium/ "数据库管理工具") $
 * [notepad2](http://notepad2.com/ "普通编辑器")
 * [OBS Studio](https://obsproject.com/ "免费且开源的用于视频录制以及直播串流的软件")
 * [PHPStorm](https://www.jetbrains.com/phpstorm/ "PHP IDE") $
 * [Postman](https://www.getpostman.com/ "接口调试工具")
-* [PowerDesigner](http://download.sybase.com/eval/PowerDesigner/PowerDesigner165_Evaluation.exe) [$](http://www.itmop.com/downinfo/115489.html)
-* [PuTTY](http://www.putty.org/ "SSH连接工具")
-* [RegexTester](http://www.regextester.com/ "正则在线测试")
+* [PowerDesigner](http://download.sybase.com/eval/PowerDesigner/PowerDesigner165_Evaluation.exe "建模工具") [$](http://www.itmop.com/downinfo/115489.html)
+* [PuTTY](http://www.putty.org/ "小巧SSH连接工具")
+* [QQ影音](http://player.qq.com/)
 * [Rolan](https://www.irolan.com/ "轻量级启动器")
 * [Rufus](http://rufus.akeo.ie/ "支持各种系统的U盘制作工具")
 * [seer](http://www.1218.io/ "文件快速预览")
@@ -46,15 +49,18 @@ Windows常用软件
 * [VirtualBox](https://www.virtualbox.org/ "虚拟机")
 * [VMware](https://download3.vmware.com/software/wkst/file/VMware-workstation-full-12.5.6-5528349.exe "虚拟机") $
 > 5A02H-AU243-TZJ49-GTC7K-3C61N
+* [Visual Studio Code](https://code.visualstudio.com/ "Code editing.Redefined.")
 * [WePE工具箱](http://www.wepe.com.cn/ "微PE工具箱")
 * [WGestures全局鼠标手势](http://www.yingdev.com/projects/wgestures "一个更简单、更现代的鼠标手势。")
 * [WinCacheGrind](https://github.com/ceefour/wincachegrind "XDebug profile分析")
-* [Wireshark](https://www.wireshark.org/ "抓包工具")
-* [WinSCP](https://winscp.net)
-* [Winrar](https://www.rarlab.com/)
-* [Xshell](http://www.netsarang.com/xshell.html "SSH连接工具")
+* [Wireshark](https://www.wireshark.org/ "全能抓包工具")
+* [WinSCP](https://winscp.net "WinSCP 是一个 Windows 环境下使用的 SSH 的开源图形化 SFTP 客户端。")
+* [Winrar](https://www.rarlab.com/ "RAR压缩处理软件 英文版无广告")
+* [Xshell](https://www.netsarang.com/zh/xshell/ "SSH连接工具")
 * [Zeal](https://zealdocs.org/ "帮助手册大全")
 * [暴风激活工具](http://www.baofengjihuo.com/ "暴风激活工具_win7激活工具_win10激活密匙_win8激活软件_永久激活所有系统和office")
+* [火绒安全](https://www.huorong.cn/)
+* [万彩办公大师](http://www.wofficebox.com/ "免费的办公工具百宝箱")
 
 常用网站工具
 ===============
