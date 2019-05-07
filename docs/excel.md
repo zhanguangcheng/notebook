@@ -6,6 +6,32 @@ Excel相关
 
 ### 单元格引用方式
 
+* 相对 `A1` 行列会跟随变化
+* 混合 `$A1` `A$1` 行或列会跟随变化
+* 绝对引用 `$A$1` 行不列会跟随变化
+
+### 区域引用
+
+> 可组合使用，包括单元格引用
+
+* 单个区域 `A1:B2`
+* 联合区域 `(区域1,区域2...)`：多个区域合起来
+* 交集区域 `(区域1 区域2...)`：多个区域相交的部分
+* 整行区域 `1:1`:单行 `1:2`:多行
+* 整列区域 `A:A`:单列 `A:B`:多列
+* 跨Sheet `Sheet名称!区域`
+
+### 运算符
+* 算数运算符
+`+ - * / % ^`
+
+* 比较运算符
+`= > < >= <= <>`
+
+* 文本运算符
+`&`
+
+
 ## 函数
 
 ### 文本函数
@@ -45,8 +71,23 @@ Excel相关
 ### 日期函数
 
 ### 数学函数
+* `sum(number1, [number2], ...)` 求和
+* `sumif(range,criteria,[sum_range])` 根据条件求和
+* `sumproduct(array1，[array2]，…)` 多条件求和
+* `randbetween(bottom, top)` 生成范围内随机整数
+* `round(number, num_digits)` 四舍五入
+* `mod(number, divisor)` 取余
+* `int(number)` 向下取整
 
 ### 统计函数
+* `average(number1，[number2],…)` 求平均数
+* `averageif (range,criteria，[average_range])` 条件求平均数
+* `count(value1,[value2],…)` 计算包含数值单元格个数
+* `counta(value1,[value2],…)` 计算非空单元格个数
+* `countblank(value1,[value2],…)` 计算空值单元格个数
+* `countif(range,criteria)` 按条件统计单元格个数
+* `min(number1, [number2],...)` 求最小值
+* `max(number1, [number2],...)` 求最大值
 
 ### 其他函数
 
