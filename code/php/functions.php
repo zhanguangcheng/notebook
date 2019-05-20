@@ -294,6 +294,35 @@ function array_order_by(array &$arr, $order = null)
 }
 
 /**
+ * 二维数组排序（支持array_multisort的全部参数）
+ * array_order_by($arr, array(
+ *     'age' => SORT_DESC,
+ *     'name' => SORT_ASC,
+ * );
+ * @param  array  &$arr  数组
+ * @param  array $order 排序规则, 键值对，键 => 排序
+ * @return bool
+ */
+function array_order_by2(array &$array, array $order = null)
+{
+    $args = array();
+    foreach ($order as $field => $v) {
+        if (is_string($field)) {
+            $args[] = array_column($array, $field);
+            if (is_array($v)) {
+                list($sort, $flags) = $v;
+                $args[] = $sort;
+                $args[] = $flags;
+            } else {
+                $args[] = $v;
+            }
+        }
+    }
+    $args[] = &$array;
+    return call_user_func_array('array_multisort', $args);
+}
+
+/**
  * 数字转字母
  * @param  int $index 数字: 0开始
  * @return string A B C ... AA AB ...
