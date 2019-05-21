@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>扫描枪输入捕获</title>
+</head>
+<body>
+<script>
+    ;(function() {
+        var stringLength = 5;
+        var interval = 300;
+        
+        var inputString = '';
+        var dateline = new Date();
+        var keycode = {
+            'A': 65,
+            'Z': 90,
+            '0': 48,
+            '9': 57,
+            'ENTER': 13
+        };
+        document.onkeyup = function(e) {
+            var keyCode = e.keyCode;
+            if (
+                // 只接收: 数字+大写字母+回车
+                keyCode >= keycode[0] && keyCode <= keycode[9]
+                || keyCode >= keycode.A && keyCode <= keycode.Z
+                || keyCode === keycode.ENTER
+            ) {
+                if (keyCode === keycode.ENTER) {
+                    if (inputString.length === stringLength) {
+                        // TODO:
+                        alert(inputString);
+                    }
+                    inputString = '';
+                    return;
+                }
+                if (inputString == '' || new Date().getTime() - dateline.getTime() < interval) {
+                    inputString += String.fromCharCode(keyCode);
+                } else {
+                    inputString = String.fromCharCode(keyCode);
+                }
+                dateline = new Date();
+            }
+        };
+    }());
+</script>
+</body>
+</html>
