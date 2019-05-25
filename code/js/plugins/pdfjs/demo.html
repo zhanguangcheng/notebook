@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PDF预览</title>
+</head>
+
+<body>
+    <button type="button" onclick="previewPdf('https://zhanguangcheng.github.io/notebook/code/js/plugins/pdfjs/web/example.pdf')">点击预览</button>
+    <script>
+        /**
+         * pdf预览
+         */
+        function previewPdf(url) {
+            if (navigator.userAgent.match(/MSIE [678]\./)) {
+                window.open(url);
+                return;
+            }
+            url = 'https://zhanguangcheng.github.io/notebook/code/js/plugins/pdfjs/web/viewer.html?file=' + encodeURIComponent(url);
+            window.open(url);
+        }
+    </script>
+</body>
+
+</html>
