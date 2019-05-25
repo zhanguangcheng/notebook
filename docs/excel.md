@@ -65,7 +65,7 @@ Excel相关
 * 为单元格命名
   1. 选择单元格
   2. 在名称框中输入名称
-  3. 按`Enter`
+  3. 按 <kbd>Enter</kbd>
 
 * 定义所选区域的名称
   1. 选择要命名的区域，包括行或列标签。
@@ -95,6 +95,7 @@ Excel相关
 * 整行区域 `1:1`:单行 `1:2`:多行
 * 整列区域 `A:A`:单列 `A:B`:多列
 * 跨Sheet `Sheet名称!区域`
+* 跨文件 `'磁盘路径[文件名.xlsx]Sheet名称'!区域`
 * 多个Sheet `Sheet1:Sheet3!区域)`：表示Sheet1到Sheet3中区域
 
 
@@ -124,7 +125,8 @@ Excel相关
 * `rows(array)` 指定区域有几行
 * `index(array, row_num, [column_num])` 在指定的区域中获取指定行列的值
 * `indirect(ref_text)` 通过引用获取指定单元格的值
-* `match(lookup_value, lookup_array, [match_type])` 在有个区域查找特定的值并返回所在位置
+* `match(lookup_value, lookup_array, [match_type])` [在某个区域(单列或单行)查找特定的值并返回所在索引位置](https://support.office.microsoft.com/zh-cn/article/match-%E5%87%BD%E6%95%B0-e8dffd45-c762-47d6-bf89-533f4a37673a)
+* `offset(reference, rows, cols, [height], [width])` [指定单元格的行列偏移后的引用，可以指定要返回的行数和列数](https://support.office.microsoft.com/zh-cn/article/offset-%E5%87%BD%E6%95%B0-c8de19ae-dd79-4b9b-a14e-b4d906d11b66)
 
 ### 逻辑函数
 * `and(logical1, [logical2], ...)` 全部为true结果为true
@@ -164,19 +166,19 @@ Excel相关
 
 ### 快速移动行
 1. 鼠标选中要移动的行
-2. 按住`Shift`键，鼠标移动到单元格上边框或下边框
+2. 按住<kbd>Shift</kbd>键，鼠标移动到单元格上边框或下边框
 3. 按住鼠标左键向上或向下拖动至目标位置
 
 ### 快速移动列
 1. 鼠标选中要移动的列
-2. 按住`Shift`键，鼠标移动到单元格左边框或右边框
+2. 按住<kbd>Shift</kbd>键，鼠标移动到单元格左边框或右边框
 3. 按住鼠标左键向左或向右拖动至目标位置
 
 ### 快速填充(`Ctrl+E`)
 
 1. 在首个单元格输入想要完成的“目标效果”
 2. 选择首个单元格和全部要填充的同列连续单元格
-3. 按Ctrl+E，完成智能填充
+3. 按<kbd>Ctrl</kbd> <kbd>E</kbd>，完成智能填充
 
 可实现的功能
 
@@ -187,8 +189,8 @@ Excel相关
 
 ### 快速跳转、选择
 
-* 跳转：`Ctrl`+`方向键`
-* 选择：`Ctrl`+`Shift`+`方向键`
+* 跳转：<kbd>Ctrl</kbd> <kbd>方向键</kbd>
+* 选择：<kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>方向键</kbd>
 
 ### 快速自动填充
 
@@ -198,7 +200,7 @@ Excel相关
 
 ### 创建下拉列表
 
-1. 将下拉选项列表转换为表格：选中下拉选项中任意单元格，按键`Ctrl`+`T`，根据需求选择是否包含标题，确定
+1. 将下拉选项列表转换为表格：选中下拉选项中任意单元格，按键<kbd>Ctrl</kbd> <kbd>T</kbd>，根据需求选择是否包含标题，确定
 2. 在工作表中选择想要显示下拉列表的单元格。
 3. 转到功能区上的“**数据**”选项卡，然后转到“**数据验证**”。
 4. 在“**设置**”选项卡的“**允许**”框上，单击“**序列**”。
@@ -219,6 +221,15 @@ Excel相关
 8. 多级以此类推。
 
 ![Excel联动下拉](../images/excel/excel-assoc-list.gif)
+
+
+### 多条件查询
+
+* 使用`match`和`offset`函数组合使用
+* 注意：输入完公式后需要按<kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>Enter</kbd>
+
+![Excel下拉列表](../images/excel/excel-multiple-condition-search.png)
+
 
 ## 图表
 
