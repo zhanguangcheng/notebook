@@ -83,6 +83,7 @@ Windows常用软件
 * [githack](https://raw.githack.com/ "转换github文件的header，让其可以解析（不能用于生产环境）")
 * [RegExp](https://regex101.com/ "正则测试")
 * [RegExpFigure](https://regexper.com/ "正则图形显示")
+* [Regulex](https://jex.im/regulex/ "正则图形显示")
 * [Staticfile CDN](http://www.staticfile.org/ "CDN")
 * [Tick list](https://www.dida365.com "滴答清单")
 * [TinyPNG](https://tinypng.com/ "png,jpg图片压缩")
