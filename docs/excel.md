@@ -229,7 +229,7 @@ Excel相关
 * `vlookup`实现
 * 使用`match`和`offset`函数组合实现
 
-> 已经将数据创建为表格，并重命名为新资表。
+> 已经将数据创建为表格，并重命名为薪资表。
 
 ![Excel下拉列表](../images/excel/excel-search.png)
 
