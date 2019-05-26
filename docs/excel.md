@@ -224,12 +224,30 @@ Excel相关
 ![Excel联动下拉](../images/excel/excel-assoc-list.gif)
 
 
+### 单个条件查询
+
+* `vlookup`实现
+* 使用`match`和`offset`函数组合实现
+
+> 已经将数据创建为表格，并重命名为新资表。
+
+![Excel下拉列表](../images/excel/excel-search.png)
+
 ### 多条件查询
 
 * 使用`match`和`offset`函数组合使用
 * 注意：输入完公式后需要按<kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>Enter</kbd>
 
 ![Excel下拉列表](../images/excel/excel-multiple-condition-search.png)
+
+### 单元格格式转换
+
+* 格式为文本，内容为数字，但是左上角没有绿色的角标，如何出现绿色角标
+    * 选中单元格->数据:分裂->下一步->下一步->文本->完成
+* 格式为常规，内容为数字，但是左上角有绿色的角标，如何去除绿色角标
+    * 方法一：选中单元格->点击周围的黄色图标->转换为数字
+    * 方法二：选中单元格->数据:分裂->下一步->下一步->常规->完成
+
 
 
 ## 图表
