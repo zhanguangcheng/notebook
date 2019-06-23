@@ -5,7 +5,7 @@ Redis
 
 ## 是什么？
 
-开源、远程的非关系型内存数据库
+[Redis](https://redis.io/)是开源、远程的非关系型内存数据库
 
 ## 特点
 
@@ -19,7 +19,7 @@ Redis
 ## 常用命令
 
 ### Keys
-* `TYPE` 获取key的存储类型，如、string、list、set、zset等
+* `TYPE` 获取key的存储类型，如、string、list、hash、set、zset等
 * `KEYS pattern` 查找所有符合[模式pattern](#模式pattern)的key 
 * `EXISTS key` 检测key是否存在 
 * `DEL key [key ...]` 删除指定的一个或多个key
