@@ -154,3 +154,10 @@ $memcache->addServer('127.0.0.1',11211);
 
 分布式集群架构图:
 ![分布式集群架构图](../../images/memcache.png)
+
+
+## 其他
+
+### Web客户端
+
+[A GUI Administration for memcached](https://github.com/junstor/memadmin)

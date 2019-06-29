@@ -116,3 +116,7 @@ Redis
 * `?` 匹配任意一个字符
 * `*` 匹配任意零个或多个字符
 * `[a-c]` 匹配范围字符
+
+### Web客户端
+
+[Simple web interface to manage Redis databases](https://github.com/erikdubbelboer/phpRedisAdmin)
