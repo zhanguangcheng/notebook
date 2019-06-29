@@ -4,8 +4,8 @@
 {
     // 文件一:
     /* 第一步: 跳转至QQ登录页面 */
-    $client_id = '101383043';
-    $client_secret = '7a05f3e157fc4699d52cb9cac6370836';
+    $client_id = '';
+    $client_secret = '';
     $redirect_uri = 'http://localhost/test/callback.php';
 
     $state = md5(uniqid(rand(), true));// 验证用(自定义)
@@ -128,8 +128,8 @@
 
 /* github的oAuth测试 */
 {
-    $client_id = '345c25cdc8f9078df6b1';
-    $client_secret = 'bd120abefe45170a0f63ac614cb1b2094487736a';
+    $client_id = '';
+    $client_secret = '';
     $redirect_uri = 'http://localhost/test/callback.php';
     // 文件一:
     /* 第一步: 跳转至github登录页面 */
