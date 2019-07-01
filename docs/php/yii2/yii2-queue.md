@@ -8,6 +8,7 @@ yii2-queue的使用
 
 ```bash
 composer require --prefer-dist yiisoft/yii2-queue
+composer require --prefer-dist yiisoft/yii2-redis
 ```
 
 ## 基本使用(Redis驱动)
