@@ -439,3 +439,25 @@ function generate_random_token($length = 16)
 
     return substr(hash('sha512', $randomData), 0, $length * 2);
 }
+
+/**
+ * 数据保护，支持账号、QQ号、手机号、身份证号、邮箱等信息
+ * @param  string $string 字符串
+ * @param  integer [$start] 开始保护的位置，默认为总长度的1/4
+ * @param  integer [$end] 结束保护的位置，默认为总长度的1/4
+ */
+function get_mask_info($string, $start = null, $end = null)
+{
+    if (!is_string($string) || empty($string)) {
+        return '';
+    }
+    $len = mb_strlen($string);
+    $index = strpos($string, '@');
+    $n = ceil(($index ? : $len) / 4);
+    $start = is_null($start) ? $n : $start;
+    $end = is_null($end) ? ($index ? $n + $len - $index : $n) : $end;
+    if ($len <= $start + $end) {
+        return $string;
+    }
+    return substr($string, 0, $start) . str_repeat('*', $len - $start - $end) . substr($string, -$end);
+}
