@@ -12,26 +12,27 @@ github地址：<https://github.com/antirez/redis>
 ## 安装
 
 > 环境：Centos7.0  
-> 现在（2017-12-17）安装的Redis的为最新版4.0.6。
 
 1.环境需求准备
 
-gcc、gcc-c++编译器、wget下载工具，如已安装，进行下一步。
+gcc编译器、wget下载工具，如已安装，进行下一步。
 
 ```shell
-yum -y install gcc gcc-c++ wget
+cd
+yum -y install gcc wget
 ```
 
 2.下载Redis源码包
 
 ```shell
-wget https://github.com/antirez/redis/archive/4.0.6.tar.gz
+wget http://download.redis.io/releases/redis-stable.tar.gz
 ```
 
 3.安装&运行
 
 ```shell
-cd redis-4.0.6
+tar zxf redis-stable.tar.gz
+cd redis-stable
 
 # 使用libc为分配器编译，默认为jemalloc会报错：“jemalloc/jemalloc.h：没有那个文件或目录”
 # 安装完毕后在`src`目录中有`redis-server`、`redis-cli`等文件时则表示安装成功。
@@ -39,7 +40,7 @@ make MALLOC=libc
 
 # 复制编译好的程序到软件安装目录
 mkdir /usr/local/redis
-cp src/redis-cli src/redis-server redis.conf /usr/local/redis
+cp redis.conf src/redis-server src/redis-cli src/redis-benchmark src/redis-check-aof src/redis-check-rdb src/redis-sentinel src/redis-trib.rb /usr/local/redis
 
 # 编辑redis.conf，把参数daemonize no 改为 daemonize yes（表示后台运行），然后运行。
 cd /usr/local/redis
