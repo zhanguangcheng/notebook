@@ -50,6 +50,8 @@ composer --version
 composer config -g repo.packagist composer https://packagist.phpcomposer.com
 # or
 composer config -g repo.packagist composer https://packagist.laravel-china.org
+# or
+composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
 ```
 
 局部(当前项目生效)
