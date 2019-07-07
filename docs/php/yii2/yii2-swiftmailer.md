@@ -55,7 +55,7 @@ try {
 
  ## 使用视图发送邮件
 
-视图文件@app/mail/usr/verify.php：
+视图文件@app/mail/user/verify.php：
  ```html
  <p>verify code:<code><?php echo $code ?></code></p>
  ```
@@ -156,7 +156,7 @@ try {
     - 如果多个收件人应收到此邮件，您可以传递一组地址。
     - 您还可以使用以下格式指定电子邮件地址以外的收件人姓名：`[email => name]`
     - @return $this
-* `public function setBcc($cc)`
+* `public function setBcc($bcc)`
     - 设置此消息的密件抄送（隐藏拷贝接收方）地址。与抄送功能一致，区别是不会在邮件中显示抄送接收人
     - @param string | array $bcc hidden copy receiver email address.
     - 如果多个收件人应收到此邮件，您可以传递一组地址。
