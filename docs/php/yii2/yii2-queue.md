@@ -82,6 +82,51 @@ $job_id = Yii::$app->queue->push(new \app\queue\MyJob([
     yii queue/listen
     ```
 
+## 使用Systemd来管理队列服务
+
+/etc/systemd/system/yii-queue@.service：
+```ini
+[Unit]
+Description=Yii Queue Worker %I
+After=network.target
+After=redis.service
+Requires=redis.service
+
+[Service]
+User=apache
+Group=apache
+ExecStart=/usr/bin/php /var/www/html/yii2-queue/yii queue/listen --verbose
+ExecStop=
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+```
+
+```bash
+systemctl daemon-reload
+```
+
+```bash
+# To start two workers
+systemctl start yii-queue@1 yii-queue@2
+
+# To get status of running workers
+systemctl status "yii-queue@*"
+
+# To stop the worker
+systemctl stop yii-queue@2
+
+# To stop all running workers
+systemctl stop "yii-queue@*"
+
+# To start two workers at system boot
+systemctl enable yii-queue@1 yii-queue@2
+```
+
+有什么问题请及时检查`/var/log/messages`以排查问题
+
+
 ## 使用案例
 
 * <https://github.com/yiisoft-contrib/yiiframework.com/tree/master/jobs>

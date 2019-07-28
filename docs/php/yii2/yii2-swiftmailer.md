@@ -31,6 +31,13 @@ return [
                 'password' => 'password',
                 'port' => '465',
                 'encryption' => 'ssl',
+                'StreamOptions'=>[
+                    // fwrite(): SSL: Broken pipe
+                    'ssl' => [
+                        'allow_self_signed' => true,
+                        'verify_peer' => false
+                    ]
+                ],
             ],
         ],
     ],
