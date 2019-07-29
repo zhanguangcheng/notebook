@@ -31,7 +31,7 @@ return [
             'class' => \yii\queue\redis\Queue::class,
             'as log' => \yii\queue\LogBehavior::class,
             'redis' => 'redis',// redis组件标识，可使用不同的redis组件
-            'channel' => 'my-first-queue',// 队列标识
+            'channel' => 'my-first-queue',// 队列标识，标识相同表示同一个队列。
             'commandOptions' => [
                 'isolate' => false,// 非隔离模式，性能更好
             ],
@@ -81,6 +81,35 @@ $job_id = Yii::$app->queue->push(new \app\queue\MyJob([
     ```bash
     yii queue/listen
     ```
+
+
+## 多个队列
+
+```php
+return [
+    'bootstrap' => ['sendMailQueue', 'sendSmsQueue'],
+    'components' => [
+        'sendMailQueue' => [
+            'class' => \yii\queue\redis\Queue::class,
+            'channel' => 'mail-queue',// 队列标识，标识相同表示同一个队列。
+            // ...
+        ],
+        'sendSmsQueue' => [
+            'class' => \yii\queue\redis\Queue::class,
+            'channel' => 'sms-queue',// 队列标识，标识相同表示同一个队列。
+            // ...
+        ],
+    ]
+];
+```
+
+```bash
+yii send-mail-queue/listen
+yii send-sms-queue/listen
+```
+
+同一个队列也可以启动多个进程来处理
+
 
 ## 使用Systemd来管理队列服务
 
