@@ -105,3 +105,15 @@
 * [Online regex tester and debugger](https://regex101.com/)
 * [regexper](https://regexper.com/ "将正则图形化显示")
 * [Regulex](https://jex.im/regulex "将正则图形化显示")
+
+## 常用正则
+
+### 匹配中文
+
+```
+# JavaScript
+/^[\u4e00-\u9fa5]{0,50}$/
+
+# PHP
+/^[\x{4e00}-\x{9fa5}]$/u
+```
