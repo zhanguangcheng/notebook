@@ -303,7 +303,7 @@ function array_order_by(array &$arr, $order = null)
  * @param  array $order 排序规则, 键值对，键 => 排序
  * @return bool
  */
-function array_order_by2(array &$array, array $order = null)
+function array_order_by2(array &$array, array $order)
 {
     $args = array();
     foreach ($order as $field => $v) {
