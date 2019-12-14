@@ -51,7 +51,7 @@ function vd()
 }
 
 /**
- * 格式化字节(略快)
+ * 格式化字节
  * @param  integer $size      字节
  * @param  string $delimiter 分隔符
  * @return string
@@ -66,18 +66,24 @@ function format_bytes($size, $delimiter = '')
 }
 
 /**
- * 字节格式化(略慢)
- * @param  integer $size      字节
- * @param  string $delimiter 分隔符
+ * 格式化时间戳
+ * 格式化秒为时分秒的格式
+ * @param  int $time      时间搓
  * @return string
  */
-function bytes_format($size, $delimiter = '')
+function format_timestamp($time)
 {
-    if ($size <= 0) {
-        return 0 . $delimiter . 'B';
+    if ($time < 1) {
+        return '';
+    } elseif ($time < 60) {
+        return $time . '秒';
+    } elseif ($time < 3600) {
+        return floor($time / 60) . '分' . format_timestamp($time % 60);
+    } elseif ($time < 86400) {
+        return floor($time / 3600) . '时' . format_timestamp($time % 3600);
+    } else {
+        return floor($time / 86400) . '天' . format_timestamp($time % 86400);
     }
-    static $units = array('B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB', 'NB', 'DB');
-    return round($size / pow(1024, $i = floor(log($size, 1024))), 2) . $delimiter . $units[$i];
 }
 
 /**
@@ -460,4 +466,219 @@ function get_mask_info($string, $start = null, $end = null)
         return $string;
     }
     return substr($string, 0, $start) . str_repeat('*', $len - $start - $end) . substr($string, -$end);
+}
+
+/**
+ * 检测指定服务器是否通畅
+ * @param string $host
+ * @param int $port
+ * @param int $timeout
+ * @return bool
+ */
+function ping($host, $port, $timeout = 1)
+{
+    $fp = @fsockopen($host, $port, $errno, $errstr, $timeout);
+    if ($fp) {
+        fclose($fp);
+        return true;
+    }
+    return false;
+}
+
+/**
+ * 保证返回数组
+ * @param mixed $array
+ * @return array
+ */
+function be_array($array)
+{
+    return is_array($array) ? $array : array();
+}
+
+/**
+ * 获取农历年
+ * @param string $year 2020
+ * @param string $return_type 返回数据类型
+ */
+function get_lunar_year_name($year, $return_type = 'zh') {
+    if ($return_type === 'zh') {
+        $sky   = array('庚', '辛', '壬', '癸', '甲', '乙', '丙', '丁', '戊', '己');
+        $earth = array('申', '酉', '戌', '亥', '子', '丑', '寅', '卯', '辰', '巳', '午', '未');
+    } else {
+        $sky   = array('G', 'X', 'R', 'G', 'J', 'Y', 'B', 'D', 'W', 'J');
+        $earth = array('S', 'Y', 'X', 'H', 'Z', 'C', 'Y', 'M', 'C', 'S', 'W', 'W');
+    }
+    return $sky[substr($year, 3, 1)] . $earth[$year % 12];
+}
+
+/**
+ * 获取百分比
+ */
+function get_percent($m, $n, $suffix = '%')
+{
+    if ($n <= 0) {
+        return '0' . $suffix;
+    }
+    return round($m / $n * 100, 2) . $suffix;
+}
+
+/**
+ * 获取毫秒时间戳
+ */
+function millitime()
+{
+    return microtime(true) * 10000;
+}
+
+/**
+ * Parses a user agent string into its important parts
+ *
+ * @author Jesse G. Donat <donatj@gmail.com>
+ * @link https://github.com/donatj/PhpUserAgent
+ * @link http://donatstudios.com/PHP-Parser-HTTP_USER_AGENT
+ * @param string|null $u_agent User agent string to parse or null. Uses $_SERVER['HTTP_USER_AGENT'] on NULL
+ * @throws \InvalidArgumentException on not having a proper user agent to parse.
+ * @return string[] an array with browser, version and platform keys
+ */
+function parse_user_agent($u_agent = null)
+{
+    if (is_null($u_agent)) {
+        if (isset($_SERVER['HTTP_USER_AGENT'])) {
+            $u_agent = $_SERVER['HTTP_USER_AGENT'];
+        } else {
+            throw new InvalidArgumentException('parse_user_agent requires a user agent');
+        }
+    }
+    $platform = null;
+    $browser  = null;
+    $version  = null;
+    $empty = array( 'platform' => $platform, 'browser' => $browser, 'version' => $version );
+    if (!$u_agent) {
+        return $empty;
+    }
+    if (preg_match('/\((.*?)\)/im', $u_agent, $parent_matches)) {
+        preg_match_all('/(?P<platform>BB\d+;|Android|CrOS|Tizen|iPhone|iPad|iPod|Linux|Macintosh|Windows(\ Phone)?|Silk|linux-gnu|BlackBerry|PlayBook|X11|(New\ )?Nintendo\ (WiiU?|3?DS)|Xbox(\ One)?)
+                (?:\ [^;]*)?
+                (?:;|$)/imx', $parent_matches[1], $result, PREG_PATTERN_ORDER);
+        $priority = array( 'Xbox One', 'Xbox', 'Windows Phone', 'Tizen', 'Android', 'CrOS', 'X11' );
+        $result['platform'] = array_unique($result['platform']);
+        if (count($result['platform']) > 1) {
+            if ($keys = array_intersect($priority, $result['platform'])) {
+                $platform = reset($keys);
+            } else {
+                $platform = $result['platform'][0];
+            }
+        } elseif (isset($result['platform'][0])) {
+            $platform = $result['platform'][0];
+        }
+    }
+    if ($platform == 'linux-gnu' || $platform == 'X11') {
+        $platform = 'Linux';
+    } elseif ($platform == 'CrOS') {
+        $platform = 'Chrome OS';
+    }
+    preg_match_all(
+        '%(?P<browser>Camino|Kindle(\ Fire)?|Firefox|Iceweasel|IceCat|Safari|MSIE|Trident|AppleWebKit|
+                TizenBrowser|Chrome|Vivaldi|IEMobile|Opera|OPR|Silk|Midori|Edge|CriOS|UCBrowser|Puffin|SamsungBrowser|
+                Baiduspider|Googlebot|YandexBot|bingbot|Lynx|Version|Wget|curl|
+                Valve\ Steam\ Tenfoot|
+                NintendoBrowser|PLAYSTATION\ (\d|Vita)+)
+                (?:\)?;?)
+                (?:(?:[:/ ])(?P<version>[0-9A-Z.]+)|/(?:[A-Z]*))%ix',
+        $u_agent,
+        $result,
+        PREG_PATTERN_ORDER
+    );
+    // If nothing matched, return null (to avoid undefined index errors)
+    if (!isset($result['browser'][0]) || !isset($result['version'][0])) {
+        if (preg_match('%^(?!Mozilla)(?P<browser>[A-Z0-9\-]+)(/(?P<version>[0-9A-Z.]+))?%ix', $u_agent, $result)) {
+            return array( 'platform' => $platform ?: null, 'browser' => $result['browser'], 'version' => isset($result['version']) ? $result['version'] ?: null : null );
+        }
+        return $empty;
+    }
+    if (preg_match('/rv:(?P<version>[0-9A-Z.]+)/si', $u_agent, $rv_result)) {
+        $rv_result = $rv_result['version'];
+    }
+    $browser = $result['browser'][0];
+    $version = $result['version'][0];
+    $lowerBrowser = array_map('strtolower', $result['browser']);
+    $find = function ($search, &$key, &$value = null) use ($lowerBrowser) {
+        $search = (array)$search;
+        foreach ($search as $val) {
+            $xkey = array_search(strtolower($val), $lowerBrowser);
+            if ($xkey !== false) {
+                $value = $val;
+                $key   = $xkey;
+                return true;
+            }
+        }
+        return false;
+    };
+    $key = 0;
+    $val = '';
+    if ($browser == 'Iceweasel' || strtolower($browser) == 'icecat') {
+        $browser = 'Firefox';
+    } elseif ($find('Playstation Vita', $key)) {
+        $platform = 'PlayStation Vita';
+        $browser  = 'Browser';
+    } elseif ($find(array( 'Kindle Fire', 'Silk' ), $key, $val)) {
+        $browser  = $val == 'Silk' ? 'Silk' : 'Kindle';
+        $platform = 'Kindle Fire';
+        if (!($version = $result['version'][$key]) || !is_numeric($version[0])) {
+            $version = $result['version'][array_search('Version', $result['browser'])];
+        }
+    } elseif ($find('NintendoBrowser', $key) || $platform == 'Nintendo 3DS') {
+        $browser = 'NintendoBrowser';
+        $version = $result['version'][$key];
+    } elseif ($find('Kindle', $key, $platform)) {
+        $browser = $result['browser'][$key];
+        $version = $result['version'][$key];
+    } elseif ($find('OPR', $key)) {
+        $browser = 'Opera Next';
+        $version = $result['version'][$key];
+    } elseif ($find('Opera', $key, $browser)) {
+        $find('Version', $key);
+        $version = $result['version'][$key];
+    } elseif ($find('Puffin', $key, $browser)) {
+        $version = $result['version'][$key];
+        if (strlen($version) > 3) {
+            $part = substr($version, -2);
+            if (ctype_upper($part)) {
+                $version = substr($version, 0, -2);
+                $flags = array( 'IP' => 'iPhone', 'IT' => 'iPad', 'AP' => 'Android', 'AT' => 'Android', 'WP' => 'Windows Phone', 'WT' => 'Windows' );
+                if (isset($flags[$part])) {
+                    $platform = $flags[$part];
+                }
+            }
+        }
+    } elseif ($find(array( 'IEMobile', 'Edge', 'Midori', 'Vivaldi', 'SamsungBrowser', 'Valve Steam Tenfoot', 'Chrome' ), $key, $browser)) {
+        $version = $result['version'][$key];
+    } elseif ($rv_result && $find('Trident', $key)) {
+        $browser = 'MSIE';
+        $version = $rv_result;
+    } elseif ($find('UCBrowser', $key)) {
+        $browser = 'UC Browser';
+        $version = $result['version'][$key];
+    } elseif ($find('CriOS', $key)) {
+        $browser = 'Chrome';
+        $version = $result['version'][$key];
+    } elseif ($browser == 'AppleWebKit') {
+        if ($platform == 'Android' && !($key = 0)) {
+            $browser = 'Android Browser';
+        } elseif (strpos($platform, 'BB') === 0) {
+            $browser  = 'BlackBerry Browser';
+            $platform = 'BlackBerry';
+        } elseif ($platform == 'BlackBerry' || $platform == 'PlayBook') {
+            $browser = 'BlackBerry Browser';
+        } else {
+            $find('Safari', $key, $browser) || $find('TizenBrowser', $key, $browser);
+        }
+        $find('Version', $key);
+        $version = $result['version'][$key];
+    } elseif ($pKey = preg_grep('/playstation \d/i', array_map('strtolower', $result['browser']))) {
+        $pKey = reset($pKey);
+        $platform = 'PlayStation ' . preg_replace('/[^\d]/i', '', $pKey);
+        $browser  = 'NetFront';
+    }
+    return array( 'platform' => $platform ?: null, 'browser' => $browser ?: null, 'version' => $version ?: null );
 }
