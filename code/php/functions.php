@@ -244,7 +244,7 @@ function download($file, $filename = null)
 }
 
 /**
- * 读取文件最后一次修改修改时间，然后将获取的时间作为版本号
+ * 读取文件最后一次修改时间，然后将获取的时间作为版本号
  * @param  {string} $file 文件
  * @return {string}       加上版本的文件
  */
@@ -259,12 +259,12 @@ function auto_version($file)
 
 /**
  * 二维数组排序
- * array_order_by($arr, 'age desc,name asc');
+ * array_order_by2($arr, 'age desc,name asc');
  * @param  array  &$arr  数组
  * @param  string $order 排序规则, 类似SQL的ORDER BY
  * @return array
  */
-function array_order_by(array &$arr, $order = null)
+function array_order_by2(array &$arr, $order = null)
 {
     if (is_null($order)) {
         return $arr;
@@ -303,7 +303,7 @@ function array_order_by(array &$arr, $order = null)
  * @param  array $order 排序规则, 键值对，键 => 排序
  * @return bool
  */
-function array_order_by2(array &$array, array $order)
+function array_order_by(array &$array, array $order)
 {
     $args = array();
     foreach ($order as $field => $v) {
