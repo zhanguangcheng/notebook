@@ -527,7 +527,7 @@ function get_percent($m, $n, $suffix = '%')
  */
 function millitime()
 {
-    return microtime(true) * 10000;
+    return floor(microtime(true) * 1000);
 }
 
 /**
