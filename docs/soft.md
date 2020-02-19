@@ -87,6 +87,7 @@ Windows常用软件
 * [RegExp](https://regex101.com/ "正则测试")
 * [RegExpFigure](https://regexper.com/ "正则图形显示")
 * [Regulex](https://jex.im/regulex/ "正则图形显示")
+* [Softonic](https://www.softonic.cn/ "软件下载网站")
 * [Staticfile CDN](http://www.staticfile.org/ "CDN")
 * [Tick list](https://www.dida365.com "滴答清单")
 * [TinyPNG](https://tinypng.com/ "png,jpg图片压缩")
