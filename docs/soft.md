@@ -1,6 +1,7 @@
 Windows常用软件
 ===============
 
+* [AnyDesk](https://anydesk.com/ "远程控制")
 * [7-Zip](http://www.7-zip.org/)
 * [Adobe Reader](https://acrobat.adobe.com/cn/zh-Hans/acrobat/pdf-reader.html)
 * [AutoHotkey](https://www.autohotkey.com/ "热键脚本语言")
@@ -25,6 +26,7 @@ Windows常用软件
 * [HeidiSQL](https://www.heidisql.com/ "数据库管理工具")
 * [HEU KMS Activator](https://www.baidu.com/s?wd=HEU%20KMS%20Activator "Windows Office激活工具")
 * [Honeyview](http://www.bandisoft.com/honeyview/ "Honeyview是一款快速图像查看器")
+* [Internet Download Manager(IDM)](http://www.internetdownloadmanager.com/ "下载工具") $
 * [KeePass](http://keepass.info/ "密码管理")
 * [LICEcap](http://www.cockos.com/licecap/ "gif录制")
 * [Listary](http://www.listary.com/ "文件搜索，快速启动应用")
@@ -88,6 +90,7 @@ Windows常用软件
 * [RegExp](https://regex101.com/ "正则测试")
 * [RegExpFigure](https://regexper.com/ "正则图形显示")
 * [Regulex](https://jex.im/regulex/ "正则图形显示")
+* [Softonic](https://www.softonic.cn/ "软件下载网站")
 * [Tick list](https://www.dida365.com "滴答清单")
 * [TinyPNG](https://tinypng.com/ "png,jpg图片压缩")
 * [删除图片中的背景](https://www.remove.bg "删除图片中的背景")
