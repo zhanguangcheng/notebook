@@ -67,11 +67,14 @@ Windows常用软件
 ===============
 
 * [BootCDN](http://www.bootcdn.cn/ "CDN")
+* [jsDelivr](https://www.jsdelivr.com/ "CDN")
+* [Staticfile CDN](http://www.staticfile.org/ "CDN")
 * [Browsersync](https://browsersync.io/ "前端实时可视化插件")
 * [Can I use](http://caniuse.com "前端兼容性查看")
 * [Color Hunt](http://www.colorhunt.co/ "网站配色")
 * [Convertio](https://convertio.co "文件转换器")
-* [Chrome扩展程序下载](http://crx.2333.me/ "Chrome 扩展程序 下载")
+* [Chrome扩展程序下载](http://crx.2333.me/ "Chrome 扩展程序 下载（已废弃）")
+* [Chrome Extensions Archive](https://crx.dam.io/ "Chrome 扩展程序 下载")
 * [Debuggex](https://www.debuggex.com/ "正则测试+图形显示")
 * [devdocs](http://devdocs.io/ "各种在线文档")
 * [ExplainShell](http://www.explainshell.com/ "图形显示Linux命令")
@@ -85,7 +88,6 @@ Windows常用软件
 * [RegExp](https://regex101.com/ "正则测试")
 * [RegExpFigure](https://regexper.com/ "正则图形显示")
 * [Regulex](https://jex.im/regulex/ "正则图形显示")
-* [Staticfile CDN](http://www.staticfile.org/ "CDN")
 * [Tick list](https://www.dida365.com "滴答清单")
 * [TinyPNG](https://tinypng.com/ "png,jpg图片压缩")
 * [删除图片中的背景](https://www.remove.bg "删除图片中的背景")
