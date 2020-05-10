@@ -34,6 +34,6 @@ systemctl enable httpd
 ```bash
 rpm -Uvh http://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm
 yum -y install mysql-community-server
-systemctl start mysql
-systemctl enable mysql
+systemctl start mysqld
+systemctl enable mysqld
 ```
