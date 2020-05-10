@@ -1,4 +1,20 @@
 /**
+ * 格式化字节
+ * @param  integer $size      字节
+ * @param  string $delimiter 分隔符
+ * @return string
+ */
+function formatBytes(size, delimiter)
+{
+    delimiter = delimiter || '';
+    var units = ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB', 'NB', 'DB'];
+    for (var i = 0; size >= 1024 && i < 10; i++) {
+        size /= 1024;
+    }
+    return size.toFixed(2) + delimiter + units[i];
+}
+
+/**
  * 模拟PHP的date函数，目前支持Y m d H i s u y w
  * ```javascript
  * date('Y-m-d H:i:s')
