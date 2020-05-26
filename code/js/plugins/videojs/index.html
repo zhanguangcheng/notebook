@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videojs播放器美化</title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/video.js/7.8.1/video-js.min.css" rel="stylesheet">
+    <link href="./css/video-css-pretty.css" rel="stylesheet">
+</head>
+<body>
+    <video id="my-player" class="video-js" preload="auto" width="1040" height="606" data-setup="{}">
+        <source src="video/test.mp4" type="video/mp4">
+    </video>
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/video.js/7.8.1/alt/video.core.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/video.js/7.8.1/lang/zh-CN.js"></script>
+    <script type="text/javascript">
+        videojs('my-player', {
+            language: 'zh-CN',
+            controlBar: {
+                // 设置播放器上组件的显示状态
+                pictureInPictureToggle: false,
+                timeDivider: true,
+                currentTimeDisplay: true,
+                remainingTimeDisplay: true,
+                fullscreenToggle: true,
+                volumePanel: {
+                    inline: false,
+                },
+                children: [
+                    // 设置播放器上组件显示的顺序
+                    'playToggle',
+                    'currentTimeDisplay',
+                    'progressControl',
+                    'remainingTimeDisplay',
+                    'volumePanel',
+                    'fullscreenToggle',
+                ],
+            }
+        }).ready(function () {
+            this.volume(0.5);
+            this.controls(true);
+        });
+    </script>
+    
+</body>
+</html>

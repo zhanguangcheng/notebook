@@ -1,0 +1,214 @@
+.video-js .vjs-big-play-button {
+    display: none;
+}
+
+.video-js .vjs-control {
+    width: 5em;
+}
+
+.video-js .vjs-control-bar {
+    display: flex;
+    height: 48px;
+    align-items: center;
+    background-color: rgba(43, 51, 63, 0);
+    padding: 0px 40px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.video-js .vjs-current-time {
+    display: block;
+}
+
+.video-js .vjs-control:focus {
+    outline: none;
+}
+
+.video-js .vjs-time-control {
+    font-size: 16px;
+}
+
+.video-js .vjs-current-time {
+    display: block;
+    font-size: 16px;
+}
+
+.video-js .vjs-slider-horizontal {
+    background: #2A2A2B;
+    height: 4px;
+}
+
+.video-js .vjs-load-progress {
+    background: rgba(108, 108, 108, 1);
+}
+
+.video-js .vjs-load-progress div {
+    background: rgba(108, 108, 108, 1);
+}
+
+.video-js .vjs-play-progress {
+    background-color: #D8D7D6;
+}
+
+.video-js .vjs-icon-circle:before,
+.vjs-seek-to-live-control .vjs-icon-placeholder:before,
+.video-js .vjs-play-progress:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: url(../image/prose-point.png);
+    background-size: 100% 100%;
+    right: -18px;
+}
+
+.video-js .vjs-play-progress:before {
+    top: -9px;
+    /*font-size:.12rem*/
+}
+
+.video-js .vjs-progress-control {
+    font-size: .12rem
+}
+
+.video-js .vjs-icon-replay:before,
+.video-js .vjs-play-control.vjs-ended .vjs-icon-placeholder:before {
+    content: '';
+    background: url(../image/bofang.png);
+    background-size: 100% 100%;
+    width: 48px;
+    height: 48px;
+}
+
+.video-js .vjs-icon-play:before,
+.video-js .vjs-play-control .vjs-icon-placeholder:before,
+.video-js .vjs-big-play-button .vjs-icon-placeholder:before {
+    content: '';
+    background: url(../image/bofang.png);
+    background-size: 100% 100%;
+    width: 48px;
+    height: 48px;
+}
+
+.video-js .vjs-icon-pause:before,
+.video-js .vjs-play-control.vjs-playing .vjs-icon-placeholder:before {
+    content: '';
+    background: url(../image/zanting.png);
+    background-size: 100% 100%;
+    width: 48px;
+    height: 48px;
+}
+
+.video-js .vjs-icon-volume-high:before,
+.video-js .vjs-mute-control .vjs-icon-placeholder:before {
+    font-size: 24px;
+    top: .1em;
+}
+
+.video-js .vjs-icon-fullscreen-enter:before,
+.video-js .vjs-fullscreen-control .vjs-icon-placeholder:before {
+    content: "";
+    background: url(../image/quanping.png);
+    background-size: 100% 100%;
+    width: 48px;
+    height: 48px;
+}
+
+.video-js .vjs-icon-fullscreen-exit:before,
+.video-js.vjs-fullscreen .vjs-fullscreen-control .vjs-icon-placeholder:before {
+    content: "";
+    background: url(../image/shouqi.png);
+    background-size: 100% 100%;
+    width: 44px;
+    height: 48px;
+}
+
+.video-js .vjs-mute-control .vjs-icon-placeholder:before {
+    content: "";
+    background: url(../image/shengyin.png);
+    background-size: 100% 100%;
+    width: 44px;
+    height: 48px;
+}
+
+.video-js .vjs-mute-control.vjs-vol-0 .vjs-icon-placeholder:before {
+    content: "";
+    background: url(../image/jingyin.png);
+    background-size: 100% 100%;
+    width: 44px;
+    height: 48px;
+}
+
+.video-js .vjs-control {
+    width: 5em
+}
+
+.video-js .vjs-volume-panel .vjs-volume-control.vjs-volume-vertical {
+    height: 200px;
+    width: 66px;
+}
+
+.video-js .vjs-volume-panel.vjs-hover .vjs-mute-control~.vjs-volume-control.vjs-volume-vertical {
+    left: -60px;
+}
+
+.video-js .vjs-volume-panel .vjs-mute-control~.vjs-volume-control.vjs-volume-vertical {
+    left: -60px;
+}
+
+.video-js .vjs-volume-vertical {
+    bottom: 20em;
+    background: #333333;
+    padding: 20px 0;
+}
+
+.vjs-volume-bar.vjs-slider-vertical {
+    width: 2px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.vjs-slider-vertical .vjs-volume-level:before {
+    content: '';
+    width: 26px;
+    height: 26px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    top: -13px;
+    left: -11px;
+    border-radius: 50%;
+    background: #333;
+}
+
+.video-js .vjs-volume-panel.vjs-volume-panel-vertical {
+    width: 5em;
+}
+
+.vjs-volume-bar.vjs-slider-vertical {
+    width: 4px;
+    height: 100%;
+    margin: 0 auto;
+    background: #5B5B5B;
+}
+
+.video-js .vjs-mute-control.vjs-vol-2 .vjs-icon-placeholder:before,
+.video-js .vjs-mute-control.vjs-vol-1 .vjs-icon-placeholder:before {
+    content: "";
+    background: url(../image/shengyin.png);
+    background-size: 100% 100%;
+    width: 44px;
+    height: 48px;
+}
+
+.video-js .vjs-progress-control:hover .vjs-time-tooltip {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    padding: 6px 8px 8px 8px;
+    pointer-events: none;
+    position: absolute;
+    top: -13px;
+    z-index: 1;
+}
+
+.video-js .vjs-progress-control:hover .vjs-time-tooltip,
+.vjs-mouse-display .vjs-time-tooltip {
+    top: -40px;
+}

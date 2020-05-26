@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>电子签名</title>
+    <style>
+        .container,
+        .image-box {
+            width: 100%;
+            height: 100%
+        }
+
+        #app {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            font-family: Avenir, Helvetica, Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-align: center;
+            color: #2c3e50
+        }
+
+        .greet a {
+            cursor: pointer
+        }
+
+        #canvasBox {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            height: 100%
+        }
+
+        .greet {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            /* height: 70px;
+            line-height: 70px; */
+        }
+
+        .greet,
+        input {
+            font-size: 20px
+        }
+
+        .greet select,
+        .image-box header {
+            font-size: 18px
+        }
+
+        canvas {
+            -webkit-box-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            cursor: crosshair;
+            border: 2px dashed #d3d3d3
+        }
+
+        .image-box img {
+            max-width: 80%;
+            max-height: 80%;
+            margin-top: 50px;
+            border: 1px solid gray
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="container">
+            <div class="canvasBox">
+                <div class="greet">
+                    <span>请在下方空白处签名</span>
+                    <br>
+                    <input type="button" class="fn-clear" value="清屏">
+                    <input type="button" class="fn-generate" value="确定">
+                </div>
+                <canvas></canvas>
+            </div>
+        </div>
+    </div>
+    <script>
+        function Draw(canvas, degree) {
+            var config = arguments[2] !== (void 0) ? arguments[2] : {};
+            if (!(this instanceof Draw)) {
+                return new Draw(canvas, config);
+            }
+            if (!canvas) {
+                return;
+            }
+            var $__1 = window.getComputedStyle(canvas, null),
+                width = $__1.width,
+                height = $__1.height;
+            width = width.replace('px', '');
+            height = height.replace('px', '');
+            this.canvas = canvas;
+            this.context = canvas.getContext('2d');
+            this.width = width;
+            this.height = height;
+            var context = this.context;
+            var devicePixelRatio = window.devicePixelRatio;
+            if (devicePixelRatio) {
+                canvas.style.width = (width + "px");
+                canvas.style.height = (height + "px");
+                canvas.height = height * devicePixelRatio;
+                canvas.width = width * devicePixelRatio;
+                context.scale(devicePixelRatio, devicePixelRatio);
+            } else {
+                canvas.width = width;
+                canvas.height = height;
+            }
+            context.lineWidth = 6;
+            context.strokeStyle = 'black';
+            context.lineCap = 'round';
+            context.lineJoin = 'round';
+            Object.assign(context, config);
+            var $__2 = canvas.getBoundingClientRect(),
+                left = $__2.left,
+                top = $__2.top;
+            var point = {};
+            var isMobile =
+                /phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone/i
+                .test(navigator.userAgent);
+            if (!isMobile) {
+                context.shadowBlur = 1;
+                context.shadowColor = 'black';
+            }
+            var pressed = false;
+            var paint = function (signal) {
+                switch (signal) {
+                    case 1:
+                        context.beginPath();
+                        context.moveTo(point.x, point.y);
+                    case 2:
+                        context.lineTo(point.x, point.y);
+                        context.stroke();
+                        break;
+                    default:
+                }
+            };
+            var create = function (signal) {
+                return function (e) {
+                    e.preventDefault();
+                    if (signal === 1) {
+                        pressed = true;
+                    }
+                    if (signal === 1 || pressed) {
+                        e = isMobile ? e.touches[0] : e;
+                        point.x = e.clientX - left;
+                        point.y = e.clientY - top;
+                        paint(signal);
+                    }
+                };
+            };
+            var start = create(1);
+            var move = create(2);
+            var requestAnimationFrame = window.requestAnimationFrame;
+            var optimizedMove = requestAnimationFrame ? function (e) {
+                requestAnimationFrame(function () {
+                    move(e);
+                });
+            } : move;
+            if (isMobile) {
+                canvas.addEventListener('touchstart', start);
+                canvas.addEventListener('touchmove', optimizedMove);
+            } else {
+                canvas.addEventListener('mousedown', start);
+                canvas.addEventListener('mousemove', optimizedMove);
+                ['mouseup', 'mouseleave'].forEach(function (event) {
+                    canvas.addEventListener(event, function () {
+                        pressed = false;
+                    });
+                });
+            }
+            if (typeof degree === 'number') {
+                this.degree = degree;
+                context.rotate((degree * Math.PI) / 180);
+                switch (degree) {
+                    case -90:
+                        context.translate(-height, 0);
+                        break;
+                    case 90:
+                        context.translate(0, -width);
+                        break;
+                    case -180:
+                    case 180:
+                        context.translate(-width, -height);
+                        break;
+                    default:
+                }
+            }
+        }
+        
+        Draw.prototype = {
+            scale: function (width, height) {
+                var canvas = arguments[2] !== (void 0) ? arguments[2] : this.canvas;
+                var w = canvas.width;
+                var h = canvas.height;
+                width = width || w;
+                height = height || h;
+                if (width !== w || height !== h) {
+                    var tmpCanvas = document.createElement('canvas');
+                    var tmpContext = tmpCanvas.getContext('2d');
+                    tmpCanvas.width = width;
+                    tmpCanvas.height = height;
+                    tmpContext.drawImage(canvas, 0, 0, w, h, 0, 0, width, height);
+                    canvas = tmpCanvas;
+                }
+                return canvas;
+            },
+            rotate: function (degree) {
+                var image = arguments[1] !== (void 0) ? arguments[1] : this.canvas;
+                degree = ~~degree;
+                if (degree !== 0) {
+                    var maxDegree = 180;
+                    var minDegree = -90;
+                    if (degree > maxDegree) {
+                        degree = maxDegree;
+                    } else if (degree < minDegree) {
+                        degree = minDegree;
+                    }
+                    var canvas = document.createElement('canvas');
+                    var context = canvas.getContext('2d');
+                    var height = image.height;
+                    var width = image.width;
+                    var degreePI = (degree * Math.PI) / 180;
+                    switch (degree) {
+                        case -90:
+                            canvas.width = height;
+                            canvas.height = width;
+                            context.rotate(degreePI);
+                            context.drawImage(image, -width, 0);
+                            break;
+                        case 90:
+                            canvas.width = height;
+                            canvas.height = width;
+                            context.rotate(degreePI);
+                            context.drawImage(image, 0, -height);
+                            break;
+                        case 180:
+                            canvas.width = width;
+                            canvas.height = height;
+                            context.rotate(degreePI);
+                            context.drawImage(image, -width, -height);
+                            break;
+                        default:
+                    }
+                    image = canvas;
+                }
+                return image;
+            },
+            getPNGImage: function () {
+                var canvas = arguments[0] !== (void 0) ? arguments[0] : this.canvas;
+                return canvas.toDataURL('image/png');
+            },
+            getJPGImage: function () {
+                var canvas = arguments[0] !== (void 0) ? arguments[0] : this.canvas;
+                return canvas.toDataURL('image/jpeg', 0.5);
+            },
+            downloadPNGImage: function (image) {
+                var url = image.replace('image/png',
+                    'image/octet-stream;Content-Disposition:attachment;filename=test.png');
+                window.location.href = url;
+            },
+            dataURLtoBlob: function (dataURL) {
+                var arr = dataURL.split(',');
+                var mime = arr[0].match(/:(.*?);/)[1];
+                var bStr = atob(arr[1]);
+                var n = bStr.length;
+                var u8arr = new Uint8Array(n);
+                while (n--) {
+                    u8arr[n] = bStr.charCodeAt(n);
+                }
+                return new Blob([u8arr], {
+                    type: mime
+                });
+            },
+            clear: function () {
+                var width;
+                var height;
+                switch (this.degree) {
+                    case -90:
+                    case 90:
+                        width = this.height;
+                        height = this.width;
+                        break;
+                    default:
+                        width = this.width;
+                        height = this.height;
+                }
+                this.context.clearRect(0, 0, width, height);
+            },
+            upload: function (blob, url, success, failure) {
+                var formData = new FormData();
+                var xhr = new XMLHttpRequest();
+                xhr.withCredentials = true;
+                formData.append('image', blob, 'sign.png');
+                xhr.open('POST', url, true);
+                xhr.onload = function () {
+                    if ((xhr.status >= 200 && xhr.status < 300) || xhr.status === 304) {
+                        success(xhr.responseText);
+                    } else {
+                        failure();
+                    }
+                };
+                xhr.onerror = function (e) {
+                    if (typeof failure === 'function') {
+                        failure(e);
+                    } else {
+                        console.log(("upload img error: " + e));
+                    }
+                };
+                xhr.send(formData);
+            }
+        };
+
+        var sign = {
+            draw: null,
+            degree: 0,
+            getStyle: function () {
+                var d = document;
+                var w = window.innerWidth || d.documentElement.clientWidth || d.body.clientWidth;
+                var h = window.innerHeight || d.documentElement.clientHeight || d.body.clientHeight;
+                var length = (h - w) / 2;
+                var width = w;
+                var height = h;
+                switch (this.degree) {
+                    case -90:
+                        length = -length;
+                    case 90:
+                        width = h;
+                        height = w;
+                        break;
+                    default:
+                        length = 0;
+                }
+                return {
+                    transform: ("rotate(" + this.degree + "deg) translate(" + length + "px," + length + "px)"),
+                    width: (width + "px"),
+                    height: (height + "px"),
+                    transformOrigin: 'center center'
+                };
+            },
+
+            initCanvas: function () {
+                var scale = 2; // 宽高比例
+                var canvas = document.querySelector('canvas');
+                var canvasBox = document.querySelector('.canvasBox');
+                var style = this.getStyle();
+                canvasBox.style.transform = style.transform;
+                canvasBox.style.width = style.width;
+                canvasBox.style.height = style.height;
+                canvasBox.style.transformOrigin = style.transformOrigin;
+                canvas.width = style.width.replace('px', '') - 4;
+                canvas.height = canvas.width / scale;
+                this.draw = new Draw(canvas, -this.degree);
+            },
+            clear: function () {
+                this.draw.clear();
+            },
+            download: function () {
+                this.draw.downloadPNGImage(this.draw.getPNGImage());
+            },
+        }
+
+        sign.initCanvas();
+
+        // 清空画板
+        document.querySelector('.fn-clear').addEventListener('click', function () {
+            sign.clear();
+        });
+
+        // 提交签名
+        var process = false;
+        var isSigned = false;
+        var msgs = {
+            signed: '签名已提交成功，无需再次提交。',
+            process: '正在提交中，请稍后。',
+            signSuccess: '恭喜您，签名成功。',
+            error: '网络发生错误，请刷新后再试。',
+            unknownError: '未知错误'
+        };
+        document.querySelector('.fn-generate').addEventListener('click', function () {
+            if (isSigned) {
+                return alert(msgs.signed);
+            }
+            if (process) {
+                return alert(msgs.process);
+            }
+            if (window.confirm('您是否确认使用该签名吗？')) {
+                process = true;
+                var image = sign.draw.getPNGImage();
+                var url = location.href;
+                var blob = sign.draw.dataURLtoBlob(image);
+                sign.draw.upload(
+                    blob,
+                    url,
+                    function (res) {
+                        process = false;
+                        alert(msgs.signSuccess);
+                        isSigned = true;
+                    },
+                    function (e) {
+                        process = false;
+                        alert(msgs.error);
+                    }
+                );
+            }
+        });
+    </script>
+</body>
+
+</html>
