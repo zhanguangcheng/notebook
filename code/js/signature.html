@@ -83,8 +83,9 @@
                 <div class="greet">
                     <span>请在下方空白处签名</span>
                     <br>
-                    <input type="button" class="fn-clear" value="清屏">
-                    <input type="button" class="fn-generate" value="确定">
+                    <button type="button" class="fn-clear">清屏</button>
+                    <button type="button" class="fn-generate">确定</button>
+                    <button type="button" class="fn-rotate">旋转屏幕</button>
                 </div>
                 <canvas></canvas>
             </div>
@@ -374,11 +375,21 @@
             },
         }
 
+        if (null !== localStorage.getItem('degree')) {
+            sign.degree = localStorage.getItem('degree');
+        }
+
         sign.initCanvas();
 
         // 清空画板
         document.querySelector('.fn-clear').addEventListener('click', function () {
             sign.clear();
+        });
+
+        // 旋转
+        document.querySelector('.fn-rotate').addEventListener('click', function () {
+            localStorage.setItem('degree', localStorage.getItem('degree') === '90' ? 0 : 90);
+            location.reload();
         });
 
         // 提交签名
