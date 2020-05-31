@@ -48,6 +48,9 @@ Elasticsearch 基础入门
     * 由于Replica Shard和Primary Shard是一样的，所以Primary Shard和Replica Shard都可以查询，可以提高查询效率
 * 每个Shard是一个Lucene索引
 
+#### 词项 term
+* 将一句话进行分词就可以得到多个term，是倒排索引中保存的最小单元。
+
 #### 和关系型数据库的类比
 
 | 关系型数据库 | Elasticsearch          |
@@ -82,19 +85,65 @@ Elasticsearch 基础入门
 
 安装
 ---------
-1. 打开<https://www.elastic.co/cn/downloads/elasticsearch>
+1. 打开 <https://www.elastic.co/cn/downloads/elasticsearch>
 2. 下载对应系统的压缩包并解压缩
-3. 运行`bin/elasticsearch`、Windows运行`bin/elasticseaech.bat`
-4. 访问<http://localhost:9200>
+3. 运行 `bin/elasticsearch`、Windows运行 `bin/elasticseaech.bat`
+4. 访问 `http://localhost:9200`
 
 
 Mapping
 ----------
+* 类似数据库的表定义
+* 可以设置Index下面的字段名
+* 可以设置Index下面字段的类型
+* 可以设置Index下面字段的倒排索引的配置
+* 创建mapping有隐式和显式两种类型，隐式是插入document时自动创建，显式是手动创建
+* 不能修改已经创建好的field，因为Lucene的倒排索引不能修改，可以新增field
 
 ### 索引配置
+* `dynamic` 动态Mapping配置，创建后可修改
+    * `true` 自动新增字段定义（默认）
+    * `false` 不自动新增字段，新增的数据会保存但不能查询（推荐）
+    * `strict` 严格默认，插入文档字段定义不存在时报错，数据不能保存成功
 ### 字段配置
-### 字段类型
-
+* `index` 是否记录索引，默认为`true`，`false`即不能搜索
+* `index_options` 索引选项
+* `null_value` null值替换
+* `copy_to` 将现有的多个字段复制到新字段
+* `ignore_above` 超过该值就会忽略索引，一般可keyword搭配使用，默认值为256
+* `fields` 定义子字段，如文章标题类型为text，可以设置一个keywor的子字段，整个标题当作一个term，当搜索整个标题的时候得分就会很高
+### 核心字段数据类型
+* 文本类型
+    * `keyword` 关键字类型，保存结构化数据，不分词字段
+    * `text` 文本类型，保存结非构化数据，如文章标题或文章详情，就是需要全文检索的数据
+* 数值类型
+    * `btye` 1字节
+    * `short` 2字节
+    * `integer` 4字节
+    * `long` 8字节
+    * `float` 4字节
+    * `double` 8字节
+* 范围
+    * `integer_range`
+    * `float_range`
+    * `long_range`
+    * `double_range`
+    * `date_range`
+* 复合类型
+    * `object`
+    * `nested`
+* 其他类型
+    * `date`
+    * `boolean`
+    * `binary`
+    * `ip`
+    * `geo_point`
+    * `geo_shape`
+    * `join`
+* 数组
+    * 数组不是专门的字段，默认情况所有的字段类型都可以是数组，都可以包含零个或多个值，数组中的值类型必须相同。
+* 多字段（multi-fields）
+    * 作用是允许一个字段使用多个不同的配置，如中文可以使用拼音搜索的，就可以新增一个拼音的子字段来实现
 
 文档CURD
 ---------
