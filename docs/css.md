@@ -76,7 +76,7 @@ E:after/E::after {} ie8+
 E::selection {} ie9+ 设置对象被选择时的样式。支持background-color，color
 
 CSS3将伪对象选择符前面的单个冒号(:)修改为双冒号(::)用以区别伪类选择符，但以前的写法仍然有效。 即E:after可转化为E::after
-本质上并不支持伪元素的双冒号(::)写法，而是忽略掉了其中的一个冒号，仍以单冒号来解析，所以等同变相支持了E::after。
+CSS2本质上并不支持伪元素的双冒号(::)写法，而是忽略掉了其中的一个冒号，仍以单冒号来解析，所以等同变相支持了E::after。
 
 /* 组合选择器 */
 html,body {}
@@ -173,6 +173,7 @@ textarea {
 
 ```css
 div {
+    box-sizing: content-box | border-box;/* ie8+ */
     padding: 20px;
     padding-top | right | bottom | left: 20px;
     border: none | 1px solid #ff0;
@@ -181,6 +182,61 @@ div {
     margin-top | right | bottom | left: 20px;
 }
 ```
+
+
+## 弹性布局（Flexible Box，简称Flex）
+
+采用Flex布局的元素称为Flex容器（flex-container），他的子元素称为Flex项目（flex-item）。  
+容器有两根轴，水平方向的为主轴，垂直方向的为交叉轴，项目在同一条线上称为轴线。
+
+### 启用Flex布局
+```css
+.box {
+    display: flex;
+}
+```
+
+### Flex属性
+
+#### flex-container:
+* `flex-direction` 定义主轴的方向
+    - `row` 水平方向（默认值）
+    - `row-reverse` 水平方向反向
+    - `column` 垂直方向
+    - `column-reverse` 垂直方向反向
+* `flex-wrap` 定义同一轴线放不下后如何换行
+    - `no-wrap` 不换行（默认值）
+    - `warp` 换行
+    - `wrap-reverse` 换行，行反向排列
+* `flex-flow` 是`flex-direction`和`flex-wrap`的简写形式
+    - `<flex-direction> <flex-wrap>`
+* `justify-content` 定义项目在主轴上的对其方式
+    - `flex-start` 左对齐（默认值）
+    - `center` 居中
+    - `flex-end` 右对齐
+    - `space-between` 两端对齐，每个项目之间距离相等
+    - `space-around` 每个项目两侧的间距相等
+* `align-items` 定义项目在交叉轴上的对齐方式
+    - `strtch` 占满整个容器的高度，如为设置固定高度（默认值）
+    - `flex-start` 左对齐
+    - `center` 居中
+    - `flex-end` 右对齐
+    - `baseline` 项目的第一行文本的基线对齐
+* `align-content` 定义多根轴线的对齐方式
+    - `strtch` 轴线占满整个交叉轴（默认值）
+    - `flex-start` 左对齐（默认值）
+    - `center` 居中
+    - `flex-end` 右对齐
+    - `space-between` 两端对齐，每根轴线之间距离相等
+    - `space-around` 每根轴线两侧的间距相等
+#### flex-item
+* `order` 定义项目的排序，从小到大，默认为`0`
+* `flex-grow` 定义项目放大比例，默认为`0`，有剩余空间也不放大
+* `flex-shrink` 定义项目的缩小比例，默认为`1`，空间不足也不会缩小
+* `flex-basis` 定义了在分配多余空间之前，项目占主轴的空间，默认`auto`，即原本大小
+* `flex` 是`flex-grow`、`flex-shrink`和`flex-basis`的简写形式
+    - `<flex-grow> <flex-shrink> <flex-basis>`
+* `align-self` 定义项目本身在轴线上的对齐方式，默认为`auto`，继承容器的`align-items`属性
 
 
 ## 语法与规则
@@ -402,3 +458,4 @@ html,body {height: 100%;margin:0}
 
 * <http://www.css88.com/book/css/>
 * <http://m.mamicode.com/info-detail-1248108.html>
+* <http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html>
