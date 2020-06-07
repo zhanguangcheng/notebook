@@ -79,7 +79,7 @@ crontab [选项]
 step=10 #间隔的秒数，不能大于60，最好能整除。
 
 for (( i = 0; i < 60; i=(i+step) )); do
-    $(php '/path/to/file.php')
+    $(php /path/to/file.php)
     sleep $step
 done
 
