@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>jQuery chosen</title>
-    <link href="//cdn.bootcss.com/chosen/1.7.0/chosen.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcdn.net/ajax/libs/chosen/1.8.7/chosen.min.css" rel="stylesheet">
 </head>
+
 <body>
     <!-- 
     概述:
@@ -15,24 +17,26 @@
         https://harvesthq.github.io/chosen/options.html
     -->
 
-    <select class="chosen-1" data-placeholder="请选择城市">
+    <select class="chosen-1" data-placeholder="请选择">
         <option value=""></option>
         <option value="United States">United States</option>
-        <option disabled value="United Kingdom">United Kingdom</option>
+        <option disabled value="United Kingdom">disabled</option>
         <option value="Afghanistan">Afghanistan</option>
         <option value="Aland Islands">Aland Islands</option>
-        <option value="Albania">Albania</option>
-        <option value="Algeria">Algeria</option>
-        <option value="American Samoa">American Samoa</option>
-        <option value="Andorra">Andorra</option>
-        <option value="Austria">Austria</option>
-        <option value="Austria2">Austria2</option>
     </select>
 
-    <select class="chosen-2" data-placeholder="请选择城市" multiple>
+    <select class="chosen-1" data-placeholder="请选择" multiple>
         <option value=""></option>
         <option value="United States">United States</option>
-        <option disabled value="United Kingdom">United Kingdom</option>
+        <option disabled value="United Kingdom">disabled</option>
+        <option value="Afghanistan">Afghanistan</option>
+        <option value="Aland Islands">Aland Islands</option>
+    </select>
+
+    <select class="chosen-3" data-placeholder="请选择" multiple>
+        <option value=""></option>
+        <option value="United States">United States</option>
+        <option disabled value="United Kingdom">disabled</option>
         <option selected value="Afghanistan">Afghanistan</option>
         <option value="Aland Islands">Aland Islands</option>
         <option selected value="Albania">Albania</option>
@@ -43,22 +47,31 @@
         <option value="Austria2">Austria2</option>
     </select>
 
-    <script src="//cdn.bootcss.com/jquery/1.8.3/jquery.min.js"></script>
-    <script src="//cdn.bootcss.com/chosen/1.7.0/chosen.jquery.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.8.3/jquery.min.js">
+    </script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
     <script>
-    $(".chosen-1").chosen({
-        disable_search_threshold: 10,
-        no_results_text: "没有找到",
-        width: "300px",
-        placeholder_text_single:'请选择',
-    });
+        $(".chosen-1").chosen({
+            disable_search_threshold: 20,
+            width: "300px",
+        });
 
-    $(".chosen-2").chosen({
-        disable_search_threshold: 10,
-        no_results_text: "没有找到",
-        width: "300px",
-        placeholder_text_single:'请选择',
-    });
+        $(".chosen-2").chosen({
+            disable_search_threshold: 20,
+            width: "300px",
+        });
+
+        $('.chosen-3').chosen({
+            width: "300px",
+            no_results_text: '没有找到',
+            placeholder_text_single: '请选择',
+            placeholder_text_multiple: '请选择',
+            search_contains: true,// 搜索时刻模糊匹配
+            disable_search_threshold: 20,// 20条数据以上出现搜索框
+            max_shown_results: 1000,// 最多显示1000条，防止大量数据页面卡顿
+            hide_results_on_select: false,// 选择后不关闭选择框，可继续选择
+        });
     </script>
 </body>
+
 </html>
