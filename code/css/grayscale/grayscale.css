@@ -1,0 +1,24 @@
+* {
+    filter: gray;
+    color: gray;
+}
+
+body {
+    filter: gray;
+}
+
+img {
+    filter: gray !important;
+}
+
+html {
+    filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+    -webkit-filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+    -ms-filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+    -moz-filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+    -o-filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+    -webkit-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+}
