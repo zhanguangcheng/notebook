@@ -5,9 +5,9 @@ Visual Studio Code
 
 ## 常用插件
 
-* `Align`
 * `Apache Conf`
 * `AutoFileName`
+* `Better Align`
 * `bootcdn`
 * `Bracket Pair Colorizer`
 * `Code Runner`
@@ -17,13 +17,10 @@ Visual Studio Code
 * `EditorConfig for VS Code`
 * `ESLint`
 * `Git History`
-* `GitHub Plus Theme`
 * `HTML CSS Support`
-* `Monokai Pro`
 * `PHP Debug`
 * `PHP DocBlocker`
 * `PHP Intelephense`
-* `PHP Intellisense - Crane`
 * `PHP Namespace Resolver`
 * `Project Manager`
 * `RSPG - Random String or Password Generator`
@@ -31,9 +28,7 @@ Visual Studio Code
 * `Sublime Text Keymap`
 * `SVN`
 * `Terminals Manager`
-* `Todo Tree`
 * `TortoiseSVN`
-* `Translator`
 * `VScode Great Ions`
 * `vscode-goto-documentation`
 * `vscode-random`
@@ -47,12 +42,7 @@ Visual Studio Code
     "debug.internalConsoleOptions": "neverOpen",
     "debug.showInStatusBar": "always",
     "editor.acceptSuggestionOnEnter": "off",
-    "editor.find.autoFindInSelection": true,
-    "editor.fontSize": 16,
-    "editor.formatOnPaste": true,
     "editor.lineHeight": 24,
-    "editor.minimap.renderCharacters": false,
-    "editor.mouseWheelScrollSensitivity": 5,
     "editor.mouseWheelZoom": true,
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.quickSuggestionsDelay": 100,
@@ -71,32 +61,28 @@ Visual Studio Code
     "search.useIgnoreFiles": false,
     "window.newWindowDimensions": "maximized",
     "window.title": "${rootName}@${activeEditorMedium}",
-    "workbench.colorCustomizations": {
-        "editor.findMatchBackground": "#ff6666",
-        "editor.selectionHighlightBackground": "#a98ff0c5"
-    },
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "workbench.editor.openPositioning": "last",
-    "workbench.iconTheme": "vscode-great-icons",
     
     "diffEditor.renderSideBySide": false,
     "namespaceResolver.showMessageOnStatusBar": true,
-    "namespaceResolver.autoSort": false,
+    "namespaceResolver.autoSort": true,
     "namespaceResolver.sortAlphabetically": true,
-    "terminal.integrated.fontSize": 18,
-    "todo-tree.regex": "((//|#|<!--|;|/\\*|\\*)\\s*($TAGS)|^\\s*- \\[ \\])",
-    "todo-tree.expanded": true,
-    "todo-tree.flat": true,
     "commands.commands": [
-        {
-            "text": "$(file-symlink-directory)",
-            "command": "projectManager.listProjectsNewWindow",
-            "tooltip": "Switch Project in new window",
-        },
         {
             "text": "$(gear)",
             "command": "workbench.action.openGlobalSettings",
             "tooltip": "Settings"
+        },
+        {
+            "text": "$(file-directory)",
+            "command": "workbench.action.files.openFolder",
+            "tooltip": "Open Folder",
+        },
+        {
+            "text": "$(file-submodule)",
+            "command": "workbench.action.openWorkspace",
+            "tooltip": "Switch Workspaces",
         },
         {
             "text": "$(server) Compress JS",
@@ -117,14 +103,29 @@ Visual Studio Code
             "filterLanguageRegex": "CSS"
         },
         {
-            "command": "translator.translate",
-            "text": "$(book)",
-            "tooltip": "Translate"
+            "command": "workspace tortoise-svn update",
+            "text": "$(arrow-down)",
+            "tooltip": "svn update"
         },
         {
-            "command": "editor.action.sortLinesAscending",
+            "command": "workspace tortoise-svn commit",
             "text": "$(arrow-up)",
-            "tooltip": "Sort lines"
+            "tooltip": "svn commit"
+        },
+        {
+            "command": "file tortoise-svn commit",
+            "text": "$(arrow-small-up)",
+            "tooltip": "svn file commit"
+        },
+        {
+            "command": "workspace tortoise-svn log",
+            "text": "$(history)",
+            "tooltip": "svn log"
+        },
+        {
+            "command": "file tortoise-svn log",
+            "text": "$(clock)",
+            "tooltip": "svn file log"
         }
     ],
     "terminals.terminals": [
@@ -132,13 +133,13 @@ Visual Studio Code
             "name": "Compress JS",
             "open": true,
             "onlySingle": true,
-            "command": "java -jar C:/greenEnvironment/yuicompressor/2.4.8/main.jar --type js -o '.js$:.min.js' [file]"
+            "command": "java -jar C:/portable-env/yuicompressor/2.4.8/main.jar --type js -o '.js$:.min.js' [file]"
         },
         {
             "name": "Compress CSS",
             "open": true,
             "onlySingle": true,
-            "command": "java -jar C:/greenEnvironment/yuicompressor/2.4.8/main.jar --type css -o '.css$:.min.css' [file]"
+            "command": "java -jar C:/portable-env/yuicompressor/2.4.8/main.jar --type css -o '.css$:.min.css' [file]"
         }
     ],
     "launch": {
@@ -148,7 +149,12 @@ Visual Studio Code
                 "name": "XDebug",
                 "type": "php",
                 "request": "launch",
-                "port": 9000
+                "port": 9000,
+                "xdebugSettings": {
+                    "max_children": 100,
+                    "max_data": 10000,
+                    "show_hidden": 1
+                }
             },
             {
                 "name": "Launch currently open script",
@@ -159,7 +165,38 @@ Visual Studio Code
                 "port": 9000
             }
         ]
-    }
+    },
+    "php.validate.run": "onType",
+    "explorer.confirmDelete": false,
+    "window.zoomLevel": 0,
+    "svn.autorefresh": false,
+    "workbench.startupEditor": "newUntitledFile",
+    "editor.renderControlCharacters": false,
+    "workbench.colorTheme": "Quiet Light",
+    "search.followSymlinks": false,
+    "files.autoSaveDelay": 100,
+    "editor.fontSize": 12,
+    "debug.toolBarLocation": "docked",
+    "workbench.iconTheme": "vscode-great-icons",
+    "[html]": {
+        "editor.defaultFormatter": "HookyQR.beautify"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "HookyQR.beautify"
+    },
+    "commentTranslate.targetLanguage": "zh-CN",
+    "editor.minimap.enabled": false,
+    "editor.fontFamily": "'Fira Code'",
+    "editor.fontWeight": "500",
+    "editor.fontLigatures": true,
+    "terminal.integrated.fontWeightBold": "500",
+    "diffEditor.ignoreTrimWhitespace": true,
+    "window.menuBarVisibility": "hidden",
+    "update.mode": "start",
+    "terminal.integrated.rendererType": "dom",
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
+    "editor.minimap.renderCharacters": false,
+    "timeline.excludeSources": []
 }
 ```
 
