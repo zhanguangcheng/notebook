@@ -38,8 +38,7 @@ CREATE TABLE `article`  (
 插入2条测试数据
 ```sql
 INSERT INTO article (title,content) VALUES("Elasticsearch简介", '<p>Elasticsearch是一个非常强大的搜索引擎。它目前被广泛地使用于各个IT公司。Elasticsearch是由Elastic公司创建并开源维护的。它的开源代码位于<a href="https://github.com/elastic/elasticsearch">https://github.com/elastic/elasticsearch</a>。同时，Elastic公司也拥有<a href="https://github.com/elastic/logstash">Logstash</a>及<a href="https://github.com/elastic/kibana">Kibana</a>开源项目。这个三个开源项目组合在一起，就形成了 <strong>ELK</strong>软件栈。他们三个共同形成了一个强大的生态圈。简单地说，<strong>L</strong>ogstash负责数据的采集，处理（丰富数据，数据转型等），<strong>Ki</strong>bana负责数据展，分析及管理。Elasticsearch处于最核心的位置，它可以帮我们对数据进行快速地搜索及分析。</p>');
-INSERT INTO article (title,content) VALUES("Elasticsearch分布式，高度可用", '<p>
-Elasticsearch是一个高度可用的分布式搜索引擎。每个索引都分解为碎片，每个碎片可以有一个或多个副本。默认情况下，创建一个索引，每个分片有1个分片和1个副本（1/1）。可以使用许多拓扑，包括1/10（提高搜索性能）或20/1（提高索引性能）。</p><p>为了使用Elasticsearch的分布式特性，只需启动更多节点并关闭节点。系统将继续为索引的最新数据提供请求（确保使用正确的http端口）。</p>');
+INSERT INTO article (title,content) VALUES("Elasticsearch分布式，高度可用", '<p>Elasticsearch是一个高度可用的分布式搜索引擎。每个索引都分解为碎片，每个碎片可以有一个或多个副本。默认情况下，创建一个索引，每个分片有1个分片和1个副本（1/1）。可以使用许多拓扑，包括1/10（提高搜索性能）或20/1（提高索引性能）。</p><p>为了使用Elasticsearch的分布式特性，只需启动更多节点并关闭节点。系统将继续为索引的最新数据提供请求（确保使用正确的http端口）。</p>');
 ```
 
 表中数据如下：
