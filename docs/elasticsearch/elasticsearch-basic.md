@@ -33,6 +33,7 @@ Elasticsearch 基础入门
 * 同一个Index中的Document的字段应保持相同，有利于提高搜索效率
 * 一个集群可以存储多个索引
 * 索引名称必须为小写
+* 索引还有可能是动词，比如索引一个文档，表示将文档保存进Elasticsearch中，能够被搜索到
 
 #### 文档 Document
 * 就是一条JSON数据，类似数据库中的一行记录
@@ -90,6 +91,7 @@ Elasticsearch 基础入门
 3. 运行 `bin/elasticsearch`、Windows运行 `bin/elasticseaech.bat`
 4. 访问 `http://localhost:9200`
 
+如下载速度慢导致无法下载可以使用镜像网站进行下载，如[华为开源镜像站](https://mirrors.huaweicloud.com/)
 
 Mapping
 ----------
