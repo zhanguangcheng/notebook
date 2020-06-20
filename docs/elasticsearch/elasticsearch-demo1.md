@@ -105,7 +105,7 @@ PUT /article
 
 ## 同步数据
 
-使用Logstash的插件[jdbc input plugin](logstash-jdbc-input-plugin.md)做好文章数据的同步
+使用Logstash的插件[jdbc input plugin](https://www.elastic.co/guide/en/logstash/current/plugins-inputs-jdbc.html)做好文章数据的同步
 新建同步配置文件`C:\portable-env\elasticsearch-7.7.0\config\article.conf`：
 ```conf
 input {
@@ -152,7 +152,7 @@ output {
 * `schedule => "*/10 * * * * *"`表示设置为每10秒同步一次
 * 我们将每次同步的时间：`unix_timestamp`保存到文件：`C:/portable-env/logstash-7.7.0/data/article_last_run_time`中，SQL语句中就能使用`:sql_last_value`代替最后同步时间
 * 我们使用gsub过滤文章内容的html标签和html实体符号空格
-* 这里我们新增了条件：`updated_at < NOW()`的目的时防止同一时间插入多条数据时，未插入完毕时就执行同步导致的同步遗漏，详情参考[这里]( https://developer.aliyun.com/article/762059 )
+* 这里我们新增了条件：`updated_at < NOW()`的目的是防止同一时间插入多条数据时，未插入完毕时就执行同步导致的同步遗漏，详情参考[这里]( https://developer.aliyun.com/article/762059 )
 
 进入目录：`C:\portable-env\logstash-7.7.0\bin`，启动Logstash
 ```bash
@@ -204,7 +204,7 @@ GET article/_search
 }
 ```
 
-* `highlight`时设置高亮配置
+* `highlight`是设置高亮配置
 * `from`和`size`类似MySQL中的`OFFSET`和`LIMIT`，用于分页获取数据
 
 返回结果如下：

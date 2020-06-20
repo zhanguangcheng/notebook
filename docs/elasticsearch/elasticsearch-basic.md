@@ -1,7 +1,7 @@
 Elasticsearch 基础入门
 ======================
 
-该文档所使用的Elasticsearch 版本为7.7
+该文档所使用的Elasticsearch 版本为7.7.0
 
 概述
 -------------
@@ -174,3 +174,11 @@ Mapping
 
 ## 其他
 cerebro
+
+
+## Elasticsearch资源
+
+<https://www.elastic.co/guide>
+<https://elasticstack.blog.csdn.net>
+<https://developer.aliyun.com/group/es>
+<http://www.ruanyifeng.com/blog/2017/08/elasticsearch.html>
