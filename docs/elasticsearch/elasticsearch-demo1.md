@@ -27,11 +27,11 @@ CREATE TABLE `article`  (
   `title` varchar(200) NOT NULL,
   `content` text NOT NULL,
   `view` int NOT NULL DEFAULT 0,
-  `created_at` datetime(0) NOT NULL DEFAULT CURRENT_TIMESTAMP(0),
-  `updated_at` datetime(0) NOT NULL DEFAULT CURRENT_TIMESTAMP(0) ON UPDATE CURRENT_TIMESTAMP(0),
+  `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `is_deleted` tinyint NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 ```
 >  其中`updated_at`为数据的更新时间，`is_deleted`为是否已删除，删除后将标记为`1`且修改更新时间为最新时间
 
