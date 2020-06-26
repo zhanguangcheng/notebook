@@ -105,7 +105,7 @@ SELECT id, status, data FROM job_queue WHERE id IN(:ID1, :ID2...);
 # 处理业务...
 
 # 处理完成，标记任务为处理完成
-UPDATE job_queue SET status=STATUS_FINISHED WHERE id=:ID;
+UPDATE job_queue SET status=STATUS_FINISHED WHERE IN(:ID1, :ID2...);
 ```
 
 优点是无锁、可以处理多个任务，缺点是使用了自定义变量，使用到的地方需要同时执行，防止连接断开后变量丢失。
@@ -147,7 +147,7 @@ PHP中使用`uniqid()`函数并发或分布式有可能重复，但我们这里�
 
 以上四种解决方案都可以解决问题，各有优缺点，前两种使用较简单，后两种使用稍繁琐，业务中推荐使用前两种。
 
-如果是单任务处理推荐第二种方案，如果是多任务推荐第一种，虽然有行锁，但性能影响不不大，如果追求高性能的话又何必选择MySQL来作为队列使用，可以选择更专业的队列系统，如Kafka、RabbitMQ或RocketMQ等等。
+如果是单任务处理推荐第二种方案，如果是多任务推荐第一种，虽然有行锁，但性能影响并不大，如果追求高性能的话又何必选择MySQL来作为队列使用，可以选择更专业的队列系统，如Kafka、RabbitMQ或RocketMQ等等。
 
 不过中小型系统使用MySQL作为队列系统是一个非常好的选择，具有很好的稳定性。
 
