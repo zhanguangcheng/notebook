@@ -248,3 +248,8 @@ ini_set('session.cookie_httponly', true);
 // 2. 单个设置, setcookie()的第7个参数设置为true
 bool setcookie ( string $name [, string $value = "" [, int $expire = 0 [, string $path = "" [, string $domain = "" [, bool $secure = false [, bool $httponly = false ]]]]]] )
 ```
+
+## 创建临时唯一文件
+```php
+tempnam(sys_get_temp_dir(), 'prefix')
+```
