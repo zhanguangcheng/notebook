@@ -150,3 +150,10 @@ PHP中使用`uniqid()`函数并发或分布式有可能重复，但我们这里�
 如果是单任务处理推荐第二种方案，如果是多任务推荐第一种，虽然有行锁，但性能影响不不大，如果追求高性能的话又何必选择MySQL来作为队列使用，可以选择更专业的队列系统，如Kafka、RabbitMQ或RocketMQ等等。
 
 不过中小型系统使用MySQL作为队列系统是一个非常好的选择，具有很好的稳定性。
+
+
+参考
+-----
+
+* <https://blog.csdn.net/FrancisHe/article/details/72871905>
+* <https://my.oschina.net/miaoyushun/blog/260778>
