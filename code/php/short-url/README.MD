@@ -35,3 +35,8 @@ url重写配置以实现`http://your-domain/短码`可以被识别
     ],
 ]
 ```
+
+参考
+-------
+
+* <https://hufangyun.com/2017/short-url/>
