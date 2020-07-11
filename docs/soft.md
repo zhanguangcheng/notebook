@@ -38,6 +38,7 @@ Windows常用软件
 * [PowerDesigner](http://download.sybase.com/eval/PowerDesigner/PowerDesigner165_Evaluation.exe "建模工具") [$](http://www.itmop.com/downinfo/115489.html)
 * [PuTTY](http://www.putty.org/ "小巧SSH连接工具")
 * [QQ影音](http://player.qq.com/)
+* [remi](http://rpms.remirepo.net/ "Remi's RPM repository")
 * [Rolan](https://www.irolan.com/ "轻量级启动器")
 * [Rufus](http://rufus.akeo.ie/ "支持各种系统的U盘制作工具")
 * [seer](http://www.1218.io/ "文件快速预览")
@@ -53,6 +54,7 @@ Windows常用软件
 > 5A02H-AU243-TZJ49-GTC7K-3C61N
 * [Visual Studio Code](https://code.visualstudio.com/ "Code editing.Redefined.")
 * [WePE工具箱](http://www.wepe.com.cn/ "微PE工具箱")
+* [webtatic](https://webtatic.com/)
 * [WGestures全局鼠标手势](http://www.yingdev.com/projects/wgestures "一个更简单、更现代的鼠标手势。")
 * [WinCacheGrind](https://github.com/ceefour/wincachegrind "XDebug profile分析")
 * [Wireshark](https://www.wireshark.org/ "全能抓包工具")
