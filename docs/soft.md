@@ -31,6 +31,7 @@ Windows常用软件
 * [LICEcap](http://www.cockos.com/licecap/ "gif录制")
 * [Listary](http://www.listary.com/ "文件搜索，快速启动应用")
 * [Navicat Premium](https://www.navicat.com.cn/products/navicat-premium/ "数据库管理工具") $
+* [NeatDownloadManager](http://www.neatdownloadmanager.com/ "多线程下载工具")
 * [notepad2](http://notepad2.com/ "普通编辑器")
 * [OBS Studio](https://obsproject.com/ "免费且开源的用于视频录制以及直播串流的软件")
 * [PHPStorm](https://www.jetbrains.com/phpstorm/ "PHP IDE") $
@@ -65,6 +66,7 @@ Windows常用软件
 * [暴风激活工具](http://www.baofengjihuo.com/ "暴风激活工具_win7激活工具_win10激活密匙_win8激活软件_永久激活所有系统和office")
 * [火绒安全](https://www.huorong.cn/)
 * [天若OCR](https://pan.baidu.com/s/1P2xb9kBwX1gj8j2_APivZw)
+* [向日葵远程控制](https://sunlogin.oray.com/ "远程控制")
 * [万彩办公大师](http://www.wofficebox.com/ "免费的办公工具百宝箱")
 
 常用网站工具
