@@ -64,6 +64,7 @@ Windows常用软件
 * [暴风激活工具](http://www.baofengjihuo.com/ "暴风激活工具_win7激活工具_win10激活密匙_win8激活软件_永久激活所有系统和office")
 * [火绒安全](https://www.huorong.cn/)
 * [天若OCR](https://pan.baidu.com/s/1P2xb9kBwX1gj8j2_APivZw)
+* [向日葵远程控制](https://sunlogin.oray.com/ "远程控制")
 * [万彩办公大师](http://www.wofficebox.com/ "免费的办公工具百宝箱")
 
 常用网站工具
