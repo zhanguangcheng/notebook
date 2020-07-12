@@ -25,6 +25,8 @@
 * [Ubuntu 16.04LTS LNMP环境配置](http://www.cnblogs.com/ddling/p/5906109.html)
 * [CentOS7中systemctl命令详解](https://github.com/xiayulei/notebook/issues/33)
 * [Linux软件源码包镜像](http://soft.vpser.net/)
+* [Systemd 入门教程：命令篇](http://www.ruanyifeng.com/blog/2016/03/systemd-tutorial-commands.html)
+* [Systemd 入门教程：实战篇](http://www.ruanyifeng.com/blog/2016/03/systemd-tutorial-part-two.html)
 
 ## 数据可视化
 

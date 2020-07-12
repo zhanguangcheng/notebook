@@ -152,6 +152,113 @@ PHP中使用`uniqid()`函数并发或分布式有可能重复，但我们这里�
 不过中小型系统使用MySQL作为队列系统是一个非常好的选择，具有很好的稳定性。
 
 
+运行机制
+-------
+
+### 生产者
+
+生产者很简单，只需要往数据库中写数据即可，并标记为待处理
+
+### 消费者
+
+消费者主要有2个关键问题，一是如何运行消费者、二是消费者代码如何编写。
+
+#### 如何运行消费者
+
+由于消费者需要轮询检测是否有新的任务需要消费，首先想到的可能是使用Linux的定时任务`crontab`来定时启动，但`crontab`至少1分钟检测一次，有时候不一定能满足需求，这里我们使用`systemd`来启动一个或多个PHP脚本作为服务运行在后台的方式，Systemd 是 Linux 系统工具，用来启动守护进程，已成为大多数发行版的标准配置。
+
+更多资料请移步[Systemd 入门教程：实战篇](http://www.ruanyifeng.com/blog/2016/03/systemd-tutorial-part-two.html)
+
+新增一个systemd服务配置
+```bash
+vim /etc/systemd/system/myjob@.service
+```
+
+```ini
+[Unit]
+Description=myjob
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+Restart=on-failure
+User=root
+ExecStart=/usr/bin/php /myjob/t.php
+
+[Install]
+WantedBy=multi-user.target
+```
+
+重新加载配置，让我们新增的配置生效
+```bash
+systemctl daemon-reload
+```
+
+```bash
+# 启动多个服务，具体启动几个根据需求
+systemctl start myjob@1 myjob@2 myjob@3
+
+# 查查服务的状态
+systemctl status "myjob@*"
+
+# 设置为开机启动
+systemctl enable myjob@1 myjob@2 myjob@3
+```
+
+有什么问题请及时检查`/var/log/messages`以排查问题
+
+#### 消费者代码如何编写
+
+先上代码 `/myjob/t.php`
+```php
+// 连接数据库
+$pdo = new PDO('mysql:host=127.0.0.1;dbname=test;charSET=utf8', 'root', '');
+$pdo->exec('SET NAMES utf8');
+
+// 无限循环来保证程序不会停止
+where (true) {
+    // 是否有任务
+    if (hasTask()) {
+        // 启动事务
+        $pdo->beginTransaction();
+
+        // 查询任务队列
+        $data = $pdo->query('SELECT id, status, data FROM job_queue WHERE status=0 ORDER BY id ASC LIMIT 5 FOR UPDATE')->fetchAll();
+
+        // 标记为处理中
+        if ($data) {
+            $pdo->exec('UPDATE job_queue SET status=1 WHERE id IN(' . implode(',', array_column($data, 'id', 'id')) . ')');
+        }
+
+        // 提交事务
+        $pdo->commit();
+
+        // 处理任务队列，标记为已处理
+        if ($data) {
+            foreach ($data as $row) {
+                // 处理任务……
+
+                // 标为为已处理
+                $pdo->exec('UPDATE job_queue SET status=2 WHERE id=' . $row['id']);
+            }
+        } else {
+            // 设置为无任务
+            setNoTask();
+        }
+    } else {
+        // 轮询间隔
+        sleep(1);
+    }
+}
+```
+
+这里有两点需要说明一下：
+
+1. 使用`where (true)`来保证程序不会停止。
+2. 函数`hasTask()`和`setNoTask()`是为了防止过多的数据库查询，只有当检测到有任务时才查询数据库，原理也很简单，但消费者产生新的任务时让`hasTask()`返回`true`即可。
+
+
 参考
 -----
 
