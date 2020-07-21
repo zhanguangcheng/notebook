@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>拾取坐标系统示例</title>
+</head>
+
+<body>
+    <input type="text" id="value">
+    <button id="btn">choose</button>
+
+    <script>
+        document.getElementById('btn').addEventListener('click', function() {
+            window.open('map/index.html', 'map', 'width=1200,height=800');
+        });
+
+        function callback(value) {
+            document.getElementById('value').value = value;
+        }
+    </script>
+</body>
+
+</html>
