@@ -153,7 +153,7 @@ $memcache->addServer('127.0.0.1',11211);
 
 
 分布式集群架构图:
-![分布式集群架构图](../../images/memcache.png)
+![分布式集群架构图](../images/memcache.png)
 
 
 ## 其他
