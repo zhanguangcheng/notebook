@@ -33,3 +33,19 @@ SHOW FULL COLUMNS FROM `table_name`;
 ## 关于NULL值的使用
 
 避免使用null，除非null值有意义。原因：null值很难优化，占额外空间，查询时麻烦。
+
+## 线上大表加索引
+> 并发大的情况尽量不要使用，容易出现锁等待，阻塞业务，经测试并发在100/秒以下无问题
+```sql
+# 创建一样的表结构，创建好索引
+CREATE TABLE message_copy LIKE message;
+ALTER TABLE message_copy ADD INDEX ( `status` );
+
+# 迁移老数据，id<=100是确认数据范围，防止锁表，然后再迁移新产生的数据并替换表名
+INSERT INTO message_copy SELECT * FROM message WHERE id<=100;
+INSERT INTO message_copy SELECT * FROM message WHERE id>100;
+RENAME TABLE message TO message_bak, message_copy to message;
+
+# 检查无误后，删除临时表
+DROP TABLE message_bak;
+```
