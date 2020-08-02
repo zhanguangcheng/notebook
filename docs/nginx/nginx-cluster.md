@@ -277,5 +277,5 @@ http {
 
 ## 参考
 
-<http://nginx.org/en/docs/>
-<https://www.cnblogs.com/xiugeng/p/10155283.html>
+* <http://nginx.org/en/docs/>
+* <https://www.cnblogs.com/xiugeng/p/10155283.html>
