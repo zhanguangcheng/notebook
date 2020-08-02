@@ -274,3 +274,8 @@ http {
 5. 应用服务器响应给负载均衡服务器
 6. 负载均衡服务器响应给客户端
 
+
+## 参考
+
+<http://nginx.org/en/docs/>
+<https://www.cnblogs.com/xiugeng/p/10155283.html>
