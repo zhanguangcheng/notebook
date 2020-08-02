@@ -98,6 +98,19 @@ http{
     open_file_cache_min_uses 2;
     open_file_cache_errors on;
 
+    # 定义限流配置
+    # 1. $binary_remote_addr：通过客户端IP标识来做限制。
+    # 2. zone=one:10m：表示生成一个大小为10M，名字为one的内存区域， 用来存储访问的频次信息。
+    # 3. rate=100r/s：表示1秒中100个请求，结果为10ms一个请求，10ms之后才接受第二个请求。如果在10ms内发送100个请求，那么只会成功一个。
+    limit_req_zone $binary_remote_addr zone=one:10m rate=100r/s;
+
+    # 定义反向代理集群
+    upstream web {
+        least_conn;
+        server 192.168.1.16;
+        server 192.168.1.17;
+    }
+
     #虚拟主机的配置
     server{
         #监听的端口
@@ -134,6 +147,18 @@ http{
 
             #下行与上三行同样功能
             try_files $uri /index.php$uri?$query_string;
+
+            # 对请求数量限流配置的应用
+            # 1. zone=one：使用名字为one的配置区域来做限流。
+            # 2. burst=20：访问次数超出rate的限制后，额外允许的突发量。
+            # 3. nodelay：超出速率限制后的请求无需等待，直接返回503
+            limit_req zone=one burst=20 nodelay;
+
+            # 反向代理请求转发
+            proxy_pass http://web;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         }
 
 
