@@ -27,6 +27,8 @@
 * [Linux软件源码包镜像](http://soft.vpser.net/)
 * [Systemd 入门教程：命令篇](http://www.ruanyifeng.com/blog/2016/03/systemd-tutorial-commands.html)
 * [Systemd 入门教程：实战篇](http://www.ruanyifeng.com/blog/2016/03/systemd-tutorial-part-two.html)
+* [Nginx管理](https://www.cnblogs.com/xiugeng/p/10111716.html)
+* [Nginx限流](https://www.321dz.com/2019.html)
 
 ## 数据可视化
 
