@@ -1,5 +1,3 @@
-yum -y install net-tools
-
 Memcache分布式缓存系统
 ====================
 
@@ -29,7 +27,7 @@ Memcache分布式缓存系统
 Memcache天生就支持分布式，应用起来非常简单，分布式算法由客户端提供，目前一般都采用Consistent Hashing算法，新增节点、节点宕机都有比较好的命中率。
 
 分布式集群架构图:
-![分布式集群架构图](../images/memcache.png)
+![分布式集群架构图](../..//images/memcache.png)
 
 ### 安装服务
 ```bash
