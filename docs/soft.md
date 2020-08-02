@@ -33,13 +33,13 @@ Windows常用软件
 * [Navicat Premium](https://www.navicat.com.cn/products/navicat-premium/ "数据库管理工具") $
 * [NeatDownloadManager](http://www.neatdownloadmanager.com/ "多线程下载工具")
 * [notepad2](http://notepad2.com/ "普通编辑器")
+* [notepad-mod(https://github.com/XhmikosR/notepad2-mod "普通编辑器")
 * [OBS Studio](https://obsproject.com/ "免费且开源的用于视频录制以及直播串流的软件")
 * [PHPStorm](https://www.jetbrains.com/phpstorm/ "PHP IDE") $
 * [Postman](https://www.getpostman.com/ "接口调试工具")
 * [PowerDesigner](http://download.sybase.com/eval/PowerDesigner/PowerDesigner165_Evaluation.exe "建模工具") [$](http://www.itmop.com/downinfo/115489.html)
 * [PuTTY](http://www.putty.org/ "小巧SSH连接工具")
 * [QQ影音](http://player.qq.com/)
-* [remi](http://rpms.remirepo.net/ "Remi's RPM repository")
 * [Rolan](https://www.irolan.com/ "轻量级启动器")
 * [Rufus](http://rufus.akeo.ie/ "支持各种系统的U盘制作工具")
 * [seer](http://www.1218.io/ "文件快速预览")
@@ -55,7 +55,6 @@ Windows常用软件
 > 5A02H-AU243-TZJ49-GTC7K-3C61N
 * [Visual Studio Code](https://code.visualstudio.com/ "Code editing.Redefined.")
 * [WePE工具箱](http://www.wepe.com.cn/ "微PE工具箱")
-* [webtatic](https://webtatic.com/)
 * [WGestures全局鼠标手势](http://www.yingdev.com/projects/wgestures "一个更简单、更现代的鼠标手势。")
 * [WinCacheGrind](https://github.com/ceefour/wincachegrind "XDebug profile分析")
 * [Wireshark](https://www.wireshark.org/ "全能抓包工具")
@@ -101,6 +100,7 @@ Windows常用软件
 * [在线PS](https://ps.gaoding.com/ "在线PS")
 * [smallpdf](https://smallpdf.com/cn "PDF处理")
 * [PDF24 Tools](https://tools.pdf24.org/zh/ "PDF工具")
+* [迅捷PDF转换器](https://app.xunjiepdf.com/ "PDF工具")
 * [删除图片中的背景](https://www.remove.bg "删除图片中的背景")
 * [微软常用运行库合集](https://www.baidu.com/baidu?wd=微软常用运行库合集 "微软常用运行库合集")
 * [开源软件镜像站](https://www.baidu.com/baidu?wd=开源软件镜像站 "开源软件镜像站")
@@ -111,3 +111,6 @@ Windows常用软件
     * [搜狐开源镜像站](http://mirrors.sohu.com/)
     * [清华大学开源软件镜像站](https://mirrors.tuna.tsinghua.edu.cn/)
     * [中国科学技术大学开源软件镜像站](http://mirrors.ustc.edu.cn/)
+* [remi](http://rpms.remirepo.net/ "Remi's RPM repository")
+* [webtatic](https://webtatic.com/)
+* [云端超级应用空间](https://uzer.me/)
