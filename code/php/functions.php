@@ -40,6 +40,36 @@ if (!function_exists('array_column')) {
 }
 
 /**
+ * 获取人性化的时间
+ * @param int $timestamp 时间搓
+ * @return string
+ */
+function timeago($timestamp)
+{
+    $now = time();
+    $time = $now - $timestamp;
+    if ($timestamp > $now) {
+        return date('Y.m.d', $timestamp);
+    } elseif ($time < 60) {
+        return '刚刚';
+    } elseif ($time < 3600) {
+        return floor($time / 60) . '分钟前';
+    } elseif ($time < 86400) {
+        return floor($time / 3600) . '小时前';
+    } elseif ($time < 604800) {
+        return '本周';
+    } elseif ($time < 2592000) {
+        return floor($time / 86400) . '天前';
+    } elseif ($time < 31536000) {
+        return floor($time / 2592000) . '个月前';
+    } elseif ($time < 94608000) {
+        return floor($time / 31536000) . '年前';
+    } else {
+        return date('Y.m.d', $timestamp);
+    }
+}
+
+/**
  * 美化的var_dump()
  * > 更多丰富打印: https://github.com/zhanguangcheng/php-output
  */
