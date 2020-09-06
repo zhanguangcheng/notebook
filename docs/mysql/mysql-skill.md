@@ -49,3 +49,18 @@ RENAME TABLE message TO message_bak, message_copy to message;
 # 检查无误后，删除临时表
 DROP TABLE message_bak;
 ```
+
+## 快速导出、导入数据
+```sql
+# 导出
+SELECT * INTO OUTFILE 'd:/person.txt'
+FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+FROM test.person;
+
+# 导入
+LOAD DATA INFILE 'd:/person.txt'
+INTO TABLE test.person
+FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"'
+LINES TERMINATED BY '\n';
+```
