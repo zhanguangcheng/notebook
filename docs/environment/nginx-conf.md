@@ -82,16 +82,13 @@ http{
     gzip on; #开启gzip压缩输出
     gzip_min_length 1k; #最小压缩文件大小
     gzip_buffers 4 16k; #压缩缓冲区
-    gzip_http_version 1.0; #压缩版本（默认1.1，前端如果是squid2.5请使用1.0）
-    gzip_comp_level 2; #压缩等级
-    gzip_types text/plain application/x-javascript text/css application/xml;
-
+    gzip_http_version 1.1; #压缩版本（默认1.1，前端如果是squid2.5请使用1.0）
+    gzip_comp_level 6; #压缩等级
+    gzip_types text/xml application/xml application/atom+xml application/rss+xml application/xhtml+xml image/svg+xml text/javascript application/javascript application/x-javascript text/x-json application/json application/x-web-app-manifest+json text/css text/plain text/x-component font/opentype application/x-font-ttf application/vnd.ms-fontobject image/x-icon;
     #压缩类型，默认就已经包含text/html，所以下面就不用再写了，写上去也不会有问题，但是会有一个warn。
     gzip_vary on;
-
     #ie6禁用gzip压缩，否则会出现bug
     gzip_disable "msie6";
-
 
     open_file_cache max=1000 inactive=20s;
     open_file_cache_valid 30s;
@@ -139,8 +136,8 @@ http{
         #自定义错误页面
         error_page 404 /404.html;
 
-        #隐藏index.php的通常做法（请求一个不存在的资源时，）
         location / {
+            #隐藏index.php的通常做法（请求一个不存在的资源时，）
             #if (!-e $request_filename) {
             #    rewrite ^/(.*)$ /index.php/$1 last;
             #}
@@ -175,12 +172,32 @@ http{
         #设置成功并在过期时间内会返回200 from cache
         #超过过期时间时，文件没有被修改会返回304 Not Modified，已经被修改会返回200 OK(拉取最新资源)
         location ~ .*\.(gif|jpg|jpeg|png|bmp|swf)$ {
-            expires 7d;
+            access_log off;
+            expires 7d;# s m h d
         }
 
         #设置css,js缓存时间
         location ~ .*\.(js|css)?$ {
+            access_log off;
             expires 1d;
+        }
+
+        #rewrite
+        location /admin {
+            #redirect:302，permanent:301
+            rewrite ^/(.*)$ http://admin.domain.com/$1 permanent;
+        }
+
+        rewrite ^/assets(.*) http://assets.domain.com$1 permanent;
+
+        #http => https
+        if ($host = www.domain.com) {
+            rewrite ^/(.*)$ https://www.domain.com/$1 permanent;
+        }
+
+        location ~ /\.(svn|git) {
+            deny all;
+            # or return 403;
         }
 
         location = / {
@@ -196,6 +213,7 @@ http{
         # / 通用匹配，任何请求都会匹配到。
         # 多个location配置的情况下匹配顺序为（参考资料而来，还未实际验证，试试就知道了，不必拘泥，仅供参考）:
         # 首先匹配 =，其次匹配^~, 其次是按文件中顺序的正则匹配，最后是交给 / 通用匹配。当有匹配成功时候，停止匹配，按当前匹配规则处理请求。
+
     }
 }
 ```
