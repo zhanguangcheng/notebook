@@ -91,3 +91,9 @@ $('#range').on('click', '.fn-delete', function(event) {
     console.log($);// $ is not defined
 </script>
 ```
+
+## 在Chrome的Dev Tool中调试异步加载的js
+```js
+//@ sourceURL=fileName.js
+……
+```
