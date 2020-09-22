@@ -118,7 +118,7 @@ USE db_name;
 
 主要语法
 ```sql
-CREATE TABLE [IF NOT EXISTS] tbl_name (列定义) 配置项;
+CREATE TABLE [IF NOT EXISTS] tbl_name (列定义) [table_options] [partition_options];
 CREATE TABLE [IF NOT EXISTS] tbl_name 查询语句;
 CREATE TABLE [IF NOT EXISTS] tbl_name LIKE old_tbl_name;
 ```
@@ -145,9 +145,41 @@ CREATE TABLE tbl_name LIKE old_tbl_name;
 
 
 ### [ALTER TABLE](https://dev.mysql.com/doc/refman/5.7/en/alter-table.html)
+
+主要语法
+```sql
+ALTER TABLE [alter_specification...] [partition_options];
+```
+
+alter_specification包含
+```sql
+# 表配置
+table_options
+
+# 字段操作
+ADD [COLUMN] col_name column_definition [FIRST | AFTER col_name];
+CHANGE [COLUMN] old_col_name new_col_name column_definition [FIRST | AFTER col_name];
+MODIFY [COLUMN] col_name column_definition [FIRST | AFTER col_name];
+DROP [COLUMN] col_name;
+
+# 索引操作
+ADD PRIMARY KEY [index_type] (index_col_name,...) [index_option];
+ADD {INDEX|KEY} [index_name] [index_type] (index_col_name,...) [index_option];
+ADD UNIQUE [INDEX|KEY] [index_name] [index_type] (index_col_name,...) [index_option];
+DROP PRIMARY KEY;
+DROP {INDEX|KEY} index_name;
+
+# 分区操作
+ADD PARTITION (partition_definition)
+DROP PARTITION partition_names
+```
+
+示例
 ```sql
 ALTER TABLE ADD COLUMN col_name column_definition FIRST;
-ALTER TABLE ADD COLUMN col_name column_definition AFTER col_name;
+ALTER TABLE
+  ADD COLUMN col2 column_definition AFTER col1
+  ADD COLUMN col3 column_definition AFTER col2;
 ALTER TABLE CHANGE COLUMN old_col_name new_col_name column_definition AFTER col_name;
 ALTER TABLE MODIFY COLUMN col_name column_definition AFTER col_name;
 ALTER TABLE DROP COLUMN col_name;
@@ -302,6 +334,7 @@ SHOW INDEX FROM tbl_name;
 SHOW GRANTS FOR 'grass'@'localhost';
 SHOW [GLOBAL | SESSION] VARIABLES [like_or_where];
 SHOW [GLOBAL | SESSION] STATUS [like_or_where];
+SHOW PLUGINS;
 SHOW PROFILES;
 SHOW PROFILE FOR QUERY n;
 SHOW WARNINGS;
