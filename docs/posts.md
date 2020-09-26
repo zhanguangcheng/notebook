@@ -16,6 +16,12 @@
 
 * [浅谈CSRF攻击方式](http://www.cnblogs.com/hyddd/archive/2009/04/09/1432744.html)
 
+
+## Linux
+* [Linux教程](https://linuxtools-rst.readthedocs.io/zh_CN/latest/index.html)
+* [Linux系统监控命令汇总](https://blog.csdn.net/linxing927/article/details/79412219)
+* [Linux使用sar进行性能分析](https://blog.csdn.net/xusensen/article/details/54606401)
+
 ## WEB服务器
 
 * [你真的了解如何将 Nginx 配置为Web服务器吗](https://lufficc.com/blog/configure-nginx-as-a-web-server)
@@ -73,6 +79,7 @@
 ## 数据库相关
 
 * [让应用程序支持emoji字符](https://www.liaoxuefeng.com/article/00145803336427519ae82a6c5b5474682c0c4ba5b47fb33000)
+* [MySQL分区操作](https://www.cnblogs.com/xibuhaohao/p/10154281.html)
 
 ## 小程序
 
