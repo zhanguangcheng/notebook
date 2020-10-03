@@ -20,6 +20,10 @@ netstat -anp
 # 查看系统信息
 uname -a
 
+# 查看CPU信息
+ls cpu
+cat /proc/cpuinfo
+
 # 查看负载
 w
 uptime
