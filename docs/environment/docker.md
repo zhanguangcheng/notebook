@@ -42,7 +42,6 @@ docker
 
 ```
 # 安装docker
-yum -y update
 yum -y install docker
 systemctl start docker
 

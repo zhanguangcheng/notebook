@@ -21,6 +21,8 @@
 * [Linux教程](https://linuxtools-rst.readthedocs.io/zh_CN/latest/index.html)
 * [Linux系统监控命令汇总](https://blog.csdn.net/linxing927/article/details/79412219)
 * [Linux使用sar进行性能分析](https://blog.csdn.net/xusensen/article/details/54606401)
+* [用vim保存文件和echo命令到底有什么不同？](https://juejin.im/post/6844904158831575047)
+
 
 ## WEB服务器
 
