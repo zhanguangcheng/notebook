@@ -127,6 +127,10 @@
 * [Modern PHP](https://book.douban.com/subject/26635862/)
 * [Pro Git](https://progit.bootcss.com/)
 
+## 快乐冲浪
+
+* [国内加速访问 GitHub](https://sitoi.cn/posts/23395.html)
+
 ## 其他
 * <http://www.sonimei.cn/>
 * [语义化版本](semver.org)
