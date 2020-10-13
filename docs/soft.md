@@ -114,3 +114,4 @@ Windows常用软件
 * [remi](http://rpms.remirepo.net/ "Remi's RPM repository")
 * [webtatic](https://webtatic.com/)
 * [云端超级应用空间](https://uzer.me/)
+* [开源软件替代方案](https://opensource.builders/)
