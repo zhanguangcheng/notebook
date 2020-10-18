@@ -58,4 +58,13 @@ ls -lh 文件名
 # 查看路由
 route
 netstat -r
+
+# 时间同步
+yum -y install ntp && echo "*/5 * * * * root /usr/sbin/ntpdate ntp.aliyun.com" >> /etc/crontab
+
+# 后台运行程序
+nohup wget http://xxx.tar.gz &
+
+# 左边的标准输出作为右边的参数，grep是左边的标准输出作为右边的标准输入，但不是所有程序都支持，这时需要使用xargs
+echo "/" | xargs ls
 ```

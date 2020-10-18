@@ -21,6 +21,18 @@ sed -i 's/rpms.remirepo.net/mirrors.aliyun.com\/remi/' /etc/yum.repos.d/remi*
 # 更换PHP的base源为remi源，比如7.2
 yum install -y yum-utils && yum-config-manager --enable remi-php72
 
+# 新增nginx源
+cat > /etc/yum.repos.d/nginx.repo << EOF
+# http://nginx.org/en/linux_packages.html
+[nginx-stable]
+name=nginx stable repo
+baseurl=http://nginx.org/packages/centos/$releasever/$basearch/
+gpgcheck=1
+enabled=1
+gpgkey=https://nginx.org/keys/nginx_signing.key
+module_hotfixes=true
+EOF
+
 # 新增MySQL官方源
 yum install -y http://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm
 
@@ -44,4 +56,7 @@ yum install php php-fpm php-gd php-curl php-pdo php-mysql
 
 # 查看软件安装的文件
 rpm -ql nginx
+
+# yum源列表
+yum repolist
 ```

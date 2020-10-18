@@ -452,6 +452,19 @@ function array_to_string($array, $delimiter = ',')
 }
 
 /**
+ * 字符串转16进制
+ * @param string $str
+ * @return string
+ */
+function string_to_hex($str){
+    $hex = '';
+    for($i = 0; $i < strlen($str); $i++) {
+        $hex .= '\x' . dechex(ord($str[$i]));
+    }
+    return $hex;
+}
+
+/**
  * 生成随机数
  * @param  integer $length 字节长度
  * @return string
