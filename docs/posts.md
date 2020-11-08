@@ -126,6 +126,9 @@
 * [PHP之道](https://laravel-china.github.io/php-the-right-way/)
 * [Modern PHP](https://book.douban.com/subject/26635862/)
 * [Pro Git](https://progit.bootcss.com/)
+* [笨办法学C](https://www.cntofu.com/book/25/index.html)
+* [C 语言进阶](https://www.cntofu.com/book/102/index.html)
+* [Linux C编程一站式学习](http://akaedu.github.io/book/index.html)
 
 ## 快乐冲浪
 
