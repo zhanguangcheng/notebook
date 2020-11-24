@@ -18,7 +18,7 @@ UNIX_TIMESTAMP('2020-06-21 21:33:19');
 -- 时间戳转时间
 FROM_UNIXTIME(1592746399, '%Y-%m-%d %H:%i:%s');
 
--- 加密解密
+-- 加密解密，默认加密模式：aes-128-ecb（SHOW VARIABLES LIKE 'block_encryption_mode'），填充模式：PKCS7
 AES_ENCRYPT('data', 'password')
 AES_DECRYPT('data', 'password')
 
