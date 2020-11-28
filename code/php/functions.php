@@ -574,6 +574,18 @@ function millitime()
 }
 
 /**
+ * 把给定纯文本内容复制到系统剪贴板，兼容Mac/Win/Linux(只能普通文本内容，不支持富文本及图片甚至文件)
+ * @param $content
+ * @return string|null
+ */
+function copy_to_clipboard($content)
+{
+    $clipboard = PHP_OS == 'Darwin' ? 'pbcopy' : (PHP_OS == 'WINNT' ? 'clip' : 'xsel');
+    $command = "echo $content | $clipboard";
+    return shell_exec($command);
+}
+
+/**
  * Parses a user agent string into its important parts
  *
  * @author Jesse G. Donat <donatj@gmail.com>

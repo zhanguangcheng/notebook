@@ -253,3 +253,23 @@ bool setcookie ( string $name [, string $value = "" [, int $expire = 0 [, string
 ```php
 tempnam(sys_get_temp_dir(), 'prefix')
 ```
+
+## iOS拍照图片上传后方向错误bug修复
+```php
+// iOS拍照图片bug修复，需开启扩展：exif
+// 参考：https://www.cnblogs.com/mumuxinfei/p/5523798.html
+$src = "/path/to/file.jpg";
+$img = imagecreatefromjpeg($src);
+if (function_exists('exif_read_data')) {
+    // 新增@原因：有bug:https://bugs.php.net/bug.php?id=74428
+    $exif = @exif_read_data($src);
+    if(!empty($exif['Orientation'])) {
+        switch($exif['Orientation']) {
+            case 8: $img = imagerotate($img, 90, 0); break;
+            case 3: $img = imagerotate($img, 180, 0); break;
+            case 6: $img = imagerotate($img, -90, 0); break;
+        }
+    }
+}
+imagejpeg($img);
+```
