@@ -33,7 +33,7 @@ Windows常用软件
 * [Navicat Premium](https://www.navicat.com.cn/products/navicat-premium/ "数据库管理工具") $
 * [NeatDownloadManager](http://www.neatdownloadmanager.com/ "多线程下载工具")
 * [notepad2](http://notepad2.com/ "普通编辑器")
-* [notepad-mod(https://github.com/XhmikosR/notepad2-mod "普通编辑器")
+* [notepad-mod](https://github.com/XhmikosR/notepad2-mod "普通编辑器")
 * [OBS Studio](https://obsproject.com/ "免费且开源的用于视频录制以及直播串流的软件")
 * [PHPStorm](https://www.jetbrains.com/phpstorm/ "PHP IDE") $
 * [Postman](https://www.getpostman.com/ "接口调试工具")
