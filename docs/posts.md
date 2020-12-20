@@ -39,6 +39,7 @@
 * [Nginx限流](https://www.321dz.com/2019.html)
 * [Nginx 从入门到实践，万字详解！](https://juejin.im/post/6844904144235413512)
 * [手摸手带你 Docker 从入门到实践](https://juejin.im/post/6875323565479034894)
+* [rsync 用法教程](http://www.ruanyifeng.com/blog/2020/08/rsync.html)
 
 ## 数据可视化
 

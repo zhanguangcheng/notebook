@@ -12,6 +12,7 @@ Windows常用软件
 * [Chocolatey](https://chocolatey.org/ "The package manager for Windows")
 * [cmder](http://cmder.net/ "Portable console emulator for Windows")
 > 中文乱码问题解决:settings->environment->`set LANG=zh_CN.UTF8`
+* [CopyTranslator](https://github.com/CopyTranslator/CopyTranslator "翻译工具")
 * [diffuse](https://sourceforge.net/projects/diffuse/ "文本差异对比")
 * [Ditto](https://www.ditto.com/ "剪切板增强")
 * [EditPlus](https://www.editplus.com/ "Windows text editor with FTP and sftp") $
@@ -35,6 +36,7 @@ Windows常用软件
 * [notepad2](http://notepad2.com/ "普通编辑器")
 * [notepad-mod](https://github.com/XhmikosR/notepad2-mod "普通编辑器")
 * [OBS Studio](https://obsproject.com/ "免费且开源的用于视频录制以及直播串流的软件")
+* [PandaOCR](https://github.com/miaomiaosoft/PandaOCR "OCR图文识别")
 * [PHPStorm](https://www.jetbrains.com/phpstorm/ "PHP IDE") $
 * [Postman](https://www.getpostman.com/ "接口调试工具")
 * [PowerDesigner](http://download.sybase.com/eval/PowerDesigner/PowerDesigner165_Evaluation.exe "建模工具") [$](http://www.itmop.com/downinfo/115489.html)
