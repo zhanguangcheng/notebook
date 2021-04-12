@@ -273,3 +273,9 @@ if (function_exists('exif_read_data')) {
 }
 imagejpeg($img);
 ```
+
+## 转16进制
+```php
+var_dump('﻿' === "\xEF\xBB\xBF", bin2hex('﻿'));
+// 输出：bool(true) string(6) "efbbbf"
+```
