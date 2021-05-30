@@ -89,7 +89,7 @@ Windows常用软件
 * [hyperpolyglot](http://hyperpolyglot.org/ "各种语言，工具的对比")
 * [Linux命令帮助](https://jaywcjlove.github.io/linux-command/ "Linux命令帮助")
 * [MSDN, 我告诉你](http://www.itellyou.cn/ "各种原版Windows系统, 软件")
-* [OfficePLUS](http://office.mmais.com.cn "微软Office官方在线模板网站")
+* [OfficePLUS](http://www.officeplus.cn/ "微软Office官方在线模板网站")
 * [githack](https://raw.githack.com/ "转换github文件的header，让其可以解析（不能用于生产环境）")
 * [RegExp](https://regex101.com/ "正则测试")
 * [RegExpFigure](https://regexper.com/ "正则图形显示")
