@@ -99,7 +99,9 @@ http{
     # 1. $binary_remote_addr：通过客户端IP标识来做限制。
     # 2. zone=one:10m：表示生成一个大小为10M，名字为one的内存区域， 用来存储访问的频次信息。
     # 3. rate=100r/s：表示1秒中100个请求，结果为10ms一个请求，10ms之后才接受第二个请求。如果在10ms内发送100个请求，那么只会成功一个。
-    limit_req_zone $binary_remote_addr zone=one:10m rate=100r/s;
+    limit_req_zone $binary_remote_addr zone=req_ip:10m rate=100r/s;
+    limit_conn_zone $binary_remote_addr zone=conn_per_ip:10m;
+    limit_conn_zone $server_name zone=conn_per_server:100m;
 
     # 定义反向代理集群
     upstream web {
@@ -149,9 +151,23 @@ http{
             # 1. zone=one：使用名字为one的配置区域来做限流。
             # 2. burst=20：访问次数超出rate的限制后，额外允许的突发量。
             # 3. nodelay：超出速率限制后的请求无需等待，直接返回503
-            limit_req zone=one burst=20 nodelay;
+            limit_req zone=req_ip burst=20 nodelay;
+            limit_conn conn_per_ip 50;
+            limit_conn conn_per_server 200;
+            limit_rate 100k;
 
             # 反向代理请求转发
+            proxy_pass http://web;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        }
+
+        #Nginx+Apache动静分离
+        location / {
+            try_files $uri @apache;
+        }
+        location @apache {
             proxy_pass http://web;
             proxy_set_header Host $host;
             proxy_set_header X-Real-IP $remote_addr;
