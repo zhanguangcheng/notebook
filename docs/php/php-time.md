@@ -27,6 +27,9 @@ strtotime('first day of 00:00:00');
 // 本月底 2016-09-30 23:59:59
 strtotime('last day of 23:59:59');
 
+// 本月底 2016-09-30 23:59:59
+strtotime('last day of next month 23:59:59');
+
 // 本周一 00:00:00
 strtotime('Monday this week');
 
