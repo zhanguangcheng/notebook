@@ -13,6 +13,7 @@ Windows常用软件
 * [cmder](http://cmder.net/ "Portable console emulator for Windows")
 > 中文乱码问题解决:settings->environment->`set LANG=zh_CN.UTF8`
 * [CopyTranslator](https://github.com/CopyTranslator/CopyTranslator "翻译工具")
+* [DBeaver](https://dbeaver.io/ "数据库管理工具")
 * [diffuse](https://sourceforge.net/projects/diffuse/ "文本差异对比")
 * [Ditto](https://www.ditto.com/ "剪切板增强")
 * [EditPlus](https://www.editplus.com/ "Windows text editor with FTP and sftp") $

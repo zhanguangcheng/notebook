@@ -78,6 +78,7 @@
 * [如何编写一个PHP单元测试用例](https://github.com/yezuozuo/how-to-write-a-phpunit-testcase)
 * [PHP性能追踪及分析工具xhprof的安装与使用](https://www.cnblogs.com/maxincai/p/6001459.html)
 * [PHP性能分析——xhprof](https://www.jianshu.com/p/c69e368de756)
+* [PHP extensions in JavaScript](https://locutus.io/php/)
 
 ## 数据库相关
 
