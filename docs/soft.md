@@ -32,6 +32,7 @@ Windows常用软件
 * [KeePass](http://keepass.info/ "密码管理")
 * [LICEcap](http://www.cockos.com/licecap/ "gif录制")
 * [Listary](http://www.listary.com/ "文件搜索，快速启动应用")
+* [MindMaster](https://www.edrawsoft.cn/mindmaster/ "思维导图软件")
 * [Navicat Premium](https://www.navicat.com.cn/products/navicat-premium/ "数据库管理工具") $
 * [NeatDownloadManager](http://www.neatdownloadmanager.com/ "多线程下载工具")
 * [notepad2](http://notepad2.com/ "普通编辑器")
